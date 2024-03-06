@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2024-03-06_15-53-37" tag="">
+  <assembly name="Default">
+    <class name="C:\Users\Bera\Desktop\midtermproject\src\farmermarket\header\farmermarket.h" coveredlines="1" coverablelines="8" totallines="22" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="0" />
+    <class name="C:\Users\Bera\Desktop\midtermproject\src\farmermarket\src\farmermarket.cpp" coveredlines="0" coverablelines="8" totallines="141" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="0" />
+    <class name="C:\Users\Bera\Desktop\midtermproject\src\farmermarketapp\header\farmermarketapp.h" coveredlines="1" coverablelines="1" totallines="11" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="0" />
+    <class name="C:\Users\Bera\Desktop\midtermproject\src\farmermarketapp\src\farmermarketapp.cpp" coveredlines="1" coverablelines="2" totallines="21" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="0" />
+    <class name="C:\Users\Bera\Desktop\midtermproject\src\utility\header\commonTypes.h" coveredlines="0" coverablelines="1" totallines="0" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="0" />
+    <class name="C:\Users\Bera\Desktop\midtermproject\src\utility\header\mathUtility.h" coveredlines="0" coverablelines="1" totallines="0" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="0" />
+    <class name="C:\Users\Bera\Desktop\midtermproject\src\utility\src\mathUtility.cpp" coveredlines="0" coverablelines="1" totallines="0" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="0" />
+  </assembly>
+</coverage>

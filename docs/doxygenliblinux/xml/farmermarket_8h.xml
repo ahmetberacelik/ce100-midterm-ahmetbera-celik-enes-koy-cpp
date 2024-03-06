@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="farmermarket_8h" kind="file" language="C++">
+    <compoundname>farmermarket.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includedby refid="farmermarketapp_8cpp" local="yes">src/farmermarketapp/src/farmermarketapp.cpp</includedby>
+    <includedby refid="farmermarket_8cpp" local="yes">src/farmermarket/src/farmermarket.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/farmermarket/header/farmermarket.h</label>
+        <link refid="farmermarket_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/farmermarket/header/farmermarket.h</label>
+        <link refid="farmermarket_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/farmermarket/src/farmermarket.cpp</label>
+        <link refid="farmermarket_8cpp"/>
+      </node>
+      <node id="2">
+        <label>src/farmermarketapp/src/farmermarketapp.cpp</label>
+        <link refid="farmermarketapp_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structUser" prot="public">User</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="farmermarket_8h_1aba64fa55f458c1c83323df5810365145" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mainMenu</definition>
+        <argsstring>(std::istream &amp;in, std::ostream &amp;out)</argsstring>
+        <name>mainMenu</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="15" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="8" bodyend="44" declfile="src/farmermarket/header/farmermarket.h" declline="15" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1a3571d8d7858de3069c0320b86f5c2d6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int saveUser</definition>
+        <argsstring>(const User *user, const char *filename)</argsstring>
+        <name>saveUser</name>
+        <param>
+          <type>const <ref refid="structUser" kindref="compound">User</ref> *</type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="17" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="46" bodyend="51" declfile="src/farmermarket/header/farmermarket.h" declline="17" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1a7e955099fa8201496a50f8a9f8f22b46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int authenticateUser</definition>
+        <argsstring>(const char *username, const char *password, const char *filename)</argsstring>
+        <name>authenticateUser</name>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>password</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="19" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="53" bodyend="65" declfile="src/farmermarket/header/farmermarket.h" declline="19" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1aedcb5f536071dbb0b932955185cb427a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool userAuthentication</definition>
+        <argsstring>(std::istream &amp;in, std::ostream &amp;out)</argsstring>
+        <name>userAuthentication</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="21" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="67" bodyend="141" declfile="src/farmermarket/header/farmermarket.h" declline="21" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Provides functions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FARMERMARKET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FARMERMARKET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="structUser" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11" refid="structUser_1af62c586dc88c8434d35e01db81c0087b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>username[50];</highlight></codeline>
+<codeline lineno="12" refid="structUser_1ae547b53c7ae0dee7ba2fc00bf315fa24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>password[50];</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}<sp/><ref refid="structUser" kindref="compound">User</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1aba64fa55f458c1c83323df5810365145" kindref="member">mainMenu</ref>(std::istream&amp;<sp/>in,<sp/>std::ostream&amp;<sp/>out);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a3571d8d7858de3069c0320b86f5c2d6c" kindref="member">saveUser</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structUser" kindref="compound">User</ref>*<sp/>user,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a7e955099fa8201496a50f8a9f8f22b46" kindref="member">authenticateUser</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>username,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>password,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1aedcb5f536071dbb0b932955185cb427a" kindref="member">userAuthentication</ref>(std::istream&amp;<sp/>in,<sp/>std::ostream&amp;<sp/>out);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>FARMERMARKET_H</highlight></codeline>
+    </programlisting>
+    <location file="src/farmermarket/header/farmermarket.h"/>
+  </compounddef>
+</doxygen>

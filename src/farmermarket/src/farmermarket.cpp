@@ -1,10 +1,15 @@
 #include "../header/farmermarket.h"
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 bool guessMode = false;
 char active_user[50];
 bool mainMenu(std::istream& in, std::ostream& out) {
+    if (!userAuthentication(std::cin, std::cout))
+    {
+        return false;
+    }
     int choice; 
     while (true) {
         out << "1. Listing of Local Vendors and Products\n";
@@ -40,17 +45,21 @@ bool mainMenu(std::istream& in, std::ostream& out) {
             out << "Invalid option, please try again.\n";
         }
     }
+    return true;
 }
 
 int saveUser(const User* user, const char* filename) {
     FILE* file = fopen(filename, "ab");
     fwrite(user, sizeof(User), 1, file);
     fclose(file);
-    return 0;
+    return 1;
 }
 
 int authenticateUser(const char* username, const char* password, const char* filename) {
     FILE* file = fopen(filename, "rb");
+    if (!file) {
+        return -1;
+    }
     User user;
     while (fread(&user, sizeof(User), 1, file)) {
         if (strcmp(user.username, username) == 0 && strcmp(user.password, password) == 0) {
@@ -58,12 +67,16 @@ int authenticateUser(const char* username, const char* password, const char* fil
             return 1;
         }
     }
-    fclose(file);
-    return 0;
 }
 
 bool userAuthentication(std::istream& in, std::ostream& out) {
     const char* filename = "Users.bin";
+    User user1 = { "Ahmet Bera Celik", "qwerty" };
+    saveUser(&user1, filename);
+    User user2 = { "Enes Koy", "123456" };
+    saveUser(&user2, filename);
+    User user3 = { "Ugur Coruh", "asdasd" };
+    saveUser(&user3, filename);
     int choice;
     int right_to_try = 3;
     while (true) {
@@ -90,8 +103,7 @@ bool userAuthentication(std::istream& in, std::ostream& out) {
             if (authenticateUser(temp_username, temp_password, filename)) {
                 out << "Welcome " << temp_username << "\n";
                 strcpy(active_user, temp_username);
-                return true;
-            }
+                return true; }
             else {
                 out << "You entered wrong username or password. Please try again.\n";
                 right_to_try--;
@@ -117,12 +129,10 @@ bool userAuthentication(std::istream& in, std::ostream& out) {
             out << "Welcome " << new_username << "\n";
             strcpy(active_user, new_username);
             return true;
-            break;
         }
         case 3:
             guessMode = true;
             return true;
-            break;
         case 4:
             out << "Exiting program...\n";
             return false;

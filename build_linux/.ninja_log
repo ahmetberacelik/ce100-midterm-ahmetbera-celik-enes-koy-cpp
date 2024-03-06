@@ -1,0 +1,19 @@
+# ninja log v5
+1	37	1709729334345568000	src/utility/CMakeFiles/utility.dir/src/mathUtility.cpp.o	b8ee4d331da65d1e
+38	85	1709729334396893900	src/utility/libutility.a	e294d0b7834579cc
+6	285	1709729334598348400	src/farmermarketapp/CMakeFiles/farmermarketapp.dir/src/farmermarketapp.cpp.o	bc572516534722ef
+4	309	1709729334613975500	src/farmermarket/CMakeFiles/farmermarket.dir/src/farmermarket.cpp.o	9e04be2018e6922e
+286	323	1709729334637239100	src/tests/utility/CMakeFiles/utility_tests.dir/utility_test.cpp.o	d5f4bf50e227a069
+312	359	1709729334664598300	src/farmermarket/libfarmermarket.a	315fa4dbd3c336c2
+359	459	1709729334771369500	build/Debug/farmermarketapp	9f926e48e55670b
+85	951	1709729335255745900	src/tests/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	8a26ad552b778aa4
+323	1322	1709729335631357000	src/tests/farmermarket/CMakeFiles/farmermarket_tests.dir/farmermarket_test.cpp.o	f1252eec8c61d8b4
+7	4222	1709729338529747200	src/tests/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	a4a30b2f297803bd
+4222	4340	1709729338639882000	lib/libgtest.a	997e8c9e4456dc05
+4340	4378	1709729338690217500	lib/libgtest_main.a	2478c56cc9290652
+4378	4612	1709729338926555600	build/Debug/utility_tests	f5681c65d8b3a87b
+4378	4612	1709729338926555600	src/tests/utility/utility_tests[1]_tests.cmake	f5681c65d8b3a87b
+4378	4612	1709729338926555600	/mnt/c/Users/Bera/Desktop/midtermproject/build_linux/src/tests/utility/utility_tests[1]_tests.cmake	f5681c65d8b3a87b
+4380	18375	1709729338926555600	build/Debug/farmermarket_tests	6b92ef5f9075db75
+4380	18375	1709729338926555600	src/tests/farmermarket/farmermarket_tests[1]_tests.cmake	6b92ef5f9075db75
+4380	18375	1709729338926555600	/mnt/c/Users/Bera/Desktop/midtermproject/build_linux/src/tests/farmermarket/farmermarket_tests[1]_tests.cmake	6b92ef5f9075db75

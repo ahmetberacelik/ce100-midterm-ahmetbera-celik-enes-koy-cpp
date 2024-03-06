@@ -1,0 +1,139 @@
+\doxysection{farmermarket\+\_\+test.\+cpp}
+\hypertarget{farmermarket__test_8cpp_source}{}\label{farmermarket__test_8cpp_source}\index{src/tests/farmermarket/farmermarket\_test.cpp@{src/tests/farmermarket/farmermarket\_test.cpp}}
+\mbox{\hyperlink{farmermarket__test_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}gtest/gtest.h"{}}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}../../farmermarket/header/farmermarket.h"{}}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00004}\mbox{\hyperlink{class_farmermarket_test}{00004}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_farmermarket_test}{FarmermarketTest}}\ :\ \textcolor{keyword}{public}\ ::testing::Test\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00005}00005\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00006}\mbox{\hyperlink{class_farmermarket_test_a1e479597a8a64fede2bcf7e94e7c72a1}{00006}}\ \ \ \ \ std::ostringstream\ \mbox{\hyperlink{class_farmermarket_test_a1e479597a8a64fede2bcf7e94e7c72a1}{out}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00007}\mbox{\hyperlink{class_farmermarket_test_a8877e5804f1a5e01c751220092c3f2b5}{00007}}\ \ \ \ \ std::istringstream\ \mbox{\hyperlink{class_farmermarket_test_a8877e5804f1a5e01c751220092c3f2b5}{in}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00008}\mbox{\hyperlink{class_farmermarket_test_ab41c0bee33799c143c4ba9cf4da9c9e0}{00008}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{class_farmermarket_test_ab41c0bee33799c143c4ba9cf4da9c9e0}{testFilename}}\ =\ \textcolor{stringliteral}{"{}TestUsers.bin"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00009}\mbox{\hyperlink{class_farmermarket_test_a3116c6bcff3d9a33df6730723959944e}{00009}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_farmermarket_test_a3116c6bcff3d9a33df6730723959944e}{SetUp}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_farmermarket_test_a1e479597a8a64fede2bcf7e94e7c72a1}{out}}.str(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00011}00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_farmermarket_test_a1e479597a8a64fede2bcf7e94e7c72a1}{out}}.clear();}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00012}00012\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00013}\mbox{\hyperlink{class_farmermarket_test_a0016e959eca974c84485fabf4f0a46b8}{00013}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_farmermarket_test_a0016e959eca974c84485fabf4f0a46b8}{TearDown}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ remove(\mbox{\hyperlink{class_farmermarket_test_ab41c0bee33799c143c4ba9cf4da9c9e0}{testFilename}});}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00016}\mbox{\hyperlink{class_farmermarket_test_a3467495d8194e943a33692051b9f12c7}{00016}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_farmermarket_test_a3467495d8194e943a33692051b9f12c7}{simulateUserInput}}(\textcolor{keyword}{const}\ std::string\&\ input)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_farmermarket_test_a8877e5804f1a5e01c751220092c3f2b5}{in}}.str(input);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_farmermarket_test_a8877e5804f1a5e01c751220092c3f2b5}{in}}.clear();}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00020}00020\ \};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00022}\mbox{\hyperlink{farmermarket__test_8cpp_a9f96c9e5ef0c2a3087b85ca7938fd199}{00022}}\ \mbox{\hyperlink{farmermarket__test_8cpp_a9f96c9e5ef0c2a3087b85ca7938fd199}{TEST\_F}}(\mbox{\hyperlink{class_farmermarket_test}{FarmermarketTest}},\ SaveandAuthenticateUserTest)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00023}00023\ \ \ \ \ User\ testUser\ =\ \{\ \textcolor{stringliteral}{"{}TestUser"{}},\ \textcolor{stringliteral}{"{}123456"{}}\ \};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{int}\ result\ =\ saveUser(\&testUser,\ testFilename);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{int}\ result2\ =\ authenticateUser(\textcolor{stringliteral}{"{}TestUser"{}},\ \textcolor{stringliteral}{"{}123456"{}},\ testFilename);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00026}00026\ \ \ \ \ EXPECT\_EQ(result2,\ 1);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00027}00027\ \ \ \ \ EXPECT\_EQ(result,\ 1);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00030}\mbox{\hyperlink{farmermarket__test_8cpp_a2e1a8b07125da8cff6b80524b7bb5502}{00030}}\ \mbox{\hyperlink{farmermarket__test_8cpp_a9f96c9e5ef0c2a3087b85ca7938fd199}{TEST\_F}}(\mbox{\hyperlink{class_farmermarket_test}{FarmermarketTest}},\ InvalidAuthenticateUserTest)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{int}\ result2\ =\ authenticateUser(\textcolor{stringliteral}{"{}TestUser"{}},\ \textcolor{stringliteral}{"{}123456"{}},\ testFilename);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00032}00032\ \ \ \ \ EXPECT\_EQ(result2,\ -\/1);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00033}00033\ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00035}\mbox{\hyperlink{farmermarket__test_8cpp_a69eb778b615f6182f20273acc278bdb0}{00035}}\ \mbox{\hyperlink{farmermarket__test_8cpp_a9f96c9e5ef0c2a3087b85ca7938fd199}{TEST\_F}}(\mbox{\hyperlink{class_farmermarket_test}{FarmermarketTest}},\ UserAuthenticationValidTest)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00036}00036\ \ \ \ \ simulateUserInput(\textcolor{stringliteral}{"{}1\(\backslash\)nAhmet\ Bera\ Celik\(\backslash\)nqwerty\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00037}00037\ \ \ \ \ EXPECT\_TRUE(userAuthentication(in,\ out));}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00038}00038\ \ \ \ \ std::string\ expectedOutput\ =\ \textcolor{stringliteral}{"{}1.\ Login\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00039}00039\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}2.\ Register\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00040}00040\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}3.\ Guest\ Mode\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00041}00041\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}4.\ Exit\ Program\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00042}00042\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Please\ select\ an\ option:\ "{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00043}00043\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Please\ enter\ your\ username:\ "{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00044}00044\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Please\ enter\ your\ password:\ "{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00045}00045\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Welcome\ Ahmet\ Bera\ Celik\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00046}00046\ \ \ \ \ EXPECT\_EQ(expectedOutput,\ out.str());}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00048}00048\ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00050}\mbox{\hyperlink{farmermarket__test_8cpp_ab0b2a7230b6cb4c2f37a2c9cd5a4c89b}{00050}}\ \mbox{\hyperlink{farmermarket__test_8cpp_a9f96c9e5ef0c2a3087b85ca7938fd199}{TEST\_F}}(\mbox{\hyperlink{class_farmermarket_test}{FarmermarketTest}},\ UserAuthenticationInvalidTest)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00051}00051\ \ \ \ \ simulateUserInput(\textcolor{stringliteral}{"{}1\(\backslash\)nInvalid\ User\(\backslash\)nqwerty\(\backslash\)n1\(\backslash\)nInvalid\ User\(\backslash\)nqwerty\(\backslash\)n1\(\backslash\)nInvalid\ User\(\backslash\)nqwerty\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00052}00052\ \ \ \ \ EXPECT\_FALSE(userAuthentication(in,\ out));}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00053}00053\ \ \ \ \ std::string\ expectedOutput\ =\ \textcolor{stringliteral}{"{}1.\ Login\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00054}00054\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}2.\ Register\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00055}00055\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}3.\ Guest\ Mode\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00056}00056\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}4.\ Exit\ Program\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00057}00057\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Please\ select\ an\ option:\ "{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00058}00058\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Please\ enter\ your\ username:\ "{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00059}00059\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Please\ enter\ your\ password:\ "{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00060}00060\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}You\ entered\ wrong\ username\ or\ password.\ Please\ try\ again.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00061}00061\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}1.\ Login\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00062}00062\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}2.\ Register\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00063}00063\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}3.\ Guest\ Mode\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00064}00064\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}4.\ Exit\ Program\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00065}00065\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Please\ select\ an\ option:\ "{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00066}00066\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Please\ enter\ your\ username:\ "{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00067}00067\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Please\ enter\ your\ password:\ "{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00068}00068\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}You\ entered\ wrong\ username\ or\ password.\ Please\ try\ again.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00069}00069\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}1.\ Login\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00070}00070\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}2.\ Register\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00071}00071\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}3.\ Guest\ Mode\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00072}00072\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}4.\ Exit\ Program\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00073}00073\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Please\ select\ an\ option:\ "{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00074}00074\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Please\ enter\ your\ username:\ "{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00075}00075\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Please\ enter\ your\ password:\ "{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00076}00076\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}You\ entered\ wrong\ username\ or\ password.\ Please\ try\ again.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00077}00077\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}You\ have\ run\ out\ of\ login\ attempts.\ See\ you...\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00078}00078\ \ \ \ \ EXPECT\_EQ(expectedOutput,\ out.str());}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00080}00080\ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00082}\mbox{\hyperlink{farmermarket__test_8cpp_a878f021e915c35d5d2f8b06f2dc54edb}{00082}}\ \mbox{\hyperlink{farmermarket__test_8cpp_a9f96c9e5ef0c2a3087b85ca7938fd199}{TEST\_F}}(\mbox{\hyperlink{class_farmermarket_test}{FarmermarketTest}},\ RegisterUserTest)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00083}00083\ \ \ \ \ simulateUserInput(\textcolor{stringliteral}{"{}2\(\backslash\)nAbuzer\(\backslash\)n616161\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00084}00084\ \ \ \ \ EXPECT\_TRUE(userAuthentication(in,\ out));}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00085}00085\ \ \ \ \ std::string\ expectedOutput\ =\ \textcolor{stringliteral}{"{}1.\ Login\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00086}00086\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}2.\ Register\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00087}00087\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}3.\ Guest\ Mode\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00088}00088\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}4.\ Exit\ Program\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00089}00089\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Please\ select\ an\ option:\ "{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00090}00090\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Please\ enter\ your\ username:\ "{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00091}00091\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Please\ enter\ your\ password:\ "{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00092}00092\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}User\ registered\ successfully.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00093}00093\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Welcome\ Abuzer\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00094}00094\ \ \ \ \ EXPECT\_EQ(expectedOutput,\ out.str());}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00096}00096\ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00098}\mbox{\hyperlink{farmermarket__test_8cpp_a28a12b4da9a7077663fc7283bbdcdd24}{00098}}\ \mbox{\hyperlink{farmermarket__test_8cpp_a9f96c9e5ef0c2a3087b85ca7938fd199}{TEST\_F}}(\mbox{\hyperlink{class_farmermarket_test}{FarmermarketTest}},\ GuessModeTest)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00099}00099\ \ \ \ \ simulateUserInput(\textcolor{stringliteral}{"{}3\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00100}00100\ \ \ \ \ EXPECT\_TRUE(userAuthentication(in,\ out));}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00101}00101\ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00103}\mbox{\hyperlink{farmermarket__test_8cpp_ae7c982fc717508062652ee3ffdfceeaa}{00103}}\ \mbox{\hyperlink{farmermarket__test_8cpp_a9f96c9e5ef0c2a3087b85ca7938fd199}{TEST\_F}}(\mbox{\hyperlink{class_farmermarket_test}{FarmermarketTest}},\ userAuthenticationMenuSelection)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00104}00104\ \ \ \ \ simulateUserInput(\textcolor{stringliteral}{"{}1213213\(\backslash\)nasdasd\(\backslash\)n4\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00105}00105\ \ \ \ \ EXPECT\_FALSE(userAuthentication(in,\ out));}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00106}00106\ \ \ \ \ std::string\ expectedOutput\ =\ \textcolor{stringliteral}{"{}1.\ Login\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00107}00107\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}2.\ Register\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00108}00108\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}3.\ Guest\ Mode\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00109}00109\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}4.\ Exit\ Program\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00110}00110\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Please\ select\ an\ option:\ "{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00111}00111\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Invalid\ option,\ please\ try\ again.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00112}00112\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}1.\ Login\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00113}00113\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}2.\ Register\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00114}00114\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}3.\ Guest\ Mode\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00115}00115\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}4.\ Exit\ Program\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00116}00116\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Please\ select\ an\ option:\ "{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00117}00117\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Invalid\ input,\ please\ enter\ a\ number.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00118}00118\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}1.\ Login\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00119}00119\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}2.\ Register\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00120}00120\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}3.\ Guest\ Mode\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00121}00121\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}4.\ Exit\ Program\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00122}00122\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Please\ select\ an\ option:\ "{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00123}00123\ \ \ \ \ expectedOutput\ +=\ \textcolor{stringliteral}{"{}Exiting\ program...\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00124}00124\ \ \ \ \ EXPECT\_EQ(expectedOutput,\ out.str());}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00125}00125\ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00133}\mbox{\hyperlink{farmermarket__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{00133}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}**\ argv)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00134}00134\ \textcolor{preprocessor}{\#ifdef\ ENABLE\_FARMERMARKET\_TEST}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00135}00135\ \ \ \ \ ::testing::InitGoogleTest(\&argc,\ argv);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00136}00136\ \ \ \ \ \textcolor{keywordflow}{return}\ RUN\_ALL\_TESTS();}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00137}00137\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00138}00138\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00139}00139\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00140}00140\ \}}
+
+\end{DoxyCode}

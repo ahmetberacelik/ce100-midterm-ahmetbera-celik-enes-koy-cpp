@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="8"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="0"
+	timestamp="2024-03-06T15:49:12"
+	>
+	<testcase name="utility_tests" classname="utility_tests" time="0.0322544" status="run">
+		<system-out>Running main() from /mnt/c/Users/Bera/Desktop/midtermproject/src/tests/googletest/googletest/src/gtest_main.cc
+[==========] Running 0 tests from 0 test suites.
+[==========] 0 tests from 0 test suites ran. (0 ms total)
+[  PASSED  ] 0 tests.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.SaveandAuthenticateUserTest" classname="FarmermarketTest.SaveandAuthenticateUserTest" time="0.0341616" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.SaveandAuthenticateUserTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.SaveandAuthenticateUserTest
+[       OK ] FarmermarketTest.SaveandAuthenticateUserTest (1 ms)
+[----------] 1 test from FarmermarketTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.InvalidAuthenticateUserTest" classname="FarmermarketTest.InvalidAuthenticateUserTest" time="0.0373341" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.InvalidAuthenticateUserTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.InvalidAuthenticateUserTest
+[       OK ] FarmermarketTest.InvalidAuthenticateUserTest (0 ms)
+[----------] 1 test from FarmermarketTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.UserAuthenticationValidTest" classname="FarmermarketTest.UserAuthenticationValidTest" time="0.0427436" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.UserAuthenticationValidTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.UserAuthenticationValidTest
+[       OK ] FarmermarketTest.UserAuthenticationValidTest (7 ms)
+[----------] 1 test from FarmermarketTest (7 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (7 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.UserAuthenticationInvalidTest" classname="FarmermarketTest.UserAuthenticationInvalidTest" time="0.0430377" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.UserAuthenticationInvalidTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.UserAuthenticationInvalidTest
+[       OK ] FarmermarketTest.UserAuthenticationInvalidTest (13 ms)
+[----------] 1 test from FarmermarketTest (13 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (13 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.RegisterUserTest" classname="FarmermarketTest.RegisterUserTest" time="0.0346834" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.RegisterUserTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.RegisterUserTest
+[       OK ] FarmermarketTest.RegisterUserTest (2 ms)
+[----------] 1 test from FarmermarketTest (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.GuessModeTest" classname="FarmermarketTest.GuessModeTest" time="0.0325658" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.GuessModeTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.GuessModeTest
+[       OK ] FarmermarketTest.GuessModeTest (0 ms)
+[----------] 1 test from FarmermarketTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.userAuthenticationMenuSelection" classname="FarmermarketTest.userAuthenticationMenuSelection" time="0.0308656" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.userAuthenticationMenuSelection
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.userAuthenticationMenuSelection
+[       OK ] FarmermarketTest.userAuthenticationMenuSelection (1 ms)
+[----------] 1 test from FarmermarketTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+</testsuite>

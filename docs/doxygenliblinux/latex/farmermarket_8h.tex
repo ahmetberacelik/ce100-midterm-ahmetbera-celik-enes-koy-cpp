@@ -1,0 +1,72 @@
+\hypertarget{farmermarket_8h}{}\doxysection{src/farmermarket/header/farmermarket.h File Reference}
+\label{farmermarket_8h}\index{src/farmermarket/header/farmermarket.h@{src/farmermarket/header/farmermarket.h}}
+
+
+Provides functions.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for farmermarket.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{farmermarket_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{farmermarket_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structUser}{User}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{farmermarket_8h_aba64fa55f458c1c83323df5810365145}{main\+Menu}} (std\+::istream \&in, std\+::ostream \&out)
+\item 
+int \mbox{\hyperlink{farmermarket_8h_a3571d8d7858de3069c0320b86f5c2d6c}{save\+User}} (const \mbox{\hyperlink{structUser}{User}} $\ast$user, const char $\ast$filename)
+\item 
+int \mbox{\hyperlink{farmermarket_8h_a7e955099fa8201496a50f8a9f8f22b46}{authenticate\+User}} (const char $\ast$username, const char $\ast$password, const char $\ast$filename)
+\item 
+bool \mbox{\hyperlink{farmermarket_8h_aedcb5f536071dbb0b932955185cb427a}{user\+Authentication}} (std\+::istream \&in, std\+::ostream \&out)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides functions. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{farmermarket_8h_a7e955099fa8201496a50f8a9f8f22b46}\label{farmermarket_8h_a7e955099fa8201496a50f8a9f8f22b46}} 
+\index{farmermarket.h@{farmermarket.h}!authenticateUser@{authenticateUser}}
+\index{authenticateUser@{authenticateUser}!farmermarket.h@{farmermarket.h}}
+\doxysubsubsection{\texorpdfstring{authenticateUser()}{authenticateUser()}}
+{\footnotesize\ttfamily int authenticate\+User (\begin{DoxyParamCaption}\item[{const char $\ast$}]{username,  }\item[{const char $\ast$}]{password,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{farmermarket_8h_aba64fa55f458c1c83323df5810365145}\label{farmermarket_8h_aba64fa55f458c1c83323df5810365145}} 
+\index{farmermarket.h@{farmermarket.h}!mainMenu@{mainMenu}}
+\index{mainMenu@{mainMenu}!farmermarket.h@{farmermarket.h}}
+\doxysubsubsection{\texorpdfstring{mainMenu()}{mainMenu()}}
+{\footnotesize\ttfamily bool main\+Menu (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{farmermarket_8h_a3571d8d7858de3069c0320b86f5c2d6c}\label{farmermarket_8h_a3571d8d7858de3069c0320b86f5c2d6c}} 
+\index{farmermarket.h@{farmermarket.h}!saveUser@{saveUser}}
+\index{saveUser@{saveUser}!farmermarket.h@{farmermarket.h}}
+\doxysubsubsection{\texorpdfstring{saveUser()}{saveUser()}}
+{\footnotesize\ttfamily int save\+User (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structUser}{User}} $\ast$}]{user,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{farmermarket_8h_aedcb5f536071dbb0b932955185cb427a}\label{farmermarket_8h_aedcb5f536071dbb0b932955185cb427a}} 
+\index{farmermarket.h@{farmermarket.h}!userAuthentication@{userAuthentication}}
+\index{userAuthentication@{userAuthentication}!farmermarket.h@{farmermarket.h}}
+\doxysubsubsection{\texorpdfstring{userAuthentication()}{userAuthentication()}}
+{\footnotesize\ttfamily bool user\+Authentication (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption})}
+
