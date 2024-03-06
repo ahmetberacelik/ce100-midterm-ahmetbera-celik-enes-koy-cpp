@@ -10,6 +10,19 @@
 #include "../../farmermarket/header/farmermarket.h"
 
 int main() {
-    
-    return 0;
+    const char* filename = "Users.bin";
+    User user1 = { "Ahmet Bera Celik", "qwerty" };   
+    saveUser(&user1, filename);
+    User user2 = { "Enes Koy", "123456" };
+    saveUser(&user2, filename);
+    User user3 = { "Ugur Coruh", "asdasd" };
+    saveUser(&user3, filename);
+    if (userAuthentication(std::cin, std::cout))
+    {
+        mainMenu(std::cin, std::cout);
+    }
+    else
+    {
+        return 0;
+    } 
 }

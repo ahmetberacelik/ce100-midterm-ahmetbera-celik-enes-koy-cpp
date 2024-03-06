@@ -4,15 +4,31 @@
 
 class FarmermarketTest : public ::testing::Test {
 protected:
+	std::ostringstream out;
+	std::istringstream in;
 	void SetUp() override {
-		// Setup test data
-	}
-
-	void TearDown() override {
-		// Clean up test data
+		out.str("");
+		out.clear();
+	} 
+	void simulateUserInput(const std::string& input) {
+		in.str(input);
+		in.clear();
 	}
 };
+TEST_F(FarmermarketTest, UserAuthenticationValidTest) {
+	simulateUserInput("1\nAhmet Bera Celik\nqwerty\n");
+	EXPECT_TRUE(userAuthentication(in, out));
+	std::string expectedOutput = "1. Login\n";
+	expectedOutput += "2. Register\n";
+	expectedOutput += "3. Guest Mode\n";
+	expectedOutput += "4. Exit Program\n";
+	expectedOutput += "Please select an option: ";
+	expectedOutput += "Please enter your username: ";
+	expectedOutput += "Please enter your password: ";
+	expectedOutput += "Welcome Ahmet Bera Celik\n";
+	EXPECT_EQ(expectedOutput, out.str());
 
+}
 /**
  * @brief The main function of the test program.
  *
