@@ -5,18 +5,17 @@
  */
 #ifndef FARMERMARKET_H
 #define FARMERMARKET_H
-#include <iostream>
 
 typedef struct {
     char username[50];
     char password[50];
 } User;
 
-bool mainMenu(std::istream& in, std::ostream& out);
+bool mainMenu();
 
 int saveUser(const User* user, const char* filename);
 
 int authenticateUser(const char* username, const char* password, const char* filename);
 
-bool userAuthentication(std::istream& in, std::ostream& out);
+bool userAuthentication();
 #endif // FARMERMARKET_H

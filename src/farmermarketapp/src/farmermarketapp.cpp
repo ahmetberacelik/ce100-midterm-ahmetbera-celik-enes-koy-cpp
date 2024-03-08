@@ -6,10 +6,10 @@
  *
  */
  // Standard Libraries
-#include <iostream>
+#include <stdio.h>
 #include "../../farmermarket/header/farmermarket.h"
 
 int main() {
-    mainMenu(std::cin, std::cout);
+    mainMenu();
     return 0;
 }
