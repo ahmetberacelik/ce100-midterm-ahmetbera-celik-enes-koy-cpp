@@ -3,14 +3,21 @@
 class FarmermarketTest : public ::testing::Test {
 protected:
 	const char* testFilename = "TestUsers.bin";
-    const char* inputSimname = "inputSim.txt";
-    const char* outputSimname = "outputSim.txt";
+	FILE* testIn;
+	FILE* testOut;
+	char testOutputBuffer[1024];
 	void SetUp() override {
+		testIn = tmpfile();
+		testOut = tmpfile();
 	}
 	void TearDown() override {
+		fclose(testIn);
+		fclose(testOut);
 		remove(testFilename);
-        remove(inputSimname);
-        remove(outputSimname);
+	}
+	void ReadTestOutput() {
+		rewind(testOut);
+		fread(testOutputBuffer, sizeof(testOutputBuffer), 1, testOut);
 	}
 };
 
@@ -28,28 +35,17 @@ TEST_F(FarmermarketTest, InvalidAuthenticateUserTest) {
 }
 
 TEST_F(FarmermarketTest, UserAuthenticationTest) {
-    FILE* inputSim = fopen(inputSimname, "w");
-    fprintf(inputSim, "1\nAhmet Bera Celik\nqwerty\n");
-    fclose(inputSim);
+	fputs("1\nEnes Koy\n123456\n", testIn);
+	rewind(testIn);
 
-    freopen(inputSimname, "r", stdin);
-    freopen(outputSimname, "w", stdout);
+	bool authResult = userAuthentication(testIn, testOut);
 
-    userAuthentication();
+	rewind(testOut);
 
-    fclose(stdin);
-    fclose(stdout);
-    freopen("COM", "a", stdout);
-    freopen("COM", "r", stdin);
-
-    char expectedOutput[] = "1. Login\n2. Register\n3. Guest Mode\n4. Exit Program\nPlease select an option: Please enter your username: Please enter your password: Welcome Ahmet Bera Celik\n";
-    char actualOutput[1024];
-
-    FILE* outputSim = fopen(outputSimname, "r");
-    fread(actualOutput, sizeof(char), 1023, outputSim);
-    fclose(outputSim);
-    bool result = (strcmp(expectedOutput, actualOutput) == 1);
-    EXPECT_TRUE(result);
+	ReadTestOutput();
+	char expectedOutout[1024] = "Welcome Enes Koy\n";
+	EXPECT_TRUE(authResult);
+	EXPECT_TRUE(strstr(testOutputBuffer, expectedOutout) != NULL);
 }
 /**
  * @brief The main function of the test program.

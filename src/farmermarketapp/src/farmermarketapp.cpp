@@ -10,6 +10,6 @@
 #include "../../farmermarket/header/farmermarket.h"
 
 int main() {
-    mainMenu();
+    mainMenu(stdin, stdout);
     return 0;
 }

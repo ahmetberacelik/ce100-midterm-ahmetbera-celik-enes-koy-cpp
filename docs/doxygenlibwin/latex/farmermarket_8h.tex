@@ -5,8 +5,9 @@
 Provides functions.  
 
 
-{\ttfamily \#include $<$iostream$>$}\newline
-Include dependency graph for farmermarket.\+h\+:\nopagebreak
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for farmermarket.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -28,13 +29,13 @@ struct \mbox{\hyperlink{struct_user}{User}}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{farmermarket_8h_aba64fa55f458c1c83323df5810365145}{main\+Menu}} (std\+::istream \&in, std\+::ostream \&out)
+bool \mbox{\hyperlink{farmermarket_8h_a2d0255f645d941c02e7a6d600479552b}{main\+Menu}} (FILE \texorpdfstring{$\ast$}{*}in, FILE \texorpdfstring{$\ast$}{*}out)
 \item 
 int \mbox{\hyperlink{farmermarket_8h_a3571d8d7858de3069c0320b86f5c2d6c}{save\+User}} (const \mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}user, const char \texorpdfstring{$\ast$}{*}filename)
 \item 
 int \mbox{\hyperlink{farmermarket_8h_a7e955099fa8201496a50f8a9f8f22b46}{authenticate\+User}} (const char \texorpdfstring{$\ast$}{*}username, const char \texorpdfstring{$\ast$}{*}password, const char \texorpdfstring{$\ast$}{*}filename)
 \item 
-bool \mbox{\hyperlink{farmermarket_8h_aedcb5f536071dbb0b932955185cb427a}{user\+Authentication}} (std\+::istream \&in, std\+::ostream \&out)
+bool \mbox{\hyperlink{farmermarket_8h_a6903abe4d5df4957642a65806ccb35a7}{user\+Authentication}} (FILE \texorpdfstring{$\ast$}{*}in, FILE \texorpdfstring{$\ast$}{*}out)
 \end{DoxyCompactItemize}
 
 
@@ -50,11 +51,11 @@ Provides functions.
 \doxysubsubsection{\texorpdfstring{authenticateUser()}{authenticateUser()}}
 {\footnotesize\ttfamily int authenticate\+User (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{username,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{password,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
 
-\Hypertarget{farmermarket_8h_aba64fa55f458c1c83323df5810365145}\label{farmermarket_8h_aba64fa55f458c1c83323df5810365145} 
+\Hypertarget{farmermarket_8h_a2d0255f645d941c02e7a6d600479552b}\label{farmermarket_8h_a2d0255f645d941c02e7a6d600479552b} 
 \index{farmermarket.h@{farmermarket.h}!mainMenu@{mainMenu}}
 \index{mainMenu@{mainMenu}!farmermarket.h@{farmermarket.h}}
 \doxysubsubsection{\texorpdfstring{mainMenu()}{mainMenu()}}
-{\footnotesize\ttfamily bool main\+Menu (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool main\+Menu (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{in,  }\item[{FILE \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})}
 
 \Hypertarget{farmermarket_8h_a3571d8d7858de3069c0320b86f5c2d6c}\label{farmermarket_8h_a3571d8d7858de3069c0320b86f5c2d6c} 
 \index{farmermarket.h@{farmermarket.h}!saveUser@{saveUser}}
@@ -62,9 +63,9 @@ Provides functions.
 \doxysubsubsection{\texorpdfstring{saveUser()}{saveUser()}}
 {\footnotesize\ttfamily int save\+User (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}}]{user,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
 
-\Hypertarget{farmermarket_8h_aedcb5f536071dbb0b932955185cb427a}\label{farmermarket_8h_aedcb5f536071dbb0b932955185cb427a} 
+\Hypertarget{farmermarket_8h_a6903abe4d5df4957642a65806ccb35a7}\label{farmermarket_8h_a6903abe4d5df4957642a65806ccb35a7} 
 \index{farmermarket.h@{farmermarket.h}!userAuthentication@{userAuthentication}}
 \index{userAuthentication@{userAuthentication}!farmermarket.h@{farmermarket.h}}
 \doxysubsubsection{\texorpdfstring{userAuthentication()}{userAuthentication()}}
-{\footnotesize\ttfamily bool user\+Authentication (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool user\+Authentication (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{in,  }\item[{FILE \texorpdfstring{$\ast$}{*}}]{out }\end{DoxyParamCaption})}
 

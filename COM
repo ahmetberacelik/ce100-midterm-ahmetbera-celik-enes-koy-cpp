@@ -1,0 +1,14 @@
+C:\Users\Bera\Desktop\midtermproject\src\tests\farmermarket\farmermarket_test.cpp(52): error: Value of: result
+  Actual: false
+Expected: true
+
+[  FAILED  ] FarmermarketTest.UserAuthenticationTest (19 ms)
+[----------] 3 tests from FarmermarketTest (27 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (29 ms total)
+[  PASSED  ] 2 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] FarmermarketTest.UserAuthenticationTest
+
+ 1 FAILED TEST

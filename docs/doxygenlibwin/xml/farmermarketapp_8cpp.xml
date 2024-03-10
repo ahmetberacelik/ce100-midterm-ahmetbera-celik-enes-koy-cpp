@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
   <compounddef id="farmermarketapp_8cpp" kind="file" language="C++">
     <compoundname>farmermarketapp.cpp</compoundname>
-    <includes local="no">iostream</includes>
+    <includes local="no">stdio.h</includes>
     <includes refid="farmermarket_8h" local="yes">../../farmermarket/header/farmermarket.h</includes>
     <incdepgraph>
       <node id="3">
@@ -20,7 +20,7 @@
         </childnode>
       </node>
       <node id="2">
-        <label>iostream</label>
+        <label>stdio.h</label>
       </node>
     </incdepgraph>
       <sectiondef kind="func">
@@ -47,11 +47,11 @@
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>Standard<sp/>Libraries</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../farmermarket/header/farmermarket.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarketapp_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="farmermarket_8h_1aba64fa55f458c1c83323df5810365145" kindref="member">mainMenu</ref>(std::cin,<sp/>std::cout);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="farmermarket_8h_1a2d0255f645d941c02e7a6d600479552b" kindref="member">mainMenu</ref>(stdin,<sp/>stdout);</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
 <codeline lineno="15"><highlight class="normal">}</highlight></codeline>
     </programlisting>

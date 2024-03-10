@@ -4,34 +4,6 @@
     <compoundname>FarmermarketTest</compoundname>
     <basecompoundref prot="public" virt="non-virtual">testing::Test</basecompoundref>
       <sectiondef kind="protected-attrib">
-      <memberdef kind="variable" id="class_farmermarket_test_1a1e479597a8a64fede2bcf7e94e7c72a1" prot="protected" static="no" mutable="no">
-        <type>std::ostringstream</type>
-        <definition>std::ostringstream FarmermarketTest::out</definition>
-        <argsstring></argsstring>
-        <name>out</name>
-        <qualifiedname>FarmermarketTest::out</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="6" column="20" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="6" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_farmermarket_test_1a8877e5804f1a5e01c751220092c3f2b5" prot="protected" static="no" mutable="no">
-        <type>std::istringstream</type>
-        <definition>std::istringstream FarmermarketTest::in</definition>
-        <argsstring></argsstring>
-        <name>in</name>
-        <qualifiedname>FarmermarketTest::in</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="7" column="20" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="7" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="variable" id="class_farmermarket_test_1ab41c0bee33799c143c4ba9cf4da9c9e0" prot="protected" static="no" mutable="no">
         <type>const char *</type>
         <definition>const char* FarmermarketTest::testFilename</definition>
@@ -45,7 +17,49 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="8" column="12" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="8" bodyend="-1"/>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="5" column="12" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_farmermarket_test_1a250a365b417c3ae992d86eb3f7c2cda4" prot="protected" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* FarmermarketTest::testIn</definition>
+        <argsstring></argsstring>
+        <name>testIn</name>
+        <qualifiedname>FarmermarketTest::testIn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="6" column="6" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_farmermarket_test_1a8de5f036a4b01251ab52e18948169cc7" prot="protected" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* FarmermarketTest::testOut</definition>
+        <argsstring></argsstring>
+        <name>testOut</name>
+        <qualifiedname>FarmermarketTest::testOut</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="7" column="6" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_farmermarket_test_1acc4d000f23da803eb24a8313730aab50" prot="protected" static="no" mutable="no">
+        <type>char</type>
+        <definition>char FarmermarketTest::testOutputBuffer[1024]</definition>
+        <argsstring>[1024]</argsstring>
+        <name>testOutputBuffer</name>
+        <qualifiedname>FarmermarketTest::testOutputBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="8" column="6" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="8" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -75,25 +89,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="13" column="6" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="13" bodyend="15"/>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="13" column="6" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="13" bodyend="17"/>
       </memberdef>
-      <memberdef kind="function" id="class_farmermarket_test_1a3467495d8194e943a33692051b9f12c7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_farmermarket_test_1a1fe118834bc3bb477a7bf76893dfc543" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void FarmermarketTest::simulateUserInput</definition>
-        <argsstring>(const std::string &amp;input)</argsstring>
-        <name>simulateUserInput</name>
-        <qualifiedname>FarmermarketTest::simulateUserInput</qualifiedname>
-        <param>
-          <type>const std::string &amp;</type>
-          <declname>input</declname>
-        </param>
+        <definition>void FarmermarketTest::ReadTestOutput</definition>
+        <argsstring>()</argsstring>
+        <name>ReadTestOutput</name>
+        <qualifiedname>FarmermarketTest::ReadTestOutput</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="16" column="6" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="16" bodyend="19"/>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="18" column="6" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="18" bodyend="21"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -122,14 +132,15 @@
         <label>testing::Test</label>
       </node>
     </collaborationgraph>
-    <location file="src/tests/farmermarket/farmermarket_test.cpp" line="4" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="4" bodyend="20"/>
+    <location file="src/tests/farmermarket/farmermarket_test.cpp" line="3" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="3" bodyend="22"/>
     <listofallmembers>
-      <member refid="class_farmermarket_test_1a8877e5804f1a5e01c751220092c3f2b5" prot="protected" virt="non-virtual"><scope>FarmermarketTest</scope><name>in</name></member>
-      <member refid="class_farmermarket_test_1a1e479597a8a64fede2bcf7e94e7c72a1" prot="protected" virt="non-virtual"><scope>FarmermarketTest</scope><name>out</name></member>
+      <member refid="class_farmermarket_test_1a1fe118834bc3bb477a7bf76893dfc543" prot="protected" virt="non-virtual"><scope>FarmermarketTest</scope><name>ReadTestOutput</name></member>
       <member refid="class_farmermarket_test_1a3116c6bcff3d9a33df6730723959944e" prot="protected" virt="non-virtual"><scope>FarmermarketTest</scope><name>SetUp</name></member>
-      <member refid="class_farmermarket_test_1a3467495d8194e943a33692051b9f12c7" prot="protected" virt="non-virtual"><scope>FarmermarketTest</scope><name>simulateUserInput</name></member>
       <member refid="class_farmermarket_test_1a0016e959eca974c84485fabf4f0a46b8" prot="protected" virt="non-virtual"><scope>FarmermarketTest</scope><name>TearDown</name></member>
       <member refid="class_farmermarket_test_1ab41c0bee33799c143c4ba9cf4da9c9e0" prot="protected" virt="non-virtual"><scope>FarmermarketTest</scope><name>testFilename</name></member>
+      <member refid="class_farmermarket_test_1a250a365b417c3ae992d86eb3f7c2cda4" prot="protected" virt="non-virtual"><scope>FarmermarketTest</scope><name>testIn</name></member>
+      <member refid="class_farmermarket_test_1a8de5f036a4b01251ab52e18948169cc7" prot="protected" virt="non-virtual"><scope>FarmermarketTest</scope><name>testOut</name></member>
+      <member refid="class_farmermarket_test_1acc4d000f23da803eb24a8313730aab50" prot="protected" virt="non-virtual"><scope>FarmermarketTest</scope><name>testOutputBuffer</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

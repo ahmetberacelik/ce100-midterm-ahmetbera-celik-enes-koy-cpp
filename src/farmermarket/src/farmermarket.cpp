@@ -6,43 +6,43 @@ using namespace std;
 
 bool guessMode = false;
 char active_user[50];
-bool mainMenu() {
-    if (!userAuthentication()) {
+bool mainMenu(FILE* in, FILE* out){
+    if (!userAuthentication(in,out)) {
         return false;
     }
     int choice;
     while (true) {
-        printf("1. Listing of Local Vendors and Products\n");
-        printf("2. Seasonal Produce Guide\n");
-        printf("3. Price Comparison\n");
-        printf("4. Market Hours and Locations\n");
-        printf("5. Exit\n");
-        printf("Please select an option: ");
-        if (scanf("%d", &choice) != 1) {
-            while (getchar() != '\n');
-            printf("Invalid input, please enter a number.\n");
+        fprintf(out, "1. Listing of Local Vendors and Products\n");
+        fprintf(out, "2. Seasonal Produce Guide\n");
+        fprintf(out, "3. Price Comparison\n");
+        fprintf(out, "4. Market Hours and Locations\n");
+        fprintf(out, "5. Exit\n");
+        fprintf(out, "Please select an option: ");
+        if (fscanf(in, "%d", &choice) != 1) {
+            while (fgetc(in) != '\n' && !feof(in));
+            fprintf(out, "Invalid input, please enter a number.\n");
             continue;
         }
-        while (getchar() != '\n');
+        while (fgetc(in) != '\n' && !feof(in));
 
         switch (choice) {
         case 1:
-            printf("Listing of Local Vendors and Products\n");
+            fprintf(out, "Listing of Local Vendors and Products\n");
             break;
         case 2:
-            printf("Seasonal Produce Guide\n");
+            fprintf(out, "Seasonal Produce Guide\n");
             break;
         case 3:
-            printf("Price Comparison\n");
+            fprintf(out, "Price Comparison\n");
             break;
         case 4:
-            printf("Market Hours and Locations\n");
+            fprintf(out, "Market Hours and Locations\n");
             break;
         case 5:
-            printf("Exiting program...\n");
+            fprintf(out, "Exiting program...\n");
             return true;
         default:
-            printf("Invalid option, please try again.\n");
+            fprintf(out, "Invalid option, please try again.\n");
         }
     }
     return true;
@@ -69,7 +69,7 @@ int authenticateUser(const char* username, const char* password, const char* fil
     }
 }
 
-bool userAuthentication() {
+bool userAuthentication(FILE* in, FILE* out) {
     const char* filename = "Users.bin";
     User user1 = { "Ahmet Bera Celik", "qwerty" };
     saveUser(&user1, filename);
@@ -84,51 +84,51 @@ bool userAuthentication() {
     char temp_password[50];
 
     while (true) {
-        printf("1. Login\n");
-        printf("2. Register\n");
-        printf("3. Guest Mode\n");
-        printf("4. Exit Program\n");
-        printf("Please select an option: ");
-        scanf("%d", &choice);
-        while (getchar() != '\n');
+        fprintf(out, "1. Login\n");
+        fprintf(out, "2. Register\n");
+        fprintf(out, "3. Guest Mode\n");
+        fprintf(out, "4. Exit Program\n");
+        fprintf(out, "Please select an option: ");
+        fscanf(in, "%d", &choice);
+        while (fgetc(in) != '\n' && !feof(in));
 
         switch (choice) {
         case 1:
-            printf("Please enter your username: ");
-            fgets(temp_username, 50, stdin);
+            fprintf(out, "Please enter your username: ");
+            fgets(temp_username, 50, in);
             temp_username[strcspn(temp_username, "\n")] = 0;
-            printf("Please enter your password: ");
-            fgets(temp_password, 50, stdin);
+            fprintf(out, "Please enter your password: ");
+            fgets(temp_password, 50, in);
             temp_password[strcspn(temp_password, "\n")] = 0;
 
             if (authenticateUser(temp_username, temp_password, filename) == 1) {
-                printf("Welcome %s\n", temp_username);
+                fprintf(out, "Welcome %s\n", temp_username);
                 strcpy(active_user, temp_username);
                 return true;
             }
             else {
-                printf("You entered wrong username or password. Please try again.\n");
+                fprintf(out, "You entered wrong username or password. Please try again.\n");
                 right_to_try--;
                 if (right_to_try == 0) {
-                    printf("You have run out of login attempts. See you...\n");
+                    fprintf(out, "You have run out of login attempts. See you...\n");
                     return false;
                 }
             }
             break;
 
         case 2:
-            printf("Please enter your username: ");
-            fgets(temp_username, 50, stdin);
+            fprintf(out, "Please enter your username: ");
+            fgets(temp_username, 50, in);
             temp_username[strcspn(temp_username, "\n")] = 0;
-            printf("Please enter your password: ");
-            fgets(temp_password, 50, stdin);
+            fprintf(out, "Please enter your password: ");
+            fgets(temp_password, 50, in);
             temp_password[strcspn(temp_password, "\n")] = 0;
 
             User newUser;
             strcpy(newUser.username, temp_username);
             strcpy(newUser.password, temp_password);
             saveUser(&newUser, filename);
-            printf("User registered successfully.\nWelcome %s\n", temp_username);
+            fprintf(out, "User registered successfully.\nWelcome %s\n", temp_username);
             strcpy(active_user, temp_username);
             return true;
 
@@ -137,11 +137,12 @@ bool userAuthentication() {
             return true;
 
         case 4:
-            printf("Exiting program...\n");
+            fprintf(out, "Exiting program...\n");
             return false;
 
         default:
-            printf("Invalid option, please try again.\n");
+            fprintf(out, "Invalid option, please try again.\n");
         }
     }
 }
+
