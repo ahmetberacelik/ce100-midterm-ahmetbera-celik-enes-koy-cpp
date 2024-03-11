@@ -85,10 +85,12 @@ $(function() {
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for farmermarket.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="farmermarket_8cpp__incl.svg" width="411" height="203"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="farmermarket_8cpp__incl.svg" width="580" height="203"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -101,6 +103,18 @@ Functions</h2></td></tr>
 <tr class="separator:a7e955099fa8201496a50f8a9f8f22b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6903abe4d5df4957642a65806ccb35a7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8cpp.html#a6903abe4d5df4957642a65806ccb35a7">userAuthentication</a> (FILE *in, FILE *out)</td></tr>
 <tr class="separator:a6903abe4d5df4957642a65806ccb35a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ce3038a802aa59d3225588131ea97bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8cpp.html#a7ce3038a802aa59d3225588131ea97bb">swap</a> (char **a, char **b)</td></tr>
+<tr class="separator:a7ce3038a802aa59d3225588131ea97bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa20d794eb7aaeb63297a19db22b775ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8cpp.html#aa20d794eb7aaeb63297a19db22b775ca">partition</a> (char *arr[], int low, int high)</td></tr>
+<tr class="separator:aa20d794eb7aaeb63297a19db22b775ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe92df5eb77de11b244b68e5b635696a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8cpp.html#abe92df5eb77de11b244b68e5b635696a">quickSort</a> (char *arr[], int low, int high)</td></tr>
+<tr class="separator:abe92df5eb77de11b244b68e5b635696a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab61c92aff538932520ee72d58ad3bdf0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8cpp.html#ab61c92aff538932520ee72d58ad3bdf0">binarySearch</a> (char *arr[], int l, int r, char *x)</td></tr>
+<tr class="separator:ab61c92aff538932520ee72d58ad3bdf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89eb831fe57e17f7dec4227adaead9d4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8cpp.html#a89eb831fe57e17f7dec4227adaead9d4">searchAndPrintResult</a> (char *arr[], int size, char *x)</td></tr>
+<tr class="separator:a89eb831fe57e17f7dec4227adaead9d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6faa53c43bb0d63cca3e821483e46159"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8cpp.html#a6faa53c43bb0d63cca3e821483e46159">listingOfInfos</a> (FILE *in, FILE *out)</td></tr>
+<tr class="separator:a6faa53c43bb0d63cca3e821483e46159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -144,6 +158,74 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ab61c92aff538932520ee72d58ad3bdf0" name="ab61c92aff538932520ee72d58ad3bdf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab61c92aff538932520ee72d58ad3bdf0">&#9670;&#160;</a></span>binarySearch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int binarySearch </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>arr</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6faa53c43bb0d63cca3e821483e46159" name="a6faa53c43bb0d63cca3e821483e46159"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6faa53c43bb0d63cca3e821483e46159">&#9670;&#160;</a></span>listingOfInfos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool listingOfInfos </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2d0255f645d941c02e7a6d600479552b" name="a2d0255f645d941c02e7a6d600479552b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d0255f645d941c02e7a6d600479552b">&#9670;&#160;</a></span>mainMenu()</h2>
 
@@ -172,6 +254,74 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="aa20d794eb7aaeb63297a19db22b775ca" name="aa20d794eb7aaeb63297a19db22b775ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa20d794eb7aaeb63297a19db22b775ca">&#9670;&#160;</a></span>partition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int partition </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>arr</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>low</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>high</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe92df5eb77de11b244b68e5b635696a" name="abe92df5eb77de11b244b68e5b635696a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe92df5eb77de11b244b68e5b635696a">&#9670;&#160;</a></span>quickSort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool quickSort </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>arr</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>low</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>high</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3571d8d7858de3069c0320b86f5c2d6c" name="a3571d8d7858de3069c0320b86f5c2d6c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3571d8d7858de3069c0320b86f5c2d6c">&#9670;&#160;</a></span>saveUser()</h2>
 
@@ -189,6 +339,68 @@ Variables</h2></td></tr>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89eb831fe57e17f7dec4227adaead9d4" name="a89eb831fe57e17f7dec4227adaead9d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89eb831fe57e17f7dec4227adaead9d4">&#9670;&#160;</a></span>searchAndPrintResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool searchAndPrintResult </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>arr</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ce3038a802aa59d3225588131ea97bb" name="a7ce3038a802aa59d3225588131ea97bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ce3038a802aa59d3225588131ea97bb">&#9670;&#160;</a></span>swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool swap </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

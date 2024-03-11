@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
-using namespace std;
-
+#include <stdlib.h>
+#include <time.h>
 bool guessMode = false;
 char active_user[50];
 bool mainMenu(FILE* in, FILE* out) {
@@ -27,7 +27,7 @@ bool mainMenu(FILE* in, FILE* out) {
 
         switch (choice) {
         case 1:
-            fprintf(out, "Listing of Local Vendors and Products\n");
+            listingOfInfos(in, out);
             break;
         case 2:
             fprintf(out, "Seasonal Produce Guide\n");
@@ -145,3 +145,133 @@ bool userAuthentication(FILE* in, FILE* out) {
     }
 }
 
+bool swap(char** a, char** b) {
+    char* t = *a;
+    *a = *b;
+    *b = t;
+    return true;
+}
+
+int partition(char* arr[], int low, int high) {
+    char* pivot = arr[low + (rand() % (high - low))];
+    int i = low - 1, j = high + 1;
+
+    while (1) {
+        do {
+            i++;
+        } while (strcmp(arr[i], pivot) < 0);
+        do {
+            j--;
+        } while (strcmp(arr[j], pivot) > 0);
+
+        if (i >= j) {
+            return j;
+        }
+        swap(&arr[i], &arr[j]);
+    }
+}
+
+bool quickSort(char* arr[], int low, int high) {
+    if (low < high) {
+        int pi = partition(arr, low, high);
+
+        quickSort(arr, low, pi);
+        quickSort(arr, pi + 1, high);
+    }
+    return true;
+}
+
+int binarySearch(char* arr[], int l, int r, char* x) {
+    if (r >= l) {
+        int mid = l + (r - l) / 2;
+
+        int res = strcmp(arr[mid], x);
+
+        if (res == 0) {
+            return mid;
+        }
+
+        if (res > 0) {
+            return binarySearch(arr, l, mid - 1, x);
+        }
+
+        return binarySearch(arr, mid + 1, r, x);
+    }
+
+    return -1;
+}
+bool searchAndPrintResult(char* arr[], int size, char* x) {
+    int result = binarySearch(arr, 0, size - 1, x);
+    if (result == -1) {
+        return false; }
+    else {
+        return true;
+    }
+}
+
+bool listingOfInfos(FILE* in, FILE* out) {
+    char* vendors[] = { "Ahmet", "Mehmet", "Veli", "Ayse", "Nuriye" };
+    char* products[][6] = {
+        {"Ahmet", "Banana", "Apple", "Cherry", "Date", "Grape"},
+        {"Mehmet", "Raspberry", "Eggplant", "Mushroom", "Beet", "Turnip"},
+        {"Veli", "Cucumber", "Melon", "Lemon", "Tomato", "Orange"},
+        {"Ayse", "Pear", "Nectarine", "Carrot", "Bean", "Beet"},
+        {"Nuriye", "Hazelnut", "Chestnut", "Fig", "Coconut", "Broccoli"}
+    };
+    int numVendors = sizeof(vendors) / sizeof(vendors[0]);
+    int numProductsPerVendor = sizeof(products[0]) / sizeof(products[0][0]);
+    char vendor_query[50];
+    char product_query[50];
+    bool found = false;
+    int choice;
+    while (true) {
+        fprintf(out, "1. Browse Vendors\n");
+        fprintf(out, "2. Search Product\n");
+        fprintf(out, "3. Exit\n");
+        fprintf(out, "Please select an option: ");
+        if (fscanf(in, "%d", &choice) != 1) {
+            while (fgetc(in) != '\n' && !feof(in));
+            fprintf(out, "Invalid input, please enter a number.\n");
+            continue;
+        }
+        while (fgetc(in) != '\n' && !feof(in));
+
+        switch (choice) {
+        case 1:
+            fprintf(out, "Please enter vendor name: ");
+            fgets(vendor_query, 50, in);
+            vendor_query[strcspn(vendor_query, "\n")] = 0;
+            quickSort(vendors, 0, numVendors - 1);
+            if (searchAndPrintResult(vendors, numVendors, vendor_query)) {
+                fprintf(out, "Vendor found: %s\n", vendor_query);
+                }
+            else {
+                fprintf(out, "Vendor not found.\n");
+            }
+            break;
+        case 2:
+            fprintf(out, "Please enter product name: ");
+            fgets(product_query, 50, in);
+            product_query[strcspn(product_query, "\n")] = 0;
+            for (int i = 0; i < numVendors; i++) {
+                quickSort(products[i] + 1, 0, numProductsPerVendor - 2);
+                if (binarySearch(products[i] + 1, 0, numProductsPerVendor - 2, product_query) != -1) {
+                    fprintf(out, "Product %s found at vendor %s\n", product_query, products[i][0]);
+                    found = true;
+                    break; }
+                else {
+                    found = false;
+                }
+            }
+            if (!found) {
+                fprintf(out, "Product not found.\n");
+            }
+            break;
+        case 3:
+            fprintf(out, "Exiting Listing Of Infos...\n");
+            return true;
+        default:
+            fprintf(out, "Invalid option, please try again.\n");
+        }
+    }
+}

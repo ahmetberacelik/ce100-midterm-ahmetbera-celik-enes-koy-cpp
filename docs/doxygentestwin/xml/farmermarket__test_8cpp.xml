@@ -174,6 +174,196 @@
         </inbodydescription>
         <location file="src/tests/farmermarket/farmermarket_test.cpp" line="100" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="100" bodyend="112"/>
       </memberdef>
+      <memberdef kind="function" id="farmermarket__test_8cpp_1a999455f2f35e46c3183a35991ba64c61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(FarmermarketTest, HandlePointerSwap)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref></type>
+        </param>
+        <param>
+          <type>HandlePointerSwap</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="114" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="114" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket__test_8cpp_1a74d1cf642aacbd0dbe38becf853febab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(FarmermarketTest, HandleSorting)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref></type>
+        </param>
+        <param>
+          <type>HandleSorting</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="123" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="123" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket__test_8cpp_1a14c57fb22686cfbb45d1d58cc6a3b80a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(FarmermarketTest, FindElement)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref></type>
+        </param>
+        <param>
+          <type>FindElement</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="132" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="132" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket__test_8cpp_1a6cac2242f62229a72d684c36f65431fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(FarmermarketTest, SearchInArray)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref></type>
+        </param>
+        <param>
+          <type>SearchInArray</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="139" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="139" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket__test_8cpp_1a2765df0da2dd353c058842e928888e5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(FarmermarketTest, VendorSearchTest)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref></type>
+        </param>
+        <param>
+          <type>VendorSearchTest</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="145" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="145" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket__test_8cpp_1a150d6f4ae9cff07249823071c7538988" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(FarmermarketTest, ProductSearchTest)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref></type>
+        </param>
+        <param>
+          <type>ProductSearchTest</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="157" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="157" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket__test_8cpp_1a5cd284e77913a229eaabceee15a88822" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(FarmermarketTest, InvalidOptionTest)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref></type>
+        </param>
+        <param>
+          <type>InvalidOptionTest</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="169" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="169" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket__test_8cpp_1a2c63e48eec1aacb996bc3cdef61df59d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(FarmermarketTest, VendorNotFoundTest)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref></type>
+        </param>
+        <param>
+          <type>VendorNotFoundTest</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="181" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="181" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket__test_8cpp_1a0e3ac2b612fe28ed65abe29d840ffaf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(FarmermarketTest, ProductNotFoundTest)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref></type>
+        </param>
+        <param>
+          <type>ProductNotFoundTest</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="193" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="193" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket__test_8cpp_1ad8670cae87296596568d6a5706cde133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(FarmermarketTest, InvalidMenuOptionTest)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref></type>
+        </param>
+        <param>
+          <type>InvalidMenuOptionTest</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="205" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="205" bodyend="216"/>
+      </memberdef>
       <memberdef kind="function" id="farmermarket__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int main</definition>
@@ -214,7 +404,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="120" column="5" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="120" bodyend="127"/>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="225" column="5" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="225" bodyend="232"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -334,14 +524,119 @@
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_FALSE(authResult);</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(testOutputBuffer,<sp/>expectedOutput);</highlight></codeline>
 <codeline lineno="112"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="120" refid="farmermarket__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)<sp/>{</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ENABLE_FARMERMARKET_TEST</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>::testing::InitGoogleTest(&amp;argc,<sp/>argv);</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>RUN_ALL_TESTS();</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="farmermarket__test_8cpp_1a999455f2f35e46c3183a35991ba64c61" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>HandlePointerSwap)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>a<sp/>=<sp/>strdup(</highlight><highlight class="stringliteral">&quot;hello&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>b<sp/>=<sp/>strdup(</highlight><highlight class="stringliteral">&quot;world&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_TRUE(swap(&amp;a,<sp/>&amp;b));</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(b,<sp/></highlight><highlight class="stringliteral">&quot;hello&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(a,<sp/></highlight><highlight class="stringliteral">&quot;world&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>free(a);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>free(b);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123" refid="farmermarket__test_8cpp_1a74d1cf642aacbd0dbe38becf853febab" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>HandleSorting)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>arr[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;banana&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;apple&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;orange&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;mango&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(arr)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(arr[0]);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>quickSort(arr,<sp/>0,<sp/>n<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(arr[0],<sp/></highlight><highlight class="stringliteral">&quot;apple&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(arr[1],<sp/></highlight><highlight class="stringliteral">&quot;banana&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(arr[2],<sp/></highlight><highlight class="stringliteral">&quot;mango&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(arr[3],<sp/></highlight><highlight class="stringliteral">&quot;orange&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132" refid="farmermarket__test_8cpp_1a14c57fb22686cfbb45d1d58cc6a3b80a" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>FindElement)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>arr[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;apple&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;banana&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;mango&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;orange&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(arr)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(arr[0]);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(binarySearch(arr,<sp/>0,<sp/>n<sp/>-<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;mango&quot;</highlight><highlight class="normal">),<sp/>2);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(binarySearch(arr,<sp/>0,<sp/>n<sp/>-<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;apple&quot;</highlight><highlight class="normal">),<sp/>0);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(binarySearch(arr,<sp/>0,<sp/>n<sp/>-<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;notinthelist&quot;</highlight><highlight class="normal">),<sp/>-1);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139" refid="farmermarket__test_8cpp_1a6cac2242f62229a72d684c36f65431fb" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>SearchInArray)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>arr[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;apple&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;banana&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;mango&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;orange&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(arr)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(arr[0]);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_TRUE(searchAndPrintResult(arr,<sp/>n,<sp/></highlight><highlight class="stringliteral">&quot;banana&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_FALSE(searchAndPrintResult(arr,<sp/>n,<sp/></highlight><highlight class="stringliteral">&quot;cherry&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145" refid="farmermarket__test_8cpp_1a2765df0da2dd353c058842e928888e5d" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>VendorSearchTest)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>fputs(</highlight><highlight class="stringliteral">&quot;1\nAhmet\n3\n&quot;</highlight><highlight class="normal">,<sp/>testIn);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testIn);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>listingOfInfos(testIn,<sp/>testOut);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testOut);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>ReadTestOutput();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>expectedOutput[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;1.<sp/>Browse<sp/>Vendors\n2.<sp/>Search<sp/>Product\n3.<sp/>Exit\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Please<sp/>enter<sp/>vendor<sp/>name:<sp/>Vendor<sp/>found:<sp/>Ahmet\n1.<sp/>Browse<sp/>Vendors\n2.<sp/>Search<sp/>Product\n3.<sp/>Exit\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Exiting<sp/>Listing<sp/>Of<sp/>Infos...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(testOutputBuffer,<sp/>expectedOutput);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="157" refid="farmermarket__test_8cpp_1a150d6f4ae9cff07249823071c7538988" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>ProductSearchTest)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>fputs(</highlight><highlight class="stringliteral">&quot;2\nBanana\n3\n&quot;</highlight><highlight class="normal">,<sp/>testIn);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testIn);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>listingOfInfos(testIn,<sp/>testOut);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testOut);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>ReadTestOutput();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>expectedOutput[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;1.<sp/>Browse<sp/>Vendors\n2.<sp/>Search<sp/>Product\n3.<sp/>Exit\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Please<sp/>enter<sp/>product<sp/>name:<sp/>Product<sp/>Banana<sp/>found<sp/>at<sp/>vendor<sp/>Ahmet\n1.<sp/>Browse<sp/>Vendors\n2.<sp/>Search<sp/>Product\n3.<sp/>Exit\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Exiting<sp/>Listing<sp/>Of<sp/>Infos...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(testOutputBuffer,<sp/>expectedOutput);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="169" refid="farmermarket__test_8cpp_1a5cd284e77913a229eaabceee15a88822" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>InvalidOptionTest)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>fputs(</highlight><highlight class="stringliteral">&quot;invalid\n3\n&quot;</highlight><highlight class="normal">,<sp/>testIn);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testIn);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>listingOfInfos(testIn,<sp/>testOut);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testOut);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>ReadTestOutput();</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>expectedOutput[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;1.<sp/>Browse<sp/>Vendors\n2.<sp/>Search<sp/>Product\n3.<sp/>Exit\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Invalid<sp/>input,<sp/>please<sp/>enter<sp/>a<sp/>number.\n1.<sp/>Browse<sp/>Vendors\n2.<sp/>Search<sp/>Product\n3.<sp/>Exit\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Exiting<sp/>Listing<sp/>Of<sp/>Infos...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(testOutputBuffer,<sp/>expectedOutput);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="181" refid="farmermarket__test_8cpp_1a2c63e48eec1aacb996bc3cdef61df59d" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>VendorNotFoundTest)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>fputs(</highlight><highlight class="stringliteral">&quot;1\nNonExistingVendor\n3\n&quot;</highlight><highlight class="normal">,<sp/>testIn);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testIn);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>listingOfInfos(testIn,<sp/>testOut);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testOut);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>ReadTestOutput();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>expectedOutput[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;1.<sp/>Browse<sp/>Vendors\n2.<sp/>Search<sp/>Product\n3.<sp/>Exit\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Please<sp/>enter<sp/>vendor<sp/>name:<sp/>Vendor<sp/>not<sp/>found.\n1.<sp/>Browse<sp/>Vendors\n2.<sp/>Search<sp/>Product\n3.<sp/>Exit\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Exiting<sp/>Listing<sp/>Of<sp/>Infos...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(testOutputBuffer,<sp/>expectedOutput);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="193" refid="farmermarket__test_8cpp_1a0e3ac2b612fe28ed65abe29d840ffaf6" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>ProductNotFoundTest)<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>fputs(</highlight><highlight class="stringliteral">&quot;2\nNonExistingProduct\n3\n&quot;</highlight><highlight class="normal">,<sp/>testIn);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testIn);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>listingOfInfos(testIn,<sp/>testOut);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testOut);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>ReadTestOutput();</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>expectedOutput[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;1.<sp/>Browse<sp/>Vendors\n2.<sp/>Search<sp/>Product\n3.<sp/>Exit\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Please<sp/>enter<sp/>product<sp/>name:<sp/>Product<sp/>not<sp/>found.\n1.<sp/>Browse<sp/>Vendors\n2.<sp/>Search<sp/>Product\n3.<sp/>Exit\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Exiting<sp/>Listing<sp/>Of<sp/>Infos...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(testOutputBuffer,<sp/>expectedOutput);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="205" refid="farmermarket__test_8cpp_1ad8670cae87296596568d6a5706cde133" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>InvalidMenuOptionTest)<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>fputs(</highlight><highlight class="stringliteral">&quot;5\n3\n&quot;</highlight><highlight class="normal">,<sp/>testIn);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testIn);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>listingOfInfos(testIn,<sp/>testOut);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testOut);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>ReadTestOutput();</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>expectedOutput[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;1.<sp/>Browse<sp/>Vendors\n2.<sp/>Search<sp/>Product\n3.<sp/>Exit\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Invalid<sp/>option,<sp/>please<sp/>try<sp/>again.\n1.<sp/>Browse<sp/>Vendors\n2.<sp/>Search<sp/>Product\n3.<sp/>Exit\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Exiting<sp/>Listing<sp/>Of<sp/>Infos...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(testOutputBuffer,<sp/>expectedOutput);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="farmermarket__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)<sp/>{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ENABLE_FARMERMARKET_TEST</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>::testing::InitGoogleTest(&amp;argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>RUN_ALL_TESTS();</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/tests/farmermarket/farmermarket_test.cpp"/>
   </compounddef>

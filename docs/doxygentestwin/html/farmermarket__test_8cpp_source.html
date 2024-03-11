@@ -190,14 +190,119 @@ $(function() {
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    EXPECT_FALSE(authResult);</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    EXPECT_STREQ(testOutputBuffer, expectedOutput);</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>}</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">  120</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="farmermarket__test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">#ifdef ENABLE_FARMERMARKET_TEST</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    ::testing::InitGoogleTest(&amp;argc, argv);</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordflow">return</span> RUN_ALL_TESTS();</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a999455f2f35e46c3183a35991ba64c61">  114</a></span><a class="code hl_function" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code hl_class" href="class_farmermarket_test.html">FarmermarketTest</a>, HandlePointerSwap) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordtype">char</span>* a = strdup(<span class="stringliteral">&quot;hello&quot;</span>);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordtype">char</span>* b = strdup(<span class="stringliteral">&quot;world&quot;</span>);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    EXPECT_TRUE(swap(&amp;a, &amp;b));</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    EXPECT_STREQ(b, <span class="stringliteral">&quot;hello&quot;</span>);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    EXPECT_STREQ(a, <span class="stringliteral">&quot;world&quot;</span>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    free(a);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    free(b);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a74d1cf642aacbd0dbe38becf853febab">  123</a></span><a class="code hl_function" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code hl_class" href="class_farmermarket_test.html">FarmermarketTest</a>, HandleSorting) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordtype">char</span>* arr[] = { <span class="stringliteral">&quot;banana&quot;</span>, <span class="stringliteral">&quot;apple&quot;</span>, <span class="stringliteral">&quot;orange&quot;</span>, <span class="stringliteral">&quot;mango&quot;</span> };</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">int</span> n = <span class="keyword">sizeof</span>(arr) / <span class="keyword">sizeof</span>(arr[0]);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    quickSort(arr, 0, n - 1);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    EXPECT_STREQ(arr[0], <span class="stringliteral">&quot;apple&quot;</span>);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    EXPECT_STREQ(arr[1], <span class="stringliteral">&quot;banana&quot;</span>);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    EXPECT_STREQ(arr[2], <span class="stringliteral">&quot;mango&quot;</span>);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    EXPECT_STREQ(arr[3], <span class="stringliteral">&quot;orange&quot;</span>);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>}</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a14c57fb22686cfbb45d1d58cc6a3b80a">  132</a></span><a class="code hl_function" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code hl_class" href="class_farmermarket_test.html">FarmermarketTest</a>, FindElement) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordtype">char</span>* arr[] = { <span class="stringliteral">&quot;apple&quot;</span>, <span class="stringliteral">&quot;banana&quot;</span>, <span class="stringliteral">&quot;mango&quot;</span>, <span class="stringliteral">&quot;orange&quot;</span> };</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordtype">int</span> n = <span class="keyword">sizeof</span>(arr) / <span class="keyword">sizeof</span>(arr[0]);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    EXPECT_EQ(binarySearch(arr, 0, n - 1, <span class="stringliteral">&quot;mango&quot;</span>), 2);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    EXPECT_EQ(binarySearch(arr, 0, n - 1, <span class="stringliteral">&quot;apple&quot;</span>), 0);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    EXPECT_EQ(binarySearch(arr, 0, n - 1, <span class="stringliteral">&quot;notinthelist&quot;</span>), -1);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a6cac2242f62229a72d684c36f65431fb">  139</a></span><a class="code hl_function" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code hl_class" href="class_farmermarket_test.html">FarmermarketTest</a>, SearchInArray) {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordtype">char</span>* arr[] = { <span class="stringliteral">&quot;apple&quot;</span>, <span class="stringliteral">&quot;banana&quot;</span>, <span class="stringliteral">&quot;mango&quot;</span>, <span class="stringliteral">&quot;orange&quot;</span> };</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordtype">int</span> n = <span class="keyword">sizeof</span>(arr) / <span class="keyword">sizeof</span>(arr[0]);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    EXPECT_TRUE(searchAndPrintResult(arr, n, <span class="stringliteral">&quot;banana&quot;</span>));</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    EXPECT_FALSE(searchAndPrintResult(arr, n, <span class="stringliteral">&quot;cherry&quot;</span>));</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>}</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a2765df0da2dd353c058842e928888e5d">  145</a></span><a class="code hl_function" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code hl_class" href="class_farmermarket_test.html">FarmermarketTest</a>, VendorSearchTest) {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    fputs(<span class="stringliteral">&quot;1\nAhmet\n3\n&quot;</span>, testIn);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    rewind(testIn);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    listingOfInfos(testIn, testOut);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    rewind(testOut);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    ReadTestOutput();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordtype">char</span> expectedOutput[] = <span class="stringliteral">&quot;1. Browse Vendors\n2. Search Product\n3. Exit\nPlease select an option: Please enter vendor name: Vendor found: Ahmet\n1. Browse Vendors\n2. Search Product\n3. Exit\nPlease select an option: Exiting Listing Of Infos...\n&quot;</span>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    EXPECT_STREQ(testOutputBuffer, expectedOutput);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>}</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a150d6f4ae9cff07249823071c7538988">  157</a></span><a class="code hl_function" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code hl_class" href="class_farmermarket_test.html">FarmermarketTest</a>, ProductSearchTest) {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    fputs(<span class="stringliteral">&quot;2\nBanana\n3\n&quot;</span>, testIn);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    rewind(testIn);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    listingOfInfos(testIn, testOut);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    rewind(testOut);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    ReadTestOutput();</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordtype">char</span> expectedOutput[] = <span class="stringliteral">&quot;1. Browse Vendors\n2. Search Product\n3. Exit\nPlease select an option: Please enter product name: Product Banana found at vendor Ahmet\n1. Browse Vendors\n2. Search Product\n3. Exit\nPlease select an option: Exiting Listing Of Infos...\n&quot;</span>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    EXPECT_STREQ(testOutputBuffer, expectedOutput);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>}</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a5cd284e77913a229eaabceee15a88822">  169</a></span><a class="code hl_function" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code hl_class" href="class_farmermarket_test.html">FarmermarketTest</a>, InvalidOptionTest) {</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    fputs(<span class="stringliteral">&quot;invalid\n3\n&quot;</span>, testIn);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    rewind(testIn);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    listingOfInfos(testIn, testOut);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    rewind(testOut);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    ReadTestOutput();</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordtype">char</span> expectedOutput[] = <span class="stringliteral">&quot;1. Browse Vendors\n2. Search Product\n3. Exit\nPlease select an option: Invalid input, please enter a number.\n1. Browse Vendors\n2. Search Product\n3. Exit\nPlease select an option: Exiting Listing Of Infos...\n&quot;</span>;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    EXPECT_STREQ(testOutputBuffer, expectedOutput);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>}</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a2c63e48eec1aacb996bc3cdef61df59d">  181</a></span><a class="code hl_function" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code hl_class" href="class_farmermarket_test.html">FarmermarketTest</a>, VendorNotFoundTest) {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    fputs(<span class="stringliteral">&quot;1\nNonExistingVendor\n3\n&quot;</span>, testIn);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    rewind(testIn);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    listingOfInfos(testIn, testOut);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    rewind(testOut);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    ReadTestOutput();</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordtype">char</span> expectedOutput[] = <span class="stringliteral">&quot;1. Browse Vendors\n2. Search Product\n3. Exit\nPlease select an option: Please enter vendor name: Vendor not found.\n1. Browse Vendors\n2. Search Product\n3. Exit\nPlease select an option: Exiting Listing Of Infos...\n&quot;</span>;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    EXPECT_STREQ(testOutputBuffer, expectedOutput);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>}</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a0e3ac2b612fe28ed65abe29d840ffaf6">  193</a></span><a class="code hl_function" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code hl_class" href="class_farmermarket_test.html">FarmermarketTest</a>, ProductNotFoundTest) {</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    fputs(<span class="stringliteral">&quot;2\nNonExistingProduct\n3\n&quot;</span>, testIn);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    rewind(testIn);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    listingOfInfos(testIn, testOut);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    rewind(testOut);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    ReadTestOutput();</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordtype">char</span> expectedOutput[] = <span class="stringliteral">&quot;1. Browse Vendors\n2. Search Product\n3. Exit\nPlease select an option: Please enter product name: Product not found.\n1. Browse Vendors\n2. Search Product\n3. Exit\nPlease select an option: Exiting Listing Of Infos...\n&quot;</span>;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    EXPECT_STREQ(testOutputBuffer, expectedOutput);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>}</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#ad8670cae87296596568d6a5706cde133">  205</a></span><a class="code hl_function" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code hl_class" href="class_farmermarket_test.html">FarmermarketTest</a>, InvalidMenuOptionTest) {</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    fputs(<span class="stringliteral">&quot;5\n3\n&quot;</span>, testIn);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    rewind(testIn);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    listingOfInfos(testIn, testOut);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    rewind(testOut);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    ReadTestOutput();</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keywordtype">char</span> expectedOutput[] = <span class="stringliteral">&quot;1. Browse Vendors\n2. Search Product\n3. Exit\nPlease select an option: Invalid option, please try again.\n1. Browse Vendors\n2. Search Product\n3. Exit\nPlease select an option: Exiting Listing Of Infos...\n&quot;</span>;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    EXPECT_STREQ(testOutputBuffer, expectedOutput);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>}</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">  225</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="farmermarket__test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) {</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="preprocessor">#ifdef ENABLE_FARMERMARKET_TEST</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    ::testing::InitGoogleTest(&amp;argc, argv);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keywordflow">return</span> RUN_ALL_TESTS();</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>}</div>
 <div class="ttc" id="aclass_farmermarket_test_html"><div class="ttname"><a href="class_farmermarket_test.html">FarmermarketTest</a></div><div class="ttdef"><b>Definition</b> <a href="farmermarket__test_8cpp_source.html#l00003">farmermarket_test.cpp:3</a></div></div>
 <div class="ttc" id="aclass_farmermarket_test_html_a0016e959eca974c84485fabf4f0a46b8"><div class="ttname"><a href="class_farmermarket_test.html#a0016e959eca974c84485fabf4f0a46b8">FarmermarketTest::TearDown</a></div><div class="ttdeci">void TearDown() override</div><div class="ttdef"><b>Definition</b> <a href="farmermarket__test_8cpp_source.html#l00013">farmermarket_test.cpp:13</a></div></div>
 <div class="ttc" id="aclass_farmermarket_test_html_a1fe118834bc3bb477a7bf76893dfc543"><div class="ttname"><a href="class_farmermarket_test.html#a1fe118834bc3bb477a7bf76893dfc543">FarmermarketTest::ReadTestOutput</a></div><div class="ttdeci">void ReadTestOutput()</div><div class="ttdef"><b>Definition</b> <a href="farmermarket__test_8cpp_source.html#l00018">farmermarket_test.cpp:18</a></div></div>
@@ -206,7 +311,7 @@ $(function() {
 <div class="ttc" id="aclass_farmermarket_test_html_a8de5f036a4b01251ab52e18948169cc7"><div class="ttname"><a href="class_farmermarket_test.html#a8de5f036a4b01251ab52e18948169cc7">FarmermarketTest::testOut</a></div><div class="ttdeci">FILE * testOut</div><div class="ttdef"><b>Definition</b> <a href="farmermarket__test_8cpp_source.html#l00007">farmermarket_test.cpp:7</a></div></div>
 <div class="ttc" id="aclass_farmermarket_test_html_ab41c0bee33799c143c4ba9cf4da9c9e0"><div class="ttname"><a href="class_farmermarket_test.html#ab41c0bee33799c143c4ba9cf4da9c9e0">FarmermarketTest::testFilename</a></div><div class="ttdeci">const char * testFilename</div><div class="ttdef"><b>Definition</b> <a href="farmermarket__test_8cpp_source.html#l00005">farmermarket_test.cpp:5</a></div></div>
 <div class="ttc" id="aclass_farmermarket_test_html_acc4d000f23da803eb24a8313730aab50"><div class="ttname"><a href="class_farmermarket_test.html#acc4d000f23da803eb24a8313730aab50">FarmermarketTest::testOutputBuffer</a></div><div class="ttdeci">char testOutputBuffer[1024]</div><div class="ttdef"><b>Definition</b> <a href="farmermarket__test_8cpp_source.html#l00008">farmermarket_test.cpp:8</a></div></div>
-<div class="ttc" id="afarmermarket__test_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="farmermarket__test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdoc">The main function of the test program.</div><div class="ttdef"><b>Definition</b> <a href="farmermarket__test_8cpp_source.html#l00120">farmermarket_test.cpp:120</a></div></div>
+<div class="ttc" id="afarmermarket__test_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="farmermarket__test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdoc">The main function of the test program.</div><div class="ttdef"><b>Definition</b> <a href="farmermarket__test_8cpp_source.html#l00225">farmermarket_test.cpp:225</a></div></div>
 <div class="ttc" id="afarmermarket__test_8cpp_html_a9f96c9e5ef0c2a3087b85ca7938fd199"><div class="ttname"><a href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a></div><div class="ttdeci">TEST_F(FarmermarketTest, SaveandAuthenticateUserTest)</div><div class="ttdef"><b>Definition</b> <a href="farmermarket__test_8cpp_source.html#l00027">farmermarket_test.cpp:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

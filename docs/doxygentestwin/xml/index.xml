@@ -22,6 +22,16 @@
     <member refid="farmermarket__test_8cpp_1a5ebd5ff8906ed71f9cc4b7af4cccbcef" kind="function"><name>TEST_F</name></member>
     <member refid="farmermarket__test_8cpp_1ac189b4e00d388361a1188d1bc6500b00" kind="function"><name>TEST_F</name></member>
     <member refid="farmermarket__test_8cpp_1a2fdbe1cfc718088428def5f505056e5b" kind="function"><name>TEST_F</name></member>
+    <member refid="farmermarket__test_8cpp_1a999455f2f35e46c3183a35991ba64c61" kind="function"><name>TEST_F</name></member>
+    <member refid="farmermarket__test_8cpp_1a74d1cf642aacbd0dbe38becf853febab" kind="function"><name>TEST_F</name></member>
+    <member refid="farmermarket__test_8cpp_1a14c57fb22686cfbb45d1d58cc6a3b80a" kind="function"><name>TEST_F</name></member>
+    <member refid="farmermarket__test_8cpp_1a6cac2242f62229a72d684c36f65431fb" kind="function"><name>TEST_F</name></member>
+    <member refid="farmermarket__test_8cpp_1a2765df0da2dd353c058842e928888e5d" kind="function"><name>TEST_F</name></member>
+    <member refid="farmermarket__test_8cpp_1a150d6f4ae9cff07249823071c7538988" kind="function"><name>TEST_F</name></member>
+    <member refid="farmermarket__test_8cpp_1a5cd284e77913a229eaabceee15a88822" kind="function"><name>TEST_F</name></member>
+    <member refid="farmermarket__test_8cpp_1a2c63e48eec1aacb996bc3cdef61df59d" kind="function"><name>TEST_F</name></member>
+    <member refid="farmermarket__test_8cpp_1a0e3ac2b612fe28ed65abe29d840ffaf6" kind="function"><name>TEST_F</name></member>
+    <member refid="farmermarket__test_8cpp_1ad8670cae87296596568d6a5706cde133" kind="function"><name>TEST_F</name></member>
     <member refid="farmermarket__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
   <compound refid="utility__test_8cpp" kind="file"><name>utility_test.cpp</name>

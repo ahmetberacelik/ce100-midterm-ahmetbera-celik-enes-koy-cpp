@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['saveuser_0',['saveUser',['../farmermarket_8h.html#a3571d8d7858de3069c0320b86f5c2d6c',1,'saveUser(const User *user, const char *filename):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a3571d8d7858de3069c0320b86f5c2d6c',1,'saveUser(const User *user, const char *filename):&#160;farmermarket.cpp']]]
+  ['listingofinfos_0',['listingOfInfos',['../farmermarket_8h.html#a6faa53c43bb0d63cca3e821483e46159',1,'listingOfInfos(FILE *in, FILE *out):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a6faa53c43bb0d63cca3e821483e46159',1,'listingOfInfos(FILE *in, FILE *out):&#160;farmermarket.cpp']]]
 ];

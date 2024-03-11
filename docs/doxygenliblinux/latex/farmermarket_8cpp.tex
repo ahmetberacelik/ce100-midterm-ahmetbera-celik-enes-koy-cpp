@@ -4,6 +4,8 @@
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdbool.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
 Include dependency graph for farmermarket.\+cpp\+:
 \nopagebreak
 \begin{figure}[H]
@@ -22,6 +24,18 @@ int \mbox{\hyperlink{farmermarket_8cpp_a3571d8d7858de3069c0320b86f5c2d6c}{save\+
 int \mbox{\hyperlink{farmermarket_8cpp_a7e955099fa8201496a50f8a9f8f22b46}{authenticate\+User}} (const char $\ast$username, const char $\ast$password, const char $\ast$filename)
 \item 
 bool \mbox{\hyperlink{farmermarket_8cpp_a6903abe4d5df4957642a65806ccb35a7}{user\+Authentication}} (FILE $\ast$in, FILE $\ast$out)
+\item 
+bool \mbox{\hyperlink{farmermarket_8cpp_a7ce3038a802aa59d3225588131ea97bb}{swap}} (char $\ast$$\ast$a, char $\ast$$\ast$b)
+\item 
+int \mbox{\hyperlink{farmermarket_8cpp_aa20d794eb7aaeb63297a19db22b775ca}{partition}} (char $\ast$arr\mbox{[}$\,$\mbox{]}, int low, int high)
+\item 
+bool \mbox{\hyperlink{farmermarket_8cpp_abe92df5eb77de11b244b68e5b635696a}{quick\+Sort}} (char $\ast$arr\mbox{[}$\,$\mbox{]}, int low, int high)
+\item 
+int \mbox{\hyperlink{farmermarket_8cpp_ab61c92aff538932520ee72d58ad3bdf0}{binary\+Search}} (char $\ast$arr\mbox{[}$\,$\mbox{]}, int l, int r, char $\ast$x)
+\item 
+bool \mbox{\hyperlink{farmermarket_8cpp_a89eb831fe57e17f7dec4227adaead9d4}{search\+And\+Print\+Result}} (char $\ast$arr\mbox{[}$\,$\mbox{]}, int size, char $\ast$x)
+\item 
+bool \mbox{\hyperlink{farmermarket_8cpp_a6faa53c43bb0d63cca3e821483e46159}{listing\+Of\+Infos}} (FILE $\ast$in, FILE $\ast$out)
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -39,17 +53,53 @@ char \mbox{\hyperlink{farmermarket_8cpp_a170f93ec0075e15cc70e036391b0a4ad}{activ
 \doxysubsubsection{\texorpdfstring{authenticateUser()}{authenticateUser()}}
 {\footnotesize\ttfamily int authenticate\+User (\begin{DoxyParamCaption}\item[{const char $\ast$}]{username,  }\item[{const char $\ast$}]{password,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{farmermarket_8cpp_ab61c92aff538932520ee72d58ad3bdf0}\label{farmermarket_8cpp_ab61c92aff538932520ee72d58ad3bdf0}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!binarySearch@{binarySearch}}
+\index{binarySearch@{binarySearch}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{binarySearch()}{binarySearch()}}
+{\footnotesize\ttfamily int binary\+Search (\begin{DoxyParamCaption}\item[{char $\ast$}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{l,  }\item[{int}]{r,  }\item[{char $\ast$}]{x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{farmermarket_8cpp_a6faa53c43bb0d63cca3e821483e46159}\label{farmermarket_8cpp_a6faa53c43bb0d63cca3e821483e46159}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!listingOfInfos@{listingOfInfos}}
+\index{listingOfInfos@{listingOfInfos}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{listingOfInfos()}{listingOfInfos()}}
+{\footnotesize\ttfamily bool listing\+Of\+Infos (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{in,  }\item[{FILE $\ast$}]{out }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{farmermarket_8cpp_a2d0255f645d941c02e7a6d600479552b}\label{farmermarket_8cpp_a2d0255f645d941c02e7a6d600479552b}} 
 \index{farmermarket.cpp@{farmermarket.cpp}!mainMenu@{mainMenu}}
 \index{mainMenu@{mainMenu}!farmermarket.cpp@{farmermarket.cpp}}
 \doxysubsubsection{\texorpdfstring{mainMenu()}{mainMenu()}}
 {\footnotesize\ttfamily bool main\+Menu (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{in,  }\item[{FILE $\ast$}]{out }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{farmermarket_8cpp_aa20d794eb7aaeb63297a19db22b775ca}\label{farmermarket_8cpp_aa20d794eb7aaeb63297a19db22b775ca}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!partition@{partition}}
+\index{partition@{partition}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{partition()}{partition()}}
+{\footnotesize\ttfamily int partition (\begin{DoxyParamCaption}\item[{char $\ast$}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{farmermarket_8cpp_abe92df5eb77de11b244b68e5b635696a}\label{farmermarket_8cpp_abe92df5eb77de11b244b68e5b635696a}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!quickSort@{quickSort}}
+\index{quickSort@{quickSort}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{quickSort()}{quickSort()}}
+{\footnotesize\ttfamily bool quick\+Sort (\begin{DoxyParamCaption}\item[{char $\ast$}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{farmermarket_8cpp_a3571d8d7858de3069c0320b86f5c2d6c}\label{farmermarket_8cpp_a3571d8d7858de3069c0320b86f5c2d6c}} 
 \index{farmermarket.cpp@{farmermarket.cpp}!saveUser@{saveUser}}
 \index{saveUser@{saveUser}!farmermarket.cpp@{farmermarket.cpp}}
 \doxysubsubsection{\texorpdfstring{saveUser()}{saveUser()}}
 {\footnotesize\ttfamily int save\+User (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structUser}{User}} $\ast$}]{user,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{farmermarket_8cpp_a89eb831fe57e17f7dec4227adaead9d4}\label{farmermarket_8cpp_a89eb831fe57e17f7dec4227adaead9d4}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!searchAndPrintResult@{searchAndPrintResult}}
+\index{searchAndPrintResult@{searchAndPrintResult}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{searchAndPrintResult()}{searchAndPrintResult()}}
+{\footnotesize\ttfamily bool search\+And\+Print\+Result (\begin{DoxyParamCaption}\item[{char $\ast$}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{size,  }\item[{char $\ast$}]{x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{farmermarket_8cpp_a7ce3038a802aa59d3225588131ea97bb}\label{farmermarket_8cpp_a7ce3038a802aa59d3225588131ea97bb}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!swap@{swap}}
+\index{swap@{swap}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily bool swap (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{a,  }\item[{char $\ast$$\ast$}]{b }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{farmermarket_8cpp_a6903abe4d5df4957642a65806ccb35a7}\label{farmermarket_8cpp_a6903abe4d5df4957642a65806ccb35a7}} 
 \index{farmermarket.cpp@{farmermarket.cpp}!userAuthentication@{userAuthentication}}

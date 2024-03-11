@@ -114,13 +114,118 @@
 \DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00110}00110\ \ \ \ \ EXPECT\_FALSE(authResult);}
 \DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00111}00111\ \ \ \ \ EXPECT\_STREQ(testOutputBuffer,\ expectedOutput);}
 \DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00112}00112\ \}}
-\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00120}\mbox{\hyperlink{farmermarket__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{00120}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}**\ argv)\ \{}
-\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00121}00121\ \textcolor{preprocessor}{\#ifdef\ ENABLE\_FARMERMARKET\_TEST}}
-\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00122}00122\ \ \ \ \ ::testing::InitGoogleTest(\&argc,\ argv);}
-\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00123}00123\ \ \ \ \ \textcolor{keywordflow}{return}\ RUN\_ALL\_TESTS();}
-\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00124}00124\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00125}00125\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00126}00126\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00127}00127\ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00114}\mbox{\hyperlink{farmermarket__test_8cpp_a999455f2f35e46c3183a35991ba64c61}{00114}}\ \mbox{\hyperlink{farmermarket__test_8cpp_a9f96c9e5ef0c2a3087b85ca7938fd199}{TEST\_F}}(\mbox{\hyperlink{class_farmermarket_test}{FarmermarketTest}},\ HandlePointerSwap)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00115}00115\ \ \ \ \ \textcolor{keywordtype}{char}*\ a\ =\ strdup(\textcolor{stringliteral}{"{}hello"{}});}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00116}00116\ \ \ \ \ \textcolor{keywordtype}{char}*\ b\ =\ strdup(\textcolor{stringliteral}{"{}world"{}});}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00117}00117\ \ \ \ \ EXPECT\_TRUE(swap(\&a,\ \&b));}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00118}00118\ \ \ \ \ EXPECT\_STREQ(b,\ \textcolor{stringliteral}{"{}hello"{}});}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00119}00119\ \ \ \ \ EXPECT\_STREQ(a,\ \textcolor{stringliteral}{"{}world"{}});}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00120}00120\ \ \ \ \ free(a);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00121}00121\ \ \ \ \ free(b);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00122}00122\ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00123}\mbox{\hyperlink{farmermarket__test_8cpp_a74d1cf642aacbd0dbe38becf853febab}{00123}}\ \mbox{\hyperlink{farmermarket__test_8cpp_a9f96c9e5ef0c2a3087b85ca7938fd199}{TEST\_F}}(\mbox{\hyperlink{class_farmermarket_test}{FarmermarketTest}},\ HandleSorting)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00124}00124\ \ \ \ \ \textcolor{keywordtype}{char}*\ arr[]\ =\ \{\ \textcolor{stringliteral}{"{}banana"{}},\ \textcolor{stringliteral}{"{}apple"{}},\ \textcolor{stringliteral}{"{}orange"{}},\ \textcolor{stringliteral}{"{}mango"{}}\ \};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00125}00125\ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ \textcolor{keyword}{sizeof}(arr)\ /\ \textcolor{keyword}{sizeof}(arr[0]);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00126}00126\ \ \ \ \ quickSort(arr,\ 0,\ n\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00127}00127\ \ \ \ \ EXPECT\_STREQ(arr[0],\ \textcolor{stringliteral}{"{}apple"{}});}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00128}00128\ \ \ \ \ EXPECT\_STREQ(arr[1],\ \textcolor{stringliteral}{"{}banana"{}});}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00129}00129\ \ \ \ \ EXPECT\_STREQ(arr[2],\ \textcolor{stringliteral}{"{}mango"{}});}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00130}00130\ \ \ \ \ EXPECT\_STREQ(arr[3],\ \textcolor{stringliteral}{"{}orange"{}});}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00131}00131\ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00132}\mbox{\hyperlink{farmermarket__test_8cpp_a14c57fb22686cfbb45d1d58cc6a3b80a}{00132}}\ \mbox{\hyperlink{farmermarket__test_8cpp_a9f96c9e5ef0c2a3087b85ca7938fd199}{TEST\_F}}(\mbox{\hyperlink{class_farmermarket_test}{FarmermarketTest}},\ FindElement)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00133}00133\ \ \ \ \ \textcolor{keywordtype}{char}*\ arr[]\ =\ \{\ \textcolor{stringliteral}{"{}apple"{}},\ \textcolor{stringliteral}{"{}banana"{}},\ \textcolor{stringliteral}{"{}mango"{}},\ \textcolor{stringliteral}{"{}orange"{}}\ \};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00134}00134\ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ \textcolor{keyword}{sizeof}(arr)\ /\ \textcolor{keyword}{sizeof}(arr[0]);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00135}00135\ \ \ \ \ EXPECT\_EQ(binarySearch(arr,\ 0,\ n\ -\/\ 1,\ \textcolor{stringliteral}{"{}mango"{}}),\ 2);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00136}00136\ \ \ \ \ EXPECT\_EQ(binarySearch(arr,\ 0,\ n\ -\/\ 1,\ \textcolor{stringliteral}{"{}apple"{}}),\ 0);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00137}00137\ \ \ \ \ EXPECT\_EQ(binarySearch(arr,\ 0,\ n\ -\/\ 1,\ \textcolor{stringliteral}{"{}notinthelist"{}}),\ -\/1);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00138}00138\ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00139}\mbox{\hyperlink{farmermarket__test_8cpp_a6cac2242f62229a72d684c36f65431fb}{00139}}\ \mbox{\hyperlink{farmermarket__test_8cpp_a9f96c9e5ef0c2a3087b85ca7938fd199}{TEST\_F}}(\mbox{\hyperlink{class_farmermarket_test}{FarmermarketTest}},\ SearchInArray)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00140}00140\ \ \ \ \ \textcolor{keywordtype}{char}*\ arr[]\ =\ \{\ \textcolor{stringliteral}{"{}apple"{}},\ \textcolor{stringliteral}{"{}banana"{}},\ \textcolor{stringliteral}{"{}mango"{}},\ \textcolor{stringliteral}{"{}orange"{}}\ \};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00141}00141\ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ \textcolor{keyword}{sizeof}(arr)\ /\ \textcolor{keyword}{sizeof}(arr[0]);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00142}00142\ \ \ \ \ EXPECT\_TRUE(searchAndPrintResult(arr,\ n,\ \textcolor{stringliteral}{"{}banana"{}}));}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00143}00143\ \ \ \ \ EXPECT\_FALSE(searchAndPrintResult(arr,\ n,\ \textcolor{stringliteral}{"{}cherry"{}}));}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00144}00144\ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00145}\mbox{\hyperlink{farmermarket__test_8cpp_a2765df0da2dd353c058842e928888e5d}{00145}}\ \mbox{\hyperlink{farmermarket__test_8cpp_a9f96c9e5ef0c2a3087b85ca7938fd199}{TEST\_F}}(\mbox{\hyperlink{class_farmermarket_test}{FarmermarketTest}},\ VendorSearchTest)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00146}00146\ \ \ \ \ fputs(\textcolor{stringliteral}{"{}1\(\backslash\)nAhmet\(\backslash\)n3\(\backslash\)n"{}},\ testIn);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00147}00147\ \ \ \ \ rewind(testIn);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00149}00149\ \ \ \ \ listingOfInfos(testIn,\ testOut);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00151}00151\ \ \ \ \ rewind(testOut);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00153}00153\ \ \ \ \ ReadTestOutput();}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00154}00154\ \ \ \ \ \textcolor{keywordtype}{char}\ expectedOutput[]\ =\ \textcolor{stringliteral}{"{}1.\ Browse\ Vendors\(\backslash\)n2.\ Search\ Product\(\backslash\)n3.\ Exit\(\backslash\)nPlease\ select\ an\ option:\ Please\ enter\ vendor\ name:\ Vendor\ found:\ Ahmet\(\backslash\)n1.\ Browse\ Vendors\(\backslash\)n2.\ Search\ Product\(\backslash\)n3.\ Exit\(\backslash\)nPlease\ select\ an\ option:\ Exiting\ Listing\ Of\ Infos...\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00155}00155\ \ \ \ \ EXPECT\_STREQ(testOutputBuffer,\ expectedOutput);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00156}00156\ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00157}\mbox{\hyperlink{farmermarket__test_8cpp_a150d6f4ae9cff07249823071c7538988}{00157}}\ \mbox{\hyperlink{farmermarket__test_8cpp_a9f96c9e5ef0c2a3087b85ca7938fd199}{TEST\_F}}(\mbox{\hyperlink{class_farmermarket_test}{FarmermarketTest}},\ ProductSearchTest)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00158}00158\ \ \ \ \ fputs(\textcolor{stringliteral}{"{}2\(\backslash\)nBanana\(\backslash\)n3\(\backslash\)n"{}},\ testIn);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00159}00159\ \ \ \ \ rewind(testIn);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00161}00161\ \ \ \ \ listingOfInfos(testIn,\ testOut);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00163}00163\ \ \ \ \ rewind(testOut);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00165}00165\ \ \ \ \ ReadTestOutput();}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00166}00166\ \ \ \ \ \textcolor{keywordtype}{char}\ expectedOutput[]\ =\ \textcolor{stringliteral}{"{}1.\ Browse\ Vendors\(\backslash\)n2.\ Search\ Product\(\backslash\)n3.\ Exit\(\backslash\)nPlease\ select\ an\ option:\ Please\ enter\ product\ name:\ Product\ Banana\ found\ at\ vendor\ Ahmet\(\backslash\)n1.\ Browse\ Vendors\(\backslash\)n2.\ Search\ Product\(\backslash\)n3.\ Exit\(\backslash\)nPlease\ select\ an\ option:\ Exiting\ Listing\ Of\ Infos...\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00167}00167\ \ \ \ \ EXPECT\_STREQ(testOutputBuffer,\ expectedOutput);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00168}00168\ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00169}\mbox{\hyperlink{farmermarket__test_8cpp_a5cd284e77913a229eaabceee15a88822}{00169}}\ \mbox{\hyperlink{farmermarket__test_8cpp_a9f96c9e5ef0c2a3087b85ca7938fd199}{TEST\_F}}(\mbox{\hyperlink{class_farmermarket_test}{FarmermarketTest}},\ InvalidOptionTest)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00170}00170\ \ \ \ \ fputs(\textcolor{stringliteral}{"{}invalid\(\backslash\)n3\(\backslash\)n"{}},\ testIn);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00171}00171\ \ \ \ \ rewind(testIn);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00173}00173\ \ \ \ \ listingOfInfos(testIn,\ testOut);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00174}00174\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00175}00175\ \ \ \ \ rewind(testOut);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00177}00177\ \ \ \ \ ReadTestOutput();}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00178}00178\ \ \ \ \ \textcolor{keywordtype}{char}\ expectedOutput[]\ =\ \textcolor{stringliteral}{"{}1.\ Browse\ Vendors\(\backslash\)n2.\ Search\ Product\(\backslash\)n3.\ Exit\(\backslash\)nPlease\ select\ an\ option:\ Invalid\ input,\ please\ enter\ a\ number.\(\backslash\)n1.\ Browse\ Vendors\(\backslash\)n2.\ Search\ Product\(\backslash\)n3.\ Exit\(\backslash\)nPlease\ select\ an\ option:\ Exiting\ Listing\ Of\ Infos...\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00179}00179\ \ \ \ \ EXPECT\_STREQ(testOutputBuffer,\ expectedOutput);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00180}00180\ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00181}\mbox{\hyperlink{farmermarket__test_8cpp_a2c63e48eec1aacb996bc3cdef61df59d}{00181}}\ \mbox{\hyperlink{farmermarket__test_8cpp_a9f96c9e5ef0c2a3087b85ca7938fd199}{TEST\_F}}(\mbox{\hyperlink{class_farmermarket_test}{FarmermarketTest}},\ VendorNotFoundTest)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00182}00182\ \ \ \ \ fputs(\textcolor{stringliteral}{"{}1\(\backslash\)nNonExistingVendor\(\backslash\)n3\(\backslash\)n"{}},\ testIn);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00183}00183\ \ \ \ \ rewind(testIn);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00185}00185\ \ \ \ \ listingOfInfos(testIn,\ testOut);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00187}00187\ \ \ \ \ rewind(testOut);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00189}00189\ \ \ \ \ ReadTestOutput();}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00190}00190\ \ \ \ \ \textcolor{keywordtype}{char}\ expectedOutput[]\ =\ \textcolor{stringliteral}{"{}1.\ Browse\ Vendors\(\backslash\)n2.\ Search\ Product\(\backslash\)n3.\ Exit\(\backslash\)nPlease\ select\ an\ option:\ Please\ enter\ vendor\ name:\ Vendor\ not\ found.\(\backslash\)n1.\ Browse\ Vendors\(\backslash\)n2.\ Search\ Product\(\backslash\)n3.\ Exit\(\backslash\)nPlease\ select\ an\ option:\ Exiting\ Listing\ Of\ Infos...\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00191}00191\ \ \ \ \ EXPECT\_STREQ(testOutputBuffer,\ expectedOutput);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00192}00192\ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00193}\mbox{\hyperlink{farmermarket__test_8cpp_a0e3ac2b612fe28ed65abe29d840ffaf6}{00193}}\ \mbox{\hyperlink{farmermarket__test_8cpp_a9f96c9e5ef0c2a3087b85ca7938fd199}{TEST\_F}}(\mbox{\hyperlink{class_farmermarket_test}{FarmermarketTest}},\ ProductNotFoundTest)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00194}00194\ \ \ \ \ fputs(\textcolor{stringliteral}{"{}2\(\backslash\)nNonExistingProduct\(\backslash\)n3\(\backslash\)n"{}},\ testIn);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00195}00195\ \ \ \ \ rewind(testIn);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00196}00196\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00197}00197\ \ \ \ \ listingOfInfos(testIn,\ testOut);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00199}00199\ \ \ \ \ rewind(testOut);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00201}00201\ \ \ \ \ ReadTestOutput();}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00202}00202\ \ \ \ \ \textcolor{keywordtype}{char}\ expectedOutput[]\ =\ \textcolor{stringliteral}{"{}1.\ Browse\ Vendors\(\backslash\)n2.\ Search\ Product\(\backslash\)n3.\ Exit\(\backslash\)nPlease\ select\ an\ option:\ Please\ enter\ product\ name:\ Product\ not\ found.\(\backslash\)n1.\ Browse\ Vendors\(\backslash\)n2.\ Search\ Product\(\backslash\)n3.\ Exit\(\backslash\)nPlease\ select\ an\ option:\ Exiting\ Listing\ Of\ Infos...\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00203}00203\ \ \ \ \ EXPECT\_STREQ(testOutputBuffer,\ expectedOutput);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00204}00204\ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00205}\mbox{\hyperlink{farmermarket__test_8cpp_ad8670cae87296596568d6a5706cde133}{00205}}\ \mbox{\hyperlink{farmermarket__test_8cpp_a9f96c9e5ef0c2a3087b85ca7938fd199}{TEST\_F}}(\mbox{\hyperlink{class_farmermarket_test}{FarmermarketTest}},\ InvalidMenuOptionTest)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00206}00206\ \ \ \ \ fputs(\textcolor{stringliteral}{"{}5\(\backslash\)n3\(\backslash\)n"{}},\ testIn);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00207}00207\ \ \ \ \ rewind(testIn);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00209}00209\ \ \ \ \ listingOfInfos(testIn,\ testOut);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00211}00211\ \ \ \ \ rewind(testOut);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00213}00213\ \ \ \ \ ReadTestOutput();}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00214}00214\ \ \ \ \ \textcolor{keywordtype}{char}\ expectedOutput[]\ =\ \textcolor{stringliteral}{"{}1.\ Browse\ Vendors\(\backslash\)n2.\ Search\ Product\(\backslash\)n3.\ Exit\(\backslash\)nPlease\ select\ an\ option:\ Invalid\ option,\ please\ try\ again.\(\backslash\)n1.\ Browse\ Vendors\(\backslash\)n2.\ Search\ Product\(\backslash\)n3.\ Exit\(\backslash\)nPlease\ select\ an\ option:\ Exiting\ Listing\ Of\ Infos...\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00215}00215\ \ \ \ \ EXPECT\_STREQ(testOutputBuffer,\ expectedOutput);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00216}00216\ \}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00217}00217\ }
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00225}\mbox{\hyperlink{farmermarket__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{00225}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}**\ argv)\ \{}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00226}00226\ \textcolor{preprocessor}{\#ifdef\ ENABLE\_FARMERMARKET\_TEST}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00227}00227\ \ \ \ \ ::testing::InitGoogleTest(\&argc,\ argv);}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00228}00228\ \ \ \ \ \textcolor{keywordflow}{return}\ RUN\_ALL\_TESTS();}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00229}00229\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00230}00230\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00231}00231\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{farmermarket__test_8cpp_source_l00232}00232\ \}}
 
 \end{DoxyCode}

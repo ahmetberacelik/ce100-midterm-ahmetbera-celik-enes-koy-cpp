@@ -124,6 +124,156 @@
         </inbodydescription>
         <location file="src/farmermarket/header/farmermarket.h" line="20" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="72" bodyend="146" declfile="src/farmermarket/header/farmermarket.h" declline="20" declcolumn="6"/>
       </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1a7ce3038a802aa59d3225588131ea97bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool swap</definition>
+        <argsstring>(char **a, char **b)</argsstring>
+        <name>swap</name>
+        <param>
+          <type>char **</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="22" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="148" bodyend="153" declfile="src/farmermarket/header/farmermarket.h" declline="22" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1aa20d794eb7aaeb63297a19db22b775ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int partition</definition>
+        <argsstring>(char *arr[], int low, int high)</argsstring>
+        <name>partition</name>
+        <param>
+          <type>char *</type>
+          <declname>arr</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>low</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>high</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="24" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="155" bodyend="172" declfile="src/farmermarket/header/farmermarket.h" declline="24" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1abe92df5eb77de11b244b68e5b635696a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool quickSort</definition>
+        <argsstring>(char *arr[], int low, int high)</argsstring>
+        <name>quickSort</name>
+        <param>
+          <type>char *</type>
+          <declname>arr</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>low</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>high</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="26" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="174" bodyend="182" declfile="src/farmermarket/header/farmermarket.h" declline="26" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1ab61c92aff538932520ee72d58ad3bdf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int binarySearch</definition>
+        <argsstring>(char *arr[], int l, int r, char *x)</argsstring>
+        <name>binarySearch</name>
+        <param>
+          <type>char *</type>
+          <declname>arr</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="28" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="184" bodyend="202" declfile="src/farmermarket/header/farmermarket.h" declline="28" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1a89eb831fe57e17f7dec4227adaead9d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool searchAndPrintResult</definition>
+        <argsstring>(char *arr[], int size, char *x)</argsstring>
+        <name>searchAndPrintResult</name>
+        <param>
+          <type>char *</type>
+          <declname>arr</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="30" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="203" bodyend="210" declfile="src/farmermarket/header/farmermarket.h" declline="30" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1a6faa53c43bb0d63cca3e821483e46159" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool listingOfInfos</definition>
+        <argsstring>(FILE *in, FILE *out)</argsstring>
+        <name>listingOfInfos</name>
+        <param>
+          <type>FILE *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="32" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="212" bodyend="277" declfile="src/farmermarket/header/farmermarket.h" declline="32" declcolumn="6"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Provides functions. </para>
@@ -147,7 +297,19 @@
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a7e955099fa8201496a50f8a9f8f22b46" kindref="member">authenticateUser</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>username,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>password,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a6903abe4d5df4957642a65806ccb35a7" kindref="member">userAuthentication</ref>(FILE*<sp/>in,<sp/>FILE*<sp/>out);</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>FARMERMARKET_H</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a7ce3038a802aa59d3225588131ea97bb" kindref="member">swap</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>a,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>b);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1aa20d794eb7aaeb63297a19db22b775ca" kindref="member">partition</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>low,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>high);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1abe92df5eb77de11b244b68e5b635696a" kindref="member">quickSort</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>low,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>high);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1ab61c92aff538932520ee72d58ad3bdf0" kindref="member">binarySearch</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>x);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a89eb831fe57e17f7dec4227adaead9d4" kindref="member">searchAndPrintResult</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>x);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a6faa53c43bb0d63cca3e821483e46159" kindref="member">listingOfInfos</ref>(FILE*<sp/>in,<sp/>FILE*<sp/>out);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>FARMERMARKET_H</highlight></codeline>
     </programlisting>
     <location file="src/farmermarket/header/farmermarket.h"/>
   </compounddef>
