@@ -9,18 +9,18 @@
   <compound refid="README_8md" kind="file"><name>README.md</name>
   </compound>
   <compound refid="farmermarket_8h" kind="file"><name>farmermarket.h</name>
-    <member refid="farmermarket_8h_1aba64fa55f458c1c83323df5810365145" kind="function"><name>mainMenu</name></member>
+    <member refid="farmermarket_8h_1a2d0255f645d941c02e7a6d600479552b" kind="function"><name>mainMenu</name></member>
     <member refid="farmermarket_8h_1a3571d8d7858de3069c0320b86f5c2d6c" kind="function"><name>saveUser</name></member>
     <member refid="farmermarket_8h_1a7e955099fa8201496a50f8a9f8f22b46" kind="function"><name>authenticateUser</name></member>
-    <member refid="farmermarket_8h_1aedcb5f536071dbb0b932955185cb427a" kind="function"><name>userAuthentication</name></member>
+    <member refid="farmermarket_8h_1a6903abe4d5df4957642a65806ccb35a7" kind="function"><name>userAuthentication</name></member>
   </compound>
   <compound refid="farmermarket_8cpp" kind="file"><name>farmermarket.cpp</name>
     <member refid="farmermarket_8cpp_1adbd78a4b0fc346ff2bffcf07c264be7f" kind="variable"><name>guessMode</name></member>
     <member refid="farmermarket_8cpp_1a170f93ec0075e15cc70e036391b0a4ad" kind="variable"><name>active_user</name></member>
-    <member refid="farmermarket_8cpp_1aba64fa55f458c1c83323df5810365145" kind="function"><name>mainMenu</name></member>
+    <member refid="farmermarket_8cpp_1a2d0255f645d941c02e7a6d600479552b" kind="function"><name>mainMenu</name></member>
     <member refid="farmermarket_8cpp_1a3571d8d7858de3069c0320b86f5c2d6c" kind="function"><name>saveUser</name></member>
     <member refid="farmermarket_8cpp_1a7e955099fa8201496a50f8a9f8f22b46" kind="function"><name>authenticateUser</name></member>
-    <member refid="farmermarket_8cpp_1aedcb5f536071dbb0b932955185cb427a" kind="function"><name>userAuthentication</name></member>
+    <member refid="farmermarket_8cpp_1a6903abe4d5df4957642a65806ccb35a7" kind="function"><name>userAuthentication</name></member>
   </compound>
   <compound refid="farmermarketapp_8h" kind="file"><name>farmermarketapp.h</name>
   </compound>

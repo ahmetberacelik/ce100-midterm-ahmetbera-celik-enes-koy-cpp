@@ -1,116 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="(empty)"
-	tests="8"
-	failures="0"
+	tests="9"
+	failures="1"
 	disabled="0"
 	skipped="0"
 	hostname=""
 	time="0"
-	timestamp="2024-03-06T15:49:12"
+	timestamp="2024-03-11T10:33:54"
 	>
-	<testcase name="utility_tests" classname="utility_tests" time="0.0322544" status="run">
+	<testcase name="utility_tests" classname="utility_tests" time="0.0330988" status="run">
 		<system-out>Running main() from /mnt/c/Users/Bera/Desktop/midtermproject/src/tests/googletest/googletest/src/gtest_main.cc
 [==========] Running 0 tests from 0 test suites.
 [==========] 0 tests from 0 test suites ran. (0 ms total)
 [  PASSED  ] 0 tests.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.SaveandAuthenticateUserTest" classname="FarmermarketTest.SaveandAuthenticateUserTest" time="0.0341616" status="run">
+	<testcase name="FarmermarketTest.SaveandAuthenticateUserTest" classname="FarmermarketTest.SaveandAuthenticateUserTest" time="0.036013" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.SaveandAuthenticateUserTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.SaveandAuthenticateUserTest
-[       OK ] FarmermarketTest.SaveandAuthenticateUserTest (1 ms)
-[----------] 1 test from FarmermarketTest (1 ms total)
+[       OK ] FarmermarketTest.SaveandAuthenticateUserTest (8 ms)
+[----------] 1 test from FarmermarketTest (8 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (8 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.InvalidAuthenticateUserTest" classname="FarmermarketTest.InvalidAuthenticateUserTest" time="0.0373341" status="run">
+	<testcase name="FarmermarketTest.InvalidAuthenticateUserTest" classname="FarmermarketTest.InvalidAuthenticateUserTest" time="0.0371407" status="fail">
+		<failure message=""/>
 		<system-out>Note: Google Test filter = FarmermarketTest.InvalidAuthenticateUserTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.InvalidAuthenticateUserTest
-[       OK ] FarmermarketTest.InvalidAuthenticateUserTest (0 ms)
-[----------] 1 test from FarmermarketTest (0 ms total)
+/mnt/c/Users/Bera/Desktop/midtermproject/src/tests/farmermarket/farmermarket_test.cpp:37: Failure
+Expected equality of these values:
+  result2
+    Which is: 1
+  -1
+
+[  FAILED  ] FarmermarketTest.InvalidAuthenticateUserTest (1 ms)
+[----------] 1 test from FarmermarketTest (1 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 1 test.
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] FarmermarketTest.InvalidAuthenticateUserTest
+
+ 1 FAILED TEST
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.UserAuthenticationValidTest" classname="FarmermarketTest.UserAuthenticationValidTest" time="0.0427436" status="run">
-		<system-out>Note: Google Test filter = FarmermarketTest.UserAuthenticationValidTest
+	<testcase name="FarmermarketTest.UserAuthenticationLoginTest" classname="FarmermarketTest.UserAuthenticationLoginTest" time="0.0383272" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.UserAuthenticationLoginTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
-[ RUN      ] FarmermarketTest.UserAuthenticationValidTest
-[       OK ] FarmermarketTest.UserAuthenticationValidTest (7 ms)
-[----------] 1 test from FarmermarketTest (7 ms total)
+[ RUN      ] FarmermarketTest.UserAuthenticationLoginTest
+[       OK ] FarmermarketTest.UserAuthenticationLoginTest (3 ms)
+[----------] 1 test from FarmermarketTest (3 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (7 ms total)
+[==========] 1 test from 1 test suite ran. (3 ms total)
 [  PASSED  ] 1 test.
+libgcov profiling error:/mnt/c/Users/Bera/Desktop/midtermproject/build_linux/src/tests/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.gcda:Merge mismatch for function 2640
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.UserAuthenticationInvalidTest" classname="FarmermarketTest.UserAuthenticationInvalidTest" time="0.0430377" status="run">
-		<system-out>Note: Google Test filter = FarmermarketTest.UserAuthenticationInvalidTest
+	<testcase name="FarmermarketTest.UserAuthenticationLoginInvalidTest" classname="FarmermarketTest.UserAuthenticationLoginInvalidTest" time="0.0376752" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.UserAuthenticationLoginInvalidTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
-[ RUN      ] FarmermarketTest.UserAuthenticationInvalidTest
-[       OK ] FarmermarketTest.UserAuthenticationInvalidTest (13 ms)
-[----------] 1 test from FarmermarketTest (13 ms total)
+[ RUN      ] FarmermarketTest.UserAuthenticationLoginInvalidTest
+[       OK ] FarmermarketTest.UserAuthenticationLoginInvalidTest (8 ms)
+[----------] 1 test from FarmermarketTest (8 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (13 ms total)
+[==========] 1 test from 1 test suite ran. (8 ms total)
 [  PASSED  ] 1 test.
+libgcov profiling error:/mnt/c/Users/Bera/Desktop/midtermproject/build_linux/src/tests/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.gcda:Merge mismatch for function 2640
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.RegisterUserTest" classname="FarmermarketTest.RegisterUserTest" time="0.0346834" status="run">
-		<system-out>Note: Google Test filter = FarmermarketTest.RegisterUserTest
+	<testcase name="FarmermarketTest.UserAuthenticationRegisterTest" classname="FarmermarketTest.UserAuthenticationRegisterTest" time="0.0367864" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.UserAuthenticationRegisterTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
-[ RUN      ] FarmermarketTest.RegisterUserTest
-[       OK ] FarmermarketTest.RegisterUserTest (2 ms)
+[ RUN      ] FarmermarketTest.UserAuthenticationRegisterTest
+[       OK ] FarmermarketTest.UserAuthenticationRegisterTest (1 ms)
+[----------] 1 test from FarmermarketTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+libgcov profiling error:/mnt/c/Users/Bera/Desktop/midtermproject/build_linux/src/tests/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.gcda:Merge mismatch for function 2640
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.LoginGuestModeTest" classname="FarmermarketTest.LoginGuestModeTest" time="0.0277094" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.LoginGuestModeTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.LoginGuestModeTest
+[       OK ] FarmermarketTest.LoginGuestModeTest (2 ms)
 [----------] 1 test from FarmermarketTest (2 ms total)
 
 [----------] Global test environment tear-down
 [==========] 1 test from 1 test suite ran. (2 ms total)
 [  PASSED  ] 1 test.
+libgcov profiling error:/mnt/c/Users/Bera/Desktop/midtermproject/build_linux/src/tests/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.gcda:Merge mismatch for function 2640
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.GuessModeTest" classname="FarmermarketTest.GuessModeTest" time="0.0325658" status="run">
-		<system-out>Note: Google Test filter = FarmermarketTest.GuessModeTest
+	<testcase name="FarmermarketTest.ExitUserAuthenticationTest" classname="FarmermarketTest.ExitUserAuthenticationTest" time="0.0188608" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.ExitUserAuthenticationTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
-[ RUN      ] FarmermarketTest.GuessModeTest
-[       OK ] FarmermarketTest.GuessModeTest (0 ms)
+[ RUN      ] FarmermarketTest.ExitUserAuthenticationTest
+[       OK ] FarmermarketTest.ExitUserAuthenticationTest (1 ms)
 [----------] 1 test from FarmermarketTest (1 ms total)
 
 [----------] Global test environment tear-down
 [==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
+libgcov profiling error:/mnt/c/Users/Bera/Desktop/midtermproject/build_linux/src/tests/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.gcda:Merge mismatch for function 2640
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.userAuthenticationMenuSelection" classname="FarmermarketTest.userAuthenticationMenuSelection" time="0.0308656" status="run">
-		<system-out>Note: Google Test filter = FarmermarketTest.userAuthenticationMenuSelection
+	<testcase name="FarmermarketTest.UserAuthenticationInvalidInputTest" classname="FarmermarketTest.UserAuthenticationInvalidInputTest" time="0.014885" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.UserAuthenticationInvalidInputTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
-[ RUN      ] FarmermarketTest.userAuthenticationMenuSelection
-[       OK ] FarmermarketTest.userAuthenticationMenuSelection (1 ms)
+[ RUN      ] FarmermarketTest.UserAuthenticationInvalidInputTest
+[       OK ] FarmermarketTest.UserAuthenticationInvalidInputTest (1 ms)
 [----------] 1 test from FarmermarketTest (1 ms total)
 
 [----------] Global test environment tear-down
 [==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
+libgcov profiling error:/mnt/c/Users/Bera/Desktop/midtermproject/build_linux/src/tests/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.gcda:Merge mismatch for function 2640
 </system-out>
 	</testcase>
 </testsuite>

@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="18" column="6" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="18" bodyend="21"/>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="18" column="6" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="18" bodyend="23"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -132,7 +132,7 @@
         <label>testing::Test</label>
       </node>
     </collaborationgraph>
-    <location file="src/tests/farmermarket/farmermarket_test.cpp" line="3" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="3" bodyend="22"/>
+    <location file="src/tests/farmermarket/farmermarket_test.cpp" line="3" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="3" bodyend="25"/>
     <listofallmembers>
       <member refid="class_farmermarket_test_1a1fe118834bc3bb477a7bf76893dfc543" prot="protected" virt="non-virtual"><scope>FarmermarketTest</scope><name>ReadTestOutput</name></member>
       <member refid="class_farmermarket_test_1a3116c6bcff3d9a33df6730723959944e" prot="protected" virt="non-virtual"><scope>FarmermarketTest</scope><name>SetUp</name></member>

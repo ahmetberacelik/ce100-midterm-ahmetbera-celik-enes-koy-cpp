@@ -16,7 +16,12 @@
   <compound refid="farmermarket__test_8cpp" kind="file"><name>farmermarket_test.cpp</name>
     <member refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kind="function"><name>TEST_F</name></member>
     <member refid="farmermarket__test_8cpp_1a2e1a8b07125da8cff6b80524b7bb5502" kind="function"><name>TEST_F</name></member>
-    <member refid="farmermarket__test_8cpp_1a4453ff06ee8eac9ef9a96e93a52d20d2" kind="function"><name>TEST_F</name></member>
+    <member refid="farmermarket__test_8cpp_1a276ab0927d0dd447a79a76f49dfee7ba" kind="function"><name>TEST_F</name></member>
+    <member refid="farmermarket__test_8cpp_1a5b7c908fd01c4931ff5c0dc9131cb03d" kind="function"><name>TEST_F</name></member>
+    <member refid="farmermarket__test_8cpp_1a45bafd79aa827c01e7fa5c5f7711b9cd" kind="function"><name>TEST_F</name></member>
+    <member refid="farmermarket__test_8cpp_1a5ebd5ff8906ed71f9cc4b7af4cccbcef" kind="function"><name>TEST_F</name></member>
+    <member refid="farmermarket__test_8cpp_1ac189b4e00d388361a1188d1bc6500b00" kind="function"><name>TEST_F</name></member>
+    <member refid="farmermarket__test_8cpp_1a2fdbe1cfc718088428def5f505056e5b" kind="function"><name>TEST_F</name></member>
     <member refid="farmermarket__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
   <compound refid="utility__test_8cpp" kind="file"><name>utility_test.cpp</name>

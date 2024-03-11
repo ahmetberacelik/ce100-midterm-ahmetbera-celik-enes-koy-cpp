@@ -7,7 +7,7 @@ Inheritance diagram for Farmermarket\+Test\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=205pt]{classFarmermarketTest__inherit__graph}
+\includegraphics[width=193pt]{classFarmermarketTest__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -17,7 +17,7 @@ Collaboration diagram for Farmermarket\+Test\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=205pt]{classFarmermarketTest__coll__graph}
+\includegraphics[width=193pt]{classFarmermarketTest__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Protected Member Functions}
@@ -27,27 +27,39 @@ void \mbox{\hyperlink{classFarmermarketTest_a3116c6bcff3d9a33df6730723959944e}{S
 \item 
 void \mbox{\hyperlink{classFarmermarketTest_a0016e959eca974c84485fabf4f0a46b8}{Tear\+Down}} () override
 \item 
-void \mbox{\hyperlink{classFarmermarketTest_a3467495d8194e943a33692051b9f12c7}{simulate\+User\+Input}} (const std\+::string \&input)
+void \mbox{\hyperlink{classFarmermarketTest_a1fe118834bc3bb477a7bf76893dfc543}{Read\+Test\+Output}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::ostringstream \mbox{\hyperlink{classFarmermarketTest_a1e479597a8a64fede2bcf7e94e7c72a1}{out}}
-\item 
-std\+::istringstream \mbox{\hyperlink{classFarmermarketTest_a8877e5804f1a5e01c751220092c3f2b5}{in}}
-\item 
 const char $\ast$ \mbox{\hyperlink{classFarmermarketTest_ab41c0bee33799c143c4ba9cf4da9c9e0}{test\+Filename}} = \char`\"{}Test\+Users.\+bin\char`\"{}
+\item 
+FILE $\ast$ \mbox{\hyperlink{classFarmermarketTest_a250a365b417c3ae992d86eb3f7c2cda4}{test\+In}}
+\item 
+FILE $\ast$ \mbox{\hyperlink{classFarmermarketTest_a8de5f036a4b01251ab52e18948169cc7}{test\+Out}}
+\item 
+char \mbox{\hyperlink{classFarmermarketTest_acc4d000f23da803eb24a8313730aab50}{test\+Output\+Buffer}} \mbox{[}1024\mbox{]}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line 4 of file farmermarket\+\_\+test.\+cpp.
+Definition at line 3 of file farmermarket\+\_\+test.\+cpp.
 
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFarmermarketTest_a1fe118834bc3bb477a7bf76893dfc543}\label{classFarmermarketTest_a1fe118834bc3bb477a7bf76893dfc543}} 
+\index{FarmermarketTest@{FarmermarketTest}!ReadTestOutput@{ReadTestOutput}}
+\index{ReadTestOutput@{ReadTestOutput}!FarmermarketTest@{FarmermarketTest}}
+\doxysubsubsection{\texorpdfstring{ReadTestOutput()}{ReadTestOutput()}}
+{\footnotesize\ttfamily void Farmermarket\+Test\+::\+Read\+Test\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 18 of file farmermarket\+\_\+test.\+cpp.
+
 \mbox{\Hypertarget{classFarmermarketTest_a3116c6bcff3d9a33df6730723959944e}\label{classFarmermarketTest_a3116c6bcff3d9a33df6730723959944e}} 
 \index{FarmermarketTest@{FarmermarketTest}!SetUp@{SetUp}}
 \index{SetUp@{SetUp}!FarmermarketTest@{FarmermarketTest}}
@@ -57,16 +69,6 @@ Definition at line 4 of file farmermarket\+\_\+test.\+cpp.
 
 
 Definition at line 9 of file farmermarket\+\_\+test.\+cpp.
-
-\mbox{\Hypertarget{classFarmermarketTest_a3467495d8194e943a33692051b9f12c7}\label{classFarmermarketTest_a3467495d8194e943a33692051b9f12c7}} 
-\index{FarmermarketTest@{FarmermarketTest}!simulateUserInput@{simulateUserInput}}
-\index{simulateUserInput@{simulateUserInput}!FarmermarketTest@{FarmermarketTest}}
-\doxysubsubsection{\texorpdfstring{simulateUserInput()}{simulateUserInput()}}
-{\footnotesize\ttfamily void Farmermarket\+Test\+::simulate\+User\+Input (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
-
-
-
-Definition at line 16 of file farmermarket\+\_\+test.\+cpp.
 
 \mbox{\Hypertarget{classFarmermarketTest_a0016e959eca974c84485fabf4f0a46b8}\label{classFarmermarketTest_a0016e959eca974c84485fabf4f0a46b8}} 
 \index{FarmermarketTest@{FarmermarketTest}!TearDown@{TearDown}}
@@ -81,31 +83,41 @@ Definition at line 13 of file farmermarket\+\_\+test.\+cpp.
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classFarmermarketTest_a8877e5804f1a5e01c751220092c3f2b5}\label{classFarmermarketTest_a8877e5804f1a5e01c751220092c3f2b5}} 
-\index{FarmermarketTest@{FarmermarketTest}!in@{in}}
-\index{in@{in}!FarmermarketTest@{FarmermarketTest}}
-\doxysubsubsection{\texorpdfstring{in}{in}}
-{\footnotesize\ttfamily std\+::istringstream Farmermarket\+Test\+::in\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line 7 of file farmermarket\+\_\+test.\+cpp.
-
-\mbox{\Hypertarget{classFarmermarketTest_a1e479597a8a64fede2bcf7e94e7c72a1}\label{classFarmermarketTest_a1e479597a8a64fede2bcf7e94e7c72a1}} 
-\index{FarmermarketTest@{FarmermarketTest}!out@{out}}
-\index{out@{out}!FarmermarketTest@{FarmermarketTest}}
-\doxysubsubsection{\texorpdfstring{out}{out}}
-{\footnotesize\ttfamily std\+::ostringstream Farmermarket\+Test\+::out\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line 6 of file farmermarket\+\_\+test.\+cpp.
-
 \mbox{\Hypertarget{classFarmermarketTest_ab41c0bee33799c143c4ba9cf4da9c9e0}\label{classFarmermarketTest_ab41c0bee33799c143c4ba9cf4da9c9e0}} 
 \index{FarmermarketTest@{FarmermarketTest}!testFilename@{testFilename}}
 \index{testFilename@{testFilename}!FarmermarketTest@{FarmermarketTest}}
 \doxysubsubsection{\texorpdfstring{testFilename}{testFilename}}
 {\footnotesize\ttfamily const char$\ast$ Farmermarket\+Test\+::test\+Filename = \char`\"{}Test\+Users.\+bin\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 5 of file farmermarket\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{classFarmermarketTest_a250a365b417c3ae992d86eb3f7c2cda4}\label{classFarmermarketTest_a250a365b417c3ae992d86eb3f7c2cda4}} 
+\index{FarmermarketTest@{FarmermarketTest}!testIn@{testIn}}
+\index{testIn@{testIn}!FarmermarketTest@{FarmermarketTest}}
+\doxysubsubsection{\texorpdfstring{testIn}{testIn}}
+{\footnotesize\ttfamily FILE$\ast$ Farmermarket\+Test\+::test\+In\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 6 of file farmermarket\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{classFarmermarketTest_a8de5f036a4b01251ab52e18948169cc7}\label{classFarmermarketTest_a8de5f036a4b01251ab52e18948169cc7}} 
+\index{FarmermarketTest@{FarmermarketTest}!testOut@{testOut}}
+\index{testOut@{testOut}!FarmermarketTest@{FarmermarketTest}}
+\doxysubsubsection{\texorpdfstring{testOut}{testOut}}
+{\footnotesize\ttfamily FILE$\ast$ Farmermarket\+Test\+::test\+Out\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 7 of file farmermarket\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{classFarmermarketTest_acc4d000f23da803eb24a8313730aab50}\label{classFarmermarketTest_acc4d000f23da803eb24a8313730aab50}} 
+\index{FarmermarketTest@{FarmermarketTest}!testOutputBuffer@{testOutputBuffer}}
+\index{testOutputBuffer@{testOutputBuffer}!FarmermarketTest@{FarmermarketTest}}
+\doxysubsubsection{\texorpdfstring{testOutputBuffer}{testOutputBuffer}}
+{\footnotesize\ttfamily char Farmermarket\+Test\+::test\+Output\+Buffer\mbox{[}1024\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 

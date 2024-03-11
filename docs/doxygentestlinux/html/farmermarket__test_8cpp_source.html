@@ -72,148 +72,136 @@ $(function() {
 <div class="title">farmermarket_test.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="farmermarket__test_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;gtest/gtest.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../../farmermarket/header/farmermarket.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="classFarmermarketTest.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFarmermarketTest.html">FarmermarketTest</a> : <span class="keyword">public</span> ::testing::Test {</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classFarmermarketTest.html#a1e479597a8a64fede2bcf7e94e7c72a1">    6</a></span>&#160;    std::ostringstream <a class="code" href="classFarmermarketTest.html#a1e479597a8a64fede2bcf7e94e7c72a1">out</a>;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classFarmermarketTest.html#a8877e5804f1a5e01c751220092c3f2b5">    7</a></span>&#160;    std::istringstream <a class="code" href="classFarmermarketTest.html#a8877e5804f1a5e01c751220092c3f2b5">in</a>;</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classFarmermarketTest.html#ab41c0bee33799c143c4ba9cf4da9c9e0">    8</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classFarmermarketTest.html#ab41c0bee33799c143c4ba9cf4da9c9e0">testFilename</a> = <span class="stringliteral">&quot;TestUsers.bin&quot;</span>;</div>
+<a href="farmermarket__test_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;gtest/gtest.h&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../../farmermarket/header/farmermarket.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classFarmermarketTest.html">    3</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFarmermarketTest.html">FarmermarketTest</a> : <span class="keyword">public</span> ::testing::Test {</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classFarmermarketTest.html#ab41c0bee33799c143c4ba9cf4da9c9e0">    5</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classFarmermarketTest.html#ab41c0bee33799c143c4ba9cf4da9c9e0">testFilename</a> = <span class="stringliteral">&quot;TestUsers.bin&quot;</span>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classFarmermarketTest.html#a250a365b417c3ae992d86eb3f7c2cda4">    6</a></span>&#160;    FILE* <a class="code" href="classFarmermarketTest.html#a250a365b417c3ae992d86eb3f7c2cda4">testIn</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classFarmermarketTest.html#a8de5f036a4b01251ab52e18948169cc7">    7</a></span>&#160;    FILE* <a class="code" href="classFarmermarketTest.html#a8de5f036a4b01251ab52e18948169cc7">testOut</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classFarmermarketTest.html#acc4d000f23da803eb24a8313730aab50">    8</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="classFarmermarketTest.html#acc4d000f23da803eb24a8313730aab50">testOutputBuffer</a>[1024];</div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classFarmermarketTest.html#a3116c6bcff3d9a33df6730723959944e">    9</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFarmermarketTest.html#a3116c6bcff3d9a33df6730723959944e">SetUp</a>()<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="classFarmermarketTest.html#a1e479597a8a64fede2bcf7e94e7c72a1">out</a>.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="classFarmermarketTest.html#a1e479597a8a64fede2bcf7e94e7c72a1">out</a>.clear();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="classFarmermarketTest.html#a250a365b417c3ae992d86eb3f7c2cda4">testIn</a> = tmpfile();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="classFarmermarketTest.html#a8de5f036a4b01251ab52e18948169cc7">testOut</a> = tmpfile();</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    }</div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classFarmermarketTest.html#a0016e959eca974c84485fabf4f0a46b8">   13</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFarmermarketTest.html#a0016e959eca974c84485fabf4f0a46b8">TearDown</a>()<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        remove(<a class="code" href="classFarmermarketTest.html#ab41c0bee33799c143c4ba9cf4da9c9e0">testFilename</a>);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classFarmermarketTest.html#a3467495d8194e943a33692051b9f12c7">   16</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFarmermarketTest.html#a3467495d8194e943a33692051b9f12c7">simulateUserInput</a>(<span class="keyword">const</span> std::string&amp; input) {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="classFarmermarketTest.html#a8877e5804f1a5e01c751220092c3f2b5">in</a>.str(input);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="classFarmermarketTest.html#a8877e5804f1a5e01c751220092c3f2b5">in</a>.clear();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">   22</a></span>&#160;<a class="code" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code" href="classFarmermarketTest.html">FarmermarketTest</a>, SaveandAuthenticateUserTest) {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    User testUser = { <span class="stringliteral">&quot;TestUser&quot;</span>, <span class="stringliteral">&quot;123456&quot;</span> };</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> result = saveUser(&amp;testUser, testFilename);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">int</span> result2 = authenticateUser(<span class="stringliteral">&quot;TestUser&quot;</span>, <span class="stringliteral">&quot;123456&quot;</span>, testFilename);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    EXPECT_EQ(result2, 1);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    EXPECT_EQ(result, 1);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a2e1a8b07125da8cff6b80524b7bb5502">   30</a></span>&#160;<a class="code" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code" href="classFarmermarketTest.html">FarmermarketTest</a>, InvalidAuthenticateUserTest) {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> result2 = authenticateUser(<span class="stringliteral">&quot;TestUser&quot;</span>, <span class="stringliteral">&quot;123456&quot;</span>, testFilename);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    EXPECT_EQ(result2, -1);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        fclose(<a class="code" href="classFarmermarketTest.html#a250a365b417c3ae992d86eb3f7c2cda4">testIn</a>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        fclose(<a class="code" href="classFarmermarketTest.html#a8de5f036a4b01251ab52e18948169cc7">testOut</a>);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        remove(<a class="code" href="classFarmermarketTest.html#ab41c0bee33799c143c4ba9cf4da9c9e0">testFilename</a>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classFarmermarketTest.html#a1fe118834bc3bb477a7bf76893dfc543">   18</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFarmermarketTest.html#a1fe118834bc3bb477a7bf76893dfc543">ReadTestOutput</a>() {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        rewind(<a class="code" href="classFarmermarketTest.html#a8de5f036a4b01251ab52e18948169cc7">testOut</a>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        memset(<a class="code" href="classFarmermarketTest.html#acc4d000f23da803eb24a8313730aab50">testOutputBuffer</a>, 0, <span class="keyword">sizeof</span>(<a class="code" href="classFarmermarketTest.html#acc4d000f23da803eb24a8313730aab50">testOutputBuffer</a>));</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">size_t</span> bytesRead = fread(<a class="code" href="classFarmermarketTest.html#acc4d000f23da803eb24a8313730aab50">testOutputBuffer</a>, 1, <span class="keyword">sizeof</span>(<a class="code" href="classFarmermarketTest.html#acc4d000f23da803eb24a8313730aab50">testOutputBuffer</a>) - 1, <a class="code" href="classFarmermarketTest.html#a8de5f036a4b01251ab52e18948169cc7">testOut</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="classFarmermarketTest.html#acc4d000f23da803eb24a8313730aab50">testOutputBuffer</a>[bytesRead] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">   27</a></span>&#160;<a class="code" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code" href="classFarmermarketTest.html">FarmermarketTest</a>, SaveandAuthenticateUserTest) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    User testUser = { <span class="stringliteral">&quot;TestUser&quot;</span>, <span class="stringliteral">&quot;123456&quot;</span> };</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> result = saveUser(&amp;testUser, testFilename);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> result2 = authenticateUser(<span class="stringliteral">&quot;TestUser&quot;</span>, <span class="stringliteral">&quot;123456&quot;</span>, testFilename);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    EXPECT_EQ(result2, 1);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    EXPECT_EQ(result, 1);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a69eb778b615f6182f20273acc278bdb0">   35</a></span>&#160;<a class="code" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code" href="classFarmermarketTest.html">FarmermarketTest</a>, UserAuthenticationValidTest) {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    simulateUserInput(<span class="stringliteral">&quot;1\nAhmet Bera Celik\nqwerty\n&quot;</span>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    EXPECT_TRUE(userAuthentication(in, out));</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    std::string expectedOutput = <span class="stringliteral">&quot;1. Login\n&quot;</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    expectedOutput += <span class="stringliteral">&quot;2. Register\n&quot;</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    expectedOutput += <span class="stringliteral">&quot;3. Guest Mode\n&quot;</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    expectedOutput += <span class="stringliteral">&quot;4. Exit Program\n&quot;</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Please select an option: &quot;</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Please enter your username: &quot;</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Please enter your password: &quot;</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Welcome Ahmet Bera Celik\n&quot;</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    EXPECT_EQ(expectedOutput, out.str());</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a2e1a8b07125da8cff6b80524b7bb5502">   35</a></span>&#160;<a class="code" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code" href="classFarmermarketTest.html">FarmermarketTest</a>, InvalidAuthenticateUserTest) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> result2 = authenticateUser(<span class="stringliteral">&quot;TestUser&quot;</span>, <span class="stringliteral">&quot;123456&quot;</span>, testFilename);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    EXPECT_EQ(result2, -1);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a276ab0927d0dd447a79a76f49dfee7ba">   40</a></span>&#160;<a class="code" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code" href="classFarmermarketTest.html">FarmermarketTest</a>, UserAuthenticationLoginTest) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    fputs(<span class="stringliteral">&quot;1\nEnes Koy\n123456\n&quot;</span>, testIn);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    rewind(testIn);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">bool</span> authResult = userAuthentication(testIn, testOut);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    rewind(testOut);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#ab0b2a7230b6cb4c2f37a2c9cd5a4c89b">   50</a></span>&#160;<a class="code" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code" href="classFarmermarketTest.html">FarmermarketTest</a>, UserAuthenticationInvalidTest) {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    simulateUserInput(<span class="stringliteral">&quot;1\nInvalid User\nqwerty\n1\nInvalid User\nqwerty\n1\nInvalid User\nqwerty\n&quot;</span>);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    EXPECT_FALSE(userAuthentication(in, out));</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::string expectedOutput = <span class="stringliteral">&quot;1. Login\n&quot;</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    expectedOutput += <span class="stringliteral">&quot;2. Register\n&quot;</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    expectedOutput += <span class="stringliteral">&quot;3. Guest Mode\n&quot;</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    expectedOutput += <span class="stringliteral">&quot;4. Exit Program\n&quot;</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Please select an option: &quot;</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Please enter your username: &quot;</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Please enter your password: &quot;</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    expectedOutput += <span class="stringliteral">&quot;You entered wrong username or password. Please try again.\n&quot;</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    expectedOutput += <span class="stringliteral">&quot;1. Login\n&quot;</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    expectedOutput += <span class="stringliteral">&quot;2. Register\n&quot;</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    expectedOutput += <span class="stringliteral">&quot;3. Guest Mode\n&quot;</span>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    expectedOutput += <span class="stringliteral">&quot;4. Exit Program\n&quot;</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Please select an option: &quot;</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Please enter your username: &quot;</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Please enter your password: &quot;</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    expectedOutput += <span class="stringliteral">&quot;You entered wrong username or password. Please try again.\n&quot;</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    expectedOutput += <span class="stringliteral">&quot;1. Login\n&quot;</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    expectedOutput += <span class="stringliteral">&quot;2. Register\n&quot;</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    expectedOutput += <span class="stringliteral">&quot;3. Guest Mode\n&quot;</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    expectedOutput += <span class="stringliteral">&quot;4. Exit Program\n&quot;</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Please select an option: &quot;</span>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Please enter your username: &quot;</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Please enter your password: &quot;</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    expectedOutput += <span class="stringliteral">&quot;You entered wrong username or password. Please try again.\n&quot;</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    expectedOutput += <span class="stringliteral">&quot;You have run out of login attempts. See you...\n&quot;</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    EXPECT_EQ(expectedOutput, out.str());</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    ReadTestOutput();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">char</span> expectedOutput[] = <span class="stringliteral">&quot;1. Login\n2. Register\n3. Guest Mode\n4. Exit Program\nPlease select an option: Please enter your username:&quot;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="stringliteral">&quot; Please enter your password: Welcome Enes Koy\n&quot;</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    EXPECT_TRUE(authResult);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    EXPECT_STREQ(testOutputBuffer, expectedOutput);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a5b7c908fd01c4931ff5c0dc9131cb03d">   55</a></span>&#160;<a class="code" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code" href="classFarmermarketTest.html">FarmermarketTest</a>, UserAuthenticationLoginInvalidTest) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    fputs(<span class="stringliteral">&quot;1\nInvalid User\n123456\n&quot;</span>, testIn);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    rewind(testIn);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">bool</span> authResult = userAuthentication(testIn, testOut);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    rewind(testOut);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    ReadTestOutput();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">char</span> expectedOutput[] = <span class="stringliteral">&quot;1. Login\n2. Register\n3. Guest Mode\n4. Exit Program\nPlease select an option: Please enter your username: Please enter your password: You entered wrong username or password. Please try again.\n&quot;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="stringliteral">&quot;1. Login\n2. Register\n3. Guest Mode\n4. Exit Program\nPlease select an option: Please enter your username: Please enter your password: You entered wrong username or password. Please try again.\n&quot;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="stringliteral">&quot;1. Login\n2. Register\n3. Guest Mode\n4. Exit Program\nPlease select an option: Please enter your username: Please enter your password: You entered wrong username or password. Please try again.\n&quot;</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="stringliteral">&quot;You have run out of login attempts. See you...\n&quot;</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    EXPECT_FALSE(authResult);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    EXPECT_STREQ(testOutputBuffer, expectedOutput);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a45bafd79aa827c01e7fa5c5f7711b9cd">   72</a></span>&#160;<a class="code" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code" href="classFarmermarketTest.html">FarmermarketTest</a>, UserAuthenticationRegisterTest) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    fputs(<span class="stringliteral">&quot;2\nNew User\n123456\n&quot;</span>, testIn);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    rewind(testIn);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">bool</span> authResult = userAuthentication(testIn, testOut);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    rewind(testOut);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a878f021e915c35d5d2f8b06f2dc54edb">   82</a></span>&#160;<a class="code" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code" href="classFarmermarketTest.html">FarmermarketTest</a>, RegisterUserTest) {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    simulateUserInput(<span class="stringliteral">&quot;2\nAbuzer\n616161\n&quot;</span>);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    EXPECT_TRUE(userAuthentication(in, out));</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    std::string expectedOutput = <span class="stringliteral">&quot;1. Login\n&quot;</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    expectedOutput += <span class="stringliteral">&quot;2. Register\n&quot;</span>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    expectedOutput += <span class="stringliteral">&quot;3. Guest Mode\n&quot;</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    expectedOutput += <span class="stringliteral">&quot;4. Exit Program\n&quot;</span>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Please select an option: &quot;</span>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Please enter your username: &quot;</span>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Please enter your password: &quot;</span>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    expectedOutput += <span class="stringliteral">&quot;User registered successfully.\n&quot;</span>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Welcome Abuzer\n&quot;</span>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    EXPECT_EQ(expectedOutput, out.str());</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a28a12b4da9a7077663fc7283bbdcdd24">   98</a></span>&#160;<a class="code" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code" href="classFarmermarketTest.html">FarmermarketTest</a>, GuessModeTest) {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    simulateUserInput(<span class="stringliteral">&quot;3\n&quot;</span>);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    EXPECT_TRUE(userAuthentication(in, out));</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#ae7c982fc717508062652ee3ffdfceeaa">  103</a></span>&#160;<a class="code" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code" href="classFarmermarketTest.html">FarmermarketTest</a>, userAuthenticationMenuSelection) {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    simulateUserInput(<span class="stringliteral">&quot;1213213\nasdasd\n4\n&quot;</span>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    EXPECT_FALSE(userAuthentication(in, out));</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    std::string expectedOutput = <span class="stringliteral">&quot;1. Login\n&quot;</span>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    expectedOutput += <span class="stringliteral">&quot;2. Register\n&quot;</span>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    expectedOutput += <span class="stringliteral">&quot;3. Guest Mode\n&quot;</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    expectedOutput += <span class="stringliteral">&quot;4. Exit Program\n&quot;</span>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Please select an option: &quot;</span>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Invalid option, please try again.\n&quot;</span>;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    expectedOutput += <span class="stringliteral">&quot;1. Login\n&quot;</span>;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    expectedOutput += <span class="stringliteral">&quot;2. Register\n&quot;</span>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    expectedOutput += <span class="stringliteral">&quot;3. Guest Mode\n&quot;</span>;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    expectedOutput += <span class="stringliteral">&quot;4. Exit Program\n&quot;</span>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Please select an option: &quot;</span>;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Invalid input, please enter a number.\n&quot;</span>;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    expectedOutput += <span class="stringliteral">&quot;1. Login\n&quot;</span>;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    expectedOutput += <span class="stringliteral">&quot;2. Register\n&quot;</span>;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    expectedOutput += <span class="stringliteral">&quot;3. Guest Mode\n&quot;</span>;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    expectedOutput += <span class="stringliteral">&quot;4. Exit Program\n&quot;</span>;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Please select an option: &quot;</span>;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    expectedOutput += <span class="stringliteral">&quot;Exiting program...\n&quot;</span>;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    EXPECT_EQ(expectedOutput, out.str());</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
-<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">  133</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="farmermarket__test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#ifdef ENABLE_FARMERMARKET_TEST</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    ::testing::InitGoogleTest(&amp;argc, argv);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">return</span> RUN_ALL_TESTS();</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">}</span></div>
-<div class="ttc" id="aclassFarmermarketTest_html"><div class="ttname"><a href="classFarmermarketTest.html">FarmermarketTest</a></div><div class="ttdef"><b>Definition:</b> <a href="farmermarket__test_8cpp_source.html#l00004">farmermarket_test.cpp:4</a></div></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    ReadTestOutput();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">char</span> expectedOutput[] = <span class="stringliteral">&quot;1. Login\n2. Register\n3. Guest Mode\n4. Exit Program\nPlease select an option: Please enter your username: Please enter your password: User registered successfully.\nWelcome New User\n&quot;</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    EXPECT_TRUE(authResult);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    EXPECT_STREQ(testOutputBuffer, expectedOutput);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a5ebd5ff8906ed71f9cc4b7af4cccbcef">   86</a></span>&#160;<a class="code" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code" href="classFarmermarketTest.html">FarmermarketTest</a>, LoginGuestModeTest) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    fputs(<span class="stringliteral">&quot;3\n&quot;</span>, testIn);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    rewind(testIn);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">bool</span> authResult = userAuthentication(testIn, testOut);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    EXPECT_TRUE(authResult);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#ac189b4e00d388361a1188d1bc6500b00">   93</a></span>&#160;<a class="code" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code" href="classFarmermarketTest.html">FarmermarketTest</a>, ExitUserAuthenticationTest) {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    fputs(<span class="stringliteral">&quot;4\n&quot;</span>, testIn);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    rewind(testIn);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">bool</span> authResult = userAuthentication(testIn, testOut);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    EXPECT_FALSE(authResult);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a2fdbe1cfc718088428def5f505056e5b">  100</a></span>&#160;<a class="code" href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a>(<a class="code" href="classFarmermarketTest.html">FarmermarketTest</a>, UserAuthenticationInvalidInputTest) {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    fputs(<span class="stringliteral">&quot;invalid\n4\n&quot;</span>, testIn);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    rewind(testIn);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">bool</span> authResult = userAuthentication(testIn, testOut);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    rewind(testOut);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    ReadTestOutput();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">char</span> expectedOutput[] = <span class="stringliteral">&quot;1. Login\n2. Register\n3. Guest Mode\n4. Exit Program\nPlease select an option: Invalid option, please try again.\n1. Login\n2. Register\n3. Guest Mode\n4. Exit Program\nPlease select an option: Exiting program...\n&quot;</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    EXPECT_FALSE(authResult);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    EXPECT_STREQ(testOutputBuffer, expectedOutput);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="farmermarket__test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">  120</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="farmermarket__test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#ifdef ENABLE_FARMERMARKET_TEST</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    ::testing::InitGoogleTest(&amp;argc, argv);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">return</span> RUN_ALL_TESTS();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">}</span></div>
+<div class="ttc" id="aclassFarmermarketTest_html"><div class="ttname"><a href="classFarmermarketTest.html">FarmermarketTest</a></div><div class="ttdef"><b>Definition:</b> <a href="farmermarket__test_8cpp_source.html#l00003">farmermarket_test.cpp:3</a></div></div>
 <div class="ttc" id="aclassFarmermarketTest_html_a0016e959eca974c84485fabf4f0a46b8"><div class="ttname"><a href="classFarmermarketTest.html#a0016e959eca974c84485fabf4f0a46b8">FarmermarketTest::TearDown</a></div><div class="ttdeci">void TearDown() override</div><div class="ttdef"><b>Definition:</b> <a href="farmermarket__test_8cpp_source.html#l00013">farmermarket_test.cpp:13</a></div></div>
-<div class="ttc" id="aclassFarmermarketTest_html_a1e479597a8a64fede2bcf7e94e7c72a1"><div class="ttname"><a href="classFarmermarketTest.html#a1e479597a8a64fede2bcf7e94e7c72a1">FarmermarketTest::out</a></div><div class="ttdeci">std::ostringstream out</div><div class="ttdef"><b>Definition:</b> <a href="farmermarket__test_8cpp_source.html#l00006">farmermarket_test.cpp:6</a></div></div>
+<div class="ttc" id="aclassFarmermarketTest_html_a1fe118834bc3bb477a7bf76893dfc543"><div class="ttname"><a href="classFarmermarketTest.html#a1fe118834bc3bb477a7bf76893dfc543">FarmermarketTest::ReadTestOutput</a></div><div class="ttdeci">void ReadTestOutput()</div><div class="ttdef"><b>Definition:</b> <a href="farmermarket__test_8cpp_source.html#l00018">farmermarket_test.cpp:18</a></div></div>
+<div class="ttc" id="aclassFarmermarketTest_html_a250a365b417c3ae992d86eb3f7c2cda4"><div class="ttname"><a href="classFarmermarketTest.html#a250a365b417c3ae992d86eb3f7c2cda4">FarmermarketTest::testIn</a></div><div class="ttdeci">FILE * testIn</div><div class="ttdef"><b>Definition:</b> <a href="farmermarket__test_8cpp_source.html#l00006">farmermarket_test.cpp:6</a></div></div>
 <div class="ttc" id="aclassFarmermarketTest_html_a3116c6bcff3d9a33df6730723959944e"><div class="ttname"><a href="classFarmermarketTest.html#a3116c6bcff3d9a33df6730723959944e">FarmermarketTest::SetUp</a></div><div class="ttdeci">void SetUp() override</div><div class="ttdef"><b>Definition:</b> <a href="farmermarket__test_8cpp_source.html#l00009">farmermarket_test.cpp:9</a></div></div>
-<div class="ttc" id="aclassFarmermarketTest_html_a3467495d8194e943a33692051b9f12c7"><div class="ttname"><a href="classFarmermarketTest.html#a3467495d8194e943a33692051b9f12c7">FarmermarketTest::simulateUserInput</a></div><div class="ttdeci">void simulateUserInput(const std::string &amp;input)</div><div class="ttdef"><b>Definition:</b> <a href="farmermarket__test_8cpp_source.html#l00016">farmermarket_test.cpp:16</a></div></div>
-<div class="ttc" id="aclassFarmermarketTest_html_a8877e5804f1a5e01c751220092c3f2b5"><div class="ttname"><a href="classFarmermarketTest.html#a8877e5804f1a5e01c751220092c3f2b5">FarmermarketTest::in</a></div><div class="ttdeci">std::istringstream in</div><div class="ttdef"><b>Definition:</b> <a href="farmermarket__test_8cpp_source.html#l00007">farmermarket_test.cpp:7</a></div></div>
-<div class="ttc" id="aclassFarmermarketTest_html_ab41c0bee33799c143c4ba9cf4da9c9e0"><div class="ttname"><a href="classFarmermarketTest.html#ab41c0bee33799c143c4ba9cf4da9c9e0">FarmermarketTest::testFilename</a></div><div class="ttdeci">const char * testFilename</div><div class="ttdef"><b>Definition:</b> <a href="farmermarket__test_8cpp_source.html#l00008">farmermarket_test.cpp:8</a></div></div>
-<div class="ttc" id="afarmermarket__test_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="farmermarket__test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdoc">The main function of the test program.</div><div class="ttdef"><b>Definition:</b> <a href="farmermarket__test_8cpp_source.html#l00133">farmermarket_test.cpp:133</a></div></div>
-<div class="ttc" id="afarmermarket__test_8cpp_html_a9f96c9e5ef0c2a3087b85ca7938fd199"><div class="ttname"><a href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a></div><div class="ttdeci">TEST_F(FarmermarketTest, SaveandAuthenticateUserTest)</div><div class="ttdef"><b>Definition:</b> <a href="farmermarket__test_8cpp_source.html#l00022">farmermarket_test.cpp:22</a></div></div>
+<div class="ttc" id="aclassFarmermarketTest_html_a8de5f036a4b01251ab52e18948169cc7"><div class="ttname"><a href="classFarmermarketTest.html#a8de5f036a4b01251ab52e18948169cc7">FarmermarketTest::testOut</a></div><div class="ttdeci">FILE * testOut</div><div class="ttdef"><b>Definition:</b> <a href="farmermarket__test_8cpp_source.html#l00007">farmermarket_test.cpp:7</a></div></div>
+<div class="ttc" id="aclassFarmermarketTest_html_ab41c0bee33799c143c4ba9cf4da9c9e0"><div class="ttname"><a href="classFarmermarketTest.html#ab41c0bee33799c143c4ba9cf4da9c9e0">FarmermarketTest::testFilename</a></div><div class="ttdeci">const char * testFilename</div><div class="ttdef"><b>Definition:</b> <a href="farmermarket__test_8cpp_source.html#l00005">farmermarket_test.cpp:5</a></div></div>
+<div class="ttc" id="aclassFarmermarketTest_html_acc4d000f23da803eb24a8313730aab50"><div class="ttname"><a href="classFarmermarketTest.html#acc4d000f23da803eb24a8313730aab50">FarmermarketTest::testOutputBuffer</a></div><div class="ttdeci">char testOutputBuffer[1024]</div><div class="ttdef"><b>Definition:</b> <a href="farmermarket__test_8cpp_source.html#l00008">farmermarket_test.cpp:8</a></div></div>
+<div class="ttc" id="afarmermarket__test_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="farmermarket__test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdoc">The main function of the test program.</div><div class="ttdef"><b>Definition:</b> <a href="farmermarket__test_8cpp_source.html#l00120">farmermarket_test.cpp:120</a></div></div>
+<div class="ttc" id="afarmermarket__test_8cpp_html_a9f96c9e5ef0c2a3087b85ca7938fd199"><div class="ttname"><a href="farmermarket__test_8cpp.html#a9f96c9e5ef0c2a3087b85ca7938fd199">TEST_F</a></div><div class="ttdeci">TEST_F(FarmermarketTest, SaveandAuthenticateUserTest)</div><div class="ttdef"><b>Definition:</b> <a href="farmermarket__test_8cpp_source.html#l00027">farmermarket_test.cpp:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

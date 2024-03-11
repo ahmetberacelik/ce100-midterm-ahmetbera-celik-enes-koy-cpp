@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="24" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="24" bodyend="30"/>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="27" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="27" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="farmermarket__test_8cpp_1a2e1a8b07125da8cff6b80524b7bb5502" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -58,18 +58,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="32" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="32" bodyend="35"/>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="35" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="35" bodyend="38"/>
       </memberdef>
-      <memberdef kind="function" id="farmermarket__test_8cpp_1a4453ff06ee8eac9ef9a96e93a52d20d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="farmermarket__test_8cpp_1a276ab0927d0dd447a79a76f49dfee7ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>TEST_F</definition>
-        <argsstring>(FarmermarketTest, UserAuthenticationTest)</argsstring>
+        <argsstring>(FarmermarketTest, UserAuthenticationLoginTest)</argsstring>
         <name>TEST_F</name>
         <param>
           <type><ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref></type>
         </param>
         <param>
-          <type>UserAuthenticationTest</type>
+          <type>UserAuthenticationLoginTest</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -77,7 +77,102 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="37" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="37" bodyend="49"/>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="40" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="40" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket__test_8cpp_1a5b7c908fd01c4931ff5c0dc9131cb03d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(FarmermarketTest, UserAuthenticationLoginInvalidTest)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref></type>
+        </param>
+        <param>
+          <type>UserAuthenticationLoginInvalidTest</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="55" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="55" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket__test_8cpp_1a45bafd79aa827c01e7fa5c5f7711b9cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(FarmermarketTest, UserAuthenticationRegisterTest)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref></type>
+        </param>
+        <param>
+          <type>UserAuthenticationRegisterTest</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="72" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="72" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket__test_8cpp_1a5ebd5ff8906ed71f9cc4b7af4cccbcef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(FarmermarketTest, LoginGuestModeTest)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref></type>
+        </param>
+        <param>
+          <type>LoginGuestModeTest</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="86" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="86" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket__test_8cpp_1ac189b4e00d388361a1188d1bc6500b00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(FarmermarketTest, ExitUserAuthenticationTest)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref></type>
+        </param>
+        <param>
+          <type>ExitUserAuthenticationTest</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="93" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="93" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket__test_8cpp_1a2fdbe1cfc718088428def5f505056e5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_F</definition>
+        <argsstring>(FarmermarketTest, UserAuthenticationInvalidInputTest)</argsstring>
+        <name>TEST_F</name>
+        <param>
+          <type><ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref></type>
+        </param>
+        <param>
+          <type>UserAuthenticationInvalidInputTest</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="100" column="1" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="100" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="farmermarket__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -119,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="57" column="5" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="57" bodyend="64"/>
+        <location file="src/tests/farmermarket/farmermarket_test.cpp" line="120" column="5" bodyfile="src/tests/farmermarket/farmermarket_test.cpp" bodystart="120" bodyend="127"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -146,44 +241,107 @@
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="18" refid="class_farmermarket_test_1a1fe118834bc3bb477a7bf76893dfc543" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_farmermarket_test_1a1fe118834bc3bb477a7bf76893dfc543" kindref="member">ReadTestOutput</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rewind(<ref refid="class_farmermarket_test_1a8de5f036a4b01251ab52e18948169cc7" kindref="member">testOut</ref>);</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fread(<ref refid="class_farmermarket_test_1acc4d000f23da803eb24a8313730aab50" kindref="member">testOutputBuffer</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="class_farmermarket_test_1acc4d000f23da803eb24a8313730aab50" kindref="member">testOutputBuffer</ref>),<sp/>1,<sp/><ref refid="class_farmermarket_test_1a8de5f036a4b01251ab52e18948169cc7" kindref="member">testOut</ref>);</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="22"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24" refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>SaveandAuthenticateUserTest)<sp/>{</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>User<sp/>testUser<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;TestUser&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;123456&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>saveUser(&amp;testUser,<sp/>testFilename);</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result2<sp/>=<sp/>authenticateUser(</highlight><highlight class="stringliteral">&quot;TestUser&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;123456&quot;</highlight><highlight class="normal">,<sp/>testFilename);</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(result2,<sp/>1);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(result,<sp/>1);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="farmermarket__test_8cpp_1a2e1a8b07125da8cff6b80524b7bb5502" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>InvalidAuthenticateUserTest)<sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result2<sp/>=<sp/>authenticateUser(</highlight><highlight class="stringliteral">&quot;TestUser&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;123456&quot;</highlight><highlight class="normal">,<sp/>testFilename);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(result2,<sp/>-1);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37" refid="farmermarket__test_8cpp_1a4453ff06ee8eac9ef9a96e93a52d20d2" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>UserAuthenticationTest)<sp/>{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>fputs(</highlight><highlight class="stringliteral">&quot;1\nEnes<sp/>Koy\n123456\n&quot;</highlight><highlight class="normal">,<sp/>testIn);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testIn);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>authResult<sp/>=<sp/>userAuthentication(testIn,<sp/>testOut);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testOut);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>ReadTestOutput();</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>expectedOutout[1024]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Welcome<sp/>Enes<sp/>Koy\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_TRUE(authResult);</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_TRUE(strstr(testOutputBuffer,<sp/>expectedOutout)<sp/>!=<sp/>NULL);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="57" refid="farmermarket__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)<sp/>{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ENABLE_FARMERMARKET_TEST</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>::testing::InitGoogleTest(&amp;argc,<sp/>argv);</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>RUN_ALL_TESTS();</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memset(<ref refid="class_farmermarket_test_1acc4d000f23da803eb24a8313730aab50" kindref="member">testOutputBuffer</ref>,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="class_farmermarket_test_1acc4d000f23da803eb24a8313730aab50" kindref="member">testOutputBuffer</ref>));</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytesRead<sp/>=<sp/>fread(<ref refid="class_farmermarket_test_1acc4d000f23da803eb24a8313730aab50" kindref="member">testOutputBuffer</ref>,<sp/>1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="class_farmermarket_test_1acc4d000f23da803eb24a8313730aab50" kindref="member">testOutputBuffer</ref>)<sp/>-<sp/>1,<sp/><ref refid="class_farmermarket_test_1a8de5f036a4b01251ab52e18948169cc7" kindref="member">testOut</ref>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_farmermarket_test_1acc4d000f23da803eb24a8313730aab50" kindref="member">testOutputBuffer</ref>[bytesRead]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>SaveandAuthenticateUserTest)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>User<sp/>testUser<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;TestUser&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;123456&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>saveUser(&amp;testUser,<sp/>testFilename);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result2<sp/>=<sp/>authenticateUser(</highlight><highlight class="stringliteral">&quot;TestUser&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;123456&quot;</highlight><highlight class="normal">,<sp/>testFilename);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(result2,<sp/>1);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(result,<sp/>1);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="farmermarket__test_8cpp_1a2e1a8b07125da8cff6b80524b7bb5502" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>InvalidAuthenticateUserTest)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result2<sp/>=<sp/>authenticateUser(</highlight><highlight class="stringliteral">&quot;TestUser&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;123456&quot;</highlight><highlight class="normal">,<sp/>testFilename);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(result2,<sp/>-1);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="farmermarket__test_8cpp_1a276ab0927d0dd447a79a76f49dfee7ba" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>UserAuthenticationLoginTest)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>fputs(</highlight><highlight class="stringliteral">&quot;1\nEnes<sp/>Koy\n123456\n&quot;</highlight><highlight class="normal">,<sp/>testIn);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testIn);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>authResult<sp/>=<sp/>userAuthentication(testIn,<sp/>testOut);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testOut);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>ReadTestOutput();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>expectedOutput[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;1.<sp/>Login\n2.<sp/>Register\n3.<sp/>Guest<sp/>Mode\n4.<sp/>Exit<sp/>Program\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Please<sp/>enter<sp/>your<sp/>username:&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>Please<sp/>enter<sp/>your<sp/>password:<sp/>Welcome<sp/>Enes<sp/>Koy\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_TRUE(authResult);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(testOutputBuffer,<sp/>expectedOutput);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="farmermarket__test_8cpp_1a5b7c908fd01c4931ff5c0dc9131cb03d" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>UserAuthenticationLoginInvalidTest)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>fputs(</highlight><highlight class="stringliteral">&quot;1\nInvalid<sp/>User\n123456\n&quot;</highlight><highlight class="normal">,<sp/>testIn);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testIn);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>authResult<sp/>=<sp/>userAuthentication(testIn,<sp/>testOut);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testOut);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>ReadTestOutput();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>expectedOutput[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;1.<sp/>Login\n2.<sp/>Register\n3.<sp/>Guest<sp/>Mode\n4.<sp/>Exit<sp/>Program\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Please<sp/>enter<sp/>your<sp/>username:<sp/>Please<sp/>enter<sp/>your<sp/>password:<sp/>You<sp/>entered<sp/>wrong<sp/>username<sp/>or<sp/>password.<sp/>Please<sp/>try<sp/>again.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;1.<sp/>Login\n2.<sp/>Register\n3.<sp/>Guest<sp/>Mode\n4.<sp/>Exit<sp/>Program\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Please<sp/>enter<sp/>your<sp/>username:<sp/>Please<sp/>enter<sp/>your<sp/>password:<sp/>You<sp/>entered<sp/>wrong<sp/>username<sp/>or<sp/>password.<sp/>Please<sp/>try<sp/>again.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;1.<sp/>Login\n2.<sp/>Register\n3.<sp/>Guest<sp/>Mode\n4.<sp/>Exit<sp/>Program\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Please<sp/>enter<sp/>your<sp/>username:<sp/>Please<sp/>enter<sp/>your<sp/>password:<sp/>You<sp/>entered<sp/>wrong<sp/>username<sp/>or<sp/>password.<sp/>Please<sp/>try<sp/>again.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;You<sp/>have<sp/>run<sp/>out<sp/>of<sp/>login<sp/>attempts.<sp/>See<sp/>you...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_FALSE(authResult);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(testOutputBuffer,<sp/>expectedOutput);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="farmermarket__test_8cpp_1a45bafd79aa827c01e7fa5c5f7711b9cd" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>UserAuthenticationRegisterTest)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>fputs(</highlight><highlight class="stringliteral">&quot;2\nNew<sp/>User\n123456\n&quot;</highlight><highlight class="normal">,<sp/>testIn);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testIn);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>authResult<sp/>=<sp/>userAuthentication(testIn,<sp/>testOut);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testOut);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>ReadTestOutput();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>expectedOutput[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;1.<sp/>Login\n2.<sp/>Register\n3.<sp/>Guest<sp/>Mode\n4.<sp/>Exit<sp/>Program\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Please<sp/>enter<sp/>your<sp/>username:<sp/>Please<sp/>enter<sp/>your<sp/>password:<sp/>User<sp/>registered<sp/>successfully.\nWelcome<sp/>New<sp/>User\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_TRUE(authResult);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(testOutputBuffer,<sp/>expectedOutput);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="farmermarket__test_8cpp_1a5ebd5ff8906ed71f9cc4b7af4cccbcef" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>LoginGuestModeTest)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>fputs(</highlight><highlight class="stringliteral">&quot;3\n&quot;</highlight><highlight class="normal">,<sp/>testIn);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testIn);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>authResult<sp/>=<sp/>userAuthentication(testIn,<sp/>testOut);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_TRUE(authResult);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="farmermarket__test_8cpp_1ac189b4e00d388361a1188d1bc6500b00" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>ExitUserAuthenticationTest)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>fputs(</highlight><highlight class="stringliteral">&quot;4\n&quot;</highlight><highlight class="normal">,<sp/>testIn);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testIn);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>authResult<sp/>=<sp/>userAuthentication(testIn,<sp/>testOut);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_FALSE(authResult);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="farmermarket__test_8cpp_1a2fdbe1cfc718088428def5f505056e5b" refkind="member"><highlight class="normal"><ref refid="farmermarket__test_8cpp_1a9f96c9e5ef0c2a3087b85ca7938fd199" kindref="member">TEST_F</ref>(<ref refid="class_farmermarket_test" kindref="compound">FarmermarketTest</ref>,<sp/>UserAuthenticationInvalidInputTest)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>fputs(</highlight><highlight class="stringliteral">&quot;invalid\n4\n&quot;</highlight><highlight class="normal">,<sp/>testIn);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testIn);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>authResult<sp/>=<sp/>userAuthentication(testIn,<sp/>testOut);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>rewind(testOut);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>ReadTestOutput();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>expectedOutput[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;1.<sp/>Login\n2.<sp/>Register\n3.<sp/>Guest<sp/>Mode\n4.<sp/>Exit<sp/>Program\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Invalid<sp/>option,<sp/>please<sp/>try<sp/>again.\n1.<sp/>Login\n2.<sp/>Register\n3.<sp/>Guest<sp/>Mode\n4.<sp/>Exit<sp/>Program\nPlease<sp/>select<sp/>an<sp/>option:<sp/>Exiting<sp/>program...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_FALSE(authResult);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_STREQ(testOutputBuffer,<sp/>expectedOutput);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120" refid="farmermarket__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ENABLE_FARMERMARKET_TEST</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>::testing::InitGoogleTest(&amp;argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>RUN_ALL_TESTS();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/tests/farmermarket/farmermarket_test.cpp"/>
   </compounddef>

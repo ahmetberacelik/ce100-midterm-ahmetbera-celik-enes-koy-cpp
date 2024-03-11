@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarket/header/farmermarket.h" line="20" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="72" bodyend="147" declfile="src/farmermarket/header/farmermarket.h" declline="20" declcolumn="6"/>
+        <location file="src/farmermarket/header/farmermarket.h" line="20" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="72" bodyend="146" declfile="src/farmermarket/header/farmermarket.h" declline="20" declcolumn="6"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

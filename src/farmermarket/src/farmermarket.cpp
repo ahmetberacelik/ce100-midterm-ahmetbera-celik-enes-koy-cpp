@@ -6,8 +6,8 @@ using namespace std;
 
 bool guessMode = false;
 char active_user[50];
-bool mainMenu(FILE* in, FILE* out){
-    if (!userAuthentication(in,out)) {
+bool mainMenu(FILE* in, FILE* out) {
+    if (!userAuthentication(in, out)) {
         return false;
     }
     int choice;
@@ -104,8 +104,7 @@ bool userAuthentication(FILE* in, FILE* out) {
             if (authenticateUser(temp_username, temp_password, filename) == 1) {
                 fprintf(out, "Welcome %s\n", temp_username);
                 strcpy(active_user, temp_username);
-                return true;
-            }
+                return true; }
             else {
                 fprintf(out, "You entered wrong username or password. Please try again.\n");
                 right_to_try--;
