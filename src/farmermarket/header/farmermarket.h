@@ -1,7 +1,7 @@
 /**
  * @file farmermarket.h
- * 
- * @brief Provides functions
+ *
+ * @brief Provides functions definations.
  */
 #ifndef FARMERMARKET_H
 #define FARMERMARKET_H
@@ -13,7 +13,7 @@ typedef struct {
 } User;
 
 typedef struct {
-    int id;
+    int price;
     char* name;
     char* season;
 } ProductSeason;
@@ -54,4 +54,10 @@ int saveProductSeason(const ProductSeason* productSeason, int numProducts, const
 int loadProductSeasonsAndPrint(FILE* in, FILE* out, const char* filename, const char* selectedSeason);
 
 bool seasonalProduceGuide(FILE* in, FILE* out);
+
+int lcs(char* X, char* Y, int m, int n);
+
+void compareAndPrintLCS(char* season1, char* season2, char* name1, char* name2, int price, FILE* out);
+
+bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out);
 #endif // FARMERMARKET_H

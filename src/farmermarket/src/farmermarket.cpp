@@ -6,6 +6,44 @@
 #include <time.h>
 bool guessMode = false;
 char active_user[50];
+char* vendors[] = { "Ahmet", "Mehmet", "Veli", "Ayse", "Nuriye" };
+char* products[][6] = {
+    {"Ahmet", "Banana", "Apple", "Cherry", "Date", "Grape"},
+    {"Mehmet", "Raspberry", "Eggplant", "Mushroom", "Beet", "Turnip"},
+    {"Veli", "Cucumber", "Melon", "Lemon", "Tomato", "Orange"},
+    {"Ayse", "Pear", "Nectarine", "Carrot", "Bean", "Beet"},
+    {"Nuriye", "Hazelnut", "Chestnut", "Fig", "Coconut", "Broccoli"}
+};
+
+ProductSeason productSeasons[] = {
+    {10,"Banana", "Summer"},
+    {10,"Apple", "Fall"},
+    {10,"Cherry", "Summer"},
+    {15,"Date", "Fall"},
+    {15, "Grape", "Fall"},
+    {15,"Raspberry", "Summer"},
+    {20,"Eggplant", "Summer"},
+    {20,"Mushroom", "Fall"},
+    {20,"Beet", "Fall"},
+    {25, "Turnip", "Winter"},
+    {25, "Cucumber", "Summer"},
+    {25, "Melon", "Summer"},
+    {30, "Lemon", "Winter"},
+    {30,"Tomato", "Summer"},
+    {30, "Orange", "Winter"},
+    {35, "Pear", "Fall"},
+    {35,"Nectarine", "Summer"},
+    {35, "Carrot", "Fall"},
+    {40, "Bean", "Summer"},
+    {40, "Hazelnut", "Fall"},
+    {40, "Chestnut", "Fall"},
+    {45, "Fig", "Summer"},
+    {45, "Coconut", "Summer"},
+    {45,"Broccoli", "Fall"},
+    {15, "Asparagus", "Spring"},
+    {15,"Radish", "Spring"},
+};
+int numProducts = sizeof(productSeasons) / sizeof(productSeasons[0]);
 void clearScreen() {
 #ifdef _WIN32
     system("cls");
@@ -41,7 +79,7 @@ bool mainMenu(FILE* in, FILE* out) {
             seasonalProduceGuide(in, out);
             break;
         case 3:
-            fprintf(out, "Price Comparison\n");
+            PurchasingTransactionsAndPriceComparison(in, out);
             break;
         case 4:
             fprintf(out, "Market Hours and Locations\n");
@@ -95,6 +133,7 @@ bool userAuthentication(FILE* in, FILE* out) {
     char temp_password[50];
 
     while (true) {
+        clearScreen();
         fprintf(out, "1. Login\n");
         fprintf(out, "2. Register\n");
         fprintf(out, "3. Guest Mode\n");
@@ -117,7 +156,8 @@ bool userAuthentication(FILE* in, FILE* out) {
                 fprintf(out, "Welcome %s\n", temp_username);
                 strcpy(active_user, temp_username);
                 while (fgetc(in) != '\n' && !feof(in));
-                return true; }
+                return true;
+            }
             else {
                 fprintf(out, "You entered wrong username or password. Please try again.\n");
                 right_to_try--;
@@ -221,7 +261,8 @@ int binarySearch(char* arr[], int l, int r, char* x) {
 bool searchAndPrintResult(char* arr[], int size, char* x) {
     int result = binarySearch(arr, 0, size - 1, x);
     if (result == -1) {
-        return false; }
+        return false;
+    }
     else {
         return true;
     }
@@ -229,14 +270,7 @@ bool searchAndPrintResult(char* arr[], int size, char* x) {
 
 bool listingOfInfos(FILE* in, FILE* out) {
     clearScreen();
-    char* vendors[] = { "Ahmet", "Mehmet", "Veli", "Ayse", "Nuriye" };
-    char* products[][6] = {
-        {"Ahmet", "Banana", "Apple", "Cherry", "Date", "Grape"},
-        {"Mehmet", "Raspberry", "Eggplant", "Mushroom", "Beet", "Turnip"},
-        {"Veli", "Cucumber", "Melon", "Lemon", "Tomato", "Orange"},
-        {"Ayse", "Pear", "Nectarine", "Carrot", "Bean", "Beet"},
-        {"Nuriye", "Hazelnut", "Chestnut", "Fig", "Coconut", "Broccoli"}
-    };
+
     int numVendors = sizeof(vendors) / sizeof(vendors[0]);
     int numProductsPerVendor = sizeof(products[0]) / sizeof(products[0][0]);
     char vendor_query[50];
@@ -266,7 +300,7 @@ bool listingOfInfos(FILE* in, FILE* out) {
             clearScreen();
             if (searchAndPrintResult(vendors, numVendors, vendor_query)) {
                 fprintf(out, "Vendor found: %s\n", vendor_query);
-                }
+            }
             else {
                 fprintf(out, "Vendor not found.\n");
             }
@@ -282,7 +316,8 @@ bool listingOfInfos(FILE* in, FILE* out) {
                 if (binarySearch(products[i] + 1, 0, numProductsPerVendor - 2, product_query) != -1) {
                     fprintf(out, "Product %s found at vendor %s\n", product_query, products[i][0]);
                     found = true;
-                    break; }
+                    break;
+                }
                 else {
                     found = false;
                 }
@@ -314,7 +349,7 @@ void insertMinHeap(MinHeap* heap, ProductSeason item) {
     int i = heap->size++;
     while (i > 0) {
         int parent = (i - 1) / 2;
-        if (heap->items[parent].id <= item.id) break;
+        if (heap->items[parent].price <= item.price) break;
         heap->items[i] = heap->items[parent];
         i = parent;
     }
@@ -328,10 +363,10 @@ ProductSeason removeMin(MinHeap* heap) {
     while (i * 2 + 1 < heap->size) {
         int left = i * 2 + 1, right = i * 2 + 2;
         int smallest = left;
-        if (right < heap->size && heap->items[right].id < heap->items[left].id) {
+        if (right < heap->size && heap->items[right].price < heap->items[left].price) {
             smallest = right;
         }
-        if (lastItem.id <= heap->items[smallest].id) break;
+        if (lastItem.price <= heap->items[smallest].price) break;
         heap->items[i] = heap->items[smallest];
         i = smallest;
     }
@@ -375,50 +410,17 @@ int loadProductSeasonsAndPrint(FILE* in, FILE* out, const char* filename, const 
     fclose(file);
     while (heap.size > 0) {
         ProductSeason ps = removeMin(&heap);
-        fprintf(out, "- ID: %d, Name: %s\n", ps.id, ps.name);
+        fprintf(out, "- Price: %d, Name: %s\n", ps.price, ps.name);
     }
     while (fgetc(in) != '\n' && !feof(in));
 
     return found;
 }
 
-
-
 bool seasonalProduceGuide(FILE* in, FILE* out) {
     clearScreen();
     const char* filename = "ProductSeasons.bin";
-    ProductSeason productSeasons[] = {
-    {2,"Banana", "Summer"},
-    {30, "Rhubarb", "Spring"},
-    {13,"Apple", "Fall"},
-    {28, "Peas", "Spring"},
-    {1,"Cherry", "Summer"},
-    {14,"Date", "Fall"},
-    {15, "Grape", "Fall"},
-    {3,"Raspberry", "Summer"},
-    {29, "Radish", "Spring"},
-    {5,"Eggplant", "Summer"},
-    {16,"Mushroom", "Fall"},
-    {17,"Beet", "Fall"},
-    {23, "Turnip", "Winter"},
-    {6, "Cucumber", "Summer"},
-    {8, "Melon", "Summer"},
-    {24, "Lemon", "Winter"},
-    {7,"Tomato", "Summer"},
-    {27, "Asparagus", "Spring"},
-    {25, "Orange", "Winter"},
-    {18, "Pear", "Fall"},
-    {9,"Nectarine", "Summer"},
-    {19, "Carrot", "Fall"},
-    {10, "Bean", "Summer"},
-    {20, "Hazelnut", "Fall"},
-    {21, "Chestnut", "Fall"},
-    {11, "Fig", "Summer"},
-    {4, "Coconut", "Summer"},
-    {22,"Broccoli", "Fall"},
-    {26, "Strawberry", "Spring"},
-    };
-    int numProducts = sizeof(productSeasons) / sizeof(productSeasons[0]);
+
     saveProductSeason(productSeasons, numProducts, filename);
     while (true) {
         clearScreen();
@@ -448,6 +450,123 @@ bool seasonalProduceGuide(FILE* in, FILE* out) {
         fprintf(out, "Available produce for %s season:\n", selectedSeason);
         if (!loadProductSeasonsAndPrint(in, out, filename, selectedSeason)) {
             fprintf(out, "No produce found for this season.\n");
+        }
+    }
+    return true;
+}
+
+int lcs(char* X, char* Y, int m, int n)
+{
+    int** L;
+    L = (int**)malloc((m + 1) * sizeof(int*));
+    for (int i = 0; i <= m; i++) {
+        L[i] = (int*)malloc((n + 1) * sizeof(int));
+    }
+
+    int i, j;
+
+    for (i = 0; i <= m; i++)
+    {
+        for (j = 0; j <= n; j++)
+        {
+            if (i == 0 || j == 0)
+                L[i][j] = 0;
+            else if (X[i - 1] == Y[j - 1])
+                L[i][j] = L[i - 1][j - 1] + 1;
+            else
+                L[i][j] = (L[i - 1][j] > L[i][j - 1]) ? L[i - 1][j] : L[i][j - 1];
+        }
+    }
+
+    int result = L[m][n];
+
+    for (int i = 0; i <= m; i++) {
+        free(L[i]);
+    }
+    free(L);
+
+    return result;
+}
+
+void compareAndPrintLCS(char* season1, char* season2, char* name1, char* name2, int price, FILE* out)
+{
+    int m = strlen(name1);
+    int n = strlen(name2);
+
+    int lcsLength = lcs(name1, name2, m, n);
+
+    if (lcsLength > 0 && strcmp(season1, season2) == 0) {
+        fprintf(out, "- Name 1: %s, Name 2: %s, Price: %d\n", name1, name2, price);
+    }
+}
+
+bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
+    clearScreen();
+    int choice;
+    while (true) {
+        clearScreen();
+        fprintf(out, "1. Buy Products\n");
+        fprintf(out, "2. Compare Products\n");
+        fprintf(out, "3. Exit\n");
+        fprintf(out, "Please select an option: ");
+        if (fscanf(in, "%d", &choice) != 1) {
+            while (fgetc(in) != '\n' && !feof(in));
+            fprintf(out, "Invalid input, please enter a number.\n");
+            continue;
+        }
+        while (fgetc(in) != '\n' && !feof(in));
+        bool found = false;
+        bool validSeason = false;
+        switch (choice) {
+        case 1:
+            if (guessMode)
+            {
+                fprintf(out, "You can not buy product in guess mode.\n");
+                break;
+            }
+
+            break;
+        case 2:
+            clearScreen();
+            fprintf(out, "Enter a season: ");
+            char selectedSeason[50];
+            fgets(selectedSeason, sizeof(selectedSeason), in);
+            selectedSeason[strcspn(selectedSeason, "\n")] = '\0';
+            
+            for (int i = 0; i < sizeof(productSeasons) / sizeof(productSeasons[0]); i++) {
+                if (strcmp(productSeasons[i].season, selectedSeason) == 0) {
+                    validSeason = true;
+                    break;
+                }
+            }
+            if (!validSeason) {
+                fprintf(out, "Invalid season. Please enter a valid season.\n");
+                while (fgetc(in) != '\n' && !feof(in));
+                break;
+            }
+            fprintf(out, "Products at the same price as %s season products:\n", selectedSeason);
+            for (int i = 0; i < sizeof(productSeasons) / sizeof(productSeasons[0]); i++)
+            {
+                if (strcmp(productSeasons[i].season, selectedSeason) == 0)
+                {
+                    for (int j = i + 1; j < sizeof(productSeasons) / sizeof(productSeasons[0]); j++)
+                    {
+                        if (productSeasons[i].price == productSeasons[j].price)
+                        {
+                            compareAndPrintLCS(selectedSeason, productSeasons[i].season, productSeasons[i].name, productSeasons[j].name, productSeasons[i].price, out);
+
+                            found = true;
+                        }
+                    }
+                }
+            }
+            while (fgetc(in) != '\n' && !feof(in));
+            break;
+        case 3:
+            return false;
+        default:
+            fprintf(out, "Invalid option, please try again.\n");
+            while (fgetc(in) != '\n' && !feof(in));
         }
     }
     return true;
