@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['user_0',['User',['../struct_user.html',1,'']]]
+  ['minheap_0',['MinHeap',['../struct_min_heap.html',1,'']]]
 ];

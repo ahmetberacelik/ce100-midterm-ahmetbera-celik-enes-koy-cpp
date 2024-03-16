@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_min_heap" kind="struct" language="C++" prot="public">
+    <compoundname>MinHeap</compoundname>
+    <includes refid="farmermarket_8h" local="no">farmermarket.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_min_heap_1a032247163d50bc97e85814c3a016d191" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_product_season" kindref="compound">ProductSeason</ref></type>
+        <definition>ProductSeason MinHeap::items[MAX_SIZE]</definition>
+        <argsstring>[MAX_SIZE]</argsstring>
+        <name>items</name>
+        <qualifiedname>MinHeap::items</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="21" column="19" bodyfile="src/farmermarket/header/farmermarket.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_min_heap_1a656a275b0ca8c80647d6251c09d31247" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MinHeap::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>MinHeap::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="22" column="9" bodyfile="src/farmermarket/header/farmermarket.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>MinHeap</label>
+        <link refid="struct_min_heap"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+items</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ProductSeason</label>
+        <link refid="struct_product_season"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/farmermarket/header/farmermarket.h" line="20" column="1" bodyfile="src/farmermarket/header/farmermarket.h" bodystart="20" bodyend="23"/>
+    <listofallmembers>
+      <member refid="struct_min_heap_1a032247163d50bc97e85814c3a016d191" prot="public" virt="non-virtual"><scope>MinHeap</scope><name>items</name></member>
+      <member refid="struct_min_heap_1a656a275b0ca8c80647d6251c09d31247" prot="public" virt="non-virtual"><scope>MinHeap</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

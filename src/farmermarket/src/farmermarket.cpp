@@ -15,7 +15,6 @@ char* products[][6] = {
     {"Ayse", "Pear", "Nectarine", "Carrot", "Bean", "Beet"},
     {"Nuriye", "Hazelnut", "Chestnut", "Fig", "Coconut", "Broccoli"}
 };
-
 ProductSeason productSeasons[] = {
     {10,"Banana", "Summer"},
     {10,"Apple", "Fall"},
@@ -44,6 +43,8 @@ ProductSeason productSeasons[] = {
     {15, "Asparagus", "Spring"},
     {15,"Radish", "Spring"},
 };
+int numVendors = sizeof(vendors) / sizeof(vendors[0]);
+int numProductsPerVendor = sizeof(products[0]) / sizeof(products[0][0]);
 const int numProducts = sizeof(productSeasons) / sizeof(productSeasons[0]);
 void clearScreen() {
 #ifdef _WIN32
@@ -159,19 +160,25 @@ bool userAuthentication(FILE* in, FILE* out) {
             fprintf(out, "Please enter your username: ");
             fgets(temp_username, 50, in);
             temp_username[strcspn(temp_username, "\n")] = 0;
+
             fprintf(out, "Please enter your password: ");
             fgets(temp_password, 50, in);
             temp_password[strcspn(temp_password, "\n")] = 0;
+
             fprintf(out, "Please enter your budget: ");
             fscanf(in, "%d", &budget);
+
             while (fgetc(in) != '\n' && !feof(in));
+
             if (authenticateUser(temp_username, temp_password, filename) == 1) {
                 fprintf(out, "Welcome %s\n", temp_username);
+
                 strcpy(active_user.username, temp_username);
                 strcpy(active_user.password, temp_password);
+
                 while (fgetc(in) != '\n' && !feof(in));
-                return true;
-            }
+
+                return true; }
             else {
                 fprintf(out, "You entered wrong username or password. Please try again.\n");
                 right_to_try--;
@@ -188,6 +195,7 @@ bool userAuthentication(FILE* in, FILE* out) {
             fprintf(out, "Please enter your username: ");
             fgets(temp_username, 50, in);
             temp_username[strcspn(temp_username, "\n")] = 0;
+
             fprintf(out, "Please enter your password: ");
             fgets(temp_password, 50, in);
             temp_password[strcspn(temp_password, "\n")] = 0;
@@ -279,21 +287,54 @@ int binarySearch(char* arr[], int l, int r, char* x) {
 bool searchAndPrintResult(char* arr[], int size, char* x) {
     int result = binarySearch(arr, 0, size - 1, x);
     if (result == -1) {
-        return false;
-    }
+        return false; }
     else {
         return true;
     }
 }
 
+bool browseVendor(FILE* in, FILE* out) {
+    char vendor_query[50];
+    fprintf(out, "Please enter vendor name: ");
+    fgets(vendor_query, 50, in);
+    vendor_query[strcspn(vendor_query, "\n")] = 0;
+
+    quickSort(vendors, 0, numVendors - 1);
+
+    clearScreen();
+    if (searchAndPrintResult(vendors, numVendors, vendor_query)) {
+        fprintf(out, "Vendor found: %s\n", vendor_query);
+    }
+    else {
+        fprintf(out, "Vendor not found.\n");
+        return false;
+    } 
+    return true;
+}
+
+bool searchProduct(FILE* in, FILE* out) {
+    char product_query[50];
+    fprintf(out, "Please enter product name: ");
+    fgets(product_query, 50, in);
+    product_query[strcspn(product_query, "\n")] = 0;
+
+    for (int i = 0; i < numVendors; i++) {
+        quickSort(products[i] + 1, 0, numProductsPerVendor - 2);
+        clearScreen();
+        int result = binarySearch(products[i] + 1, 0, numProductsPerVendor - 2, product_query);
+        if (result != -1) {
+            fprintf(out, "Product %s found at vendor %s\n", product_query, products[i][0]);
+            return true;
+        }
+    }
+    fprintf(out, "Product not found.\n");
+    return false;
+}
+
+
 bool listingOfInfos(FILE* in, FILE* out) {
     clearScreen();
 
-    int numVendors = sizeof(vendors) / sizeof(vendors[0]);
-    int numProductsPerVendor = sizeof(products[0]) / sizeof(products[0][0]);
-    char vendor_query[50];
-    char product_query[50];
-    bool found = false;
     int choice;
     while (true) {
         clearScreen();
@@ -315,38 +356,11 @@ bool listingOfInfos(FILE* in, FILE* out) {
 
         switch (choice) {
         case 1:
-            fprintf(out, "Please enter vendor name: ");
-            fgets(vendor_query, 50, in);
-            vendor_query[strcspn(vendor_query, "\n")] = 0;
-            quickSort(vendors, 0, numVendors - 1);
-            clearScreen();
-            if (searchAndPrintResult(vendors, numVendors, vendor_query)) {
-                fprintf(out, "Vendor found: %s\n", vendor_query);
-            }
-            else {
-                fprintf(out, "Vendor not found.\n");
-            }
+            browseVendor(in, out);
             while (fgetc(in) != '\n' && !feof(in));
             break;
         case 2:
-            fprintf(out, "Please enter product name: ");
-            fgets(product_query, 50, in);
-            product_query[strcspn(product_query, "\n")] = 0;
-            for (int i = 0; i < numVendors; i++) {
-                quickSort(products[i] + 1, 0, numProductsPerVendor - 2);
-                clearScreen();
-                if (binarySearch(products[i] + 1, 0, numProductsPerVendor - 2, product_query) != -1) {
-                    fprintf(out, "Product %s found at vendor %s\n", product_query, products[i][0]);
-                    found = true;
-                    break;
-                }
-                else {
-                    found = false;
-                }
-            }
-            if (!found) {
-                fprintf(out, "Product not found.\n");
-            }
+            searchProduct(in, out);
             while (fgetc(in) != '\n' && !feof(in));
             break;
         case 3:
@@ -383,9 +397,7 @@ ProductSeason removeMin(MinHeap* heap) {
     while (i * 2 + 1 < heap->size) {
         int left = i * 2 + 1, right = i * 2 + 2;
         int smallest = left;
-        if (right < heap->size && heap->items[right].price < heap->items[left].price) {
-            smallest = right;
-        }
+        if (right < heap->size && heap->items[right].price < heap->items[left].price) smallest = right;
         if (lastItem.price <= heap->items[smallest].price) break;
         heap->items[i] = heap->items[smallest];
         i = smallest;
@@ -396,9 +408,6 @@ ProductSeason removeMin(MinHeap* heap) {
 
 int saveProductSeason(const ProductSeason* productSeason, int numProducts, const char* filename) {
     FILE* file = fopen(filename, "wb");
-    if (!file) {
-        return 0;
-    }
     fwrite(&numProducts, sizeof(int), 1, file);
     fwrite(productSeason, sizeof(ProductSeason), numProducts, file);
     fclose(file);
@@ -407,11 +416,6 @@ int saveProductSeason(const ProductSeason* productSeason, int numProducts, const
 
 int loadProductSeasonsAndPrint(FILE* in, FILE* out, const char* filename, const char* selectedSeason) {
     FILE* file = fopen(filename, "rb");
-    if (!file) {
-        fprintf(out, "File didn't open.\n");
-        return 0;
-    }
-
     int numProducts;
     fread(&numProducts, sizeof(int), 1, file);
 
@@ -608,6 +612,84 @@ bool suggestPurchases(FILE* out, int budget) {
     return true;
 }
 
+bool CompareProducts(FILE* in, FILE* out) {
+    bool validSeason = false;
+    bool found = false;
+    fprintf(out, "Enter a season: ");
+    char selectedSeason[50];
+    fgets(selectedSeason, sizeof(selectedSeason), in);
+    selectedSeason[strcspn(selectedSeason, "\n")] = '\0';
+
+    for (int i = 0; i < sizeof(productSeasons) / sizeof(productSeasons[0]); i++) {
+        if (strcmp(productSeasons[i].season, selectedSeason) == 0) {
+            validSeason = true;
+        }
+    }
+    if (!validSeason) {
+        fprintf(out, "Invalid season. Please enter a valid season.\n");
+        while (fgetc(in) != '\n' && !feof(in));
+        return false;
+    }
+    fprintf(out, "+-----------------------------------------------------+\n");
+    fprintf(out, "|Products at the same price as %s season products:\n", selectedSeason);
+    fprintf(out, "+-----------------------------------------------------+\n");
+    for (int i = 0; i < sizeof(productSeasons) / sizeof(productSeasons[0]); i++)
+    {
+        if (strcmp(productSeasons[i].season, selectedSeason) == 0)
+        {
+            for (int j = i + 1; j < sizeof(productSeasons) / sizeof(productSeasons[0]); j++)
+            {
+                if (productSeasons[i].price == productSeasons[j].price)
+                {
+                    compareAndPrintLCS(selectedSeason, productSeasons[i].season, productSeasons[i].name, productSeasons[j].name, productSeasons[i].price, out);
+
+                    found = true;
+                }
+            }
+        }
+    }
+    fprintf(out, "+-----------------------------------------------------+\n");
+    return true;
+}
+
+bool BuyProducts(FILE* in, FILE* out) {
+    bool productFound = false;
+    int productPrice = 0;
+    char* vendorName = NULL;
+    char productQuery[50];
+    fprintf(out, "Please enter the product name you wish to buy: ");
+    fgets(productQuery, 50, in);
+    productQuery[strcspn(productQuery, "\n")] = 0;
+
+    for (int i = 0; i < numProducts; i++) {
+        if (strcmp(productSeasons[i].name, productQuery) == 0) {
+            productFound = true;
+            productPrice = productSeasons[i].price;
+
+            for (int j = 0; j < sizeof(products) / sizeof(products[0]); j++) {
+                for (int k = 1; k < sizeof(products[j]) / sizeof(products[j][0]); k++) {
+                    if (strcmp(products[j][k], productQuery) == 0) {
+                        vendorName = products[j][0];
+                        break; }
+                }
+                if (vendorName != NULL) break; }
+            break; }
+    }
+
+    if (!productFound) {
+        fprintf(out, "Product not found. Please ensure the product name is spelled correctly.\n");
+        return false; }
+    else if (budget < productPrice) {
+        fprintf(out, "Insufficient budget to buy %s from %s. Your current budget is %d.\n", productQuery, vendorName, budget);
+        return false;
+    }
+    else {
+        budget -= productPrice;
+        fprintf(out, "You have successfully purchased %s for %d from %s. Remaining budget: %d.\n", productQuery, productPrice, vendorName, budget);
+    }
+    return true;
+}
+
 bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
     clearScreen();
     int choice;
@@ -628,11 +710,6 @@ bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
             continue;
         }
         while (fgetc(in) != '\n' && !feof(in));
-        bool found = false;
-        bool validSeason = false;
-        bool productFound = false;
-        int productPrice = 0;
-        char* vendorName = NULL;
         switch (choice) {
         case 1:
             clearScreen();
@@ -649,41 +726,7 @@ bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
             break;
         case 2:
             clearScreen();
-            fprintf(out, "Enter a season: ");
-            char selectedSeason[50];
-            fgets(selectedSeason, sizeof(selectedSeason), in);
-            selectedSeason[strcspn(selectedSeason, "\n")] = '\0';
-
-            for (int i = 0; i < sizeof(productSeasons) / sizeof(productSeasons[0]); i++) {
-                if (strcmp(productSeasons[i].season, selectedSeason) == 0) {
-                    validSeason = true;
-                    break;
-                }
-            }
-            if (!validSeason) {
-                fprintf(out, "Invalid season. Please enter a valid season.\n");
-                while (fgetc(in) != '\n' && !feof(in));
-                break;
-            }
-            fprintf(out, "+-----------------------------------------------------+\n");
-            fprintf(out, "|Products at the same price as %s season products:\n", selectedSeason);
-            fprintf(out, "+-----------------------------------------------------+\n");
-            for (int i = 0; i < sizeof(productSeasons) / sizeof(productSeasons[0]); i++)
-            {
-                if (strcmp(productSeasons[i].season, selectedSeason) == 0)
-                {
-                    for (int j = i + 1; j < sizeof(productSeasons) / sizeof(productSeasons[0]); j++)
-                    {
-                        if (productSeasons[i].price == productSeasons[j].price)
-                        {
-                            compareAndPrintLCS(selectedSeason, productSeasons[i].season, productSeasons[i].name, productSeasons[j].name, productSeasons[i].price, out);
-
-                            found = true;
-                        }
-                    }
-                }
-            }
-            fprintf(out, "+-----------------------------------------------------+\n");
+            CompareProducts(in, out);
             while (fgetc(in) != '\n' && !feof(in));
             break;
         case 3:
@@ -694,43 +737,14 @@ bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
                 while (fgetc(in) != '\n' && !feof(in));
                 break;
             }
-            char productQuery[50];
-            fprintf(out, "Please enter the product name you wish to buy: ");
-            fgets(productQuery, 50, in);
-            productQuery[strcspn(productQuery, "\n")] = 0;
-            
-            for (int i = 0; i < numProducts; i++) {
-                if (strcmp(productSeasons[i].name, productQuery) == 0) {
-                    productFound = true;
-                    productPrice = productSeasons[i].price;
-
-                    for (int j = 0; j < sizeof(products) / sizeof(products[0]); j++) {
-                        for (int k = 1; k < sizeof(products[j]) / sizeof(products[j][0]); k++) {
-                            if (strcmp(products[j][k], productQuery) == 0) {
-                                vendorName = products[j][0];
-                                break;
-                            }
-                        }
-                        if (vendorName != NULL) break;
-                    }
-                    break;
-                }
-            }
-
-            if (!productFound) {
-                fprintf(out, "Product not found. Please ensure the product name is spelled correctly.\n");
-            }
-            else if (budget < productPrice) {
-                fprintf(out, "Insufficient budget to buy %s from %s. Your current budget is %d.\n", productQuery, vendorName, budget);
-            }
-            else {
-                budget -= productPrice;
-                fprintf(out, "You have successfully purchased %s for %d from %s. Remaining budget: %d.\n", productQuery, productPrice, vendorName, budget);
+            else
+            {
+                BuyProducts(in, out);
             }
         while (fgetc(in) != '\n' && !feof(in));
         break;
         case 4:
-            return false;
+            return true;
         default:
             fprintf(out, "Invalid option, please try again.\n");
             while (fgetc(in) != '\n' && !feof(in));

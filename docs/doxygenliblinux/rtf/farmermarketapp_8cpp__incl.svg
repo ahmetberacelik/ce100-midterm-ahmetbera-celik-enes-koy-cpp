@@ -37,7 +37,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="$farmermarket_8h.html" xlink:title="Provides functions.">
+<g id="a_node3"><a xlink:href="$farmermarket_8h.html" xlink:title="Provides functions definations.">
 <polygon fill="white" stroke="black" points="53,-56.5 53,-86.5 186,-86.5 186,-56.5 53,-56.5"/>
 <text text-anchor="start" x="61" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">../../farmermarket</text>
 <text text-anchor="middle" x="119.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">/header/farmermarket.h</text>

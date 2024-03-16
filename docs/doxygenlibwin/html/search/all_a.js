@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['saveuser_0',['saveUser',['../farmermarket_8h.html#a3571d8d7858de3069c0320b86f5c2d6c',1,'saveUser(const User *user, const char *filename):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a3571d8d7858de3069c0320b86f5c2d6c',1,'saveUser(const User *user, const char *filename):&#160;farmermarket.cpp']]],
-  ['searchandprintresult_1',['searchAndPrintResult',['../farmermarket_8h.html#a89eb831fe57e17f7dec4227adaead9d4',1,'searchAndPrintResult(char *arr[], int size, char *x):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a89eb831fe57e17f7dec4227adaead9d4',1,'searchAndPrintResult(char *arr[], int size, char *x):&#160;farmermarket.cpp']]],
-  ['swap_2',['swap',['../farmermarket_8h.html#a7ce3038a802aa59d3225588131ea97bb',1,'swap(char **a, char **b):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a7ce3038a802aa59d3225588131ea97bb',1,'swap(char **a, char **b):&#160;farmermarket.cpp']]]
+  ['partition_0',['partition',['../farmermarket_8h.html#aa20d794eb7aaeb63297a19db22b775ca',1,'partition(char *arr[], int low, int high):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#aa20d794eb7aaeb63297a19db22b775ca',1,'partition(char *arr[], int low, int high):&#160;farmermarket.cpp']]],
+  ['password_1',['password',['../struct_user.html#ae547b53c7ae0dee7ba2fc00bf315fa24',1,'User']]],
+  ['price_2',['price',['../struct_product_season.html#a2c461bfb22f07f5fb17933d69b24c9d0',1,'ProductSeason']]],
+  ['products_3',['products',['../farmermarket_8cpp.html#a163d6ab236f77517bca4649094d44b2d',1,'farmermarket.cpp']]],
+  ['productseason_4',['ProductSeason',['../struct_product_season.html',1,'']]],
+  ['productseasons_5',['productSeasons',['../farmermarket_8cpp.html#ab10615d37b796f2de733bab04d544486',1,'farmermarket.cpp']]],
+  ['purchasingtransactionsandpricecomparison_6',['PurchasingTransactionsAndPriceComparison',['../farmermarket_8h.html#afdab1f2c2c53e366c20cb639384fb396',1,'PurchasingTransactionsAndPriceComparison(FILE *in, FILE *out):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#afdab1f2c2c53e366c20cb639384fb396',1,'PurchasingTransactionsAndPriceComparison(FILE *in, FILE *out):&#160;farmermarket.cpp']]]
 ];

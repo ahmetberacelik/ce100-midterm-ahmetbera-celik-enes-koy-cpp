@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Provides functions.">
+<g id="a_Node000001"><a xlink:title="Provides functions definations.">
 <polygon fill="#999999" stroke="#666666" points="121.75,-88 0,-88 0,-56 121.75,-56 121.75,-88"/>
 <text text-anchor="start" x="8" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/farmermarket/header</text>
 <text text-anchor="middle" x="60.88" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">/farmermarket.h</text>

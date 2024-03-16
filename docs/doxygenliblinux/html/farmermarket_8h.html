@@ -70,13 +70,14 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">farmermarket.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Provides functions.  
+<p>Provides functions definations.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -98,9 +99,20 @@ This graph shows which files directly or indirectly include this file:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUser.html">User</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProductSeason.html">ProductSeason</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMinHeap.html">MinHeap</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a0592dba56693fad79136250c11e5a7fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#a0592dba56693fad79136250c11e5a7fe">MAX_SIZE</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:a0592dba56693fad79136250c11e5a7fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a9d7e8af417b6d543da691e9c0e2f6f9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#a9d7e8af417b6d543da691e9c0e2f6f9f">clearScreen</a> ()</td></tr>
+<tr class="separator:a9d7e8af417b6d543da691e9c0e2f6f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d0255f645d941c02e7a6d600479552b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#a2d0255f645d941c02e7a6d600479552b">mainMenu</a> (FILE *in, FILE *out)</td></tr>
 <tr class="separator:a2d0255f645d941c02e7a6d600479552b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3571d8d7858de3069c0320b86f5c2d6c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#a3571d8d7858de3069c0320b86f5c2d6c">saveUser</a> (const <a class="el" href="structUser.html">User</a> *user, const char *filename)</td></tr>
@@ -119,12 +131,61 @@ Functions</h2></td></tr>
 <tr class="separator:ab61c92aff538932520ee72d58ad3bdf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89eb831fe57e17f7dec4227adaead9d4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#a89eb831fe57e17f7dec4227adaead9d4">searchAndPrintResult</a> (char *arr[], int size, char *x)</td></tr>
 <tr class="separator:a89eb831fe57e17f7dec4227adaead9d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1b23a5f4837b83b8d534d8efa8656bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#aa1b23a5f4837b83b8d534d8efa8656bc">browseVendor</a> (FILE *in, FILE *out)</td></tr>
+<tr class="separator:aa1b23a5f4837b83b8d534d8efa8656bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c24845ba4710a6ddf742ff90c3fe3f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#a9c24845ba4710a6ddf742ff90c3fe3f4">searchProduct</a> (FILE *in, FILE *out)</td></tr>
+<tr class="separator:a9c24845ba4710a6ddf742ff90c3fe3f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6faa53c43bb0d63cca3e821483e46159"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#a6faa53c43bb0d63cca3e821483e46159">listingOfInfos</a> (FILE *in, FILE *out)</td></tr>
 <tr class="separator:a6faa53c43bb0d63cca3e821483e46159"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdc09daeb6f473bdfc2b8420b5d43df2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#afdc09daeb6f473bdfc2b8420b5d43df2">initMinHeap</a> (<a class="el" href="structMinHeap.html">MinHeap</a> *heap)</td></tr>
+<tr class="separator:afdc09daeb6f473bdfc2b8420b5d43df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c8f4e395ebe2f63bb1e3195c2ed5c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#a05c8f4e395ebe2f63bb1e3195c2ed5c4">insertMinHeap</a> (<a class="el" href="structMinHeap.html">MinHeap</a> *heap, <a class="el" href="structProductSeason.html">ProductSeason</a> item)</td></tr>
+<tr class="separator:a05c8f4e395ebe2f63bb1e3195c2ed5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56c90b4e74e99e830a65afe24c2126f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structProductSeason.html">ProductSeason</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#a56c90b4e74e99e830a65afe24c2126f5">removeMin</a> (<a class="el" href="structMinHeap.html">MinHeap</a> *heap)</td></tr>
+<tr class="separator:a56c90b4e74e99e830a65afe24c2126f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d7b872077be723dacb9803166a15781"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#a1d7b872077be723dacb9803166a15781">saveProductSeason</a> (const <a class="el" href="structProductSeason.html">ProductSeason</a> *productSeason, int <a class="el" href="farmermarket_8cpp.html#aebf8c1269b5a0fc43f630809c1dc7a79">numProducts</a>, const char *filename)</td></tr>
+<tr class="separator:a1d7b872077be723dacb9803166a15781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aa75cd4a4f70c29cca79c8a6f8c5e20"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#a4aa75cd4a4f70c29cca79c8a6f8c5e20">loadProductSeasonsAndPrint</a> (FILE *in, FILE *out, const char *filename, const char *selectedSeason)</td></tr>
+<tr class="separator:a4aa75cd4a4f70c29cca79c8a6f8c5e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb5b925a462086bac6ce3deb0d397109"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#abb5b925a462086bac6ce3deb0d397109">seasonalProduceGuide</a> (FILE *in, FILE *out)</td></tr>
+<tr class="separator:abb5b925a462086bac6ce3deb0d397109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcef403a597dffc82764a462b584ccd0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#adcef403a597dffc82764a462b584ccd0">lcs</a> (char *X, char *Y, int m, int n)</td></tr>
+<tr class="separator:adcef403a597dffc82764a462b584ccd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e03443f56f183a6172a5af35d649cd8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#a2e03443f56f183a6172a5af35d649cd8">compareAndPrintLCS</a> (char *season1, char *season2, char *name1, char *name2, int price, FILE *out)</td></tr>
+<tr class="separator:a2e03443f56f183a6172a5af35d649cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af082905f7eac6d03e92015146bbc1925"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#af082905f7eac6d03e92015146bbc1925">max</a> (int a, int b)</td></tr>
+<tr class="separator:af082905f7eac6d03e92015146bbc1925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72cd2888bb605760d5a0f7e37703ddec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#a72cd2888bb605760d5a0f7e37703ddec">knapsack</a> (int W, int wt[], int val[], int n, int *selectedItems)</td></tr>
+<tr class="separator:a72cd2888bb605760d5a0f7e37703ddec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae128ef956aac4436a237685e8aa2ead"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#aae128ef956aac4436a237685e8aa2ead">suggestPurchases</a> (FILE *out, int <a class="el" href="farmermarket_8cpp.html#a59948f765f15671ee5157ec3a0001069">budget</a>)</td></tr>
+<tr class="separator:aae128ef956aac4436a237685e8aa2ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afff4db8ad11bb5cf38fd98ea4138145c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#afff4db8ad11bb5cf38fd98ea4138145c">CompareProducts</a> (FILE *in, FILE *out)</td></tr>
+<tr class="separator:afff4db8ad11bb5cf38fd98ea4138145c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac57a88ae4e2da199a12d762a771d537e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#ac57a88ae4e2da199a12d762a771d537e">BuyProducts</a> (FILE *in, FILE *out)</td></tr>
+<tr class="separator:ac57a88ae4e2da199a12d762a771d537e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdab1f2c2c53e366c20cb639384fb396"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#afdab1f2c2c53e366c20cb639384fb396">PurchasingTransactionsAndPriceComparison</a> (FILE *in, FILE *out)</td></tr>
+<tr class="separator:afdab1f2c2c53e366c20cb639384fb396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10a3dc160984de18304af35ab856484b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farmermarket_8h.html#a10a3dc160984de18304af35ab856484b">MarketHoursandLocations</a> (FILE *in, FILE *out)</td></tr>
+<tr class="separator:a10a3dc160984de18304af35ab856484b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Provides functions. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+<div class="textblock"><p>Provides functions definations. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a0592dba56693fad79136250c11e5a7fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0592dba56693fad79136250c11e5a7fe">&#9670;&nbsp;</a></span>MAX_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_SIZE&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a7e955099fa8201496a50f8a9f8f22b46"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e955099fa8201496a50f8a9f8f22b46">&#9670;&nbsp;</a></span>authenticateUser()</h2>
 
@@ -199,6 +260,291 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aa1b23a5f4837b83b8d534d8efa8656bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1b23a5f4837b83b8d534d8efa8656bc">&#9670;&nbsp;</a></span>browseVendor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool browseVendor </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac57a88ae4e2da199a12d762a771d537e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac57a88ae4e2da199a12d762a771d537e">&#9670;&nbsp;</a></span>BuyProducts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BuyProducts </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d7e8af417b6d543da691e9c0e2f6f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d7e8af417b6d543da691e9c0e2f6f9f">&#9670;&nbsp;</a></span>clearScreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clearScreen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e03443f56f183a6172a5af35d649cd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e03443f56f183a6172a5af35d649cd8">&#9670;&nbsp;</a></span>compareAndPrintLCS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool compareAndPrintLCS </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>season1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>season2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>price</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afff4db8ad11bb5cf38fd98ea4138145c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afff4db8ad11bb5cf38fd98ea4138145c">&#9670;&nbsp;</a></span>CompareProducts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CompareProducts </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afdc09daeb6f473bdfc2b8420b5d43df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdc09daeb6f473bdfc2b8420b5d43df2">&#9670;&nbsp;</a></span>initMinHeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initMinHeap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMinHeap.html">MinHeap</a> *&#160;</td>
+          <td class="paramname"><em>heap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05c8f4e395ebe2f63bb1e3195c2ed5c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c8f4e395ebe2f63bb1e3195c2ed5c4">&#9670;&nbsp;</a></span>insertMinHeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void insertMinHeap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMinHeap.html">MinHeap</a> *&#160;</td>
+          <td class="paramname"><em>heap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structProductSeason.html">ProductSeason</a>&#160;</td>
+          <td class="paramname"><em>item</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72cd2888bb605760d5a0f7e37703ddec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72cd2888bb605760d5a0f7e37703ddec">&#9670;&nbsp;</a></span>knapsack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int knapsack </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>W</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>wt</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>selectedItems</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adcef403a597dffc82764a462b584ccd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcef403a597dffc82764a462b584ccd0">&#9670;&nbsp;</a></span>lcs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lcs </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>X</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>Y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6faa53c43bb0d63cca3e821483e46159"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6faa53c43bb0d63cca3e821483e46159">&#9670;&nbsp;</a></span>listingOfInfos()</h2>
 
@@ -227,6 +573,46 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a4aa75cd4a4f70c29cca79c8a6f8c5e20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aa75cd4a4f70c29cca79c8a6f8c5e20">&#9670;&nbsp;</a></span>loadProductSeasonsAndPrint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int loadProductSeasonsAndPrint </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>selectedSeason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2d0255f645d941c02e7a6d600479552b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d0255f645d941c02e7a6d600479552b">&#9670;&nbsp;</a></span>mainMenu()</h2>
 
@@ -244,6 +630,62 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">FILE *&#160;</td>
           <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10a3dc160984de18304af35ab856484b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10a3dc160984de18304af35ab856484b">&#9670;&nbsp;</a></span>MarketHoursandLocations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MarketHoursandLocations </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af082905f7eac6d03e92015146bbc1925"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af082905f7eac6d03e92015146bbc1925">&#9670;&nbsp;</a></span>max()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int max </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -289,6 +731,34 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="afdab1f2c2c53e366c20cb639384fb396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdab1f2c2c53e366c20cb639384fb396">&#9670;&nbsp;</a></span>PurchasingTransactionsAndPriceComparison()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PurchasingTransactionsAndPriceComparison </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="abe92df5eb77de11b244b68e5b635696a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abe92df5eb77de11b244b68e5b635696a">&#9670;&nbsp;</a></span>quickSort()</h2>
 
@@ -312,6 +782,58 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>high</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56c90b4e74e99e830a65afe24c2126f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56c90b4e74e99e830a65afe24c2126f5">&#9670;&nbsp;</a></span>removeMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structProductSeason.html">ProductSeason</a> removeMin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMinHeap.html">MinHeap</a> *&#160;</td>
+          <td class="paramname"><em>heap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d7b872077be723dacb9803166a15781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d7b872077be723dacb9803166a15781">&#9670;&nbsp;</a></span>saveProductSeason()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int saveProductSeason </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structProductSeason.html">ProductSeason</a> *&#160;</td>
+          <td class="paramname"><em>productSeason</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numProducts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -374,6 +896,90 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c24845ba4710a6ddf742ff90c3fe3f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c24845ba4710a6ddf742ff90c3fe3f4">&#9670;&nbsp;</a></span>searchProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool searchProduct </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb5b925a462086bac6ce3deb0d397109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb5b925a462086bac6ce3deb0d397109">&#9670;&nbsp;</a></span>seasonalProduceGuide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool seasonalProduceGuide </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae128ef956aac4436a237685e8aa2ead"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae128ef956aac4436a237685e8aa2ead">&#9670;&nbsp;</a></span>suggestPurchases()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool suggestPurchases </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>budget</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

@@ -42,6 +42,10 @@ int binarySearch(char* arr[], int l, int r, char* x);
 
 bool searchAndPrintResult(char* arr[], int size, char* x);
 
+bool browseVendor(FILE* in, FILE* out);
+
+bool searchProduct(FILE* in, FILE* out);
+
 bool listingOfInfos(FILE* in, FILE* out);
 
 void initMinHeap(MinHeap* heap);
@@ -65,6 +69,10 @@ int max(int a, int b);
 int knapsack(int W, int wt[], int val[], int n, int* selectedItems);
 
 bool suggestPurchases(FILE* out, int budget);
+
+bool CompareProducts(FILE* in, FILE* out);
+
+bool BuyProducts(FILE* in, FILE* out);
 
 bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out);
 

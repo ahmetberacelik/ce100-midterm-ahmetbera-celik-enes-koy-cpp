@@ -35,7 +35,35 @@
       </node>
     </invincdepgraph>
     <innerclass refid="struct_user" prot="public">User</innerclass>
+    <innerclass refid="struct_product_season" prot="public">ProductSeason</innerclass>
+    <innerclass refid="struct_min_heap" prot="public">MinHeap</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="farmermarket_8h_1a0592dba56693fad79136250c11e5a7fe" prot="public" static="no">
+        <name>MAX_SIZE</name>
+        <initializer>100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="9" column="18" bodyfile="src/farmermarket/header/farmermarket.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="func">
+      <memberdef kind="function" id="farmermarket_8h_1a9d7e8af417b6d543da691e9c0e2f6f9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clearScreen</definition>
+        <argsstring>()</argsstring>
+        <name>clearScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="25" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="49" bodyend="55" declfile="src/farmermarket/header/farmermarket.h" declline="25" declcolumn="6"/>
+      </memberdef>
       <memberdef kind="function" id="farmermarket_8h_1a2d0255f645d941c02e7a6d600479552b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool mainMenu</definition>
@@ -55,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarket/header/farmermarket.h" line="14" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="9" bodyend="49" declfile="src/farmermarket/header/farmermarket.h" declline="14" declcolumn="6"/>
+        <location file="src/farmermarket/header/farmermarket.h" line="27" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="56" bodyend="105" declfile="src/farmermarket/header/farmermarket.h" declline="27" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="farmermarket_8h_1a3571d8d7858de3069c0320b86f5c2d6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -76,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarket/header/farmermarket.h" line="16" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="51" bodyend="56" declfile="src/farmermarket/header/farmermarket.h" declline="16" declcolumn="5"/>
+        <location file="src/farmermarket/header/farmermarket.h" line="29" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="107" bodyend="112" declfile="src/farmermarket/header/farmermarket.h" declline="29" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="farmermarket_8h_1a7e955099fa8201496a50f8a9f8f22b46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -101,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarket/header/farmermarket.h" line="18" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="58" bodyend="70" declfile="src/farmermarket/header/farmermarket.h" declline="18" declcolumn="5"/>
+        <location file="src/farmermarket/header/farmermarket.h" line="31" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="114" bodyend="126" declfile="src/farmermarket/header/farmermarket.h" declline="31" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="farmermarket_8h_1a6903abe4d5df4957642a65806ccb35a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -122,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarket/header/farmermarket.h" line="20" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="72" bodyend="146" declfile="src/farmermarket/header/farmermarket.h" declline="20" declcolumn="6"/>
+        <location file="src/farmermarket/header/farmermarket.h" line="33" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="128" bodyend="230" declfile="src/farmermarket/header/farmermarket.h" declline="33" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="farmermarket_8h_1a7ce3038a802aa59d3225588131ea97bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -143,7 +171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarket/header/farmermarket.h" line="22" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="148" bodyend="153" declfile="src/farmermarket/header/farmermarket.h" declline="22" declcolumn="6"/>
+        <location file="src/farmermarket/header/farmermarket.h" line="35" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="232" bodyend="237" declfile="src/farmermarket/header/farmermarket.h" declline="35" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="farmermarket_8h_1aa20d794eb7aaeb63297a19db22b775ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -169,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarket/header/farmermarket.h" line="24" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="155" bodyend="172" declfile="src/farmermarket/header/farmermarket.h" declline="24" declcolumn="5"/>
+        <location file="src/farmermarket/header/farmermarket.h" line="37" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="239" bodyend="256" declfile="src/farmermarket/header/farmermarket.h" declline="37" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="farmermarket_8h_1abe92df5eb77de11b244b68e5b635696a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -195,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarket/header/farmermarket.h" line="26" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="174" bodyend="182" declfile="src/farmermarket/header/farmermarket.h" declline="26" declcolumn="6"/>
+        <location file="src/farmermarket/header/farmermarket.h" line="39" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="258" bodyend="266" declfile="src/farmermarket/header/farmermarket.h" declline="39" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="farmermarket_8h_1ab61c92aff538932520ee72d58ad3bdf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -225,7 +253,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarket/header/farmermarket.h" line="28" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="184" bodyend="202" declfile="src/farmermarket/header/farmermarket.h" declline="28" declcolumn="5"/>
+        <location file="src/farmermarket/header/farmermarket.h" line="41" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="268" bodyend="286" declfile="src/farmermarket/header/farmermarket.h" declline="41" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="farmermarket_8h_1a89eb831fe57e17f7dec4227adaead9d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -251,7 +279,49 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarket/header/farmermarket.h" line="30" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="203" bodyend="210" declfile="src/farmermarket/header/farmermarket.h" declline="30" declcolumn="6"/>
+        <location file="src/farmermarket/header/farmermarket.h" line="43" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="287" bodyend="294" declfile="src/farmermarket/header/farmermarket.h" declline="43" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1aa1b23a5f4837b83b8d534d8efa8656bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool browseVendor</definition>
+        <argsstring>(FILE *in, FILE *out)</argsstring>
+        <name>browseVendor</name>
+        <param>
+          <type>FILE *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="45" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="296" bodyend="313" declfile="src/farmermarket/header/farmermarket.h" declline="45" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1a9c24845ba4710a6ddf742ff90c3fe3f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool searchProduct</definition>
+        <argsstring>(FILE *in, FILE *out)</argsstring>
+        <name>searchProduct</name>
+        <param>
+          <type>FILE *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="47" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="315" bodyend="332" declfile="src/farmermarket/header/farmermarket.h" declline="47" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="farmermarket_8h_1a6faa53c43bb0d63cca3e821483e46159" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -272,11 +342,368 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarket/header/farmermarket.h" line="32" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="212" bodyend="277" declfile="src/farmermarket/header/farmermarket.h" declline="32" declcolumn="6"/>
+        <location file="src/farmermarket/header/farmermarket.h" line="49" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="335" bodyend="373" declfile="src/farmermarket/header/farmermarket.h" declline="49" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1afdc09daeb6f473bdfc2b8420b5d43df2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initMinHeap</definition>
+        <argsstring>(MinHeap *heap)</argsstring>
+        <name>initMinHeap</name>
+        <param>
+          <type><ref refid="struct_min_heap" kindref="compound">MinHeap</ref> *</type>
+          <declname>heap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="51" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="375" bodyend="377" declfile="src/farmermarket/header/farmermarket.h" declline="51" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1a05c8f4e395ebe2f63bb1e3195c2ed5c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void insertMinHeap</definition>
+        <argsstring>(MinHeap *heap, ProductSeason item)</argsstring>
+        <name>insertMinHeap</name>
+        <param>
+          <type><ref refid="struct_min_heap" kindref="compound">MinHeap</ref> *</type>
+          <declname>heap</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_product_season" kindref="compound">ProductSeason</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="53" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="379" bodyend="391" declfile="src/farmermarket/header/farmermarket.h" declline="53" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1a56c90b4e74e99e830a65afe24c2126f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_product_season" kindref="compound">ProductSeason</ref></type>
+        <definition>ProductSeason removeMin</definition>
+        <argsstring>(MinHeap *heap)</argsstring>
+        <name>removeMin</name>
+        <param>
+          <type><ref refid="struct_min_heap" kindref="compound">MinHeap</ref> *</type>
+          <declname>heap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="55" column="15" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="393" bodyend="407" declfile="src/farmermarket/header/farmermarket.h" declline="55" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1a1d7b872077be723dacb9803166a15781" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int saveProductSeason</definition>
+        <argsstring>(const ProductSeason *productSeason, int numProducts, const char *filename)</argsstring>
+        <name>saveProductSeason</name>
+        <param>
+          <type>const <ref refid="struct_product_season" kindref="compound">ProductSeason</ref> *</type>
+          <declname>productSeason</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numProducts</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="57" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="409" bodyend="415" declfile="src/farmermarket/header/farmermarket.h" declline="57" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1a4aa75cd4a4f70c29cca79c8a6f8c5e20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int loadProductSeasonsAndPrint</definition>
+        <argsstring>(FILE *in, FILE *out, const char *filename, const char *selectedSeason)</argsstring>
+        <name>loadProductSeasonsAndPrint</name>
+        <param>
+          <type>FILE *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>selectedSeason</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="59" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="417" bodyend="443" declfile="src/farmermarket/header/farmermarket.h" declline="59" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1abb5b925a462086bac6ce3deb0d397109" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool seasonalProduceGuide</definition>
+        <argsstring>(FILE *in, FILE *out)</argsstring>
+        <name>seasonalProduceGuide</name>
+        <param>
+          <type>FILE *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="61" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="445" bodyend="490" declfile="src/farmermarket/header/farmermarket.h" declline="61" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1adcef403a597dffc82764a462b584ccd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lcs</definition>
+        <argsstring>(char *X, char *Y, int m, int n)</argsstring>
+        <name>lcs</name>
+        <param>
+          <type>char *</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>Y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="63" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="492" bodyend="523" declfile="src/farmermarket/header/farmermarket.h" declline="63" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1a2e03443f56f183a6172a5af35d649cd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool compareAndPrintLCS</definition>
+        <argsstring>(char *season1, char *season2, char *name1, char *name2, int price, FILE *out)</argsstring>
+        <name>compareAndPrintLCS</name>
+        <param>
+          <type>char *</type>
+          <declname>season1</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>season2</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>name1</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>name2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>price</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="65" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="525" bodyend="536" declfile="src/farmermarket/header/farmermarket.h" declline="65" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1af082905f7eac6d03e92015146bbc1925" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int max</definition>
+        <argsstring>(int a, int b)</argsstring>
+        <name>max</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="67" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="538" bodyend="540" declfile="src/farmermarket/header/farmermarket.h" declline="67" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1a72cd2888bb605760d5a0f7e37703ddec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int knapsack</definition>
+        <argsstring>(int W, int wt[], int val[], int n, int *selectedItems)</argsstring>
+        <name>knapsack</name>
+        <param>
+          <type>int</type>
+          <declname>W</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>wt</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>selectedItems</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="69" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="542" bodyend="579" declfile="src/farmermarket/header/farmermarket.h" declline="69" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1aae128ef956aac4436a237685e8aa2ead" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool suggestPurchases</definition>
+        <argsstring>(FILE *out, int budget)</argsstring>
+        <name>suggestPurchases</name>
+        <param>
+          <type>FILE *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>budget</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="71" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="581" bodyend="613" declfile="src/farmermarket/header/farmermarket.h" declline="71" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1afff4db8ad11bb5cf38fd98ea4138145c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CompareProducts</definition>
+        <argsstring>(FILE *in, FILE *out)</argsstring>
+        <name>CompareProducts</name>
+        <param>
+          <type>FILE *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="73" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="615" bodyend="653" declfile="src/farmermarket/header/farmermarket.h" declline="73" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1ac57a88ae4e2da199a12d762a771d537e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BuyProducts</definition>
+        <argsstring>(FILE *in, FILE *out)</argsstring>
+        <name>BuyProducts</name>
+        <param>
+          <type>FILE *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="75" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="655" bodyend="691" declfile="src/farmermarket/header/farmermarket.h" declline="75" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1afdab1f2c2c53e366c20cb639384fb396" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PurchasingTransactionsAndPriceComparison</definition>
+        <argsstring>(FILE *in, FILE *out)</argsstring>
+        <name>PurchasingTransactionsAndPriceComparison</name>
+        <param>
+          <type>FILE *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="77" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="693" bodyend="754" declfile="src/farmermarket/header/farmermarket.h" declline="77" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="farmermarket_8h_1a10a3dc160984de18304af35ab856484b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MarketHoursandLocations</definition>
+        <argsstring>(FILE *in, FILE *out)</argsstring>
+        <name>MarketHoursandLocations</name>
+        <param>
+          <type>FILE *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/farmermarket/header/farmermarket.h" line="79" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="756" bodyend="759" declfile="src/farmermarket/header/farmermarket.h" declline="79" declcolumn="6"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Provides functions. </para>
+<para>Provides functions definations. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -285,31 +712,78 @@
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FARMERMARKET_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FARMERMARKET_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9" refid="struct_user" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="10" refid="struct_user_1af62c586dc88c8434d35e01db81c0087b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>username[50];</highlight></codeline>
-<codeline lineno="11" refid="struct_user_1ae547b53c7ae0dee7ba2fc00bf315fa24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>password[50];</highlight></codeline>
-<codeline lineno="12"><highlight class="normal">}<sp/><ref refid="struct_user" kindref="compound">User</ref>;</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a2d0255f645d941c02e7a6d600479552b" kindref="member">mainMenu</ref>(FILE*<sp/>in,<sp/>FILE*<sp/>out);</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a3571d8d7858de3069c0320b86f5c2d6c" kindref="member">saveUser</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_user" kindref="compound">User</ref>*<sp/>user,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a7e955099fa8201496a50f8a9f8f22b46" kindref="member">authenticateUser</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>username,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>password,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="9" refid="farmermarket_8h_1a0592dba56693fad79136250c11e5a7fe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_SIZE<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="struct_user" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11" refid="struct_user_1af62c586dc88c8434d35e01db81c0087b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>username[50];</highlight></codeline>
+<codeline lineno="12" refid="struct_user_1ae547b53c7ae0dee7ba2fc00bf315fa24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>password[50];</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}<sp/><ref refid="struct_user" kindref="compound">User</ref>;</highlight></codeline>
+<codeline lineno="14" refid="struct_product_season" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15" refid="struct_product_season_1a2c461bfb22f07f5fb17933d69b24c9d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_product_season_1a2c461bfb22f07f5fb17933d69b24c9d0" kindref="member">price</ref>;</highlight></codeline>
+<codeline lineno="16" refid="struct_product_season_1adc68d4728e0ea99fc3a8ee09036cfc95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct_product_season_1adc68d4728e0ea99fc3a8ee09036cfc95" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="17" refid="struct_product_season_1a01c906ff899a65beb4bb9d8bec0417f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct_product_season_1a01c906ff899a65beb4bb9d8bec0417f2" kindref="member">season</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}<sp/><ref refid="struct_product_season" kindref="compound">ProductSeason</ref>;</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a6903abe4d5df4957642a65806ccb35a7" kindref="member">userAuthentication</ref>(FILE*<sp/>in,<sp/>FILE*<sp/>out);</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a7ce3038a802aa59d3225588131ea97bb" kindref="member">swap</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>a,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>b);</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1aa20d794eb7aaeb63297a19db22b775ca" kindref="member">partition</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>low,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>high);</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1abe92df5eb77de11b244b68e5b635696a" kindref="member">quickSort</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>low,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>high);</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1ab61c92aff538932520ee72d58ad3bdf0" kindref="member">binarySearch</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>x);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a89eb831fe57e17f7dec4227adaead9d4" kindref="member">searchAndPrintResult</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>x);</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a6faa53c43bb0d63cca3e821483e46159" kindref="member">listingOfInfos</ref>(FILE*<sp/>in,<sp/>FILE*<sp/>out);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>FARMERMARKET_H</highlight></codeline>
+<codeline lineno="20" refid="struct_min_heap" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21" refid="struct_min_heap_1a032247163d50bc97e85814c3a016d191" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_product_season" kindref="compound">ProductSeason</ref><sp/>items[<ref refid="farmermarket_8h_1a0592dba56693fad79136250c11e5a7fe" kindref="member">MAX_SIZE</ref>];</highlight></codeline>
+<codeline lineno="22" refid="struct_min_heap_1a656a275b0ca8c80647d6251c09d31247" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_min_heap_1a656a275b0ca8c80647d6251c09d31247" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}<sp/><ref refid="struct_min_heap" kindref="compound">MinHeap</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a9d7e8af417b6d543da691e9c0e2f6f9f" kindref="member">clearScreen</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a2d0255f645d941c02e7a6d600479552b" kindref="member">mainMenu</ref>(FILE*<sp/>in,<sp/>FILE*<sp/>out);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a3571d8d7858de3069c0320b86f5c2d6c" kindref="member">saveUser</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_user" kindref="compound">User</ref>*<sp/>user,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a7e955099fa8201496a50f8a9f8f22b46" kindref="member">authenticateUser</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>username,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>password,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a6903abe4d5df4957642a65806ccb35a7" kindref="member">userAuthentication</ref>(FILE*<sp/>in,<sp/>FILE*<sp/>out);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a7ce3038a802aa59d3225588131ea97bb" kindref="member">swap</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>a,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>b);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1aa20d794eb7aaeb63297a19db22b775ca" kindref="member">partition</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>low,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>high);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1abe92df5eb77de11b244b68e5b635696a" kindref="member">quickSort</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>low,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>high);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1ab61c92aff538932520ee72d58ad3bdf0" kindref="member">binarySearch</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>x);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a89eb831fe57e17f7dec4227adaead9d4" kindref="member">searchAndPrintResult</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>x);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1aa1b23a5f4837b83b8d534d8efa8656bc" kindref="member">browseVendor</ref>(FILE*<sp/>in,<sp/>FILE*<sp/>out);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a9c24845ba4710a6ddf742ff90c3fe3f4" kindref="member">searchProduct</ref>(FILE*<sp/>in,<sp/>FILE*<sp/>out);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a6faa53c43bb0d63cca3e821483e46159" kindref="member">listingOfInfos</ref>(FILE*<sp/>in,<sp/>FILE*<sp/>out);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1afdc09daeb6f473bdfc2b8420b5d43df2" kindref="member">initMinHeap</ref>(<ref refid="struct_min_heap" kindref="compound">MinHeap</ref>*<sp/>heap);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a05c8f4e395ebe2f63bb1e3195c2ed5c4" kindref="member">insertMinHeap</ref>(<ref refid="struct_min_heap" kindref="compound">MinHeap</ref>*<sp/>heap,<sp/><ref refid="struct_product_season" kindref="compound">ProductSeason</ref><sp/>item);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><ref refid="struct_product_season" kindref="compound">ProductSeason</ref><sp/><ref refid="farmermarket_8h_1a56c90b4e74e99e830a65afe24c2126f5" kindref="member">removeMin</ref>(<ref refid="struct_min_heap" kindref="compound">MinHeap</ref>*<sp/>heap);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a1d7b872077be723dacb9803166a15781" kindref="member">saveProductSeason</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_product_season" kindref="compound">ProductSeason</ref>*<sp/>productSeason,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8cpp_1aebf8c1269b5a0fc43f630809c1dc7a79" kindref="member">numProducts</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a4aa75cd4a4f70c29cca79c8a6f8c5e20" kindref="member">loadProductSeasonsAndPrint</ref>(FILE*<sp/>in,<sp/>FILE*<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>selectedSeason);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1abb5b925a462086bac6ce3deb0d397109" kindref="member">seasonalProduceGuide</ref>(FILE*<sp/>in,<sp/>FILE*<sp/>out);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1adcef403a597dffc82764a462b584ccd0" kindref="member">lcs</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>X,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>Y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a2e03443f56f183a6172a5af35d649cd8" kindref="member">compareAndPrintLCS</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>season1,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>season2,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name1,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>price,<sp/>FILE*<sp/>out);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1af082905f7eac6d03e92015146bbc1925" kindref="member">max</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a72cd2888bb605760d5a0f7e37703ddec" kindref="member">knapsack</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>W,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wt[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>val[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>selectedItems);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1aae128ef956aac4436a237685e8aa2ead" kindref="member">suggestPurchases</ref>(FILE*<sp/>out,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8cpp_1a59948f765f15671ee5157ec3a0001069" kindref="member">budget</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1afff4db8ad11bb5cf38fd98ea4138145c" kindref="member">CompareProducts</ref>(FILE*<sp/>in,<sp/>FILE*<sp/>out);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1ac57a88ae4e2da199a12d762a771d537e" kindref="member">BuyProducts</ref>(FILE*<sp/>in,<sp/>FILE*<sp/>out);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1afdab1f2c2c53e366c20cb639384fb396" kindref="member">PurchasingTransactionsAndPriceComparison</ref>(FILE*<sp/>in,<sp/>FILE*<sp/>out);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="farmermarket_8h_1a10a3dc160984de18304af35ab856484b" kindref="member">MarketHoursandLocations</ref>(FILE*<sp/>in,<sp/>FILE*<sp/>out);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>FARMERMARKET_H</highlight></codeline>
     </programlisting>
     <location file="src/farmermarket/header/farmermarket.h"/>
   </compounddef>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['username_48',['username',['../structUser.html#af62c586dc88c8434d35e01db81c0087b',1,'User']]]
+  ['items_101',['items',['../structMinHeap.html#a032247163d50bc97e85814c3a016d191',1,'MinHeap']]]
 ];

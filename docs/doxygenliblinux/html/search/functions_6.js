@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['saveuser_41',['saveUser',['../farmermarket_8h.html#a3571d8d7858de3069c0320b86f5c2d6c',1,'saveUser(const User *user, const char *filename):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a3571d8d7858de3069c0320b86f5c2d6c',1,'saveUser(const User *user, const char *filename):&#160;farmermarket.cpp']]],
-  ['searchandprintresult_42',['searchAndPrintResult',['../farmermarket_8h.html#a89eb831fe57e17f7dec4227adaead9d4',1,'searchAndPrintResult(char *arr[], int size, char *x):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a89eb831fe57e17f7dec4227adaead9d4',1,'searchAndPrintResult(char *arr[], int size, char *x):&#160;farmermarket.cpp']]],
-  ['swap_43',['swap',['../farmermarket_8h.html#a7ce3038a802aa59d3225588131ea97bb',1,'swap(char **a, char **b):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a7ce3038a802aa59d3225588131ea97bb',1,'swap(char **a, char **b):&#160;farmermarket.cpp']]]
+  ['main_82',['main',['../farmermarketapp_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'farmermarketapp.cpp']]],
+  ['mainmenu_83',['mainMenu',['../farmermarket_8h.html#a2d0255f645d941c02e7a6d600479552b',1,'mainMenu(FILE *in, FILE *out):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a2d0255f645d941c02e7a6d600479552b',1,'mainMenu(FILE *in, FILE *out):&#160;farmermarket.cpp']]],
+  ['markethoursandlocations_84',['MarketHoursandLocations',['../farmermarket_8h.html#a10a3dc160984de18304af35ab856484b',1,'MarketHoursandLocations(FILE *in, FILE *out):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a10a3dc160984de18304af35ab856484b',1,'MarketHoursandLocations(FILE *in, FILE *out):&#160;farmermarket.cpp']]],
+  ['max_85',['max',['../farmermarket_8h.html#af082905f7eac6d03e92015146bbc1925',1,'max(int a, int b):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#af082905f7eac6d03e92015146bbc1925',1,'max(int a, int b):&#160;farmermarket.cpp']]]
 ];
