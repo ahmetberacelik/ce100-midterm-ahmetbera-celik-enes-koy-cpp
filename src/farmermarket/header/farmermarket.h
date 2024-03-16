@@ -11,7 +11,6 @@ typedef struct {
     char username[50];
     char password[50];
 } User;
-
 typedef struct {
     int price;
     char* name;
@@ -22,6 +21,8 @@ typedef struct {
     ProductSeason items[MAX_SIZE];
     int size;
 } MinHeap;
+
+void clearScreen();
 
 bool mainMenu(FILE* in, FILE* out);
 
@@ -57,7 +58,13 @@ bool seasonalProduceGuide(FILE* in, FILE* out);
 
 int lcs(char* X, char* Y, int m, int n);
 
-void compareAndPrintLCS(char* season1, char* season2, char* name1, char* name2, int price, FILE* out);
+bool compareAndPrintLCS(char* season1, char* season2, char* name1, char* name2, int price, FILE* out);
+
+int max(int a, int b);
+
+int knapsack(int W, int wt[], int val[], int n, int* selectedItems);
+
+bool suggestPurchases(FILE* out, int budget);
 
 bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out);
 #endif // FARMERMARKET_H

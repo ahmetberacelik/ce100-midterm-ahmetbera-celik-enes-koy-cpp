@@ -4,8 +4,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
-bool guessMode = false;
-char active_user[50];
+bool guestMode = false;
+User active_user;
+int budget;
 char* vendors[] = { "Ahmet", "Mehmet", "Veli", "Ayse", "Nuriye" };
 char* products[][6] = {
     {"Ahmet", "Banana", "Apple", "Cherry", "Date", "Grape"},
@@ -43,7 +44,7 @@ ProductSeason productSeasons[] = {
     {15, "Asparagus", "Spring"},
     {15,"Radish", "Spring"},
 };
-int numProducts = sizeof(productSeasons) / sizeof(productSeasons[0]);
+const int numProducts = sizeof(productSeasons) / sizeof(productSeasons[0]);
 void clearScreen() {
 #ifdef _WIN32
     system("cls");
@@ -131,6 +132,7 @@ bool userAuthentication(FILE* in, FILE* out) {
     int right_to_try = 3;
     char temp_username[50];
     char temp_password[50];
+    
 
     while (true) {
         clearScreen();
@@ -150,11 +152,14 @@ bool userAuthentication(FILE* in, FILE* out) {
             fprintf(out, "Please enter your password: ");
             fgets(temp_password, 50, in);
             temp_password[strcspn(temp_password, "\n")] = 0;
-
+            fprintf(out, "Please enter your budget: ");
+            fscanf(in, "%d", &budget);
+            while (fgetc(in) != '\n' && !feof(in));
             if (authenticateUser(temp_username, temp_password, filename) == 1) {
                 clearScreen();
                 fprintf(out, "Welcome %s\n", temp_username);
-                strcpy(active_user, temp_username);
+                strcpy(active_user.username, temp_username);
+                strcpy(active_user.password, temp_password);
                 while (fgetc(in) != '\n' && !feof(in));
                 return true;
             }
@@ -182,13 +187,17 @@ bool userAuthentication(FILE* in, FILE* out) {
             strcpy(newUser.username, temp_username);
             strcpy(newUser.password, temp_password);
             saveUser(&newUser, filename);
+            clearScreen();
             fprintf(out, "User registered successfully.\nWelcome %s\n", temp_username);
-            strcpy(active_user, temp_username);
+            fprintf(out, "Your budget is 100 tl.");
+            budget = 100;
+            strcpy(active_user.username, temp_username);
+            strcpy(active_user.password, temp_password);
             while (fgetc(in) != '\n' && !feof(in));
             return true;
 
         case 3:
-            guessMode = true;
+            guestMode = true;
             return true;
 
         case 4:
@@ -488,7 +497,7 @@ int lcs(char* X, char* Y, int m, int n)
     return result;
 }
 
-void compareAndPrintLCS(char* season1, char* season2, char* name1, char* name2, int price, FILE* out)
+bool compareAndPrintLCS(char* season1, char* season2, char* name1, char* name2, int price, FILE* out)
 {
     int m = strlen(name1);
     int n = strlen(name2);
@@ -498,6 +507,81 @@ void compareAndPrintLCS(char* season1, char* season2, char* name1, char* name2, 
     if (lcsLength > 0 && strcmp(season1, season2) == 0) {
         fprintf(out, "- Name 1: %s, Name 2: %s, Price: %d\n", name1, name2, price);
     }
+    return true;
+}
+
+int max(int a, int b) {
+    return (a > b) ? a : b;
+}
+
+int knapsack(int W, int wt[], int val[], int n, int* selectedItems) {
+    int i, w;
+    int** K = (int**)malloc((n + 1) * sizeof(int*));
+    for (i = 0; i <= n; i++) {
+        K[i] = (int*)malloc((W + 1) * sizeof(int));
+    }
+
+    for (i = 0; i <= n; i++) {
+        for (w = 0; w <= W; w++) {
+            if (i == 0 || w == 0)
+                K[i][w] = 0;
+            else if (wt[i - 1] <= w)
+                K[i][w] = max(val[i - 1] + K[i - 1][w - wt[i - 1]], K[i - 1][w]);
+            else
+                K[i][w] = K[i - 1][w];
+        }
+    }
+
+    int res = K[n][W];
+
+    w = W;
+    for (i = n; i > 0 && res > 0; i--) {
+        if (res == K[i - 1][w])
+            continue;
+        else {
+            selectedItems[i - 1] = 1;
+            res = res - val[i - 1];
+            w = w - wt[i - 1];
+        }
+    }
+
+    for (i = 0; i <= n; i++) {
+        free(K[i]);
+    }
+    free(K);
+
+    return res;
+}
+
+bool suggestPurchases(FILE* out, int budget) {
+    int wt[numProducts];
+    int val[numProducts];
+    for (int i = 0; i < numProducts; i++) {
+        wt[i] = productSeasons[i].price;
+        val[i] = 1;
+    }
+
+    int* selectedItems = (int*)calloc(numProducts, sizeof(int));
+
+    int maxValue = knapsack(budget, wt, val, numProducts, selectedItems);
+
+    fprintf(out, "Your budget: %d\n", budget);
+    fprintf(out, "Suggested purchases to maximize value within budget:\n");
+    bool anySelected = false;
+    for (int i = 0; i < numProducts; i++) {
+        if (selectedItems[i] == 1) {
+            fprintf(out, "- %s for %d\n", productSeasons[i].name, productSeasons[i].price);
+            anySelected = true;
+        }
+    }
+    if (!anySelected) {
+        fprintf(out, "No products suggested. Increase your budget or check back later for different options.\n");
+        free(selectedItems);
+        return false;
+    }
+
+    free(selectedItems);
+    return true;
 }
 
 bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
@@ -505,9 +589,10 @@ bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
     int choice;
     while (true) {
         clearScreen();
-        fprintf(out, "1. Buy Products\n");
+        fprintf(out, "1. Shopping Suggestion\n");
         fprintf(out, "2. Compare Products\n");
-        fprintf(out, "3. Exit\n");
+        fprintf(out, "3. Buy Products\n");
+        fprintf(out, "4. Exit\n");
         fprintf(out, "Please select an option: ");
         if (fscanf(in, "%d", &choice) != 1) {
             while (fgetc(in) != '\n' && !feof(in));
@@ -517,14 +602,22 @@ bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
         while (fgetc(in) != '\n' && !feof(in));
         bool found = false;
         bool validSeason = false;
+        bool productFound = false;
+        int productPrice = 0;
+        char* vendorName = NULL;
         switch (choice) {
         case 1:
-            if (guessMode)
+            clearScreen();
+            if (guestMode)
             {
-                fprintf(out, "You can not buy product in guess mode.\n");
+                fprintf(out, "You can not buy product in guest mode.\n");
+                while (fgetc(in) != '\n' && !feof(in));
                 break;
             }
-
+            else {
+                suggestPurchases(out, budget);
+            }
+            while (fgetc(in) != '\n' && !feof(in));
             break;
         case 2:
             clearScreen();
@@ -532,7 +625,7 @@ bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
             char selectedSeason[50];
             fgets(selectedSeason, sizeof(selectedSeason), in);
             selectedSeason[strcspn(selectedSeason, "\n")] = '\0';
-            
+
             for (int i = 0; i < sizeof(productSeasons) / sizeof(productSeasons[0]); i++) {
                 if (strcmp(productSeasons[i].season, selectedSeason) == 0) {
                     validSeason = true;
@@ -563,6 +656,49 @@ bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
             while (fgetc(in) != '\n' && !feof(in));
             break;
         case 3:
+            clearScreen();
+            if (guestMode)
+            {
+                fprintf(out, "You can not buy product in guest mode.\n");
+                while (fgetc(in) != '\n' && !feof(in));
+                break;
+            }
+            char productQuery[50];
+            fprintf(out, "Please enter the product name you wish to buy: ");
+            fgets(productQuery, 50, in);
+            productQuery[strcspn(productQuery, "\n")] = 0;
+            
+            for (int i = 0; i < numProducts; i++) {
+                if (strcmp(productSeasons[i].name, productQuery) == 0) {
+                    productFound = true;
+                    productPrice = productSeasons[i].price;
+
+                    for (int j = 0; j < sizeof(products) / sizeof(products[0]); j++) {
+                        for (int k = 1; k < sizeof(products[j]) / sizeof(products[j][0]); k++) {
+                            if (strcmp(products[j][k], productQuery) == 0) {
+                                vendorName = products[j][0];
+                                break;
+                            }
+                        }
+                        if (vendorName != NULL) break;
+                    }
+                    break;
+                }
+            }
+
+            if (!productFound) {
+                fprintf(out, "Product not found. Please ensure the product name is spelled correctly.\n");
+            }
+            else if (budget < productPrice) {
+                fprintf(out, "Insufficient budget to buy %s from %s. Your current budget is %d.\n", productQuery, vendorName, budget);
+            }
+            else {
+                budget -= productPrice;
+                fprintf(out, "You have successfully purchased %s for %d from %s. Remaining budget: %d.\n", productQuery, productPrice, vendorName, budget);
+            }
+        while (fgetc(in) != '\n' && !feof(in));
+        break;
+        case 4:
             return false;
         default:
             fprintf(out, "Invalid option, please try again.\n");
