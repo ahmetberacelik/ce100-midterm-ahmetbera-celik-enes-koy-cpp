@@ -67,4 +67,6 @@ int knapsack(int W, int wt[], int val[], int n, int* selectedItems);
 bool suggestPurchases(FILE* out, int budget);
 
 bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out);
+
+bool MarketHoursandLocations(FILE* in, FILE* out);
 #endif // FARMERMARKET_H

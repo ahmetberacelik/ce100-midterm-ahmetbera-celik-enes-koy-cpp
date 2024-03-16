@@ -59,12 +59,18 @@ bool mainMenu(FILE* in, FILE* out) {
     int choice;
     while (true) {
         clearScreen();
-        fprintf(out, "1. Listing of Local Vendors and Products\n");
-        fprintf(out, "2. Seasonal Produce Guide\n");
-        fprintf(out, "3. Price Comparison\n");
-        fprintf(out, "4. Market Hours and Locations\n");
-        fprintf(out, "5. Exit\n");
+        fprintf(out, "+-------------------------------------+\n");
+        fprintf(out, "|            MAIN MENU                |\n");
+        fprintf(out, "+-------------------------------------+\n");
+        fprintf(out, "| 1. Listing of Local Vendors         |\n");
+        fprintf(out, "|    and Products                     |\n");
+        fprintf(out, "| 2. Seasonal Produce Guide           |\n");
+        fprintf(out, "| 3. Price Comparison                 |\n");
+        fprintf(out, "| 4. Market Hours and Locations       |\n");
+        fprintf(out, "| 5. Exit                             |\n");
+        fprintf(out, "+-------------------------------------+\n");
         fprintf(out, "Please select an option: ");
+
         if (fscanf(in, "%d", &choice) != 1) {
             while (fgetc(in) != '\n' && !feof(in));
             fprintf(out, "Invalid input, please enter a number.\n");
@@ -83,7 +89,7 @@ bool mainMenu(FILE* in, FILE* out) {
             PurchasingTransactionsAndPriceComparison(in, out);
             break;
         case 4:
-            fprintf(out, "Market Hours and Locations\n");
+            MarketHoursandLocations(in, out);
             break;
         case 5:
             fprintf(out, "Exiting program...Press enter!\n");
@@ -136,10 +142,14 @@ bool userAuthentication(FILE* in, FILE* out) {
 
     while (true) {
         clearScreen();
-        fprintf(out, "1. Login\n");
-        fprintf(out, "2. Register\n");
-        fprintf(out, "3. Guest Mode\n");
-        fprintf(out, "4. Exit Program\n");
+        fprintf(out, "+---------------------------+\n");
+        fprintf(out, "|  LOGIN AND REGISTER MENU  |\n");
+        fprintf(out, "+---------------------------+\n");
+        fprintf(out, "| 1. Login                  |\n");
+        fprintf(out, "| 2. Register               |\n");
+        fprintf(out, "| 3. Guest Mode             |\n");
+        fprintf(out, "| 4. Exit Program           |\n");
+        fprintf(out, "+---------------------------+\n");
         fprintf(out, "Please select an option: ");
         fscanf(in, "%d", &choice);
         while (fgetc(in) != '\n' && !feof(in));
@@ -156,7 +166,6 @@ bool userAuthentication(FILE* in, FILE* out) {
             fscanf(in, "%d", &budget);
             while (fgetc(in) != '\n' && !feof(in));
             if (authenticateUser(temp_username, temp_password, filename) == 1) {
-                clearScreen();
                 fprintf(out, "Welcome %s\n", temp_username);
                 strcpy(active_user.username, temp_username);
                 strcpy(active_user.password, temp_password);
@@ -288,9 +297,13 @@ bool listingOfInfos(FILE* in, FILE* out) {
     int choice;
     while (true) {
         clearScreen();
-        fprintf(out, "1. Browse Vendors\n");
-        fprintf(out, "2. Search Product\n");
-        fprintf(out, "3. Exit\n");
+        fprintf(out, "+----------------------------+\n");
+        fprintf(out, "|   LISTING OF INFORMATIONS  |\n");
+        fprintf(out, "+----------------------------+\n");
+        fprintf(out, "| 1. Browse Vendors          |\n");
+        fprintf(out, "| 2. Search Product          |\n");
+        fprintf(out, "| 3. Exit                    |\n");
+        fprintf(out, "+----------------------------+\n");
         fprintf(out, "Please select an option: ");
         if (fscanf(in, "%d", &choice) != 1) {
             while (fgetc(in) != '\n' && !feof(in));
@@ -337,8 +350,6 @@ bool listingOfInfos(FILE* in, FILE* out) {
             while (fgetc(in) != '\n' && !feof(in));
             break;
         case 3:
-            fprintf(out, "Exiting Listing Of Infos...Press enter!\n");
-            while (fgetc(in) != '\n' && !feof(in));
             return true;
         default:
             fprintf(out, "Invalid option, please try again.\n");
@@ -419,8 +430,9 @@ int loadProductSeasonsAndPrint(FILE* in, FILE* out, const char* filename, const 
     fclose(file);
     while (heap.size > 0) {
         ProductSeason ps = removeMin(&heap);
-        fprintf(out, "- Price: %d, Name: %s\n", ps.price, ps.name);
+        fprintf(out, "|- Price: %d, Name: %s\n", ps.price, ps.name);
     }
+    fprintf(out, "+------------------------------------+");
     while (fgetc(in) != '\n' && !feof(in));
 
     return found;
@@ -433,8 +445,17 @@ bool seasonalProduceGuide(FILE* in, FILE* out) {
     saveProductSeason(productSeasons, numProducts, filename);
     while (true) {
         clearScreen();
-        fprintf(out, "Select a season to see available produce:\n");
-        fprintf(out, "1. Spring\n2. Summer\n3. Fall\n4. Winter\n5. Return to Main Menu\n");
+        fprintf(out, "+------------------------------------------+\n");
+        fprintf(out, "|      SEASONAL PRODUCE GUIDE              |\n");
+        fprintf(out, "+------------------------------------------+\n");
+        fprintf(out, "| Select a season to see available produce:|\n");
+        fprintf(out, "+------------------------------------------+\n");
+        fprintf(out, "| 1. Spring                                |\n");
+        fprintf(out, "| 2. Summer                                |\n");
+        fprintf(out, "| 3. Fall                                  |\n");
+        fprintf(out, "| 4. Winter                                |\n");
+        fprintf(out, "| 5. Return to Main Menu                   |\n");
+        fprintf(out, "+------------------------------------------+\n");
         fprintf(out, "Please select an option: ");
 
         int choice;
@@ -456,10 +477,10 @@ bool seasonalProduceGuide(FILE* in, FILE* out) {
             continue;
         }
         clearScreen();
-        fprintf(out, "Available produce for %s season:\n", selectedSeason);
-        if (!loadProductSeasonsAndPrint(in, out, filename, selectedSeason)) {
-            fprintf(out, "No produce found for this season.\n");
-        }
+        fprintf(out, "+------------------------------------+\n");
+        fprintf(out, "|Available produce for %s season:\n", selectedSeason);
+        fprintf(out, "+------------------------------------+\n");
+        loadProductSeasonsAndPrint(in, out, filename, selectedSeason);
     }
     return true;
 }
@@ -505,7 +526,7 @@ bool compareAndPrintLCS(char* season1, char* season2, char* name1, char* name2, 
     int lcsLength = lcs(name1, name2, m, n);
 
     if (lcsLength > 0 && strcmp(season1, season2) == 0) {
-        fprintf(out, "- Name 1: %s, Name 2: %s, Price: %d\n", name1, name2, price);
+        fprintf(out, "|- Name 1: %s, Name 2: %s, Price: %d\n", name1, name2, price);
     }
     return true;
 }
@@ -564,22 +585,25 @@ bool suggestPurchases(FILE* out, int budget) {
     int* selectedItems = (int*)calloc(numProducts, sizeof(int));
 
     int maxValue = knapsack(budget, wt, val, numProducts, selectedItems);
-
-    fprintf(out, "Your budget: %d\n", budget);
-    fprintf(out, "Suggested purchases to maximize value within budget:\n");
+    fprintf(out, "+----------------------------------------------------+\n");
+    fprintf(out, "|Your budget: %d|\n", budget);
+    fprintf(out, "+----------------------------------------------------+\n");
+    fprintf(out, "|Suggested purchases to maximize value within budget:|\n");
+    fprintf(out, "+----------------------------------------------------+\n");
     bool anySelected = false;
     for (int i = 0; i < numProducts; i++) {
         if (selectedItems[i] == 1) {
-            fprintf(out, "- %s for %d\n", productSeasons[i].name, productSeasons[i].price);
+            fprintf(out, "|- %s for %d\n", productSeasons[i].name, productSeasons[i].price);
             anySelected = true;
         }
     }
     if (!anySelected) {
+        fprintf(out, "+----------------------------------------------------+\n");
         fprintf(out, "No products suggested. Increase your budget or check back later for different options.\n");
         free(selectedItems);
         return false;
     }
-
+    fprintf(out, "+----------------------------------------------------+\n");
     free(selectedItems);
     return true;
 }
@@ -589,10 +613,14 @@ bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
     int choice;
     while (true) {
         clearScreen();
-        fprintf(out, "1. Shopping Suggestion\n");
-        fprintf(out, "2. Compare Products\n");
-        fprintf(out, "3. Buy Products\n");
-        fprintf(out, "4. Exit\n");
+        fprintf(out, "+----------------------------------+\n");
+        fprintf(out, "|  PURCHASING AND PRICE COMPARISON |\n");
+        fprintf(out, "+----------------------------------+\n");
+        fprintf(out, "| 1. Shopping Suggestion           |\n");
+        fprintf(out, "| 2. Compare Products              |\n");
+        fprintf(out, "| 3. Buy Products                  |\n");
+        fprintf(out, "| 4. Exit                          |\n");
+        fprintf(out, "+----------------------------------+\n");
         fprintf(out, "Please select an option: ");
         if (fscanf(in, "%d", &choice) != 1) {
             while (fgetc(in) != '\n' && !feof(in));
@@ -637,7 +665,9 @@ bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
                 while (fgetc(in) != '\n' && !feof(in));
                 break;
             }
-            fprintf(out, "Products at the same price as %s season products:\n", selectedSeason);
+            fprintf(out, "+-----------------------------------------------------+\n");
+            fprintf(out, "|Products at the same price as %s season products:\n", selectedSeason);
+            fprintf(out, "+-----------------------------------------------------+\n");
             for (int i = 0; i < sizeof(productSeasons) / sizeof(productSeasons[0]); i++)
             {
                 if (strcmp(productSeasons[i].season, selectedSeason) == 0)
@@ -653,6 +683,7 @@ bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
                     }
                 }
             }
+            fprintf(out, "+-----------------------------------------------------+\n");
             while (fgetc(in) != '\n' && !feof(in));
             break;
         case 3:
@@ -705,5 +736,10 @@ bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
             while (fgetc(in) != '\n' && !feof(in));
         }
     }
+    return true;
+}
+
+bool MarketHoursandLocations(FILE* in, FILE* out) {
+    fprintf(out, "Hello");
     return true;
 }
