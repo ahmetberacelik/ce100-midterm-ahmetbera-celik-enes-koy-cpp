@@ -8,12 +8,12 @@ bool guestMode = false;
 User active_user;
 int budget;
 char* vendors[] = { "Ahmet", "Mehmet", "Veli", "Ayse", "Nuriye" };
-char* products[][6] = {
-    {"Ahmet", "Banana", "Apple", "Cherry", "Date", "Grape"},
-    {"Mehmet", "Raspberry", "Eggplant", "Mushroom", "Beet", "Turnip"},
-    {"Veli", "Cucumber", "Melon", "Lemon", "Tomato", "Orange"},
-    {"Ayse", "Pear", "Nectarine", "Carrot", "Bean", "Beet"},
-    {"Nuriye", "Hazelnut", "Chestnut", "Fig", "Coconut", "Broccoli"}
+char* products[][7] = {
+    {"Ahmet", "Banana", "Apple", "Cherry", "Date", "Grape", "Spinach"},
+    {"Mehmet", "Raspberry", "Eggplant", "Mushroom", "Beet", "Turnip", "Peas"},
+    {"Veli", "Cucumber", "Melon", "Lemon", "Tomato", "Orange", "Radish"},
+    {"Ayse", "Pear", "Nectarine", "Carrot", "Bean", "Asparagus", "Hazelnut"},
+    {"Nuriye", "Chestnut", "Fig", "Coconut", "Broccoli"}
 };
 ProductSeason productSeasons[] = {
     {10,"Banana", "Summer"},
@@ -21,27 +21,39 @@ ProductSeason productSeasons[] = {
     {10,"Cherry", "Summer"},
     {15,"Date", "Fall"},
     {15, "Grape", "Fall"},
+    {30,"Spinach", "Spring"},
     {15,"Raspberry", "Summer"},
     {20,"Eggplant", "Summer"},
     {20,"Mushroom", "Fall"},
     {20,"Beet", "Fall"},
     {25, "Turnip", "Winter"},
+    {30, "Peas", "Spring"},
     {25, "Cucumber", "Summer"},
     {25, "Melon", "Summer"},
     {30, "Lemon", "Winter"},
     {30,"Tomato", "Summer"},
     {30, "Orange", "Winter"},
+    {15,"Radish", "Spring"},
     {35, "Pear", "Fall"},
     {35,"Nectarine", "Summer"},
     {35, "Carrot", "Fall"},
     {40, "Bean", "Summer"},
+    {15, "Asparagus", "Spring"},
     {40, "Hazelnut", "Fall"},
     {40, "Chestnut", "Fall"},
     {45, "Fig", "Summer"},
     {45, "Coconut", "Summer"},
     {45,"Broccoli", "Fall"},
-    {15, "Asparagus", "Spring"},
-    {15,"Radish", "Spring"},
+
+};
+
+int productPricesVendorAhmet[3][3] = {
+        {10, 10, 10},//Banana, Apple, Cherry
+        {15, 15, 15},// Date, Grape, Spinach
+};
+int productQuantitiesVnedorAhmet[3][3] = {
+        {100, 28, 32},//Banana, Apple, Cherry
+        {50, 30, 40},// Date, Grape, Spinach
 };
 int numVendors = sizeof(vendors) / sizeof(vendors[0]);
 int numProductsPerVendor = sizeof(products[0]) / sizeof(products[0][0]);
@@ -67,7 +79,7 @@ bool mainMenu(FILE* in, FILE* out) {
         fprintf(out, "|    and Products                     |\n");
         fprintf(out, "| 2. Seasonal Produce Guide           |\n");
         fprintf(out, "| 3. Price Comparison                 |\n");
-        fprintf(out, "| 4. Market Hours and Locations       |\n");
+        fprintf(out, "| 4. Market Informations              |\n");
         fprintf(out, "| 5. Exit                             |\n");
         fprintf(out, "+-------------------------------------+\n");
         fprintf(out, "Please select an option: ");
@@ -90,7 +102,7 @@ bool mainMenu(FILE* in, FILE* out) {
             PurchasingTransactionsAndPriceComparison(in, out);
             break;
         case 4:
-            MarketHoursandLocations(in, out);
+            MarketInformations(in, out);
             break;
         case 5:
             fprintf(out, "Exiting program...Press enter!\n");
@@ -753,7 +765,49 @@ bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
     return true;
 }
 
-bool MarketHoursandLocations(FILE* in, FILE* out) {
-    fprintf(out, "Hello");
+bool MarketInformations(FILE* in, FILE* out) {
+    clearScreen();
+    int choice;
+    while (true) {
+        clearScreen();
+        fprintf(out, "+---------------------------------------------+\n");
+        fprintf(out, "|             MARKET INFORMATIONS             |\n");
+        fprintf(out, "+---------------------------------------------+\n");
+        fprintf(out, "| 1. Vendor Ahmet's Total Income Information  |\n");
+        fprintf(out, "| 2. Vendor Mehmet's Total Income Information |\n");
+        fprintf(out, "| 3. Vendor Veli's Total Income Information   |\n");
+        fprintf(out, "| 4. Vendor Ayse's Total Income Information   |\n");
+        fprintf(out, "| 4. Vendor Nuriye's Total Income Information |\n");
+        fprintf(out, "| 5. Exit                                     |\n");
+        fprintf(out, "+---------------------------------------------+\n");
+        fprintf(out, "Please select an option: ");
+        if (fscanf(in, "%d", &choice) != 1) {
+            while (fgetc(in) != '\n' && !feof(in));
+            fprintf(out, "Invalid input, please enter a number.\n");
+            continue;
+        }
+        while (fgetc(in) != '\n' && !feof(in));
+        switch (choice) {
+        case 1:
+
+            break;
+        case 2:
+
+            break;
+        case 3:
+
+            break;
+        case 4:
+
+            break;
+        case 5:
+            return true;
+            break;
+        default:
+            fprintf(out, "Invalid option, please try again.\n");
+            while (fgetc(in) != '\n' && !feof(in));
+            break;
+        }
+    }
     return true;
 }

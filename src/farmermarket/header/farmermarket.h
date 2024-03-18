@@ -76,5 +76,5 @@ bool BuyProducts(FILE* in, FILE* out);
 
 bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out);
 
-bool MarketHoursandLocations(FILE* in, FILE* out);
+bool MarketInformations(FILE* in, FILE* out);
 #endif // FARMERMARKET_H
