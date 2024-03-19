@@ -1,6 +1,12 @@
 var searchData=
 [
-  ['user_0',['User',['../struct_user.html',1,'']]],
-  ['userauthentication_1',['userAuthentication',['../farmermarket_8h.html#a6903abe4d5df4957642a65806ccb35a7',1,'userAuthentication(FILE *in, FILE *out):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a6903abe4d5df4957642a65806ccb35a7',1,'userAuthentication(FILE *in, FILE *out):&#160;farmermarket.cpp']]],
-  ['username_2',['username',['../struct_user.html#af62c586dc88c8434d35e01db81c0087b',1,'User']]]
+  ['saveproductseason_0',['saveProductSeason',['../farmermarket_8h.html#a1d7b872077be723dacb9803166a15781',1,'saveProductSeason(const ProductSeason *productSeason, int numProducts, const char *filename):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a1d7b872077be723dacb9803166a15781',1,'saveProductSeason(const ProductSeason *productSeason, int numProducts, const char *filename):&#160;farmermarket.cpp']]],
+  ['saveuser_1',['saveUser',['../farmermarket_8h.html#a3571d8d7858de3069c0320b86f5c2d6c',1,'saveUser(const User *user, const char *filename):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a3571d8d7858de3069c0320b86f5c2d6c',1,'saveUser(const User *user, const char *filename):&#160;farmermarket.cpp']]],
+  ['searchandprintresult_2',['searchAndPrintResult',['../farmermarket_8h.html#a89eb831fe57e17f7dec4227adaead9d4',1,'searchAndPrintResult(char *arr[], int size, char *x):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a89eb831fe57e17f7dec4227adaead9d4',1,'searchAndPrintResult(char *arr[], int size, char *x):&#160;farmermarket.cpp']]],
+  ['searchproduct_3',['searchProduct',['../farmermarket_8h.html#a9c24845ba4710a6ddf742ff90c3fe3f4',1,'searchProduct(FILE *in, FILE *out):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a9c24845ba4710a6ddf742ff90c3fe3f4',1,'searchProduct(FILE *in, FILE *out):&#160;farmermarket.cpp']]],
+  ['season_4',['season',['../struct_product_season.html#a01c906ff899a65beb4bb9d8bec0417f2',1,'ProductSeason']]],
+  ['seasonalproduceguide_5',['seasonalProduceGuide',['../farmermarket_8h.html#abb5b925a462086bac6ce3deb0d397109',1,'seasonalProduceGuide(FILE *in, FILE *out):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#abb5b925a462086bac6ce3deb0d397109',1,'seasonalProduceGuide(FILE *in, FILE *out):&#160;farmermarket.cpp']]],
+  ['size_6',['size',['../struct_min_heap.html#a656a275b0ca8c80647d6251c09d31247',1,'MinHeap']]],
+  ['suggestpurchases_7',['suggestPurchases',['../farmermarket_8h.html#aae128ef956aac4436a237685e8aa2ead',1,'suggestPurchases(FILE *out, int budget):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#aae128ef956aac4436a237685e8aa2ead',1,'suggestPurchases(FILE *out, int budget):&#160;farmermarket.cpp']]],
+  ['swap_8',['swap',['../farmermarket_8h.html#a7ce3038a802aa59d3225588131ea97bb',1,'swap(char **a, char **b):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a7ce3038a802aa59d3225588131ea97bb',1,'swap(char **a, char **b):&#160;farmermarket.cpp']]]
 ];

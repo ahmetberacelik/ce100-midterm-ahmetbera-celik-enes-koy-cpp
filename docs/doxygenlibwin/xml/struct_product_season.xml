@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarket/header/farmermarket.h" line="15" column="9" bodyfile="src/farmermarket/header/farmermarket.h" bodystart="15" bodyend="-1"/>
+        <location file="src/farmermarket/header/farmermarket.h" line="16" column="9" bodyfile="src/farmermarket/header/farmermarket.h" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_product_season_1adc68d4728e0ea99fc3a8ee09036cfc95" prot="public" static="no" mutable="no">
         <type>char *</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarket/header/farmermarket.h" line="16" column="10" bodyfile="src/farmermarket/header/farmermarket.h" bodystart="16" bodyend="-1"/>
+        <location file="src/farmermarket/header/farmermarket.h" line="17" column="10" bodyfile="src/farmermarket/header/farmermarket.h" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_product_season_1a01c906ff899a65beb4bb9d8bec0417f2" prot="public" static="no" mutable="no">
         <type>char *</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarket/header/farmermarket.h" line="17" column="10" bodyfile="src/farmermarket/header/farmermarket.h" bodystart="17" bodyend="-1"/>
+        <location file="src/farmermarket/header/farmermarket.h" line="18" column="10" bodyfile="src/farmermarket/header/farmermarket.h" bodystart="18" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -57,7 +57,7 @@
         <link refid="struct_product_season"/>
       </node>
     </collaborationgraph>
-    <location file="src/farmermarket/header/farmermarket.h" line="14" column="1" bodyfile="src/farmermarket/header/farmermarket.h" bodystart="14" bodyend="18"/>
+    <location file="src/farmermarket/header/farmermarket.h" line="15" column="1" bodyfile="src/farmermarket/header/farmermarket.h" bodystart="15" bodyend="19"/>
     <listofallmembers>
       <member refid="struct_product_season_1adc68d4728e0ea99fc3a8ee09036cfc95" prot="public" virt="non-virtual"><scope>ProductSeason</scope><name>name</name></member>
       <member refid="struct_product_season_1a2c461bfb22f07f5fb17933d69b24c9d0" prot="public" virt="non-virtual"><scope>ProductSeason</scope><name>price</name></member>

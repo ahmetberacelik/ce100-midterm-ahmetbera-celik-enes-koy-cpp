@@ -17,6 +17,7 @@
   </compound>
   <compound refid="farmermarket_8h" kind="file"><name>farmermarket.h</name>
     <member refid="farmermarket_8h_1a0592dba56693fad79136250c11e5a7fe" kind="define"><name>MAX_SIZE</name></member>
+    <member refid="farmermarket_8h_1a0240ac851181b84ac374872dc5434ee4" kind="define"><name>N</name></member>
     <member refid="farmermarket_8h_1a9d7e8af417b6d543da691e9c0e2f6f9f" kind="function"><name>clearScreen</name></member>
     <member refid="farmermarket_8h_1a2d0255f645d941c02e7a6d600479552b" kind="function"><name>mainMenu</name></member>
     <member refid="farmermarket_8h_1a3571d8d7858de3069c0320b86f5c2d6c" kind="function"><name>saveUser</name></member>
@@ -42,20 +43,31 @@
     <member refid="farmermarket_8h_1a72cd2888bb605760d5a0f7e37703ddec" kind="function"><name>knapsack</name></member>
     <member refid="farmermarket_8h_1aae128ef956aac4436a237685e8aa2ead" kind="function"><name>suggestPurchases</name></member>
     <member refid="farmermarket_8h_1afff4db8ad11bb5cf38fd98ea4138145c" kind="function"><name>CompareProducts</name></member>
-    <member refid="farmermarket_8h_1ac57a88ae4e2da199a12d762a771d537e" kind="function"><name>BuyProducts</name></member>
-    <member refid="farmermarket_8h_1afdab1f2c2c53e366c20cb639384fb396" kind="function"><name>PurchasingTransactionsAndPriceComparison</name></member>
-    <member refid="farmermarket_8h_1a10a3dc160984de18304af35ab856484b" kind="function"><name>MarketHoursandLocations</name></member>
+    <member refid="farmermarket_8h_1a0dec6d7386952deb252e98b7cb0a20ff" kind="function"><name>BuyProducts</name></member>
+    <member refid="farmermarket_8h_1a4b0449fd81901cce445979946b9b69c2" kind="function"><name>PurchasingTransactionsAndPriceComparison</name></member>
+    <member refid="farmermarket_8h_1a0ad35f0cbd89adef3313f8da6cb58b97" kind="function"><name>recursiveMatrixMultiply</name></member>
+    <member refid="farmermarket_8h_1a40d9da8607d82cbd3628a3aac44bba56" kind="function"><name>initializeDP</name></member>
+    <member refid="farmermarket_8h_1a20a9fe53fc5de61546cc8a3274ffd6fd" kind="function"><name>MCM_MemorizedRecursive</name></member>
+    <member refid="farmermarket_8h_1ac3605ae6eefdc1bd5e3484596c9f50c8" kind="function"><name>MCM_DynamicProgramming</name></member>
+    <member refid="farmermarket_8h_1afa40245e6f33184e6b3abd310d667e15" kind="function"><name>MarketInformations</name></member>
   </compound>
   <compound refid="farmermarket_8cpp" kind="file"><name>farmermarket.cpp</name>
+    <member refid="farmermarket_8cpp_1a0240ac851181b84ac374872dc5434ee4" kind="define"><name>N</name></member>
+    <member refid="farmermarket_8cpp_1a0592dba56693fad79136250c11e5a7fe" kind="define"><name>MAX_SIZE</name></member>
+    <member refid="farmermarket_8cpp_1a3439ead373ff2292c5454883ea0045b9" kind="variable"><name>dp</name></member>
     <member refid="farmermarket_8cpp_1a8f6ef3fee1e9bdc2d48bb6235909c895" kind="variable"><name>guestMode</name></member>
     <member refid="farmermarket_8cpp_1ad66d5e0a8366efb3773603ac0522fcb6" kind="variable"><name>active_user</name></member>
     <member refid="farmermarket_8cpp_1a59948f765f15671ee5157ec3a0001069" kind="variable"><name>budget</name></member>
     <member refid="farmermarket_8cpp_1a42d672c4353e8372afc4bfda4e711db2" kind="variable"><name>vendors</name></member>
-    <member refid="farmermarket_8cpp_1a163d6ab236f77517bca4649094d44b2d" kind="variable"><name>products</name></member>
+    <member refid="farmermarket_8cpp_1a657cef6c55b765ba0fff6bb2f1060ffa" kind="variable"><name>products</name></member>
     <member refid="farmermarket_8cpp_1ab10615d37b796f2de733bab04d544486" kind="variable"><name>productSeasons</name></member>
+    <member refid="farmermarket_8cpp_1ac1f7efddac2669af469a65c8f2330ca2" kind="variable"><name>productPrices</name></member>
+    <member refid="farmermarket_8cpp_1aeec9dc2796155986ebc53abdae033dae" kind="variable"><name>productQuantities</name></member>
     <member refid="farmermarket_8cpp_1a6f379c9bfe43cf05e953df19a4fa03b9" kind="variable"><name>numVendors</name></member>
     <member refid="farmermarket_8cpp_1ac686fb03d59d26b57a59abe7dbbdc8f7" kind="variable"><name>numProductsPerVendor</name></member>
     <member refid="farmermarket_8cpp_1aebf8c1269b5a0fc43f630809c1dc7a79" kind="variable"><name>numProducts</name></member>
+    <member refid="farmermarket_8cpp_1a171b4c4633e25a79227534b8edff8a00" kind="variable"><name>dimensions</name></member>
+    <member refid="farmermarket_8cpp_1a76f11d9a0a47b94f72c2d0e77fb32240" kind="variable"><name>n</name></member>
     <member refid="farmermarket_8cpp_1a9d7e8af417b6d543da691e9c0e2f6f9f" kind="function"><name>clearScreen</name></member>
     <member refid="farmermarket_8cpp_1a2d0255f645d941c02e7a6d600479552b" kind="function"><name>mainMenu</name></member>
     <member refid="farmermarket_8cpp_1a3571d8d7858de3069c0320b86f5c2d6c" kind="function"><name>saveUser</name></member>
@@ -81,9 +93,13 @@
     <member refid="farmermarket_8cpp_1a72cd2888bb605760d5a0f7e37703ddec" kind="function"><name>knapsack</name></member>
     <member refid="farmermarket_8cpp_1aae128ef956aac4436a237685e8aa2ead" kind="function"><name>suggestPurchases</name></member>
     <member refid="farmermarket_8cpp_1afff4db8ad11bb5cf38fd98ea4138145c" kind="function"><name>CompareProducts</name></member>
-    <member refid="farmermarket_8cpp_1ac57a88ae4e2da199a12d762a771d537e" kind="function"><name>BuyProducts</name></member>
-    <member refid="farmermarket_8cpp_1afdab1f2c2c53e366c20cb639384fb396" kind="function"><name>PurchasingTransactionsAndPriceComparison</name></member>
-    <member refid="farmermarket_8cpp_1a10a3dc160984de18304af35ab856484b" kind="function"><name>MarketHoursandLocations</name></member>
+    <member refid="farmermarket_8cpp_1a8f9dbe104b1b9845907513b8d2788068" kind="function"><name>BuyProducts</name></member>
+    <member refid="farmermarket_8cpp_1a4b0449fd81901cce445979946b9b69c2" kind="function"><name>PurchasingTransactionsAndPriceComparison</name></member>
+    <member refid="farmermarket_8cpp_1a0ad35f0cbd89adef3313f8da6cb58b97" kind="function"><name>recursiveMatrixMultiply</name></member>
+    <member refid="farmermarket_8cpp_1a40d9da8607d82cbd3628a3aac44bba56" kind="function"><name>initializeDP</name></member>
+    <member refid="farmermarket_8cpp_1a20a9fe53fc5de61546cc8a3274ffd6fd" kind="function"><name>MCM_MemorizedRecursive</name></member>
+    <member refid="farmermarket_8cpp_1ac3605ae6eefdc1bd5e3484596c9f50c8" kind="function"><name>MCM_DynamicProgramming</name></member>
+    <member refid="farmermarket_8cpp_1afa40245e6f33184e6b3abd310d667e15" kind="function"><name>MarketInformations</name></member>
   </compound>
   <compound refid="farmermarketapp_8h" kind="file"><name>farmermarketapp.h</name>
   </compound>

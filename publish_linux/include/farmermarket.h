@@ -7,6 +7,7 @@
 #define FARMERMARKET_H
 #include <stdio.h>
 #define MAX_SIZE 100
+#define N 4
 typedef struct {
     char username[50];
     char password[50];
@@ -72,9 +73,17 @@ bool suggestPurchases(FILE* out, int budget);
 
 bool CompareProducts(FILE* in, FILE* out);
 
-bool BuyProducts(FILE* in, FILE* out);
+bool BuyProducts(FILE* in, FILE* out, int local_budget);
 
-bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out);
+bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out, bool localGuestMode);
 
-bool MarketHoursandLocations(FILE* in, FILE* out);
+void recursiveMatrixMultiply(int A[N][N], int B[N][N], int C[N][N], int rowA, int colA, int rowB, int colB, int size);
+
+void initializeDP();
+
+int MCM_MemorizedRecursive(int dimensions[], int i, int j);
+
+int MCM_DynamicProgramming(int dimensions[], int n);
+
+bool MarketInformations(FILE* in, FILE* out);
 #endif // FARMERMARKET_H

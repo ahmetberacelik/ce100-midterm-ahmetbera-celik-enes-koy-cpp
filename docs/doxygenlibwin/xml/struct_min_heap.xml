@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarket/header/farmermarket.h" line="21" column="19" bodyfile="src/farmermarket/header/farmermarket.h" bodystart="21" bodyend="-1"/>
+        <location file="src/farmermarket/header/farmermarket.h" line="22" column="19" bodyfile="src/farmermarket/header/farmermarket.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_min_heap_1a656a275b0ca8c80647d6251c09d31247" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarket/header/farmermarket.h" line="22" column="9" bodyfile="src/farmermarket/header/farmermarket.h" bodystart="22" bodyend="-1"/>
+        <location file="src/farmermarket/header/farmermarket.h" line="23" column="9" bodyfile="src/farmermarket/header/farmermarket.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -50,7 +50,7 @@
         <link refid="struct_product_season"/>
       </node>
     </collaborationgraph>
-    <location file="src/farmermarket/header/farmermarket.h" line="20" column="1" bodyfile="src/farmermarket/header/farmermarket.h" bodystart="20" bodyend="23"/>
+    <location file="src/farmermarket/header/farmermarket.h" line="21" column="1" bodyfile="src/farmermarket/header/farmermarket.h" bodystart="21" bodyend="24"/>
     <listofallmembers>
       <member refid="struct_min_heap_1a032247163d50bc97e85814c3a016d191" prot="public" virt="non-virtual"><scope>MinHeap</scope><name>items</name></member>
       <member refid="struct_min_heap_1a656a275b0ca8c80647d6251c09d31247" prot="public" virt="non-virtual"><scope>MinHeap</scope><name>size</name></member>

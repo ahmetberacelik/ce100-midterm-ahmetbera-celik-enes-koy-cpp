@@ -1,83 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="(empty)"
-	tests="33"
+	tests="47"
 	failures="0"
 	disabled="0"
 	skipped="0"
 	hostname=""
 	time="0"
-	timestamp="2024-03-16T23:43:40"
+	timestamp="2024-03-19T15:18:26"
 	>
-	<testcase name="utility_tests" classname="utility_tests" time="0.02838" status="run">
+	<testcase name="utility_tests" classname="utility_tests" time="0.0403697" status="run">
 		<system-out>Running main() from /mnt/c/Users/Bera/Desktop/midtermproject/src/tests/googletest/googletest/src/gtest_main.cc
 [==========] Running 0 tests from 0 test suites.
 [==========] 0 tests from 0 test suites ran. (0 ms total)
 [  PASSED  ] 0 tests.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.SaveandAuthenticateUserTest" classname="FarmermarketTest.SaveandAuthenticateUserTest" time="0.0303058" status="run">
+	<testcase name="FarmermarketTest.SaveandAuthenticateUserTest" classname="FarmermarketTest.SaveandAuthenticateUserTest" time="0.0416375" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.SaveandAuthenticateUserTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.SaveandAuthenticateUserTest
-[       OK ] FarmermarketTest.SaveandAuthenticateUserTest (2 ms)
-[----------] 1 test from FarmermarketTest (2 ms total)
+[       OK ] FarmermarketTest.SaveandAuthenticateUserTest (8 ms)
+[----------] 1 test from FarmermarketTest (8 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (2 ms total)
+[==========] 1 test from 1 test suite ran. (9 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.InvalidAuthenticateUserTest" classname="FarmermarketTest.InvalidAuthenticateUserTest" time="0.0324215" status="run">
+	<testcase name="FarmermarketTest.InvalidAuthenticateUserTest" classname="FarmermarketTest.InvalidAuthenticateUserTest" time="0.0455039" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.InvalidAuthenticateUserTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.InvalidAuthenticateUserTest
-[       OK ] FarmermarketTest.InvalidAuthenticateUserTest (0 ms)
-[----------] 1 test from FarmermarketTest (0 ms total)
+[       OK ] FarmermarketTest.InvalidAuthenticateUserTest (1 ms)
+[----------] 1 test from FarmermarketTest (1 ms total)
 
 [----------] Global test environment tear-down
 [==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.UserAuthenticationLoginTest" classname="FarmermarketTest.UserAuthenticationLoginTest" time="0.0380665" status="run">
+	<testcase name="FarmermarketTest.UserAuthenticationLoginTest" classname="FarmermarketTest.UserAuthenticationLoginTest" time="0.0526039" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.UserAuthenticationLoginTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.UserAuthenticationLoginTest
-[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.UserAuthenticationLoginTest (25 ms)
-[----------] 1 test from FarmermarketTest (25 ms total)
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.UserAuthenticationLoginTest (35 ms)
+[----------] 1 test from FarmermarketTest (35 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (25 ms total)
+[==========] 1 test from 1 test suite ran. (36 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.UserAuthenticationLoginInvalidTest" classname="FarmermarketTest.UserAuthenticationLoginInvalidTest" time="0.0799059" status="run">
+	<testcase name="FarmermarketTest.UserAuthenticationLoginInvalidTest" classname="FarmermarketTest.UserAuthenticationLoginInvalidTest" time="0.10399" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.UserAuthenticationLoginInvalidTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.UserAuthenticationLoginInvalidTest
-[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.UserAuthenticationLoginInvalidTest (57 ms)
-[----------] 1 test from FarmermarketTest (57 ms total)
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.UserAuthenticationLoginInvalidTest (79 ms)
+[----------] 1 test from FarmermarketTest (79 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (57 ms total)
+[==========] 1 test from 1 test suite ran. (79 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.UserAuthenticationRegisterTest" classname="FarmermarketTest.UserAuthenticationRegisterTest" time="0.0621556" status="run">
+	<testcase name="FarmermarketTest.UserAuthenticationRegisterTest" classname="FarmermarketTest.UserAuthenticationRegisterTest" time="0.0809321" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.UserAuthenticationRegisterTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.UserAuthenticationRegisterTest
-[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.UserAuthenticationRegisterTest (35 ms)
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.UserAuthenticationRegisterTest (52 ms)
+[----------] 1 test from FarmermarketTest (52 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (52 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.LoginGuestModeTest" classname="FarmermarketTest.LoginGuestModeTest" time="0.0506423" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.LoginGuestModeTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.LoginGuestModeTest
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.LoginGuestModeTest (35 ms)
 [----------] 1 test from FarmermarketTest (35 ms total)
 
 [----------] Global test environment tear-down
@@ -85,49 +99,35 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.LoginGuestModeTest" classname="FarmermarketTest.LoginGuestModeTest" time="0.0446171" status="run">
-		<system-out>Note: Google Test filter = FarmermarketTest.LoginGuestModeTest
-[==========] Running 1 test from 1 test suite.
-[----------] Global test environment set-up.
-[----------] 1 test from FarmermarketTest
-[ RUN      ] FarmermarketTest.LoginGuestModeTest
-[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.LoginGuestModeTest (27 ms)
-[----------] 1 test from FarmermarketTest (27 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (27 ms total)
-[  PASSED  ] 1 test.
-</system-out>
-	</testcase>
-	<testcase name="FarmermarketTest.ExitUserAuthenticationTest" classname="FarmermarketTest.ExitUserAuthenticationTest" time="0.0584135" status="run">
+	<testcase name="FarmermarketTest.ExitUserAuthenticationTest" classname="FarmermarketTest.ExitUserAuthenticationTest" time="0.0750317" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.ExitUserAuthenticationTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.ExitUserAuthenticationTest
-[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.ExitUserAuthenticationTest (26 ms)
-[----------] 1 test from FarmermarketTest (26 ms total)
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.ExitUserAuthenticationTest (44 ms)
+[----------] 1 test from FarmermarketTest (44 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (26 ms total)
+[==========] 1 test from 1 test suite ran. (44 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.UserAuthenticationInvalidInputTest" classname="FarmermarketTest.UserAuthenticationInvalidInputTest" time="0.0650914" status="run">
+	<testcase name="FarmermarketTest.UserAuthenticationInvalidInputTest" classname="FarmermarketTest.UserAuthenticationInvalidInputTest" time="0.0651086" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.UserAuthenticationInvalidInputTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.UserAuthenticationInvalidInputTest
-[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.UserAuthenticationInvalidInputTest (31 ms)
-[----------] 1 test from FarmermarketTest (31 ms total)
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.UserAuthenticationInvalidInputTest (36 ms)
+[----------] 1 test from FarmermarketTest (36 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (31 ms total)
+[==========] 1 test from 1 test suite ran. (37 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.HandlePointerSwap" classname="FarmermarketTest.HandlePointerSwap" time="0.0274624" status="run">
+	<testcase name="FarmermarketTest.HandlePointerSwap" classname="FarmermarketTest.HandlePointerSwap" time="0.03503" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.HandlePointerSwap
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -137,11 +137,11 @@
 [----------] 1 test from FarmermarketTest (1 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (2 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.HandleSorting" classname="FarmermarketTest.HandleSorting" time="0.0282018" status="run">
+	<testcase name="FarmermarketTest.HandleSorting" classname="FarmermarketTest.HandleSorting" time="0.0408476" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.HandleSorting
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -155,21 +155,21 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.FindElement" classname="FarmermarketTest.FindElement" time="0.0289367" status="run">
+	<testcase name="FarmermarketTest.FindElement" classname="FarmermarketTest.FindElement" time="0.0403894" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.FindElement
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.FindElement
-[       OK ] FarmermarketTest.FindElement (0 ms)
-[----------] 1 test from FarmermarketTest (0 ms total)
+[       OK ] FarmermarketTest.FindElement (1 ms)
+[----------] 1 test from FarmermarketTest (1 ms total)
 
 [----------] Global test environment tear-down
 [==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.SearchInArray" classname="FarmermarketTest.SearchInArray" time="0.0357872" status="run">
+	<testcase name="FarmermarketTest.SearchInArray" classname="FarmermarketTest.SearchInArray" time="0.0410749" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.SearchInArray
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -183,55 +183,69 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.VendorSearchTest" classname="FarmermarketTest.VendorSearchTest" time="0.0345644" status="run">
+	<testcase name="FarmermarketTest.VendorSearchTest" classname="FarmermarketTest.VendorSearchTest" time="0.0401156" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.VendorSearchTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.VendorSearchTest
-[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.VendorSearchTest (11 ms)
-[----------] 1 test from FarmermarketTest (11 ms total)
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.VendorSearchTest (13 ms)
+[----------] 1 test from FarmermarketTest (13 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (11 ms total)
+[==========] 1 test from 1 test suite ran. (13 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.VendorNotFoundTest" classname="FarmermarketTest.VendorNotFoundTest" time="0.0348019" status="run">
+	<testcase name="FarmermarketTest.VendorNotFoundTest" classname="FarmermarketTest.VendorNotFoundTest" time="0.0441204" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.VendorNotFoundTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.VendorNotFoundTest
-[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.VendorNotFoundTest (10 ms)
-[----------] 1 test from FarmermarketTest (11 ms total)
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.VendorNotFoundTest (14 ms)
+[----------] 1 test from FarmermarketTest (14 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (11 ms total)
+[==========] 1 test from 1 test suite ran. (14 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.ProductSearchTest" classname="FarmermarketTest.ProductSearchTest" time="0.0343791" status="run">
+	<testcase name="FarmermarketTest.ProductSearchTest" classname="FarmermarketTest.ProductSearchTest" time="0.0436677" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.ProductSearchTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.ProductSearchTest
-[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.ProductSearchTest (11 ms)
-[----------] 1 test from FarmermarketTest (11 ms total)
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.ProductSearchTest (12 ms)
+[----------] 1 test from FarmermarketTest (12 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (11 ms total)
+[==========] 1 test from 1 test suite ran. (13 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.ProductNotFoundTest" classname="FarmermarketTest.ProductNotFoundTest" time="0.0559157" status="run">
+	<testcase name="FarmermarketTest.ProductNotFoundTest" classname="FarmermarketTest.ProductNotFoundTest" time="0.0558565" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.ProductNotFoundTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.ProductNotFoundTest
-[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.ProductNotFoundTest (41 ms)
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.ProductNotFoundTest (40 ms)
+[----------] 1 test from FarmermarketTest (40 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (40 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.ListingInfosMenuValidOptionTest1" classname="FarmermarketTest.ListingInfosMenuValidOptionTest1" time="0.0564984" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.ListingInfosMenuValidOptionTest1
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.ListingInfosMenuValidOptionTest1
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.ListingInfosMenuValidOptionTest1 (41 ms)
 [----------] 1 test from FarmermarketTest (41 ms total)
 
 [----------] Global test environment tear-down
@@ -239,63 +253,49 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.ListingInfosMenuValidOptionTest1" classname="FarmermarketTest.ListingInfosMenuValidOptionTest1" time="0.0575659" status="run">
-		<system-out>Note: Google Test filter = FarmermarketTest.ListingInfosMenuValidOptionTest1
-[==========] Running 1 test from 1 test suite.
-[----------] Global test environment set-up.
-[----------] 1 test from FarmermarketTest
-[ RUN      ] FarmermarketTest.ListingInfosMenuValidOptionTest1
-[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.ListingInfosMenuValidOptionTest1 (34 ms)
-[----------] 1 test from FarmermarketTest (34 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (34 ms total)
-[  PASSED  ] 1 test.
-</system-out>
-	</testcase>
-	<testcase name="FarmermarketTest.ListingInfosMenuValidOptionTest2" classname="FarmermarketTest.ListingInfosMenuValidOptionTest2" time="0.0572206" status="run">
+	<testcase name="FarmermarketTest.ListingInfosMenuValidOptionTest2" classname="FarmermarketTest.ListingInfosMenuValidOptionTest2" time="0.0593191" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.ListingInfosMenuValidOptionTest2
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.ListingInfosMenuValidOptionTest2
-[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.ListingInfosMenuValidOptionTest2 (33 ms)
-[----------] 1 test from FarmermarketTest (33 ms total)
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.ListingInfosMenuValidOptionTest2 (42 ms)
+[----------] 1 test from FarmermarketTest (42 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (33 ms total)
+[==========] 1 test from 1 test suite ran. (42 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.ListingInfosMenuInvalidOptionTest" classname="FarmermarketTest.ListingInfosMenuInvalidOptionTest" time="0.0575417" status="run">
+	<testcase name="FarmermarketTest.ListingInfosMenuInvalidOptionTest" classname="FarmermarketTest.ListingInfosMenuInvalidOptionTest" time="0.0597495" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.ListingInfosMenuInvalidOptionTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.ListingInfosMenuInvalidOptionTest
-[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.ListingInfosMenuInvalidOptionTest (25 ms)
-[----------] 1 test from FarmermarketTest (25 ms total)
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.ListingInfosMenuInvalidOptionTest (30 ms)
+[----------] 1 test from FarmermarketTest (30 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (26 ms total)
+[==========] 1 test from 1 test suite ran. (31 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.ListingInfosMenuInvalidOptionTestWithNumber" classname="FarmermarketTest.ListingInfosMenuInvalidOptionTestWithNumber" time="0.0578548" status="run">
+	<testcase name="FarmermarketTest.ListingInfosMenuInvalidOptionTestWithNumber" classname="FarmermarketTest.ListingInfosMenuInvalidOptionTestWithNumber" time="0.0596805" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.ListingInfosMenuInvalidOptionTestWithNumber
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.ListingInfosMenuInvalidOptionTestWithNumber
-[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.ListingInfosMenuInvalidOptionTestWithNumber (36 ms)
-[----------] 1 test from FarmermarketTest (36 ms total)
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.ListingInfosMenuInvalidOptionTestWithNumber (35 ms)
+[----------] 1 test from FarmermarketTest (35 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (36 ms total)
+[==========] 1 test from 1 test suite ran. (35 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.InsertMinHeapWhenFullTest" classname="FarmermarketTest.InsertMinHeapWhenFullTest" time="0.0264621" status="run">
+	<testcase name="FarmermarketTest.InsertMinHeapWhenFullTest" classname="FarmermarketTest.InsertMinHeapWhenFullTest" time="0.0337427" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.InsertMinHeapWhenFullTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -305,11 +305,11 @@
 [----------] 1 test from FarmermarketTest (1 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (2 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.RemoveMinWithReinsertionTest" classname="FarmermarketTest.RemoveMinWithReinsertionTest" time="0.0265751" status="run">
+	<testcase name="FarmermarketTest.RemoveMinWithReinsertionTest" classname="FarmermarketTest.RemoveMinWithReinsertionTest" time="0.0455051" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.RemoveMinWithReinsertionTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -323,49 +323,49 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.SaveProductSeasonTest" classname="FarmermarketTest.SaveProductSeasonTest" time="0.039215" status="run">
+	<testcase name="FarmermarketTest.SaveProductSeasonTest" classname="FarmermarketTest.SaveProductSeasonTest" time="0.0489196" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.SaveProductSeasonTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.SaveProductSeasonTest
-[       OK ] FarmermarketTest.SaveProductSeasonTest (7 ms)
-[----------] 1 test from FarmermarketTest (7 ms total)
+[       OK ] FarmermarketTest.SaveProductSeasonTest (6 ms)
+[----------] 1 test from FarmermarketTest (6 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (8 ms total)
+[==========] 1 test from 1 test suite ran. (7 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.LoadProductSeasonsAndPrintTest" classname="FarmermarketTest.LoadProductSeasonsAndPrintTest" time="0.0403575" status="run">
+	<testcase name="FarmermarketTest.LoadProductSeasonsAndPrintTest" classname="FarmermarketTest.LoadProductSeasonsAndPrintTest" time="0.0471796" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.LoadProductSeasonsAndPrintTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.LoadProductSeasonsAndPrintTest
-[       OK ] FarmermarketTest.LoadProductSeasonsAndPrintTest (6 ms)
-[----------] 1 test from FarmermarketTest (6 ms total)
+[       OK ] FarmermarketTest.LoadProductSeasonsAndPrintTest (10 ms)
+[----------] 1 test from FarmermarketTest (10 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (6 ms total)
+[==========] 1 test from 1 test suite ran. (10 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.SeasonalProduceGuideTest" classname="FarmermarketTest.SeasonalProduceGuideTest" time="0.113179" status="run">
+	<testcase name="FarmermarketTest.SeasonalProduceGuideTest" classname="FarmermarketTest.SeasonalProduceGuideTest" time="0.162238" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.SeasonalProduceGuideTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.SeasonalProduceGuideTest
-[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.SeasonalProduceGuideTest (98 ms)
-[----------] 1 test from FarmermarketTest (98 ms total)
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.SeasonalProduceGuideTest (130 ms)
+[----------] 1 test from FarmermarketTest (130 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (99 ms total)
+[==========] 1 test from 1 test suite ran. (130 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.LongestCommonSubsequenceTest" classname="FarmermarketTest.LongestCommonSubsequenceTest" time="0.028038" status="run">
+	<testcase name="FarmermarketTest.LongestCommonSubsequenceTest" classname="FarmermarketTest.LongestCommonSubsequenceTest" time="0.0342188" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.LongestCommonSubsequenceTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -379,7 +379,7 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.CompareAndPrintLCSTest" classname="FarmermarketTest.CompareAndPrintLCSTest" time="0.0291337" status="run">
+	<testcase name="FarmermarketTest.CompareAndPrintLCSTest" classname="FarmermarketTest.CompareAndPrintLCSTest" time="0.0349967" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.CompareAndPrintLCSTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -393,7 +393,7 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.MaxFunctionTest" classname="FarmermarketTest.MaxFunctionTest" time="0.0296289" status="run">
+	<testcase name="FarmermarketTest.MaxFunctionTest" classname="FarmermarketTest.MaxFunctionTest" time="0.0369731" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.MaxFunctionTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -403,11 +403,25 @@
 [----------] 1 test from FarmermarketTest (1 ms total)
 
 [----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.KnapsackFunctionTest" classname="FarmermarketTest.KnapsackFunctionTest" time="0.0353699" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.KnapsackFunctionTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.KnapsackFunctionTest
+[       OK ] FarmermarketTest.KnapsackFunctionTest (1 ms)
+[----------] 1 test from FarmermarketTest (1 ms total)
+
+[----------] Global test environment tear-down
 [==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.SuggestPurchasesTest" classname="FarmermarketTest.SuggestPurchasesTest" time="0.0282507" status="run">
+	<testcase name="FarmermarketTest.SuggestPurchasesTest" classname="FarmermarketTest.SuggestPurchasesTest" time="0.0324735" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.SuggestPurchasesTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -421,7 +435,7 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.CompareProductsTest" classname="FarmermarketTest.CompareProductsTest" time="0.0255516" status="run">
+	<testcase name="FarmermarketTest.CompareProductsTest" classname="FarmermarketTest.CompareProductsTest" time="0.0332096" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.CompareProductsTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -435,7 +449,7 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.CompareProductsTestInvalid" classname="FarmermarketTest.CompareProductsTestInvalid" time="0.0165856" status="run">
+	<testcase name="FarmermarketTest.CompareProductsTestInvalid" classname="FarmermarketTest.CompareProductsTestInvalid" time="0.0350493" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.CompareProductsTestInvalid
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -449,7 +463,21 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.BuyProductsTestInvalid" classname="FarmermarketTest.BuyProductsTestInvalid" time="0.0163235" status="run">
+	<testcase name="FarmermarketTest.BuyProductsTest" classname="FarmermarketTest.BuyProductsTest" time="0.0393547" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.BuyProductsTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.BuyProductsTest
+[       OK ] FarmermarketTest.BuyProductsTest (1 ms)
+[----------] 1 test from FarmermarketTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.BuyProductsTestInvalid" classname="FarmermarketTest.BuyProductsTestInvalid" time="0.0407709" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.BuyProductsTestInvalid
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -459,8 +487,180 @@
 [----------] 1 test from FarmermarketTest (1 ms total)
 
 [----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.BuyProductsTestLowBudget" classname="FarmermarketTest.BuyProductsTestLowBudget" time="0.0448915" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.BuyProductsTestLowBudget
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.BuyProductsTestLowBudget
+[       OK ] FarmermarketTest.BuyProductsTestLowBudget (2 ms)
+[----------] 1 test from FarmermarketTest (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.PurchasingTransactionsAndPriceComparisonMenuTest" classname="FarmermarketTest.PurchasingTransactionsAndPriceComparisonMenuTest" time="0.0804239" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.PurchasingTransactionsAndPriceComparisonMenuTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.PurchasingTransactionsAndPriceComparisonMenuTest
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.PurchasingTransactionsAndPriceComparisonMenuTest (62 ms)
+[----------] 1 test from FarmermarketTest (62 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (62 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.PurchasingTransactionsAndPriceComparisonShoppingSuggestionGuestModeTest" classname="FarmermarketTest.PurchasingTransactionsAndPriceComparisonShoppingSuggestionGuestModeTest" time="0.0579809" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.PurchasingTransactionsAndPriceComparisonShoppingSuggestionGuestModeTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.PurchasingTransactionsAndPriceComparisonShoppingSuggestionGuestModeTest
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.PurchasingTransactionsAndPriceComparisonShoppingSuggestionGuestModeTest (40 ms)
+[----------] 1 test from FarmermarketTest (40 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (41 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsTest" classname="FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsTest" time="0.0685544" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsTest
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsTest (37 ms)
+[----------] 1 test from FarmermarketTest (37 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (38 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsGuestModeTest" classname="FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsGuestModeTest" time="0.0688113" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsGuestModeTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsGuestModeTest
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsGuestModeTest (40 ms)
+[----------] 1 test from FarmermarketTest (40 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (40 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.PurchasingTransactionsAndPriceComparisonInvalidOptionTest" classname="FarmermarketTest.PurchasingTransactionsAndPriceComparisonInvalidOptionTest" time="0.0830465" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.PurchasingTransactionsAndPriceComparisonInvalidOptionTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.PurchasingTransactionsAndPriceComparisonInvalidOptionTest
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.PurchasingTransactionsAndPriceComparisonInvalidOptionTest (46 ms)
+[----------] 1 test from FarmermarketTest (46 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (46 ms total)
+[  PASSED  ] 1 test.
+libgcov profiling error:/mnt/c/Users/Bera/Desktop/midtermproject/build_linux/src/tests/farmermarket/CMakeFiles/farmermarket_tests.dir/farmermarket_test.cpp.gcda:Merge mismatch for function 454
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.RecursiveMatrixMultiply" classname="FarmermarketTest.RecursiveMatrixMultiply" time="0.0319448" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.RecursiveMatrixMultiply
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.RecursiveMatrixMultiply
+[       OK ] FarmermarketTest.RecursiveMatrixMultiply (1 ms)
+[----------] 1 test from FarmermarketTest (1 ms total)
+
+[----------] Global test environment tear-down
 [==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.MemorizedRecursiveReuseTest" classname="FarmermarketTest.MemorizedRecursiveReuseTest" time="0.0378253" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.MemorizedRecursiveReuseTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.MemorizedRecursiveReuseTest
+[       OK ] FarmermarketTest.MemorizedRecursiveReuseTest (1 ms)
+[----------] 1 test from FarmermarketTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.DynamicProgrammingTest" classname="FarmermarketTest.DynamicProgrammingTest" time="0.0386244" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.DynamicProgrammingTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.DynamicProgrammingTest
+[       OK ] FarmermarketTest.DynamicProgrammingTest (1 ms)
+[----------] 1 test from FarmermarketTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.MarketInformationsTotalIncomeTest" classname="FarmermarketTest.MarketInformationsTotalIncomeTest" time="0.0568916" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.MarketInformationsTotalIncomeTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.MarketInformationsTotalIncomeTest
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.MarketInformationsTotalIncomeTest (40 ms)
+[----------] 1 test from FarmermarketTest (40 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (40 ms total)
+[  PASSED  ] 1 test.
+libgcov profiling error:/mnt/c/Users/Bera/Desktop/midtermproject/build_linux/src/tests/farmermarket/CMakeFiles/farmermarket_tests.dir/farmermarket_test.cpp.gcda:Merge mismatch for function 454
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.MarketInformationsInvalidOptionTest" classname="FarmermarketTest.MarketInformationsInvalidOptionTest" time="0.0580388" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.MarketInformationsInvalidOptionTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.MarketInformationsInvalidOptionTest
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.MarketInformationsInvalidOptionTest (43 ms)
+[----------] 1 test from FarmermarketTest (43 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (43 ms total)
+[  PASSED  ] 1 test.
+libgcov profiling error:/mnt/c/Users/Bera/Desktop/midtermproject/build_linux/src/tests/farmermarket/CMakeFiles/farmermarket_tests.dir/farmermarket_test.cpp.gcda:Merge mismatch for function 454
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.MainMenuTest" classname="FarmermarketTest.MainMenuTest" time="0.169183" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.MainMenuTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.MainMenuTest
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] FarmermarketTest.MainMenuTest (154 ms)
+[----------] 1 test from FarmermarketTest (154 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (154 ms total)
+[  PASSED  ] 1 test.
+libgcov profiling error:/mnt/c/Users/Bera/Desktop/midtermproject/build_linux/src/tests/farmermarket/CMakeFiles/farmermarket_tests.dir/farmermarket_test.cpp.gcda:Merge mismatch for function 454
 </system-out>
 	</testcase>
 </testsuite>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vendors_0',['vendors',['../farmermarket_8cpp.html#a42d672c4353e8372afc4bfda4e711db2',1,'farmermarket.cpp']]]
+  ['username_0',['username',['../struct_user.html#af62c586dc88c8434d35e01db81c0087b',1,'User']]]
 ];

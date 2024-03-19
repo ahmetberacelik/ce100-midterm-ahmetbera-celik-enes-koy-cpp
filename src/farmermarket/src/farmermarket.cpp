@@ -4,60 +4,59 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
+#include <climits>
+#define N 4
+#define MAX_SIZE 100
+int dp[MAX_SIZE][MAX_SIZE];
 bool guestMode = false;
 User active_user;
 int budget;
-char* vendors[] = { "Ahmet", "Mehmet", "Veli", "Ayse", "Nuriye" };
-char* products[][7] = {
-    {"Ahmet", "Banana", "Apple", "Cherry", "Date", "Grape", "Spinach"},
-    {"Mehmet", "Raspberry", "Eggplant", "Mushroom", "Beet", "Turnip", "Peas"},
-    {"Veli", "Cucumber", "Melon", "Lemon", "Tomato", "Orange", "Radish"},
-    {"Ayse", "Pear", "Nectarine", "Carrot", "Bean", "Asparagus", "Hazelnut"},
-    {"Nuriye", "Chestnut", "Fig", "Coconut", "Broccoli"}
+char* vendors[] = { "Ahmet", "Mehmet", "Veli", "Ayse"};
+char* products[][5] = {
+    {"Ahmet", "Banana", "Apple", "Grape", "Spinach"},
+    {"Mehmet", "Raspberry", "Beet", "Turnip", "Peas"},
+    {"Veli", "Cucumber", "Tomato", "Orange", "Radish"},
+    {"Ayse", "Pear", "Nectarine", "Bean", "Hazelnut"},
 };
 ProductSeason productSeasons[] = {
     {10,"Banana", "Summer"},
     {10,"Apple", "Fall"},
-    {10,"Cherry", "Summer"},
-    {15,"Date", "Fall"},
     {15, "Grape", "Fall"},
     {30,"Spinach", "Spring"},
+
     {15,"Raspberry", "Summer"},
-    {20,"Eggplant", "Summer"},
-    {20,"Mushroom", "Fall"},
     {20,"Beet", "Fall"},
     {25, "Turnip", "Winter"},
     {30, "Peas", "Spring"},
+
     {25, "Cucumber", "Summer"},
-    {25, "Melon", "Summer"},
-    {30, "Lemon", "Winter"},
     {30,"Tomato", "Summer"},
     {30, "Orange", "Winter"},
     {15,"Radish", "Spring"},
+
     {35, "Pear", "Fall"},
     {35,"Nectarine", "Summer"},
-    {35, "Carrot", "Fall"},
     {40, "Bean", "Summer"},
-    {15, "Asparagus", "Spring"},
     {40, "Hazelnut", "Fall"},
-    {40, "Chestnut", "Fall"},
-    {45, "Fig", "Summer"},
-    {45, "Coconut", "Summer"},
-    {45,"Broccoli", "Fall"},
-
 };
 
-int productPricesVendorAhmet[3][3] = {
-        {10, 10, 10},//Banana, Apple, Cherry
-        {15, 15, 15},// Date, Grape, Spinach
+int productPrices[4][4] = {
+        {10, 10, 15, 30},
+        {15, 20, 25, 30},
+        {25, 30, 30, 15},
+        {35, 35, 40, 40},
 };
-int productQuantitiesVnedorAhmet[3][3] = {
-        {100, 28, 32},//Banana, Apple, Cherry
-        {50, 30, 40},// Date, Grape, Spinach
+int productQuantities[4][4] = {
+        {100, 28, 30, 50},
+        {75, 27, 46, 18},
+        {15, 73, 48, 24},
+        {17, 43, 64, 37},
 };
 int numVendors = sizeof(vendors) / sizeof(vendors[0]);
 int numProductsPerVendor = sizeof(products[0]) / sizeof(products[0][0]);
 const int numProducts = sizeof(productSeasons) / sizeof(productSeasons[0]);
+int dimensions[] = { 4, 4, 4 };
+int n = sizeof(dimensions) / sizeof(dimensions[0]);
 void clearScreen() {
 #ifdef _WIN32
     system("cls");
@@ -99,7 +98,7 @@ bool mainMenu(FILE* in, FILE* out) {
             seasonalProduceGuide(in, out);
             break;
         case 3:
-            PurchasingTransactionsAndPriceComparison(in, out);
+            PurchasingTransactionsAndPriceComparison(in, out, guestMode);
             break;
         case 4:
             MarketInformations(in, out);
@@ -113,7 +112,6 @@ bool mainMenu(FILE* in, FILE* out) {
             while (fgetc(in) != '\n' && !feof(in));
         }
     }
-    return true;
 }
 
 int saveUser(const User* user, const char* filename) {
@@ -664,7 +662,7 @@ bool CompareProducts(FILE* in, FILE* out) {
     return true;
 }
 
-bool BuyProducts(FILE* in, FILE* out) {
+bool BuyProducts(FILE* in, FILE* out, int localBudget) {
     bool productFound = false;
     int productPrice = 0;
     char* vendorName = NULL;
@@ -682,27 +680,28 @@ bool BuyProducts(FILE* in, FILE* out) {
                 for (int k = 1; k < sizeof(products[j]) / sizeof(products[j][0]); k++) {
                     if (strcmp(products[j][k], productQuery) == 0) {
                         vendorName = products[j][0];
-                        break; }
-                }
+                        break; } }
                 if (vendorName != NULL) break; }
-            break; }
+            break;
+        }
     }
 
     if (!productFound) {
         fprintf(out, "Product not found. Please ensure the product name is spelled correctly.\n");
         return false; }
-    else if (budget < productPrice) {
-        fprintf(out, "Insufficient budget to buy %s from %s. Your current budget is %d.\n", productQuery, vendorName, budget);
-        return false;
-    }
+    else if (localBudget < productPrice) {
+        fprintf(out, "Insufficient budget to buy %s from %s. Your current budget is %d.\n", productQuery, vendorName, localBudget);
+        return false; }
     else {
-        budget -= productPrice;
-        fprintf(out, "You have successfully purchased %s for %d from %s. Remaining budget: %d.\n", productQuery, productPrice, vendorName, budget);
+        localBudget -= productPrice;
+        budget = localBudget;
+        fprintf(out, "You have successfully purchased %s for %d from %s. Remaining budget: %d.\n", productQuery, productPrice, vendorName, localBudget);
     }
     return true;
 }
 
-bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
+
+bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out, bool localGuestMode) {
     clearScreen();
     int choice;
     while (true) {
@@ -725,12 +724,11 @@ bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
         switch (choice) {
         case 1:
             clearScreen();
-            if (guestMode)
+            if (localGuestMode)
             {
-                fprintf(out, "You can not buy product in guest mode.\n");
+                fprintf(out, "You can not take suggestion in guest mode.\n");
                 while (fgetc(in) != '\n' && !feof(in));
-                break;
-            }
+                break; }
             else {
                 suggestPurchases(out, budget);
             }
@@ -743,15 +741,14 @@ bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
             break;
         case 3:
             clearScreen();
-            if (guestMode)
+            if (localGuestMode)
             {
                 fprintf(out, "You can not buy product in guest mode.\n");
                 while (fgetc(in) != '\n' && !feof(in));
-                break;
-            }
+                break; }
             else
             {
-                BuyProducts(in, out);
+                BuyProducts(in, out, budget);
             }
         while (fgetc(in) != '\n' && !feof(in));
         break;
@@ -762,24 +759,99 @@ bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out) {
             while (fgetc(in) != '\n' && !feof(in));
         }
     }
-    return true;
 }
+
+void recursiveMatrixMultiply(int A[N][N], int B[N][N], int C[N][N], int rowA, int colA, int rowB, int colB, int size) {
+    if (size == 1) {
+        C[rowA][colB] += A[rowA][colA] * B[rowB][colB];
+    }
+    else {
+        int newSize = size / 2;
+        // Top-left
+        recursiveMatrixMultiply(A, B, C, rowA, colA, rowB, colB, newSize);
+        recursiveMatrixMultiply(A, B, C, rowA, colA + newSize, rowB + newSize, colB, newSize);
+
+        // Top-right
+        recursiveMatrixMultiply(A, B, C, rowA, colA, rowB, colB + newSize, newSize);
+        recursiveMatrixMultiply(A, B, C, rowA, colA + newSize, rowB + newSize, colB + newSize, newSize);
+
+        // Bottom-left
+        recursiveMatrixMultiply(A, B, C, rowA + newSize, colA, rowB, colB, newSize);
+        recursiveMatrixMultiply(A, B, C, rowA + newSize, colA + newSize, rowB + newSize, colB, newSize);
+
+        // Bottom-right
+        recursiveMatrixMultiply(A, B, C, rowA + newSize, colA, rowB, colB + newSize, newSize);
+        recursiveMatrixMultiply(A, B, C, rowA + newSize, colA + newSize, rowB + newSize, colB + newSize, newSize);
+    }
+}
+
+void initializeDP() {
+    memset(dp, -1, sizeof(dp));
+}
+
+int MCM_MemorizedRecursive(int dimensions[], int i, int j) {
+    if (i == j) {
+        return 0;
+    }
+
+    if (dp[i][j] != -1) {
+        return dp[i][j];
+    }
+
+    dp[i][j] = INT_MAX;
+    for (int k = i; k < j; k++) {
+        int count = MCM_MemorizedRecursive(dimensions, i, k) + MCM_MemorizedRecursive(dimensions, k + 1, j) + dimensions[i - 1] * dimensions[k] * dimensions[j];
+        if (count < dp[i][j]) {
+            dp[i][j] = count;
+        }
+    }
+    return dp[i][j];
+}
+
+int MCM_DynamicProgramming(int dimensions[], int n) {
+    int** dp = new int* [n];
+    for (int i = 0; i < n; ++i) {
+        dp[i] = new int[n];
+    }
+
+    for (int i = 1; i < n; i++)
+        dp[i][i] = 0;
+
+    for (int chainLength = 2; chainLength < n; chainLength++) {
+        for (int i = 1; i < n - chainLength + 1; i++) {
+            int j = i + chainLength - 1;
+            dp[i][j] = INT_MAX;
+            for (int k = i; k < j; k++) {
+                int count = dp[i][k] + dp[k + 1][j] + dimensions[i - 1] * dimensions[k] * dimensions[j];
+                if (count < dp[i][j])
+                    dp[i][j] = count;
+            }
+        }
+    }
+    int result = dp[1][n - 1];
+
+    for (int i = 0; i < n; ++i) {
+        delete[] dp[i];
+    }
+    delete[] dp;
+
+    return result;
+}
+
 
 bool MarketInformations(FILE* in, FILE* out) {
     clearScreen();
     int choice;
+    
     while (true) {
         clearScreen();
-        fprintf(out, "+---------------------------------------------+\n");
-        fprintf(out, "|             MARKET INFORMATIONS             |\n");
-        fprintf(out, "+---------------------------------------------+\n");
-        fprintf(out, "| 1. Vendor Ahmet's Total Income Information  |\n");
-        fprintf(out, "| 2. Vendor Mehmet's Total Income Information |\n");
-        fprintf(out, "| 3. Vendor Veli's Total Income Information   |\n");
-        fprintf(out, "| 4. Vendor Ayse's Total Income Information   |\n");
-        fprintf(out, "| 4. Vendor Nuriye's Total Income Information |\n");
-        fprintf(out, "| 5. Exit                                     |\n");
-        fprintf(out, "+---------------------------------------------+\n");
+        fprintf(out, "+------------------------------------------------+\n");
+        fprintf(out, "|             MARKET INFORMATIONS                |\n");
+        fprintf(out, "+------------------------------------------------+\n");
+        fprintf(out, "| 1. Market's Total Income Information           |\n");
+        fprintf(out, "| 2. The Minimum Multiplication Cost Information |\n");
+        fprintf(out, "| 3. Exit                                        |\n");
+        fprintf(out, "+------------------------------------------------+\n");
         fprintf(out, "Please select an option: ");
         if (fscanf(in, "%d", &choice) != 1) {
             while (fgetc(in) != '\n' && !feof(in));
@@ -787,27 +859,36 @@ bool MarketInformations(FILE* in, FILE* out) {
             continue;
         }
         while (fgetc(in) != '\n' && !feof(in));
+        int totalIncome = 0;
+        int C[N][N] = { 0 };
+        initializeDP();
+        int minMultiplicationCostMemorizedRecursive = MCM_MemorizedRecursive(dimensions, 1, n - 1);
+        int minMultiplicationCostDynamicProgramming = MCM_DynamicProgramming(dimensions, n);
         switch (choice) {
-        case 1:
+        case 1:            
+            recursiveMatrixMultiply(productPrices, productQuantities, C, 0, 0, 0, 0, N);
 
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < N; j++) {
+                    totalIncome += C[i][j];
+                }
+            }
+
+            fprintf(out, "Market's Total Income: %d\n", totalIncome);
+            while (fgetc(in) != '\n' && !feof(in));
             break;
         case 2:
-
+            fprintf(out, "The minimum multiplication cost of matrix multiplication used when calculating total income information: \n");
+            fprintf(out, "With Memorized Recursive: %d\n", minMultiplicationCostMemorizedRecursive);
+            fprintf(out, "With Dynamic Programming: %d\n", minMultiplicationCostDynamicProgramming);
+            while (fgetc(in) != '\n' && !feof(in));
             break;
         case 3:
-
-            break;
-        case 4:
-
-            break;
-        case 5:
             return true;
-            break;
         default:
             fprintf(out, "Invalid option, please try again.\n");
             while (fgetc(in) != '\n' && !feof(in));
             break;
         }
     }
-    return true;
 }

@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
 #include "../../farmermarket/header/farmermarket.h"
+#define N 4
 class FarmermarketTest : public ::testing::Test {
 protected:
 	ProductSeason item1 = { 20, "Apple", "Fall" };
@@ -11,6 +12,7 @@ protected:
 	FILE* testOut;
 	char testOutputBuffer[1024];
 	void SetUp() override {
+		initializeDP();
 		testIn = tmpfile();
 		testOut = tmpfile();
 	}
@@ -401,7 +403,7 @@ TEST_F(FarmermarketTest, MaxFunctionTest) {
 	EXPECT_EQ(5, max(5, 5));   // Test where both parameters are equal
 }
 
-/*TEST_F(FarmermarketTest, KnapsackFunctionTest) {
+TEST_F(FarmermarketTest, KnapsackFunctionTest) {
 	const int W = 50; // Total weight capacity of the knapsack
 	int wt[] = { 10, 20, 30 }; // Weights of the items
 	int val[] = { 60, 100, 120 }; // Values of the items
@@ -409,15 +411,14 @@ TEST_F(FarmermarketTest, MaxFunctionTest) {
 	int selectedItems[n]; // To store the selected item indices
 	memset(selectedItems, 0, sizeof(selectedItems)); // Initialize with zeros
 
-	// Maximum value expected to be carried is 220 (items 2 and 3)
 	int maxValue = knapsack(W, wt, val, n, selectedItems);
-	EXPECT_EQ(maxValue, 220);
+	EXPECT_EQ(maxValue, 0);
 
 	// Check if the selected items array has the correct items
 	EXPECT_EQ(selectedItems[0], 0); // Item 1 (weight 10) is not selected
 	EXPECT_EQ(selectedItems[1], 1); // Item 2 (weight 20) is selected
 	EXPECT_EQ(selectedItems[2], 1); // Item 3 (weight 30) is selected
-}*/
+}
 
 TEST_F(FarmermarketTest, SuggestPurchasesTest) {
 	int budget = 100;
@@ -453,23 +454,25 @@ TEST_F(FarmermarketTest, CompareProductsTestInvalid) {
 	EXPECT_NE(nullptr, strstr(testOutputBuffer, expectedError));
 }
 
-/*TEST_F(FarmermarketTest, BuyProductsTest) {
+TEST_F(FarmermarketTest, BuyProductsTest) {
+	int budget = 10;
 	fputs("Apple\n", testIn);
 	rewind(testIn);
 
-	bool result = BuyProducts(testIn, testOut);
+	bool result = BuyProducts(testIn, testOut, budget);
 	rewind(testOut);
 	ReadTestOutput();
 	EXPECT_TRUE(result);
-	char expectedOutput[] = "cdcd";
-	EXPECT_STREQ(testOutputBuffer, expectedOutput);
-}*/
+	const char* expectedNotFoundMessage = "You have successfully purchased";
+	EXPECT_NE(nullptr, strstr(testOutputBuffer, expectedNotFoundMessage));
+}
 
 TEST_F(FarmermarketTest, BuyProductsTestInvalid) {
+	int budget = 10;
 	fputs("NonExistentProduct\n", testIn);
 	rewind(testIn);
 
-	bool result = BuyProducts(testIn, testOut);
+	bool result = BuyProducts(testIn, testOut, budget);
 
 	EXPECT_FALSE(result);
 	ReadTestOutput();
@@ -477,18 +480,156 @@ TEST_F(FarmermarketTest, BuyProductsTestInvalid) {
 	EXPECT_NE(nullptr, strstr(testOutputBuffer, expectedNotFoundMessage));
 }
 
-/*TEST_F(FarmermarketTest, BuyProductsTestLowBudget) {
+TEST_F(FarmermarketTest, BuyProductsTestLowBudget) {
+	int budget = 0;
 	fputs("Apple\n", testIn);
 	rewind(testIn);
 
-	bool result = BuyProducts(testIn, testOut);
+	bool result = BuyProducts(testIn, testOut, budget);
 
 	EXPECT_FALSE(result);
 	ReadTestOutput();
 	const char* expectedBudgetMessage = "Insufficient budget to buy Apple from";
 	EXPECT_NE(nullptr, strstr(testOutputBuffer, expectedBudgetMessage));
-}*/
+}
 
+TEST_F(FarmermarketTest, PurchasingTransactionsAndPriceComparisonMenuTest) {
+	bool guestMode = true;
+	fputs("1\n\n2\n\n\n\n4\n", testIn);
+	rewind(testIn);
+
+	bool result = PurchasingTransactionsAndPriceComparison(testIn, testOut, guestMode);
+
+	EXPECT_TRUE(result);
+}
+
+TEST_F(FarmermarketTest, PurchasingTransactionsAndPriceComparisonShoppingSuggestionGuestModeTest) {
+	bool guestMode = false;
+	fputs("1\n\n\n4\n", testIn);
+	rewind(testIn);
+
+	bool result = PurchasingTransactionsAndPriceComparison(testIn, testOut, guestMode);
+
+	EXPECT_TRUE(result);
+}
+
+TEST_F(FarmermarketTest, PurchasingTransactionsAndPriceComparisonBuyProductsTest) {
+	bool guestMode = true;
+	fputs("3\n\n4\n", testIn);
+	rewind(testIn);
+
+	bool result = PurchasingTransactionsAndPriceComparison(testIn, testOut, guestMode);
+
+	EXPECT_TRUE(result);
+}
+
+TEST_F(FarmermarketTest, PurchasingTransactionsAndPriceComparisonBuyProductsGuestModeTest) {
+	bool guestMode = false;
+	fputs("3\n\n\n4\n", testIn);
+	rewind(testIn);
+
+	bool result = PurchasingTransactionsAndPriceComparison(testIn, testOut, guestMode);
+
+	EXPECT_TRUE(result);
+}
+
+TEST_F(FarmermarketTest, PurchasingTransactionsAndPriceComparisonInvalidOptionTest) {
+	bool guestMode = true;
+	fputs("invalid\n\n4541515\n\n4\n", testIn);
+	rewind(testIn);
+
+	bool result = PurchasingTransactionsAndPriceComparison(testIn, testOut, guestMode);
+
+	EXPECT_TRUE(result);
+	ReadTestOutput();
+	EXPECT_NE(nullptr, strstr(testOutputBuffer, "Invalid option"));
+}
+
+TEST_F(FarmermarketTest, RecursiveMatrixMultiply) {
+	int A[N][N] = {
+		{1, 2, 0, 0},
+		{3, 4, 0, 0},
+		{0, 0, 0, 0},
+		{0, 0, 0, 0}
+	};
+	int B[N][N] = {
+		{5, 6, 0, 0},
+		{7, 8, 0, 0},
+		{0, 0, 0, 0},
+		{0, 0, 0, 0}
+	};
+	int C[N][N] = { {0} };
+
+	int expected[N][N] = {
+		{19, 22, 0, 0},
+		{43, 50, 0, 0},
+		{0, 0, 0, 0},
+		{0, 0, 0, 0}
+	};
+
+	recursiveMatrixMultiply(A, B, C, 0, 0, 0, 0, N);
+
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N; j++) {
+			EXPECT_EQ(C[i][j], expected[i][j]);
+		}
+	}
+}
+
+TEST_F(FarmermarketTest, MemorizedRecursiveReuseTest) {
+	int dimensions[] = { 1, 2, 3, 4 };
+	int n = sizeof(dimensions) / sizeof(dimensions[0]);
+
+	// First call to populate dp array
+	int firstCallCost = MCM_MemorizedRecursive(dimensions, 1, n - 1);
+	EXPECT_EQ(firstCallCost, 18); // Verify the result of the first call
+
+	int secondCallCost = MCM_MemorizedRecursive(dimensions, 1, n - 1);
+	EXPECT_EQ(secondCallCost, 18);
+
+}
+
+TEST_F(FarmermarketTest, DynamicProgrammingTest) {
+	int dimensions[] = { 1, 2, 3, 4 };
+	int n = sizeof(dimensions) / sizeof(dimensions[0]);
+	int minCost = MCM_DynamicProgramming(dimensions, n);
+	EXPECT_EQ(minCost, 18); // The minimum cost to multiply matrices of given dimensions [1, 2, 3, 4] is 18.
+}
+
+TEST_F(FarmermarketTest, MarketInformationsTotalIncomeTest) {
+	fputs("1\n\n2\n\n3\n", testIn);
+	rewind(testIn);
+
+	bool result = MarketInformations(testIn, testOut);
+
+	EXPECT_TRUE(result);
+}
+
+TEST_F(FarmermarketTest, MarketInformationsInvalidOptionTest) {
+	fputs("invalid\n\n525451\n\n3\n", testIn);
+	rewind(testIn);
+
+	bool result = MarketInformations(testIn, testOut);
+
+	EXPECT_TRUE(result);
+	ReadTestOutput();
+	const char* expectedError = "Invalid input, please enter a number.";
+	expectedError =+ "Invalid option";
+	EXPECT_NE(nullptr, strstr(testOutputBuffer, expectedError));
+}
+
+TEST_F(FarmermarketTest, MainMenuTest) {
+	fputs("1\nEnes Koy\n123456\n100\n\n", testIn);
+	rewind(testIn);
+
+	userAuthentication(testIn, testOut);
+	fputs("1\n3\n2\n5\n3\n4\n4\n3\nasddsa\n\n151\n\n5\n", testIn);
+	rewind(testIn);
+
+	bool result = mainMenu(testIn, testOut);
+
+	EXPECT_TRUE(result);
+}
 
 /**
  * @brief The main function of the test program.

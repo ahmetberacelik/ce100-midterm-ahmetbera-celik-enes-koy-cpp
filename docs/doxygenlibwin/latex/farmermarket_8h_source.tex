@@ -7,76 +7,85 @@
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ FARMERMARKET\_H}}
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MAX\_SIZE\ 100}}
-\DoxyCodeLine{00010\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{char}\ username[50];}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{char}\ password[50];}
-\DoxyCodeLine{00013\ \}\ \mbox{\hyperlink{struct_user}{User}};}
-\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_product_season_a2c461bfb22f07f5fb17933d69b24c9d0}{price}};}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{struct_product_season_adc68d4728e0ea99fc3a8ee09036cfc95}{name}};}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{struct_product_season_a01c906ff899a65beb4bb9d8bec0417f2}{season}};}
-\DoxyCodeLine{00018\ \}\ \mbox{\hyperlink{struct_product_season}{ProductSeason}};}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
-\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{struct_product_season}{ProductSeason}}\ items[\mbox{\hyperlink{farmermarket_8h_a0592dba56693fad79136250c11e5a7fe}{MAX\_SIZE}}];}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_min_heap_a656a275b0ca8c80647d6251c09d31247}{size}};}
-\DoxyCodeLine{00023\ \}\ \mbox{\hyperlink{struct_min_heap}{MinHeap}};}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{farmermarket_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_a2d0255f645d941c02e7a6d600479552b}{mainMenu}}(FILE*\ in,\ FILE*\ out);}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_a3571d8d7858de3069c0320b86f5c2d6c}{saveUser}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_user}{User}}*\ user,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_a7e955099fa8201496a50f8a9f8f22b46}{authenticateUser}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ username,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ password,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_a6903abe4d5df4957642a65806ccb35a7}{userAuthentication}}(FILE*\ in,\ FILE*\ out);}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_a7ce3038a802aa59d3225588131ea97bb}{swap}}(\textcolor{keywordtype}{char}**\ a,\ \textcolor{keywordtype}{char}**\ b);}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_aa20d794eb7aaeb63297a19db22b775ca}{partition}}(\textcolor{keywordtype}{char}*\ arr[],\ \textcolor{keywordtype}{int}\ low,\ \textcolor{keywordtype}{int}\ high);}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_abe92df5eb77de11b244b68e5b635696a}{quickSort}}(\textcolor{keywordtype}{char}*\ arr[],\ \textcolor{keywordtype}{int}\ low,\ \textcolor{keywordtype}{int}\ high);}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_ab61c92aff538932520ee72d58ad3bdf0}{binarySearch}}(\textcolor{keywordtype}{char}*\ arr[],\ \textcolor{keywordtype}{int}\ l,\ \textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{char}*\ x);}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_a89eb831fe57e17f7dec4227adaead9d4}{searchAndPrintResult}}(\textcolor{keywordtype}{char}*\ arr[],\ \textcolor{keywordtype}{int}\ size,\ \textcolor{keywordtype}{char}*\ x);}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_aa1b23a5f4837b83b8d534d8efa8656bc}{browseVendor}}(FILE*\ in,\ FILE*\ out);}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_a9c24845ba4710a6ddf742ff90c3fe3f4}{searchProduct}}(FILE*\ in,\ FILE*\ out);}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_a6faa53c43bb0d63cca3e821483e46159}{listingOfInfos}}(FILE*\ in,\ FILE*\ out);}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{farmermarket_8h_afdc09daeb6f473bdfc2b8420b5d43df2}{initMinHeap}}(\mbox{\hyperlink{struct_min_heap}{MinHeap}}*\ heap);}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{farmermarket_8h_a05c8f4e395ebe2f63bb1e3195c2ed5c4}{insertMinHeap}}(\mbox{\hyperlink{struct_min_heap}{MinHeap}}*\ heap,\ \mbox{\hyperlink{struct_product_season}{ProductSeason}}\ item);}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00055\ \mbox{\hyperlink{struct_product_season}{ProductSeason}}\ \mbox{\hyperlink{farmermarket_8h_a56c90b4e74e99e830a65afe24c2126f5}{removeMin}}(\mbox{\hyperlink{struct_min_heap}{MinHeap}}*\ heap);}
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_a1d7b872077be723dacb9803166a15781}{saveProductSeason}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_product_season}{ProductSeason}}*\ productSeason,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8cpp_aebf8c1269b5a0fc43f630809c1dc7a79}{numProducts}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
-\DoxyCodeLine{00058\ }
-\DoxyCodeLine{00059\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_a4aa75cd4a4f70c29cca79c8a6f8c5e20}{loadProductSeasonsAndPrint}}(FILE*\ in,\ FILE*\ out,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ selectedSeason);}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_abb5b925a462086bac6ce3deb0d397109}{seasonalProduceGuide}}(FILE*\ in,\ FILE*\ out);}
-\DoxyCodeLine{00062\ }
-\DoxyCodeLine{00063\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_adcef403a597dffc82764a462b584ccd0}{lcs}}(\textcolor{keywordtype}{char}*\ X,\ \textcolor{keywordtype}{char}*\ Y,\ \textcolor{keywordtype}{int}\ m,\ \textcolor{keywordtype}{int}\ n);}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_a2e03443f56f183a6172a5af35d649cd8}{compareAndPrintLCS}}(\textcolor{keywordtype}{char}*\ season1,\ \textcolor{keywordtype}{char}*\ season2,\ \textcolor{keywordtype}{char}*\ name1,\ \textcolor{keywordtype}{char}*\ name2,\ \textcolor{keywordtype}{int}\ price,\ FILE*\ out);}
-\DoxyCodeLine{00066\ }
-\DoxyCodeLine{00067\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_af082905f7eac6d03e92015146bbc1925}{max}}(\textcolor{keywordtype}{int}\ a,\ \textcolor{keywordtype}{int}\ b);}
-\DoxyCodeLine{00068\ }
-\DoxyCodeLine{00069\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_a72cd2888bb605760d5a0f7e37703ddec}{knapsack}}(\textcolor{keywordtype}{int}\ W,\ \textcolor{keywordtype}{int}\ wt[],\ \textcolor{keywordtype}{int}\ val[],\ \textcolor{keywordtype}{int}\ n,\ \textcolor{keywordtype}{int}*\ selectedItems);}
-\DoxyCodeLine{00070\ }
-\DoxyCodeLine{00071\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_aae128ef956aac4436a237685e8aa2ead}{suggestPurchases}}(FILE*\ out,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8cpp_a59948f765f15671ee5157ec3a0001069}{budget}});}
-\DoxyCodeLine{00072\ }
-\DoxyCodeLine{00073\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_afff4db8ad11bb5cf38fd98ea4138145c}{CompareProducts}}(FILE*\ in,\ FILE*\ out);}
-\DoxyCodeLine{00074\ }
-\DoxyCodeLine{00075\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_ac57a88ae4e2da199a12d762a771d537e}{BuyProducts}}(FILE*\ in,\ FILE*\ out);}
-\DoxyCodeLine{00076\ }
-\DoxyCodeLine{00077\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_afdab1f2c2c53e366c20cb639384fb396}{PurchasingTransactionsAndPriceComparison}}(FILE*\ in,\ FILE*\ out);}
-\DoxyCodeLine{00078\ }
-\DoxyCodeLine{00079\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_a10a3dc160984de18304af35ab856484b}{MarketHoursandLocations}}(FILE*\ in,\ FILE*\ out);}
-\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FARMERMARKET\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ N\ 4}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{char}\ username[50];}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{char}\ password[50];}
+\DoxyCodeLine{00014\ \}\ \mbox{\hyperlink{struct_user}{User}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_product_season_a2c461bfb22f07f5fb17933d69b24c9d0}{price}};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{struct_product_season_adc68d4728e0ea99fc3a8ee09036cfc95}{name}};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{struct_product_season_a01c906ff899a65beb4bb9d8bec0417f2}{season}};}
+\DoxyCodeLine{00019\ \}\ \mbox{\hyperlink{struct_product_season}{ProductSeason}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{struct_product_season}{ProductSeason}}\ items[\mbox{\hyperlink{farmermarket_8h_a0592dba56693fad79136250c11e5a7fe}{MAX\_SIZE}}];}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_min_heap_a656a275b0ca8c80647d6251c09d31247}{size}};}
+\DoxyCodeLine{00024\ \}\ \mbox{\hyperlink{struct_min_heap}{MinHeap}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{farmermarket_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_a2d0255f645d941c02e7a6d600479552b}{mainMenu}}(FILE*\ in,\ FILE*\ out);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_a3571d8d7858de3069c0320b86f5c2d6c}{saveUser}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_user}{User}}*\ user,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_a7e955099fa8201496a50f8a9f8f22b46}{authenticateUser}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ username,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ password,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_a6903abe4d5df4957642a65806ccb35a7}{userAuthentication}}(FILE*\ in,\ FILE*\ out);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_a7ce3038a802aa59d3225588131ea97bb}{swap}}(\textcolor{keywordtype}{char}**\ a,\ \textcolor{keywordtype}{char}**\ b);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_aa20d794eb7aaeb63297a19db22b775ca}{partition}}(\textcolor{keywordtype}{char}*\ arr[],\ \textcolor{keywordtype}{int}\ low,\ \textcolor{keywordtype}{int}\ high);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_abe92df5eb77de11b244b68e5b635696a}{quickSort}}(\textcolor{keywordtype}{char}*\ arr[],\ \textcolor{keywordtype}{int}\ low,\ \textcolor{keywordtype}{int}\ high);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_ab61c92aff538932520ee72d58ad3bdf0}{binarySearch}}(\textcolor{keywordtype}{char}*\ arr[],\ \textcolor{keywordtype}{int}\ l,\ \textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{char}*\ x);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_a89eb831fe57e17f7dec4227adaead9d4}{searchAndPrintResult}}(\textcolor{keywordtype}{char}*\ arr[],\ \textcolor{keywordtype}{int}\ size,\ \textcolor{keywordtype}{char}*\ x);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_aa1b23a5f4837b83b8d534d8efa8656bc}{browseVendor}}(FILE*\ in,\ FILE*\ out);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_a9c24845ba4710a6ddf742ff90c3fe3f4}{searchProduct}}(FILE*\ in,\ FILE*\ out);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_a6faa53c43bb0d63cca3e821483e46159}{listingOfInfos}}(FILE*\ in,\ FILE*\ out);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{farmermarket_8h_afdc09daeb6f473bdfc2b8420b5d43df2}{initMinHeap}}(\mbox{\hyperlink{struct_min_heap}{MinHeap}}*\ heap);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{farmermarket_8h_a05c8f4e395ebe2f63bb1e3195c2ed5c4}{insertMinHeap}}(\mbox{\hyperlink{struct_min_heap}{MinHeap}}*\ heap,\ \mbox{\hyperlink{struct_product_season}{ProductSeason}}\ item);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \mbox{\hyperlink{struct_product_season}{ProductSeason}}\ \mbox{\hyperlink{farmermarket_8h_a56c90b4e74e99e830a65afe24c2126f5}{removeMin}}(\mbox{\hyperlink{struct_min_heap}{MinHeap}}*\ heap);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_a1d7b872077be723dacb9803166a15781}{saveProductSeason}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_product_season}{ProductSeason}}*\ productSeason,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8cpp_aebf8c1269b5a0fc43f630809c1dc7a79}{numProducts}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_a4aa75cd4a4f70c29cca79c8a6f8c5e20}{loadProductSeasonsAndPrint}}(FILE*\ in,\ FILE*\ out,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ selectedSeason);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_abb5b925a462086bac6ce3deb0d397109}{seasonalProduceGuide}}(FILE*\ in,\ FILE*\ out);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_adcef403a597dffc82764a462b584ccd0}{lcs}}(\textcolor{keywordtype}{char}*\ X,\ \textcolor{keywordtype}{char}*\ Y,\ \textcolor{keywordtype}{int}\ m,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}});}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_a2e03443f56f183a6172a5af35d649cd8}{compareAndPrintLCS}}(\textcolor{keywordtype}{char}*\ season1,\ \textcolor{keywordtype}{char}*\ season2,\ \textcolor{keywordtype}{char}*\ name1,\ \textcolor{keywordtype}{char}*\ name2,\ \textcolor{keywordtype}{int}\ price,\ FILE*\ out);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_af082905f7eac6d03e92015146bbc1925}{max}}(\textcolor{keywordtype}{int}\ a,\ \textcolor{keywordtype}{int}\ b);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_a72cd2888bb605760d5a0f7e37703ddec}{knapsack}}(\textcolor{keywordtype}{int}\ W,\ \textcolor{keywordtype}{int}\ wt[],\ \textcolor{keywordtype}{int}\ val[],\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}},\ \textcolor{keywordtype}{int}*\ selectedItems);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_aae128ef956aac4436a237685e8aa2ead}{suggestPurchases}}(FILE*\ out,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8cpp_a59948f765f15671ee5157ec3a0001069}{budget}});}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_afff4db8ad11bb5cf38fd98ea4138145c}{CompareProducts}}(FILE*\ in,\ FILE*\ out);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_a0dec6d7386952deb252e98b7cb0a20ff}{BuyProducts}}(FILE*\ in,\ FILE*\ out,\ \textcolor{keywordtype}{int}\ local\_budget);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_a4b0449fd81901cce445979946b9b69c2}{PurchasingTransactionsAndPriceComparison}}(FILE*\ in,\ FILE*\ out,\ \textcolor{keywordtype}{bool}\ localGuestMode);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{farmermarket_8h_a0ad35f0cbd89adef3313f8da6cb58b97}{recursiveMatrixMultiply}}(\textcolor{keywordtype}{int}\ A[\mbox{\hyperlink{farmermarket_8h_a0240ac851181b84ac374872dc5434ee4}{N}}][\mbox{\hyperlink{farmermarket_8h_a0240ac851181b84ac374872dc5434ee4}{N}}],\ \textcolor{keywordtype}{int}\ B[\mbox{\hyperlink{farmermarket_8h_a0240ac851181b84ac374872dc5434ee4}{N}}][\mbox{\hyperlink{farmermarket_8h_a0240ac851181b84ac374872dc5434ee4}{N}}],\ \textcolor{keywordtype}{int}\ C[\mbox{\hyperlink{farmermarket_8h_a0240ac851181b84ac374872dc5434ee4}{N}}][\mbox{\hyperlink{farmermarket_8h_a0240ac851181b84ac374872dc5434ee4}{N}}],\ \textcolor{keywordtype}{int}\ rowA,\ \textcolor{keywordtype}{int}\ colA,\ \textcolor{keywordtype}{int}\ rowB,\ \textcolor{keywordtype}{int}\ colB,\ \textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{farmermarket_8h_a40d9da8607d82cbd3628a3aac44bba56}{initializeDP}}();}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_a20a9fe53fc5de61546cc8a3274ffd6fd}{MCM\_MemorizedRecursive}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8cpp_a171b4c4633e25a79227534b8edff8a00}{dimensions}}[],\ \textcolor{keywordtype}{int}\ i,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8h_ac3605ae6eefdc1bd5e3484596c9f50c8}{MCM\_DynamicProgramming}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8cpp_a171b4c4633e25a79227534b8edff8a00}{dimensions}}[],\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{farmermarket_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}});}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{farmermarket_8h_afa40245e6f33184e6b3abd310d667e15}{MarketInformations}}(FILE*\ in,\ FILE*\ out);}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FARMERMARKET\_H}}
 
 \end{DoxyCode}

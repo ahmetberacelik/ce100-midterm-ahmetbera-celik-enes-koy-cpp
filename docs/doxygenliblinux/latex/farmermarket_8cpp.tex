@@ -6,6 +6,7 @@
 {\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$climits$>$}\newline
 Include dependency graph for farmermarket.\+cpp\+:
 \nopagebreak
 \begin{figure}[H]
@@ -14,6 +15,13 @@ Include dependency graph for farmermarket.\+cpp\+:
 \includegraphics[width=350pt]{farmermarket_8cpp__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{farmermarket_8cpp_a0240ac851181b84ac374872dc5434ee4}{N}}~4
+\item 
+\#define \mbox{\hyperlink{farmermarket_8cpp_a0592dba56693fad79136250c11e5a7fe}{MAX\+\_\+\+SIZE}}~100
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -55,26 +63,36 @@ int \mbox{\hyperlink{farmermarket_8cpp_a4aa75cd4a4f70c29cca79c8a6f8c5e20}{load\+
 \item 
 bool \mbox{\hyperlink{farmermarket_8cpp_abb5b925a462086bac6ce3deb0d397109}{seasonal\+Produce\+Guide}} (FILE $\ast$in, FILE $\ast$out)
 \item 
-int \mbox{\hyperlink{farmermarket_8cpp_adcef403a597dffc82764a462b584ccd0}{lcs}} (char $\ast$X, char $\ast$Y, int m, int n)
+int \mbox{\hyperlink{farmermarket_8cpp_adcef403a597dffc82764a462b584ccd0}{lcs}} (char $\ast$X, char $\ast$Y, int m, int \mbox{\hyperlink{farmermarket_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})
 \item 
 bool \mbox{\hyperlink{farmermarket_8cpp_a2e03443f56f183a6172a5af35d649cd8}{compare\+And\+Print\+LCS}} (char $\ast$season1, char $\ast$season2, char $\ast$name1, char $\ast$name2, int price, FILE $\ast$out)
 \item 
 int \mbox{\hyperlink{farmermarket_8cpp_af082905f7eac6d03e92015146bbc1925}{max}} (int a, int b)
 \item 
-int \mbox{\hyperlink{farmermarket_8cpp_a72cd2888bb605760d5a0f7e37703ddec}{knapsack}} (int W, int wt\mbox{[}$\,$\mbox{]}, int val\mbox{[}$\,$\mbox{]}, int n, int $\ast$selected\+Items)
+int \mbox{\hyperlink{farmermarket_8cpp_a72cd2888bb605760d5a0f7e37703ddec}{knapsack}} (int W, int wt\mbox{[}$\,$\mbox{]}, int val\mbox{[}$\,$\mbox{]}, int \mbox{\hyperlink{farmermarket_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}, int $\ast$selected\+Items)
 \item 
 bool \mbox{\hyperlink{farmermarket_8cpp_aae128ef956aac4436a237685e8aa2ead}{suggest\+Purchases}} (FILE $\ast$out, int \mbox{\hyperlink{farmermarket_8cpp_a59948f765f15671ee5157ec3a0001069}{budget}})
 \item 
 bool \mbox{\hyperlink{farmermarket_8cpp_afff4db8ad11bb5cf38fd98ea4138145c}{Compare\+Products}} (FILE $\ast$in, FILE $\ast$out)
 \item 
-bool \mbox{\hyperlink{farmermarket_8cpp_ac57a88ae4e2da199a12d762a771d537e}{Buy\+Products}} (FILE $\ast$in, FILE $\ast$out)
+bool \mbox{\hyperlink{farmermarket_8cpp_a8f9dbe104b1b9845907513b8d2788068}{Buy\+Products}} (FILE $\ast$in, FILE $\ast$out, int local\+Budget)
 \item 
-bool \mbox{\hyperlink{farmermarket_8cpp_afdab1f2c2c53e366c20cb639384fb396}{Purchasing\+Transactions\+And\+Price\+Comparison}} (FILE $\ast$in, FILE $\ast$out)
+bool \mbox{\hyperlink{farmermarket_8cpp_a4b0449fd81901cce445979946b9b69c2}{Purchasing\+Transactions\+And\+Price\+Comparison}} (FILE $\ast$in, FILE $\ast$out, bool local\+Guest\+Mode)
 \item 
-bool \mbox{\hyperlink{farmermarket_8cpp_a10a3dc160984de18304af35ab856484b}{Market\+Hoursand\+Locations}} (FILE $\ast$in, FILE $\ast$out)
+void \mbox{\hyperlink{farmermarket_8cpp_a0ad35f0cbd89adef3313f8da6cb58b97}{recursive\+Matrix\+Multiply}} (int A\mbox{[}\mbox{\hyperlink{farmermarket_8cpp_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{farmermarket_8cpp_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}, int B\mbox{[}\mbox{\hyperlink{farmermarket_8cpp_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{farmermarket_8cpp_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}, int C\mbox{[}\mbox{\hyperlink{farmermarket_8cpp_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{farmermarket_8cpp_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}, int rowA, int colA, int rowB, int colB, int size)
+\item 
+void \mbox{\hyperlink{farmermarket_8cpp_a40d9da8607d82cbd3628a3aac44bba56}{initialize\+DP}} ()
+\item 
+int \mbox{\hyperlink{farmermarket_8cpp_a20a9fe53fc5de61546cc8a3274ffd6fd}{MCM\+\_\+\+Memorized\+Recursive}} (int \mbox{\hyperlink{farmermarket_8cpp_a171b4c4633e25a79227534b8edff8a00}{dimensions}}\mbox{[}$\,$\mbox{]}, int i, int j)
+\item 
+int \mbox{\hyperlink{farmermarket_8cpp_ac3605ae6eefdc1bd5e3484596c9f50c8}{MCM\+\_\+\+Dynamic\+Programming}} (int \mbox{\hyperlink{farmermarket_8cpp_a171b4c4633e25a79227534b8edff8a00}{dimensions}}\mbox{[}$\,$\mbox{]}, int \mbox{\hyperlink{farmermarket_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})
+\item 
+bool \mbox{\hyperlink{farmermarket_8cpp_afa40245e6f33184e6b3abd310d667e15}{Market\+Informations}} (FILE $\ast$in, FILE $\ast$out)
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{farmermarket_8cpp_a3439ead373ff2292c5454883ea0045b9}{dp}} \mbox{[}\mbox{\hyperlink{farmermarket_8cpp_a0592dba56693fad79136250c11e5a7fe}{MAX\+\_\+\+SIZE}}\mbox{]}\mbox{[}\mbox{\hyperlink{farmermarket_8cpp_a0592dba56693fad79136250c11e5a7fe}{MAX\+\_\+\+SIZE}}\mbox{]}
 \item 
 bool \mbox{\hyperlink{farmermarket_8cpp_a8f6ef3fee1e9bdc2d48bb6235909c895}{guest\+Mode}} = false
 \item 
@@ -82,18 +100,41 @@ bool \mbox{\hyperlink{farmermarket_8cpp_a8f6ef3fee1e9bdc2d48bb6235909c895}{guest
 \item 
 int \mbox{\hyperlink{farmermarket_8cpp_a59948f765f15671ee5157ec3a0001069}{budget}}
 \item 
-char $\ast$ \mbox{\hyperlink{farmermarket_8cpp_a42d672c4353e8372afc4bfda4e711db2}{vendors}} \mbox{[}$\,$\mbox{]} = \{ \char`\"{}Ahmet\char`\"{}, \char`\"{}Mehmet\char`\"{}, \char`\"{}Veli\char`\"{}, \char`\"{}Ayse\char`\"{}, \char`\"{}Nuriye\char`\"{} \}
+char $\ast$ \mbox{\hyperlink{farmermarket_8cpp_a42d672c4353e8372afc4bfda4e711db2}{vendors}} \mbox{[}$\,$\mbox{]} = \{ \char`\"{}Ahmet\char`\"{}, \char`\"{}Mehmet\char`\"{}, \char`\"{}Veli\char`\"{}, \char`\"{}Ayse\char`\"{}\}
 \item 
-char $\ast$ \mbox{\hyperlink{farmermarket_8cpp_a163d6ab236f77517bca4649094d44b2d}{products}} \mbox{[}$\,$\mbox{]}\mbox{[}6\mbox{]}
+char $\ast$ \mbox{\hyperlink{farmermarket_8cpp_a657cef6c55b765ba0fff6bb2f1060ffa}{products}} \mbox{[}$\,$\mbox{]}\mbox{[}5\mbox{]}
 \item 
 \mbox{\hyperlink{structProductSeason}{Product\+Season}} \mbox{\hyperlink{farmermarket_8cpp_ab10615d37b796f2de733bab04d544486}{product\+Seasons}} \mbox{[}$\,$\mbox{]}
 \item 
+int \mbox{\hyperlink{farmermarket_8cpp_ac1f7efddac2669af469a65c8f2330ca2}{product\+Prices}} \mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
+\item 
+int \mbox{\hyperlink{farmermarket_8cpp_aeec9dc2796155986ebc53abdae033dae}{product\+Quantities}} \mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
+\item 
 int \mbox{\hyperlink{farmermarket_8cpp_a6f379c9bfe43cf05e953df19a4fa03b9}{num\+Vendors}} = sizeof(\mbox{\hyperlink{farmermarket_8cpp_a42d672c4353e8372afc4bfda4e711db2}{vendors}}) / sizeof(\mbox{\hyperlink{farmermarket_8cpp_a42d672c4353e8372afc4bfda4e711db2}{vendors}}\mbox{[}0\mbox{]})
 \item 
-int \mbox{\hyperlink{farmermarket_8cpp_ac686fb03d59d26b57a59abe7dbbdc8f7}{num\+Products\+Per\+Vendor}} = sizeof(\mbox{\hyperlink{farmermarket_8cpp_a163d6ab236f77517bca4649094d44b2d}{products}}\mbox{[}0\mbox{]}) / sizeof(\mbox{\hyperlink{farmermarket_8cpp_a163d6ab236f77517bca4649094d44b2d}{products}}\mbox{[}0\mbox{]}\mbox{[}0\mbox{]})
+int \mbox{\hyperlink{farmermarket_8cpp_ac686fb03d59d26b57a59abe7dbbdc8f7}{num\+Products\+Per\+Vendor}} = sizeof(\mbox{\hyperlink{farmermarket_8cpp_a657cef6c55b765ba0fff6bb2f1060ffa}{products}}\mbox{[}0\mbox{]}) / sizeof(\mbox{\hyperlink{farmermarket_8cpp_a657cef6c55b765ba0fff6bb2f1060ffa}{products}}\mbox{[}0\mbox{]}\mbox{[}0\mbox{]})
 \item 
 const int \mbox{\hyperlink{farmermarket_8cpp_aebf8c1269b5a0fc43f630809c1dc7a79}{num\+Products}} = sizeof(\mbox{\hyperlink{farmermarket_8cpp_ab10615d37b796f2de733bab04d544486}{product\+Seasons}}) / sizeof(\mbox{\hyperlink{farmermarket_8cpp_ab10615d37b796f2de733bab04d544486}{product\+Seasons}}\mbox{[}0\mbox{]})
+\item 
+int \mbox{\hyperlink{farmermarket_8cpp_a171b4c4633e25a79227534b8edff8a00}{dimensions}} \mbox{[}$\,$\mbox{]} = \{ 4, 4, 4 \}
+\item 
+int \mbox{\hyperlink{farmermarket_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} = sizeof(\mbox{\hyperlink{farmermarket_8cpp_a171b4c4633e25a79227534b8edff8a00}{dimensions}}) / sizeof(\mbox{\hyperlink{farmermarket_8cpp_a171b4c4633e25a79227534b8edff8a00}{dimensions}}\mbox{[}0\mbox{]})
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{farmermarket_8cpp_a0592dba56693fad79136250c11e5a7fe}\label{farmermarket_8cpp_a0592dba56693fad79136250c11e5a7fe}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!MAX\_SIZE@{MAX\_SIZE}}
+\index{MAX\_SIZE@{MAX\_SIZE}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_SIZE}{MAX\_SIZE}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+SIZE~100}
+
+\mbox{\Hypertarget{farmermarket_8cpp_a0240ac851181b84ac374872dc5434ee4}\label{farmermarket_8cpp_a0240ac851181b84ac374872dc5434ee4}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!N@{N}}
+\index{N@{N}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \#define N~4}
+
 
 
 \doxysubsection{Function Documentation}
@@ -115,11 +156,11 @@ const int \mbox{\hyperlink{farmermarket_8cpp_aebf8c1269b5a0fc43f630809c1dc7a79}{
 \doxysubsubsection{\texorpdfstring{browseVendor()}{browseVendor()}}
 {\footnotesize\ttfamily bool browse\+Vendor (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{in,  }\item[{FILE $\ast$}]{out }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{farmermarket_8cpp_ac57a88ae4e2da199a12d762a771d537e}\label{farmermarket_8cpp_ac57a88ae4e2da199a12d762a771d537e}} 
+\mbox{\Hypertarget{farmermarket_8cpp_a8f9dbe104b1b9845907513b8d2788068}\label{farmermarket_8cpp_a8f9dbe104b1b9845907513b8d2788068}} 
 \index{farmermarket.cpp@{farmermarket.cpp}!BuyProducts@{BuyProducts}}
 \index{BuyProducts@{BuyProducts}!farmermarket.cpp@{farmermarket.cpp}}
 \doxysubsubsection{\texorpdfstring{BuyProducts()}{BuyProducts()}}
-{\footnotesize\ttfamily bool Buy\+Products (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{in,  }\item[{FILE $\ast$}]{out }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Buy\+Products (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{in,  }\item[{FILE $\ast$}]{out,  }\item[{int}]{local\+Budget }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{farmermarket_8cpp_a9d7e8af417b6d543da691e9c0e2f6f9f}\label{farmermarket_8cpp_a9d7e8af417b6d543da691e9c0e2f6f9f}} 
 \index{farmermarket.cpp@{farmermarket.cpp}!clearScreen@{clearScreen}}
@@ -138,6 +179,12 @@ const int \mbox{\hyperlink{farmermarket_8cpp_aebf8c1269b5a0fc43f630809c1dc7a79}{
 \index{CompareProducts@{CompareProducts}!farmermarket.cpp@{farmermarket.cpp}}
 \doxysubsubsection{\texorpdfstring{CompareProducts()}{CompareProducts()}}
 {\footnotesize\ttfamily bool Compare\+Products (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{in,  }\item[{FILE $\ast$}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{farmermarket_8cpp_a40d9da8607d82cbd3628a3aac44bba56}\label{farmermarket_8cpp_a40d9da8607d82cbd3628a3aac44bba56}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!initializeDP@{initializeDP}}
+\index{initializeDP@{initializeDP}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{initializeDP()}{initializeDP()}}
+{\footnotesize\ttfamily void initialize\+DP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{farmermarket_8cpp_afdc09daeb6f473bdfc2b8420b5d43df2}\label{farmermarket_8cpp_afdc09daeb6f473bdfc2b8420b5d43df2}} 
 \index{farmermarket.cpp@{farmermarket.cpp}!initMinHeap@{initMinHeap}}
@@ -181,11 +228,11 @@ const int \mbox{\hyperlink{farmermarket_8cpp_aebf8c1269b5a0fc43f630809c1dc7a79}{
 \doxysubsubsection{\texorpdfstring{mainMenu()}{mainMenu()}}
 {\footnotesize\ttfamily bool main\+Menu (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{in,  }\item[{FILE $\ast$}]{out }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{farmermarket_8cpp_a10a3dc160984de18304af35ab856484b}\label{farmermarket_8cpp_a10a3dc160984de18304af35ab856484b}} 
-\index{farmermarket.cpp@{farmermarket.cpp}!MarketHoursandLocations@{MarketHoursandLocations}}
-\index{MarketHoursandLocations@{MarketHoursandLocations}!farmermarket.cpp@{farmermarket.cpp}}
-\doxysubsubsection{\texorpdfstring{MarketHoursandLocations()}{MarketHoursandLocations()}}
-{\footnotesize\ttfamily bool Market\+Hoursand\+Locations (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{in,  }\item[{FILE $\ast$}]{out }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{farmermarket_8cpp_afa40245e6f33184e6b3abd310d667e15}\label{farmermarket_8cpp_afa40245e6f33184e6b3abd310d667e15}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!MarketInformations@{MarketInformations}}
+\index{MarketInformations@{MarketInformations}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{MarketInformations()}{MarketInformations()}}
+{\footnotesize\ttfamily bool Market\+Informations (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{in,  }\item[{FILE $\ast$}]{out }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{farmermarket_8cpp_af082905f7eac6d03e92015146bbc1925}\label{farmermarket_8cpp_af082905f7eac6d03e92015146bbc1925}} 
 \index{farmermarket.cpp@{farmermarket.cpp}!max@{max}}
@@ -193,23 +240,41 @@ const int \mbox{\hyperlink{farmermarket_8cpp_aebf8c1269b5a0fc43f630809c1dc7a79}{
 \doxysubsubsection{\texorpdfstring{max()}{max()}}
 {\footnotesize\ttfamily int max (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{farmermarket_8cpp_ac3605ae6eefdc1bd5e3484596c9f50c8}\label{farmermarket_8cpp_ac3605ae6eefdc1bd5e3484596c9f50c8}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!MCM\_DynamicProgramming@{MCM\_DynamicProgramming}}
+\index{MCM\_DynamicProgramming@{MCM\_DynamicProgramming}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{MCM\_DynamicProgramming()}{MCM\_DynamicProgramming()}}
+{\footnotesize\ttfamily int MCM\+\_\+\+Dynamic\+Programming (\begin{DoxyParamCaption}\item[{int}]{dimensions\mbox{[}$\,$\mbox{]},  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{farmermarket_8cpp_a20a9fe53fc5de61546cc8a3274ffd6fd}\label{farmermarket_8cpp_a20a9fe53fc5de61546cc8a3274ffd6fd}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!MCM\_MemorizedRecursive@{MCM\_MemorizedRecursive}}
+\index{MCM\_MemorizedRecursive@{MCM\_MemorizedRecursive}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{MCM\_MemorizedRecursive()}{MCM\_MemorizedRecursive()}}
+{\footnotesize\ttfamily int MCM\+\_\+\+Memorized\+Recursive (\begin{DoxyParamCaption}\item[{int}]{dimensions\mbox{[}$\,$\mbox{]},  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{farmermarket_8cpp_aa20d794eb7aaeb63297a19db22b775ca}\label{farmermarket_8cpp_aa20d794eb7aaeb63297a19db22b775ca}} 
 \index{farmermarket.cpp@{farmermarket.cpp}!partition@{partition}}
 \index{partition@{partition}!farmermarket.cpp@{farmermarket.cpp}}
 \doxysubsubsection{\texorpdfstring{partition()}{partition()}}
 {\footnotesize\ttfamily int partition (\begin{DoxyParamCaption}\item[{char $\ast$}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{farmermarket_8cpp_afdab1f2c2c53e366c20cb639384fb396}\label{farmermarket_8cpp_afdab1f2c2c53e366c20cb639384fb396}} 
+\mbox{\Hypertarget{farmermarket_8cpp_a4b0449fd81901cce445979946b9b69c2}\label{farmermarket_8cpp_a4b0449fd81901cce445979946b9b69c2}} 
 \index{farmermarket.cpp@{farmermarket.cpp}!PurchasingTransactionsAndPriceComparison@{PurchasingTransactionsAndPriceComparison}}
 \index{PurchasingTransactionsAndPriceComparison@{PurchasingTransactionsAndPriceComparison}!farmermarket.cpp@{farmermarket.cpp}}
 \doxysubsubsection{\texorpdfstring{PurchasingTransactionsAndPriceComparison()}{PurchasingTransactionsAndPriceComparison()}}
-{\footnotesize\ttfamily bool Purchasing\+Transactions\+And\+Price\+Comparison (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{in,  }\item[{FILE $\ast$}]{out }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Purchasing\+Transactions\+And\+Price\+Comparison (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{in,  }\item[{FILE $\ast$}]{out,  }\item[{bool}]{local\+Guest\+Mode }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{farmermarket_8cpp_abe92df5eb77de11b244b68e5b635696a}\label{farmermarket_8cpp_abe92df5eb77de11b244b68e5b635696a}} 
 \index{farmermarket.cpp@{farmermarket.cpp}!quickSort@{quickSort}}
 \index{quickSort@{quickSort}!farmermarket.cpp@{farmermarket.cpp}}
 \doxysubsubsection{\texorpdfstring{quickSort()}{quickSort()}}
 {\footnotesize\ttfamily bool quick\+Sort (\begin{DoxyParamCaption}\item[{char $\ast$}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{farmermarket_8cpp_a0ad35f0cbd89adef3313f8da6cb58b97}\label{farmermarket_8cpp_a0ad35f0cbd89adef3313f8da6cb58b97}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!recursiveMatrixMultiply@{recursiveMatrixMultiply}}
+\index{recursiveMatrixMultiply@{recursiveMatrixMultiply}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{recursiveMatrixMultiply()}{recursiveMatrixMultiply()}}
+{\footnotesize\ttfamily void recursive\+Matrix\+Multiply (\begin{DoxyParamCaption}\item[{int}]{A\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]},  }\item[{int}]{B\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]},  }\item[{int}]{C\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]},  }\item[{int}]{rowA,  }\item[{int}]{colA,  }\item[{int}]{rowB,  }\item[{int}]{colB,  }\item[{int}]{size }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{farmermarket_8cpp_a56c90b4e74e99e830a65afe24c2126f5}\label{farmermarket_8cpp_a56c90b4e74e99e830a65afe24c2126f5}} 
 \index{farmermarket.cpp@{farmermarket.cpp}!removeMin@{removeMin}}
@@ -280,11 +345,29 @@ const int \mbox{\hyperlink{farmermarket_8cpp_aebf8c1269b5a0fc43f630809c1dc7a79}{
 \doxysubsubsection{\texorpdfstring{budget}{budget}}
 {\footnotesize\ttfamily int budget}
 
+\mbox{\Hypertarget{farmermarket_8cpp_a171b4c4633e25a79227534b8edff8a00}\label{farmermarket_8cpp_a171b4c4633e25a79227534b8edff8a00}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!dimensions@{dimensions}}
+\index{dimensions@{dimensions}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{dimensions}{dimensions}}
+{\footnotesize\ttfamily int dimensions\mbox{[}$\,$\mbox{]} = \{ 4, 4, 4 \}}
+
+\mbox{\Hypertarget{farmermarket_8cpp_a3439ead373ff2292c5454883ea0045b9}\label{farmermarket_8cpp_a3439ead373ff2292c5454883ea0045b9}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!dp@{dp}}
+\index{dp@{dp}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{dp}{dp}}
+{\footnotesize\ttfamily int dp\mbox{[}\mbox{\hyperlink{farmermarket_8cpp_a0592dba56693fad79136250c11e5a7fe}{MAX\+\_\+\+SIZE}}\mbox{]}\mbox{[}\mbox{\hyperlink{farmermarket_8cpp_a0592dba56693fad79136250c11e5a7fe}{MAX\+\_\+\+SIZE}}\mbox{]}}
+
 \mbox{\Hypertarget{farmermarket_8cpp_a8f6ef3fee1e9bdc2d48bb6235909c895}\label{farmermarket_8cpp_a8f6ef3fee1e9bdc2d48bb6235909c895}} 
 \index{farmermarket.cpp@{farmermarket.cpp}!guestMode@{guestMode}}
 \index{guestMode@{guestMode}!farmermarket.cpp@{farmermarket.cpp}}
 \doxysubsubsection{\texorpdfstring{guestMode}{guestMode}}
 {\footnotesize\ttfamily bool guest\+Mode = false}
+
+\mbox{\Hypertarget{farmermarket_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}\label{farmermarket_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!n@{n}}
+\index{n@{n}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily int n = sizeof(\mbox{\hyperlink{farmermarket_8cpp_a171b4c4633e25a79227534b8edff8a00}{dimensions}}) / sizeof(\mbox{\hyperlink{farmermarket_8cpp_a171b4c4633e25a79227534b8edff8a00}{dimensions}}\mbox{[}0\mbox{]})}
 
 \mbox{\Hypertarget{farmermarket_8cpp_aebf8c1269b5a0fc43f630809c1dc7a79}\label{farmermarket_8cpp_aebf8c1269b5a0fc43f630809c1dc7a79}} 
 \index{farmermarket.cpp@{farmermarket.cpp}!numProducts@{numProducts}}
@@ -296,7 +379,7 @@ const int \mbox{\hyperlink{farmermarket_8cpp_aebf8c1269b5a0fc43f630809c1dc7a79}{
 \index{farmermarket.cpp@{farmermarket.cpp}!numProductsPerVendor@{numProductsPerVendor}}
 \index{numProductsPerVendor@{numProductsPerVendor}!farmermarket.cpp@{farmermarket.cpp}}
 \doxysubsubsection{\texorpdfstring{numProductsPerVendor}{numProductsPerVendor}}
-{\footnotesize\ttfamily int num\+Products\+Per\+Vendor = sizeof(\mbox{\hyperlink{farmermarket_8cpp_a163d6ab236f77517bca4649094d44b2d}{products}}\mbox{[}0\mbox{]}) / sizeof(\mbox{\hyperlink{farmermarket_8cpp_a163d6ab236f77517bca4649094d44b2d}{products}}\mbox{[}0\mbox{]}\mbox{[}0\mbox{]})}
+{\footnotesize\ttfamily int num\+Products\+Per\+Vendor = sizeof(\mbox{\hyperlink{farmermarket_8cpp_a657cef6c55b765ba0fff6bb2f1060ffa}{products}}\mbox{[}0\mbox{]}) / sizeof(\mbox{\hyperlink{farmermarket_8cpp_a657cef6c55b765ba0fff6bb2f1060ffa}{products}}\mbox{[}0\mbox{]}\mbox{[}0\mbox{]})}
 
 \mbox{\Hypertarget{farmermarket_8cpp_a6f379c9bfe43cf05e953df19a4fa03b9}\label{farmermarket_8cpp_a6f379c9bfe43cf05e953df19a4fa03b9}} 
 \index{farmermarket.cpp@{farmermarket.cpp}!numVendors@{numVendors}}
@@ -304,20 +387,51 @@ const int \mbox{\hyperlink{farmermarket_8cpp_aebf8c1269b5a0fc43f630809c1dc7a79}{
 \doxysubsubsection{\texorpdfstring{numVendors}{numVendors}}
 {\footnotesize\ttfamily int num\+Vendors = sizeof(\mbox{\hyperlink{farmermarket_8cpp_a42d672c4353e8372afc4bfda4e711db2}{vendors}}) / sizeof(\mbox{\hyperlink{farmermarket_8cpp_a42d672c4353e8372afc4bfda4e711db2}{vendors}}\mbox{[}0\mbox{]})}
 
-\mbox{\Hypertarget{farmermarket_8cpp_a163d6ab236f77517bca4649094d44b2d}\label{farmermarket_8cpp_a163d6ab236f77517bca4649094d44b2d}} 
-\index{farmermarket.cpp@{farmermarket.cpp}!products@{products}}
-\index{products@{products}!farmermarket.cpp@{farmermarket.cpp}}
-\doxysubsubsection{\texorpdfstring{products}{products}}
-{\footnotesize\ttfamily char$\ast$ products\mbox{[}$\,$\mbox{]}\mbox{[}6\mbox{]}}
+\mbox{\Hypertarget{farmermarket_8cpp_ac1f7efddac2669af469a65c8f2330ca2}\label{farmermarket_8cpp_ac1f7efddac2669af469a65c8f2330ca2}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!productPrices@{productPrices}}
+\index{productPrices@{productPrices}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{productPrices}{productPrices}}
+{\footnotesize\ttfamily int product\+Prices\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}}
 
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{= \{}
-\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}Ahmet"{}}, \textcolor{stringliteral}{"{}Banana"{}}, \textcolor{stringliteral}{"{}Apple"{}}, \textcolor{stringliteral}{"{}Cherry"{}}, \textcolor{stringliteral}{"{}Date"{}}, \textcolor{stringliteral}{"{}Grape"{}}\},}
-\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}Mehmet"{}}, \textcolor{stringliteral}{"{}Raspberry"{}}, \textcolor{stringliteral}{"{}Eggplant"{}}, \textcolor{stringliteral}{"{}Mushroom"{}}, \textcolor{stringliteral}{"{}Beet"{}}, \textcolor{stringliteral}{"{}Turnip"{}}\},}
-\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}Veli"{}}, \textcolor{stringliteral}{"{}Cucumber"{}}, \textcolor{stringliteral}{"{}Melon"{}}, \textcolor{stringliteral}{"{}Lemon"{}}, \textcolor{stringliteral}{"{}Tomato"{}}, \textcolor{stringliteral}{"{}Orange"{}}\},}
-\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}Ayse"{}}, \textcolor{stringliteral}{"{}Pear"{}}, \textcolor{stringliteral}{"{}Nectarine"{}}, \textcolor{stringliteral}{"{}Carrot"{}}, \textcolor{stringliteral}{"{}Bean"{}}, \textcolor{stringliteral}{"{}Beet"{}}\},}
-\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}Nuriye"{}}, \textcolor{stringliteral}{"{}Hazelnut"{}}, \textcolor{stringliteral}{"{}Chestnut"{}}, \textcolor{stringliteral}{"{}Fig"{}}, \textcolor{stringliteral}{"{}Coconut"{}}, \textcolor{stringliteral}{"{}Broccoli"{}}\}}
+\DoxyCodeLine{        \{10, 10, 15, 30\},}
+\DoxyCodeLine{        \{15, 20, 25, 30\},}
+\DoxyCodeLine{        \{25, 30, 30, 15\},}
+\DoxyCodeLine{        \{35, 35, 40, 40\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{farmermarket_8cpp_aeec9dc2796155986ebc53abdae033dae}\label{farmermarket_8cpp_aeec9dc2796155986ebc53abdae033dae}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!productQuantities@{productQuantities}}
+\index{productQuantities@{productQuantities}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{productQuantities}{productQuantities}}
+{\footnotesize\ttfamily int product\+Quantities\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{        \{100, 28, 30, 50\},}
+\DoxyCodeLine{        \{75, 27, 46, 18\},}
+\DoxyCodeLine{        \{15, 73, 48, 24\},}
+\DoxyCodeLine{        \{17, 43, 64, 37\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{farmermarket_8cpp_a657cef6c55b765ba0fff6bb2f1060ffa}\label{farmermarket_8cpp_a657cef6c55b765ba0fff6bb2f1060ffa}} 
+\index{farmermarket.cpp@{farmermarket.cpp}!products@{products}}
+\index{products@{products}!farmermarket.cpp@{farmermarket.cpp}}
+\doxysubsubsection{\texorpdfstring{products}{products}}
+{\footnotesize\ttfamily char$\ast$ products\mbox{[}$\,$\mbox{]}\mbox{[}5\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}Ahmet"{}}, \textcolor{stringliteral}{"{}Banana"{}}, \textcolor{stringliteral}{"{}Apple"{}}, \textcolor{stringliteral}{"{}Grape"{}}, \textcolor{stringliteral}{"{}Spinach"{}}\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}Mehmet"{}}, \textcolor{stringliteral}{"{}Raspberry"{}}, \textcolor{stringliteral}{"{}Beet"{}}, \textcolor{stringliteral}{"{}Turnip"{}}, \textcolor{stringliteral}{"{}Peas"{}}\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}Veli"{}}, \textcolor{stringliteral}{"{}Cucumber"{}}, \textcolor{stringliteral}{"{}Tomato"{}}, \textcolor{stringliteral}{"{}Orange"{}}, \textcolor{stringliteral}{"{}Radish"{}}\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}Ayse"{}}, \textcolor{stringliteral}{"{}Pear"{}}, \textcolor{stringliteral}{"{}Nectarine"{}}, \textcolor{stringliteral}{"{}Bean"{}}, \textcolor{stringliteral}{"{}Hazelnut"{}}\},}
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}
@@ -332,30 +446,23 @@ const int \mbox{\hyperlink{farmermarket_8cpp_aebf8c1269b5a0fc43f630809c1dc7a79}{
 \DoxyCodeLine{= \{}
 \DoxyCodeLine{    \{10,\textcolor{stringliteral}{"{}Banana"{}}, \textcolor{stringliteral}{"{}Summer"{}}\},}
 \DoxyCodeLine{    \{10,\textcolor{stringliteral}{"{}Apple"{}}, \textcolor{stringliteral}{"{}Fall"{}}\},}
-\DoxyCodeLine{    \{10,\textcolor{stringliteral}{"{}Cherry"{}}, \textcolor{stringliteral}{"{}Summer"{}}\},}
-\DoxyCodeLine{    \{15,\textcolor{stringliteral}{"{}Date"{}}, \textcolor{stringliteral}{"{}Fall"{}}\},}
 \DoxyCodeLine{    \{15, \textcolor{stringliteral}{"{}Grape"{}}, \textcolor{stringliteral}{"{}Fall"{}}\},}
+\DoxyCodeLine{    \{30,\textcolor{stringliteral}{"{}Spinach"{}}, \textcolor{stringliteral}{"{}Spring"{}}\},}
+\DoxyCodeLine{}
 \DoxyCodeLine{    \{15,\textcolor{stringliteral}{"{}Raspberry"{}}, \textcolor{stringliteral}{"{}Summer"{}}\},}
-\DoxyCodeLine{    \{20,\textcolor{stringliteral}{"{}Eggplant"{}}, \textcolor{stringliteral}{"{}Summer"{}}\},}
-\DoxyCodeLine{    \{20,\textcolor{stringliteral}{"{}Mushroom"{}}, \textcolor{stringliteral}{"{}Fall"{}}\},}
 \DoxyCodeLine{    \{20,\textcolor{stringliteral}{"{}Beet"{}}, \textcolor{stringliteral}{"{}Fall"{}}\},}
 \DoxyCodeLine{    \{25, \textcolor{stringliteral}{"{}Turnip"{}}, \textcolor{stringliteral}{"{}Winter"{}}\},}
+\DoxyCodeLine{    \{30, \textcolor{stringliteral}{"{}Peas"{}}, \textcolor{stringliteral}{"{}Spring"{}}\},}
+\DoxyCodeLine{}
 \DoxyCodeLine{    \{25, \textcolor{stringliteral}{"{}Cucumber"{}}, \textcolor{stringliteral}{"{}Summer"{}}\},}
-\DoxyCodeLine{    \{25, \textcolor{stringliteral}{"{}Melon"{}}, \textcolor{stringliteral}{"{}Summer"{}}\},}
-\DoxyCodeLine{    \{30, \textcolor{stringliteral}{"{}Lemon"{}}, \textcolor{stringliteral}{"{}Winter"{}}\},}
 \DoxyCodeLine{    \{30,\textcolor{stringliteral}{"{}Tomato"{}}, \textcolor{stringliteral}{"{}Summer"{}}\},}
 \DoxyCodeLine{    \{30, \textcolor{stringliteral}{"{}Orange"{}}, \textcolor{stringliteral}{"{}Winter"{}}\},}
+\DoxyCodeLine{    \{15,\textcolor{stringliteral}{"{}Radish"{}}, \textcolor{stringliteral}{"{}Spring"{}}\},}
+\DoxyCodeLine{}
 \DoxyCodeLine{    \{35, \textcolor{stringliteral}{"{}Pear"{}}, \textcolor{stringliteral}{"{}Fall"{}}\},}
 \DoxyCodeLine{    \{35,\textcolor{stringliteral}{"{}Nectarine"{}}, \textcolor{stringliteral}{"{}Summer"{}}\},}
-\DoxyCodeLine{    \{35, \textcolor{stringliteral}{"{}Carrot"{}}, \textcolor{stringliteral}{"{}Fall"{}}\},}
 \DoxyCodeLine{    \{40, \textcolor{stringliteral}{"{}Bean"{}}, \textcolor{stringliteral}{"{}Summer"{}}\},}
 \DoxyCodeLine{    \{40, \textcolor{stringliteral}{"{}Hazelnut"{}}, \textcolor{stringliteral}{"{}Fall"{}}\},}
-\DoxyCodeLine{    \{40, \textcolor{stringliteral}{"{}Chestnut"{}}, \textcolor{stringliteral}{"{}Fall"{}}\},}
-\DoxyCodeLine{    \{45, \textcolor{stringliteral}{"{}Fig"{}}, \textcolor{stringliteral}{"{}Summer"{}}\},}
-\DoxyCodeLine{    \{45, \textcolor{stringliteral}{"{}Coconut"{}}, \textcolor{stringliteral}{"{}Summer"{}}\},}
-\DoxyCodeLine{    \{45,\textcolor{stringliteral}{"{}Broccoli"{}}, \textcolor{stringliteral}{"{}Fall"{}}\},}
-\DoxyCodeLine{    \{15, \textcolor{stringliteral}{"{}Asparagus"{}}, \textcolor{stringliteral}{"{}Spring"{}}\},}
-\DoxyCodeLine{    \{15,\textcolor{stringliteral}{"{}Radish"{}}, \textcolor{stringliteral}{"{}Spring"{}}\},}
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}
@@ -363,5 +470,5 @@ const int \mbox{\hyperlink{farmermarket_8cpp_aebf8c1269b5a0fc43f630809c1dc7a79}{
 \index{farmermarket.cpp@{farmermarket.cpp}!vendors@{vendors}}
 \index{vendors@{vendors}!farmermarket.cpp@{farmermarket.cpp}}
 \doxysubsubsection{\texorpdfstring{vendors}{vendors}}
-{\footnotesize\ttfamily char$\ast$ vendors\mbox{[}$\,$\mbox{]} = \{ \char`\"{}Ahmet\char`\"{}, \char`\"{}Mehmet\char`\"{}, \char`\"{}Veli\char`\"{}, \char`\"{}Ayse\char`\"{}, \char`\"{}Nuriye\char`\"{} \}}
+{\footnotesize\ttfamily char$\ast$ vendors\mbox{[}$\,$\mbox{]} = \{ \char`\"{}Ahmet\char`\"{}, \char`\"{}Mehmet\char`\"{}, \char`\"{}Veli\char`\"{}, \char`\"{}Ayse\char`\"{}\}}
 

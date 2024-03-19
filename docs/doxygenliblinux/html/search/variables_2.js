@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['guestmode_100',['guestMode',['../farmermarket_8cpp.html#a8f6ef3fee1e9bdc2d48bb6235909c895',1,'farmermarket.cpp']]]
+  ['dimensions_114',['dimensions',['../farmermarket_8cpp.html#a171b4c4633e25a79227534b8edff8a00',1,'farmermarket.cpp']]],
+  ['dp_115',['dp',['../farmermarket_8cpp.html#a3439ead373ff2292c5454883ea0045b9',1,'farmermarket.cpp']]]
 ];
