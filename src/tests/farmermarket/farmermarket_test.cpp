@@ -42,6 +42,24 @@ TEST_F(FarmermarketTest, InvalidAuthenticateUserTest) {
 	EXPECT_EQ(result2, -1);
 }
 
+
+TEST_F(FarmermarketTest, NewTest) {
+	FILE* inputsim = fopen("inputSimname.bin", "wb");
+	fprintf(inputsim, "1\nEnes Koy\n123456\n100\n\n");
+	fclose(inputsim);
+	fflush(stdout);
+	freopen("outputSimname.bin", "wb", stdout);
+	freopen("inputSimname.bin", "rb", stdin);
+	bool authResult = userAuthentication2();
+	
+	freopen("CON", "w", stdout);
+	fflush(stdout);
+	freopen("CON", "r", stdin);
+
+	EXPECT_TRUE(authResult);
+}
+
+
 TEST_F(FarmermarketTest, UserAuthenticationLoginTest) {
 	fputs("1\nEnes Koy\n123456\n100\n\n", testIn);
 	rewind(testIn);
@@ -641,6 +659,7 @@ TEST_F(FarmermarketTest, MainMenuTest) {
 int main(int argc, char** argv) {
 #ifdef ENABLE_FARMERMARKET_TEST
 	::testing::InitGoogleTest(&argc, argv);
+	::testing::GTEST_FLAG(color) = "no";
 	return RUN_ALL_TESTS();
 #else
 	return 0;

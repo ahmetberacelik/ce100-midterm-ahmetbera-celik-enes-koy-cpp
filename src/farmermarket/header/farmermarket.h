@@ -29,6 +29,8 @@ bool mainMenu(FILE* in, FILE* out);
 
 int saveUser(const User* user, const char* filename);
 
+bool userAuthentication2();
+
 int authenticateUser(const char* username, const char* password, const char* filename);
 
 bool userAuthentication(FILE* in, FILE* out);
