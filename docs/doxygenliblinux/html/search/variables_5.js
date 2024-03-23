@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['n_118',['n',['../farmermarket_8cpp.html#a76f11d9a0a47b94f72c2d0e77fb32240',1,'farmermarket.cpp']]],
-  ['name_119',['name',['../structProductSeason.html#adc68d4728e0ea99fc3a8ee09036cfc95',1,'ProductSeason']]],
-  ['numproducts_120',['numProducts',['../farmermarket_8cpp.html#aebf8c1269b5a0fc43f630809c1dc7a79',1,'farmermarket.cpp']]],
-  ['numproductspervendor_121',['numProductsPerVendor',['../farmermarket_8cpp.html#ac686fb03d59d26b57a59abe7dbbdc8f7',1,'farmermarket.cpp']]],
-  ['numvendors_122',['numVendors',['../farmermarket_8cpp.html#a6f379c9bfe43cf05e953df19a4fa03b9',1,'farmermarket.cpp']]]
+  ['password_121',['password',['../structUser.html#ae547b53c7ae0dee7ba2fc00bf315fa24',1,'User']]],
+  ['price_122',['price',['../structProductSeason.html#a2c461bfb22f07f5fb17933d69b24c9d0',1,'ProductSeason']]],
+  ['productprices_123',['productPrices',['../farmermarket_8cpp.html#ac1f7efddac2669af469a65c8f2330ca2',1,'farmermarket.cpp']]],
+  ['productquantities_124',['productQuantities',['../farmermarket_8cpp.html#aeec9dc2796155986ebc53abdae033dae',1,'farmermarket.cpp']]],
+  ['products_125',['products',['../farmermarket_8cpp.html#a657cef6c55b765ba0fff6bb2f1060ffa',1,'farmermarket.cpp']]],
+  ['productseasons_126',['productSeasons',['../farmermarket_8cpp.html#ab10615d37b796f2de733bab04d544486',1,'farmermarket.cpp']]]
 ];

@@ -6,7 +6,7 @@ Inheritance diagram for Farmermarket\+Test\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=173pt]{class_farmermarket_test__inherit__graph}
+\includegraphics[width=229pt]{class_farmermarket_test__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -15,7 +15,7 @@ Collaboration diagram for Farmermarket\+Test\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=173pt]{class_farmermarket_test__coll__graph}
+\includegraphics[width=229pt]{class_farmermarket_test__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Protected Member Functions}
@@ -25,7 +25,13 @@ void \mbox{\hyperlink{class_farmermarket_test_a3116c6bcff3d9a33df6730723959944e}
 \item 
 void \mbox{\hyperlink{class_farmermarket_test_a0016e959eca974c84485fabf4f0a46b8}{Tear\+Down}} () override
 \item 
-void \mbox{\hyperlink{class_farmermarket_test_a1fe118834bc3bb477a7bf76893dfc543}{Read\+Test\+Output}} ()
+void \mbox{\hyperlink{class_farmermarket_test_ab99fc3703a713ec8e572ccac671d1751}{simulate\+User\+Input}} (const char \texorpdfstring{$\ast$}{*}user\+Input)
+\item 
+void \mbox{\hyperlink{class_farmermarket_test_a7c3dec0cf610d3c932796dc12be78ae4}{read\+Output}} (const char \texorpdfstring{$\ast$}{*}output\+File\+Path, char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t buffer\+Size)
+\item 
+void \mbox{\hyperlink{class_farmermarket_test_a372025fa66a9407a95c904c332ac9b78}{reset\+Stdin\+Stdout}} ()
+\item 
+void \mbox{\hyperlink{class_farmermarket_test_a2b9730f01a1b5c0950b5fae48115fb6d}{remove\+Clear\+Screen\+Chars\+From\+Output\+File}} (char \texorpdfstring{$\ast$}{*}str)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -40,11 +46,9 @@ Product\+Season \mbox{\hyperlink{class_farmermarket_test_a932ca365c0a532788ec7d3
 \item 
 const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_farmermarket_test_ab41c0bee33799c143c4ba9cf4da9c9e0}{test\+Filename}} = \"{}Test\+Users.\+bin\"{}
 \item 
-FILE \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_farmermarket_test_a250a365b417c3ae992d86eb3f7c2cda4}{test\+In}}
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_farmermarket_test_a59bc4f28f3c847118269a63ec8fd9bb6}{input\+Test}} = \"{}input\+Test.\+txt\"{}
 \item 
-FILE \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_farmermarket_test_a8de5f036a4b01251ab52e18948169cc7}{test\+Out}}
-\item 
-char \mbox{\hyperlink{class_farmermarket_test_acc4d000f23da803eb24a8313730aab50}{test\+Output\+Buffer}} \mbox{[}1024\mbox{]}
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_farmermarket_test_a8493ca7d23f24817b50221b564f430f8}{output\+Test}} = \"{}output\+Test.\+txt\"{}
 \end{DoxyCompactItemize}
 
 
@@ -56,15 +60,35 @@ Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00004}{4}} o
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_farmermarket_test_a1fe118834bc3bb477a7bf76893dfc543}\label{class_farmermarket_test_a1fe118834bc3bb477a7bf76893dfc543} 
-\index{FarmermarketTest@{FarmermarketTest}!ReadTestOutput@{ReadTestOutput}}
-\index{ReadTestOutput@{ReadTestOutput}!FarmermarketTest@{FarmermarketTest}}
-\doxysubsubsection{\texorpdfstring{ReadTestOutput()}{ReadTestOutput()}}
-{\footnotesize\ttfamily void Farmermarket\+Test\+::\+Read\+Test\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+\Hypertarget{class_farmermarket_test_a7c3dec0cf610d3c932796dc12be78ae4}\label{class_farmermarket_test_a7c3dec0cf610d3c932796dc12be78ae4} 
+\index{FarmermarketTest@{FarmermarketTest}!readOutput@{readOutput}}
+\index{readOutput@{readOutput}!FarmermarketTest@{FarmermarketTest}}
+\doxysubsubsection{\texorpdfstring{readOutput()}{readOutput()}}
+{\footnotesize\ttfamily void Farmermarket\+Test\+::read\+Output (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{output\+File\+Path,  }\item[{char \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{size\+\_\+t}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
 
 
 
-Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{farmermarket__test_8cpp_source}{farmermarket\+\_\+test.\+cpp}}.
+Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{farmermarket__test_8cpp_source}{farmermarket\+\_\+test.\+cpp}}.
+
+\Hypertarget{class_farmermarket_test_a2b9730f01a1b5c0950b5fae48115fb6d}\label{class_farmermarket_test_a2b9730f01a1b5c0950b5fae48115fb6d} 
+\index{FarmermarketTest@{FarmermarketTest}!removeClearScreenCharsFromOutputFile@{removeClearScreenCharsFromOutputFile}}
+\index{removeClearScreenCharsFromOutputFile@{removeClearScreenCharsFromOutputFile}!FarmermarketTest@{FarmermarketTest}}
+\doxysubsubsection{\texorpdfstring{removeClearScreenCharsFromOutputFile()}{removeClearScreenCharsFromOutputFile()}}
+{\footnotesize\ttfamily void Farmermarket\+Test\+::remove\+Clear\+Screen\+Chars\+From\+Output\+File (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{farmermarket__test_8cpp_source}{farmermarket\+\_\+test.\+cpp}}.
+
+\Hypertarget{class_farmermarket_test_a372025fa66a9407a95c904c332ac9b78}\label{class_farmermarket_test_a372025fa66a9407a95c904c332ac9b78} 
+\index{FarmermarketTest@{FarmermarketTest}!resetStdinStdout@{resetStdinStdout}}
+\index{resetStdinStdout@{resetStdinStdout}!FarmermarketTest@{FarmermarketTest}}
+\doxysubsubsection{\texorpdfstring{resetStdinStdout()}{resetStdinStdout()}}
+{\footnotesize\ttfamily void Farmermarket\+Test\+::reset\+Stdin\+Stdout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{farmermarket__test_8cpp_source}{farmermarket\+\_\+test.\+cpp}}.
 
 \Hypertarget{class_farmermarket_test_a3116c6bcff3d9a33df6730723959944e}\label{class_farmermarket_test_a3116c6bcff3d9a33df6730723959944e} 
 \index{FarmermarketTest@{FarmermarketTest}!SetUp@{SetUp}}
@@ -74,7 +98,17 @@ Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00024}{24}} 
 
 
 
-Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{farmermarket__test_8cpp_source}{farmermarket\+\_\+test.\+cpp}}.
+Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{farmermarket__test_8cpp_source}{farmermarket\+\_\+test.\+cpp}}.
+
+\Hypertarget{class_farmermarket_test_ab99fc3703a713ec8e572ccac671d1751}\label{class_farmermarket_test_ab99fc3703a713ec8e572ccac671d1751} 
+\index{FarmermarketTest@{FarmermarketTest}!simulateUserInput@{simulateUserInput}}
+\index{simulateUserInput@{simulateUserInput}!FarmermarketTest@{FarmermarketTest}}
+\doxysubsubsection{\texorpdfstring{simulateUserInput()}{simulateUserInput()}}
+{\footnotesize\ttfamily void Farmermarket\+Test\+::simulate\+User\+Input (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{user\+Input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{farmermarket__test_8cpp_source}{farmermarket\+\_\+test.\+cpp}}.
 
 \Hypertarget{class_farmermarket_test_a0016e959eca974c84485fabf4f0a46b8}\label{class_farmermarket_test_a0016e959eca974c84485fabf4f0a46b8} 
 \index{FarmermarketTest@{FarmermarketTest}!TearDown@{TearDown}}
@@ -84,11 +118,21 @@ Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00014}{14}} 
 
 
 
-Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{farmermarket__test_8cpp_source}{farmermarket\+\_\+test.\+cpp}}.
+Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{farmermarket__test_8cpp_source}{farmermarket\+\_\+test.\+cpp}}.
 
 
 
 \doxysubsection{Member Data Documentation}
+\Hypertarget{class_farmermarket_test_a59bc4f28f3c847118269a63ec8fd9bb6}\label{class_farmermarket_test_a59bc4f28f3c847118269a63ec8fd9bb6} 
+\index{FarmermarketTest@{FarmermarketTest}!inputTest@{inputTest}}
+\index{inputTest@{inputTest}!FarmermarketTest@{FarmermarketTest}}
+\doxysubsubsection{\texorpdfstring{inputTest}{inputTest}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} Farmermarket\+Test\+::input\+Test = \"{}input\+Test.\+txt\"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{farmermarket__test_8cpp_source}{farmermarket\+\_\+test.\+cpp}}.
+
 \Hypertarget{class_farmermarket_test_af4ed341d8720135d3eee03c6f410389f}\label{class_farmermarket_test_af4ed341d8720135d3eee03c6f410389f} 
 \index{FarmermarketTest@{FarmermarketTest}!item1@{item1}}
 \index{item1@{item1}!FarmermarketTest@{FarmermarketTest}}
@@ -129,6 +173,16 @@ Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00008}{8}} o
 
 Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{farmermarket__test_8cpp_source}{farmermarket\+\_\+test.\+cpp}}.
 
+\Hypertarget{class_farmermarket_test_a8493ca7d23f24817b50221b564f430f8}\label{class_farmermarket_test_a8493ca7d23f24817b50221b564f430f8} 
+\index{FarmermarketTest@{FarmermarketTest}!outputTest@{outputTest}}
+\index{outputTest@{outputTest}!FarmermarketTest@{FarmermarketTest}}
+\doxysubsubsection{\texorpdfstring{outputTest}{outputTest}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} Farmermarket\+Test\+::output\+Test = \"{}output\+Test.\+txt\"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{farmermarket__test_8cpp_source}{farmermarket\+\_\+test.\+cpp}}.
+
 \Hypertarget{class_farmermarket_test_ab41c0bee33799c143c4ba9cf4da9c9e0}\label{class_farmermarket_test_ab41c0bee33799c143c4ba9cf4da9c9e0} 
 \index{FarmermarketTest@{FarmermarketTest}!testFilename@{testFilename}}
 \index{testFilename@{testFilename}!FarmermarketTest@{FarmermarketTest}}
@@ -138,36 +192,6 @@ Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00009}{9}} o
 
 
 Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{farmermarket__test_8cpp_source}{farmermarket\+\_\+test.\+cpp}}.
-
-\Hypertarget{class_farmermarket_test_a250a365b417c3ae992d86eb3f7c2cda4}\label{class_farmermarket_test_a250a365b417c3ae992d86eb3f7c2cda4} 
-\index{FarmermarketTest@{FarmermarketTest}!testIn@{testIn}}
-\index{testIn@{testIn}!FarmermarketTest@{FarmermarketTest}}
-\doxysubsubsection{\texorpdfstring{testIn}{testIn}}
-{\footnotesize\ttfamily FILE\texorpdfstring{$\ast$}{*} Farmermarket\+Test\+::test\+In\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{farmermarket__test_8cpp_source}{farmermarket\+\_\+test.\+cpp}}.
-
-\Hypertarget{class_farmermarket_test_a8de5f036a4b01251ab52e18948169cc7}\label{class_farmermarket_test_a8de5f036a4b01251ab52e18948169cc7} 
-\index{FarmermarketTest@{FarmermarketTest}!testOut@{testOut}}
-\index{testOut@{testOut}!FarmermarketTest@{FarmermarketTest}}
-\doxysubsubsection{\texorpdfstring{testOut}{testOut}}
-{\footnotesize\ttfamily FILE\texorpdfstring{$\ast$}{*} Farmermarket\+Test\+::test\+Out\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{farmermarket__test_8cpp_source}{farmermarket\+\_\+test.\+cpp}}.
-
-\Hypertarget{class_farmermarket_test_acc4d000f23da803eb24a8313730aab50}\label{class_farmermarket_test_acc4d000f23da803eb24a8313730aab50} 
-\index{FarmermarketTest@{FarmermarketTest}!testOutputBuffer@{testOutputBuffer}}
-\index{testOutputBuffer@{testOutputBuffer}!FarmermarketTest@{FarmermarketTest}}
-\doxysubsubsection{\texorpdfstring{testOutputBuffer}{testOutputBuffer}}
-{\footnotesize\ttfamily char Farmermarket\+Test\+::test\+Output\+Buffer\mbox{[}1024\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line \mbox{\hyperlink{farmermarket__test_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{farmermarket__test_8cpp_source}{farmermarket\+\_\+test.\+cpp}}.
 
 
 

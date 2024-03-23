@@ -1,8 +1,8 @@
 var searchData=
 [
   ['main_0',['main',['../farmermarketapp_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'farmermarketapp.cpp']]],
-  ['mainmenu_1',['mainMenu',['../farmermarket_8h.html#a2d0255f645d941c02e7a6d600479552b',1,'mainMenu(FILE *in, FILE *out):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a2d0255f645d941c02e7a6d600479552b',1,'mainMenu(FILE *in, FILE *out):&#160;farmermarket.cpp']]],
-  ['marketinformations_2',['MarketInformations',['../farmermarket_8h.html#afa40245e6f33184e6b3abd310d667e15',1,'MarketInformations(FILE *in, FILE *out):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#afa40245e6f33184e6b3abd310d667e15',1,'MarketInformations(FILE *in, FILE *out):&#160;farmermarket.cpp']]],
+  ['mainmenu_1',['mainMenu',['../farmermarket_8h.html#a63f9ee8324729217d74025ec93b7d505',1,'mainMenu(bool authenticationResult):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a63f9ee8324729217d74025ec93b7d505',1,'mainMenu(bool authenticationResult):&#160;farmermarket.cpp']]],
+  ['marketinformations_2',['MarketInformations',['../farmermarket_8h.html#ace34521f478b9150824bc01d1d229cc6',1,'MarketInformations():&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#ace34521f478b9150824bc01d1d229cc6',1,'MarketInformations():&#160;farmermarket.cpp']]],
   ['mathutility_2ecpp_3',['mathUtility.cpp',['../math_utility_8cpp.html',1,'']]],
   ['mathutility_2eh_4',['mathUtility.h',['../math_utility_8h.html',1,'']]],
   ['max_5',['max',['../farmermarket_8h.html#af082905f7eac6d03e92015146bbc1925',1,'max(int a, int b):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#af082905f7eac6d03e92015146bbc1925',1,'max(int a, int b):&#160;farmermarket.cpp']]],

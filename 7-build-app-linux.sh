@@ -74,7 +74,7 @@ cmake --install build_linux --strip
 echo "Test CMAKE"
 cd build_linux
 # ctest -C Debug -j4 --output-on-failure --output-log test_results_linux.log
-ctest -C Debug -j4 --output-junit testResults_linux.xml --output-log test_results_linux.log
+ctest -C Debug -j1 --output-junit testResults_linux.xml --output-log test_results_linux.log
 junit2html testResults_linux.xml testResults_linux.html
 cp testResults_linux.html "../docs/testresultslinux/index.html"
 cd ..

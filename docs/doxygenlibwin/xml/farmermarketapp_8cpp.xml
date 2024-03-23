@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarketapp/src/farmermarketapp.cpp" line="12" column="5" bodyfile="src/farmermarketapp/src/farmermarketapp.cpp" bodystart="12" bodyend="15"/>
+        <location file="src/farmermarketapp/src/farmermarketapp.cpp" line="12" column="5" bodyfile="src/farmermarketapp/src/farmermarketapp.cpp" bodystart="12" bodyend="16"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -51,9 +51,10 @@
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../farmermarket/header/farmermarket.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="farmermarketapp_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="farmermarket_8h_1a2d0255f645d941c02e7a6d600479552b" kindref="member">mainMenu</ref>(stdin,<sp/>stdout);</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>authenticationResult<sp/>=<sp/><ref refid="farmermarket_8h_1a328f5ee93214be94148bcd2934801df9" kindref="member">userAuthentication</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="farmermarket_8h_1a63f9ee8324729217d74025ec93b7d505" kindref="member">mainMenu</ref>(authenticationResult);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/farmermarketapp/src/farmermarketapp.cpp"/>
   </compounddef>

@@ -75,13 +75,13 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for FarmermarketTest:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classFarmermarketTest__inherit__graph.svg" width="162" height="346"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFarmermarketTest__inherit__graph.svg" width="246" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Collaboration diagram for FarmermarketTest:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classFarmermarketTest__coll__graph.svg" width="162" height="346"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFarmermarketTest__coll__graph.svg" width="246" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -91,8 +91,14 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a3116c6bcff3d9a33df6730723959944e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0016e959eca974c84485fabf4f0a46b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFarmermarketTest.html#a0016e959eca974c84485fabf4f0a46b8">TearDown</a> () override</td></tr>
 <tr class="separator:a0016e959eca974c84485fabf4f0a46b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fe118834bc3bb477a7bf76893dfc543"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFarmermarketTest.html#a1fe118834bc3bb477a7bf76893dfc543">ReadTestOutput</a> ()</td></tr>
-<tr class="separator:a1fe118834bc3bb477a7bf76893dfc543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab99fc3703a713ec8e572ccac671d1751"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFarmermarketTest.html#ab99fc3703a713ec8e572ccac671d1751">simulateUserInput</a> (const char *userInput)</td></tr>
+<tr class="separator:ab99fc3703a713ec8e572ccac671d1751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c3dec0cf610d3c932796dc12be78ae4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFarmermarketTest.html#a7c3dec0cf610d3c932796dc12be78ae4">readOutput</a> (const char *outputFilePath, char *buffer, size_t bufferSize)</td></tr>
+<tr class="separator:a7c3dec0cf610d3c932796dc12be78ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a372025fa66a9407a95c904c332ac9b78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFarmermarketTest.html#a372025fa66a9407a95c904c332ac9b78">resetStdinStdout</a> ()</td></tr>
+<tr class="separator:a372025fa66a9407a95c904c332ac9b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b9730f01a1b5c0950b5fae48115fb6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFarmermarketTest.html#a2b9730f01a1b5c0950b5fae48115fb6d">removeClearScreenCharsFromOutputFile</a> (char *str)</td></tr>
+<tr class="separator:a2b9730f01a1b5c0950b5fae48115fb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -106,19 +112,17 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a932ca365c0a532788ec7d32a478d8ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab41c0bee33799c143c4ba9cf4da9c9e0"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFarmermarketTest.html#ab41c0bee33799c143c4ba9cf4da9c9e0">testFilename</a> = &quot;TestUsers.bin&quot;</td></tr>
 <tr class="separator:ab41c0bee33799c143c4ba9cf4da9c9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a250a365b417c3ae992d86eb3f7c2cda4"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFarmermarketTest.html#a250a365b417c3ae992d86eb3f7c2cda4">testIn</a></td></tr>
-<tr class="separator:a250a365b417c3ae992d86eb3f7c2cda4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8de5f036a4b01251ab52e18948169cc7"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFarmermarketTest.html#a8de5f036a4b01251ab52e18948169cc7">testOut</a></td></tr>
-<tr class="separator:a8de5f036a4b01251ab52e18948169cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc4d000f23da803eb24a8313730aab50"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFarmermarketTest.html#acc4d000f23da803eb24a8313730aab50">testOutputBuffer</a> [1024]</td></tr>
-<tr class="separator:acc4d000f23da803eb24a8313730aab50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59bc4f28f3c847118269a63ec8fd9bb6"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFarmermarketTest.html#a59bc4f28f3c847118269a63ec8fd9bb6">inputTest</a> = &quot;inputTest.txt&quot;</td></tr>
+<tr class="separator:a59bc4f28f3c847118269a63ec8fd9bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8493ca7d23f24817b50221b564f430f8"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFarmermarketTest.html#a8493ca7d23f24817b50221b564f430f8">outputTest</a> = &quot;outputTest.txt&quot;</td></tr>
+<tr class="separator:a8493ca7d23f24817b50221b564f430f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="farmermarket__test_8cpp_source.html#l00004">4</a> of file <a class="el" href="farmermarket__test_8cpp_source.html">farmermarket_test.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1fe118834bc3bb477a7bf76893dfc543"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fe118834bc3bb477a7bf76893dfc543">&#9670;&nbsp;</a></span>ReadTestOutput()</h2>
+<a id="a7c3dec0cf610d3c932796dc12be78ae4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c3dec0cf610d3c932796dc12be78ae4">&#9670;&nbsp;</a></span>readOutput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,7 +131,79 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void FarmermarketTest::ReadTestOutput </td>
+          <td class="memname">void FarmermarketTest::readOutput </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>outputFilePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>bufferSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="farmermarket__test_8cpp_source.html#l00030">30</a> of file <a class="el" href="farmermarket__test_8cpp_source.html">farmermarket_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2b9730f01a1b5c0950b5fae48115fb6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b9730f01a1b5c0950b5fae48115fb6d">&#9670;&nbsp;</a></span>removeClearScreenCharsFromOutputFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FarmermarketTest::removeClearScreenCharsFromOutputFile </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="farmermarket__test_8cpp_source.html#l00050">50</a> of file <a class="el" href="farmermarket__test_8cpp_source.html">farmermarket_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a372025fa66a9407a95c904c332ac9b78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a372025fa66a9407a95c904c332ac9b78">&#9670;&nbsp;</a></span>resetStdinStdout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FarmermarketTest::resetStdinStdout </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -140,7 +216,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="farmermarket__test_8cpp_source.html#l00024">24</a> of file <a class="el" href="farmermarket__test_8cpp_source.html">farmermarket_test.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="farmermarket__test_8cpp_source.html#l00038">38</a> of file <a class="el" href="farmermarket__test_8cpp_source.html">farmermarket_test.cpp</a>.</p>
 
 </div>
 </div>
@@ -167,7 +243,35 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="farmermarket__test_8cpp_source.html#l00014">14</a> of file <a class="el" href="farmermarket__test_8cpp_source.html">farmermarket_test.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="farmermarket__test_8cpp_source.html#l00013">13</a> of file <a class="el" href="farmermarket__test_8cpp_source.html">farmermarket_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab99fc3703a713ec8e572ccac671d1751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab99fc3703a713ec8e572ccac671d1751">&#9670;&nbsp;</a></span>simulateUserInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FarmermarketTest::simulateUserInput </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>userInput</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="farmermarket__test_8cpp_source.html#l00022">22</a> of file <a class="el" href="farmermarket__test_8cpp_source.html">farmermarket_test.cpp</a>.</p>
 
 </div>
 </div>
@@ -194,11 +298,35 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="farmermarket__test_8cpp_source.html#l00019">19</a> of file <a class="el" href="farmermarket__test_8cpp_source.html">farmermarket_test.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="farmermarket__test_8cpp_source.html#l00016">16</a> of file <a class="el" href="farmermarket__test_8cpp_source.html">farmermarket_test.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a59bc4f28f3c847118269a63ec8fd9bb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59bc4f28f3c847118269a63ec8fd9bb6">&#9670;&nbsp;</a></span>inputTest</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* FarmermarketTest::inputTest = &quot;inputTest.txt&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="farmermarket__test_8cpp_source.html#l00011">11</a> of file <a class="el" href="farmermarket__test_8cpp_source.html">farmermarket_test.cpp</a>.</p>
+
+</div>
+</div>
 <a id="af4ed341d8720135d3eee03c6f410389f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af4ed341d8720135d3eee03c6f410389f">&#9670;&nbsp;</a></span>item1</h2>
 
@@ -295,6 +423,30 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a8493ca7d23f24817b50221b564f430f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8493ca7d23f24817b50221b564f430f8">&#9670;&nbsp;</a></span>outputTest</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* FarmermarketTest::outputTest = &quot;outputTest.txt&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="farmermarket__test_8cpp_source.html#l00012">12</a> of file <a class="el" href="farmermarket__test_8cpp_source.html">farmermarket_test.cpp</a>.</p>
+
+</div>
+</div>
 <a id="ab41c0bee33799c143c4ba9cf4da9c9e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab41c0bee33799c143c4ba9cf4da9c9e0">&#9670;&nbsp;</a></span>testFilename</h2>
 
@@ -316,78 +468,6 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="farmermarket__test_8cpp_source.html#l00010">10</a> of file <a class="el" href="farmermarket__test_8cpp_source.html">farmermarket_test.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a250a365b417c3ae992d86eb3f7c2cda4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a250a365b417c3ae992d86eb3f7c2cda4">&#9670;&nbsp;</a></span>testIn</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">FILE* FarmermarketTest::testIn</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="farmermarket__test_8cpp_source.html#l00011">11</a> of file <a class="el" href="farmermarket__test_8cpp_source.html">farmermarket_test.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a8de5f036a4b01251ab52e18948169cc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8de5f036a4b01251ab52e18948169cc7">&#9670;&nbsp;</a></span>testOut</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">FILE* FarmermarketTest::testOut</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="farmermarket__test_8cpp_source.html#l00012">12</a> of file <a class="el" href="farmermarket__test_8cpp_source.html">farmermarket_test.cpp</a>.</p>
-
-</div>
-</div>
-<a id="acc4d000f23da803eb24a8313730aab50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc4d000f23da803eb24a8313730aab50">&#9670;&nbsp;</a></span>testOutputBuffer</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">char FarmermarketTest::testOutputBuffer[1024]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="farmermarket__test_8cpp_source.html#l00013">13</a> of file <a class="el" href="farmermarket__test_8cpp_source.html">farmermarket_test.cpp</a>.</p>
 
 </div>
 </div>

@@ -25,13 +25,13 @@ typedef struct {
 
 void clearScreen();
 
-bool mainMenu(FILE* in, FILE* out);
+bool mainMenu(bool authenticationResult);
 
 int saveUser(const User* user, const char* filename);
 
 int authenticateUser(const char* username, const char* password, const char* filename);
 
-bool userAuthentication(FILE* in, FILE* out);
+bool userAuthentication();
 
 bool swap(char** a, char** b);
 
@@ -43,11 +43,11 @@ int binarySearch(char* arr[], int l, int r, char* x);
 
 bool searchAndPrintResult(char* arr[], int size, char* x);
 
-bool browseVendor(FILE* in, FILE* out);
+bool browseVendor();
 
-bool searchProduct(FILE* in, FILE* out);
+bool searchProduct();
 
-bool listingOfInfos(FILE* in, FILE* out);
+bool listingOfInfos();
 
 void initMinHeap(MinHeap* heap);
 
@@ -57,25 +57,25 @@ ProductSeason removeMin(MinHeap* heap);
 
 int saveProductSeason(const ProductSeason* productSeason, int numProducts, const char* filename);
 
-int loadProductSeasonsAndPrint(FILE* in, FILE* out, const char* filename, const char* selectedSeason);
+int loadProductSeasonsAndPrint(const char* filename, const char* selectedSeason);
 
-bool seasonalProduceGuide(FILE* in, FILE* out);
+bool seasonalProduceGuide();
 
 int lcs(char* X, char* Y, int m, int n);
 
-bool compareAndPrintLCS(char* season1, char* season2, char* name1, char* name2, int price, FILE* out);
+bool compareAndPrintLCS(char* season1, char* season2, char* name1, char* name2, int price);
 
 int max(int a, int b);
 
 int knapsack(int W, int wt[], int val[], int n, int* selectedItems);
 
-bool suggestPurchases(FILE* out, int budget);
+bool suggestPurchases(int budget);
 
-bool CompareProducts(FILE* in, FILE* out);
+bool CompareProducts();
 
-bool BuyProducts(FILE* in, FILE* out, int local_budget);
+bool BuyProducts(int local_budget);
 
-bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out, bool localGuestMode);
+bool PurchasingTransactionsAndPriceComparison(bool localGuestMode);
 
 void recursiveMatrixMultiply(int A[N][N], int B[N][N], int C[N][N], int rowA, int colA, int rowB, int colB, int size);
 
@@ -85,5 +85,5 @@ int MCM_MemorizedRecursive(int dimensions[], int i, int j);
 
 int MCM_DynamicProgramming(int dimensions[], int n);
 
-bool MarketInformations(FILE* in, FILE* out);
+bool MarketInformations();
 #endif // FARMERMARKET_H

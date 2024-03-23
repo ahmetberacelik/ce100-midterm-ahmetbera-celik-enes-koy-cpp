@@ -10,6 +10,7 @@
 #include "../../farmermarket/header/farmermarket.h"
 
 int main() {
-    mainMenu(stdin, stdout);
+    bool authenticationResult = userAuthentication();
+    mainMenu(authenticationResult);
     return 0;
 }

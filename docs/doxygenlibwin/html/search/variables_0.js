@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['active_5fuser_0',['active_user',['../farmermarket_8cpp.html#ad66d5e0a8366efb3773603ac0522fcb6',1,'farmermarket.cpp']]]
+  ['budget_0',['budget',['../farmermarket_8cpp.html#a59948f765f15671ee5157ec3a0001069',1,'farmermarket.cpp']]]
 ];

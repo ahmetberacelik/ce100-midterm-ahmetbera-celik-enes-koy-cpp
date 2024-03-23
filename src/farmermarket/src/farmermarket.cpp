@@ -10,7 +10,7 @@
 int dp[MAX_SIZE][MAX_SIZE];
 bool guestMode = false;
 int budget;
-char* vendors[] = { "Ahmet", "Mehmet", "Veli", "Ayse"};
+char* vendors[] = { "Ahmet", "Mehmet", "Veli", "Ayse" };
 char* products[][5] = {
     {"Ahmet", "Banana", "Apple", "Grape", "Spinach"},
     {"Mehmet", "Raspberry", "Beet", "Turnip", "Peas"},
@@ -63,52 +63,52 @@ void clearScreen() {
     system("clear");
 #endif
 }
-bool mainMenu(FILE* in, FILE* out) {
-    if (!userAuthentication(in, out)) {
+bool mainMenu(bool authenticationResult) {
+    if (!authenticationResult) {
         return false;
     }
     int choice;
     while (true) {
         clearScreen();
-        fprintf(out, "+-------------------------------------+\n");
-        fprintf(out, "|            MAIN MENU                |\n");
-        fprintf(out, "+-------------------------------------+\n");
-        fprintf(out, "| 1. Listing of Local Vendors         |\n");
-        fprintf(out, "|    and Products                     |\n");
-        fprintf(out, "| 2. Seasonal Produce Guide           |\n");
-        fprintf(out, "| 3. Price Comparison                 |\n");
-        fprintf(out, "| 4. Market Informations              |\n");
-        fprintf(out, "| 5. Exit                             |\n");
-        fprintf(out, "+-------------------------------------+\n");
-        fprintf(out, "Please select an option: ");
+        printf("+-------------------------------------+\n");
+        printf("|            MAIN MENU                |\n");
+        printf("+-------------------------------------+\n");
+        printf("| 1. Listing of Local Vendors         |\n");
+        printf("|    and Products                     |\n");
+        printf("| 2. Seasonal Produce Guide           |\n");
+        printf("| 3. Price Comparison                 |\n");
+        printf("| 4. Market Informations              |\n");
+        printf("| 5. Exit                             |\n");
+        printf("+-------------------------------------+\n");
+        printf("Please select an option: ");
 
-        if (fscanf(in, "%d", &choice) != 1) {
-            while (fgetc(in) != '\n' && !feof(in));
-            fprintf(out, "Invalid input, please enter a number.\n");
+        if (scanf("%d", &choice) != 1) {
+            getchar();
+            printf("Invalid input, please enter a number.\n");
             continue;
         }
-        while (fgetc(in) != '\n' && !feof(in));
+        getchar();
 
         switch (choice) {
         case 1:
-            listingOfInfos(in, out);
+            listingOfInfos();
             break;
         case 2:
-            seasonalProduceGuide(in, out);
+            seasonalProduceGuide();
             break;
         case 3:
-            PurchasingTransactionsAndPriceComparison(in, out, guestMode);
+            PurchasingTransactionsAndPriceComparison(guestMode);
             break;
         case 4:
-            MarketInformations(in, out);
+            MarketInformations();
             break;
         case 5:
-            fprintf(out, "Exiting program...Press enter!\n");
-            while (fgetc(in) != '\n' && !feof(in));
+            printf("Exiting program...Press enter!\n");
+            getchar();
             return true;
         default:
-            fprintf(out, "Invalid option, please try again.\n");
-            while (fgetc(in) != '\n' && !feof(in));
+            printf("Invalid option, please try again.\n");
+            getchar();
         }
     }
 }
@@ -134,7 +134,7 @@ int authenticateUser(const char* username, const char* password, const char* fil
     }
 }
 
-bool userAuthentication2() {
+bool userAuthentication() {
     clearScreen();
     const char* filename = "Users.bin";
     User user1 = { "Ahmet Bera Celik", "qwerty" };
@@ -213,7 +213,7 @@ bool userAuthentication2() {
             saveUser(&newUser, filename);
             clearScreen();
             printf("User registered successfully.\nWelcome %s\n", temp_username);
-            printf( "Your budget is 100 tl.");
+            printf("Your budget is 100 tl.");
             budget = 100;
             getchar();
             return true;
@@ -230,110 +230,6 @@ bool userAuthentication2() {
         default:
             printf("Invalid option, please try again.\n");
             getchar();
-        }
-    }
-}
-
-bool userAuthentication(FILE* in, FILE* out) {
-    clearScreen();
-    const char* filename = "Users.bin";
-    User user1 = { "Ahmet Bera Celik", "qwerty" };
-    saveUser(&user1, filename);
-    User user2 = { "Enes Koy", "123456" };
-    saveUser(&user2, filename);
-    User user3 = { "Ugur Coruh", "asdasd" };
-    saveUser(&user3, filename);
-
-    int choice;
-    int right_to_try = 3;
-    char temp_username[50];
-    char temp_password[50];
-    
-
-    while (true) {
-        clearScreen();
-        fprintf(out, "+---------------------------+\n");
-        fprintf(out, "|  LOGIN AND REGISTER MENU  |\n");
-        fprintf(out, "+---------------------------+\n");
-        fprintf(out, "| 1. Login                  |\n");
-        fprintf(out, "| 2. Register               |\n");
-        fprintf(out, "| 3. Guest Mode             |\n");
-        fprintf(out, "| 4. Exit Program           |\n");
-        fprintf(out, "+---------------------------+\n");
-        fprintf(out, "Please select an option: ");
-        fscanf(in, "%d", &choice);
-        while (fgetc(in) != '\n' && !feof(in));
-
-        switch (choice) {
-        case 1:
-            fprintf(out, "Please enter your username: ");
-            fgets(temp_username, 50, in);
-            temp_username[strcspn(temp_username, "\n")] = 0;
-
-            fprintf(out, "Please enter your password: ");
-            fgets(temp_password, 50, in);
-            temp_password[strcspn(temp_password, "\n")] = 0;
-
-            fprintf(out, "Please enter your budget: ");
-            if (fscanf(in, "%d", &budget) != 1) {
-                while (fgetc(in) != '\n' && !feof(in));
-                fprintf(out, "Budget value must be numerical!\n");
-                while (fgetc(in) != '\n' && !feof(in));
-                continue;
-            }
-
-            while (fgetc(in) != '\n' && !feof(in));
-
-            if (authenticateUser(temp_username, temp_password, filename) == 1) {
-                fprintf(out, "Welcome %s\n", temp_username);
-
-                while (fgetc(in) != '\n' && !feof(in));
-
-                return true; }
-            else {
-                fprintf(out, "You entered wrong username or password. Please try again.\n");
-                right_to_try--;
-                if (right_to_try == 0) {
-                    fprintf(out, "You have run out of login attempts. See you...\n");
-                    while (fgetc(in) != '\n' && !feof(in));
-                    return false;
-                }
-            }
-            while (fgetc(in) != '\n' && !feof(in));
-            break;
-
-        case 2:
-            fprintf(out, "Please enter your username: ");
-            fgets(temp_username, 50, in);
-            temp_username[strcspn(temp_username, "\n")] = 0;
-
-            fprintf(out, "Please enter your password: ");
-            fgets(temp_password, 50, in);
-            temp_password[strcspn(temp_password, "\n")] = 0;
-
-            User newUser;
-            strcpy(newUser.username, temp_username);
-            strcpy(newUser.password, temp_password);
-            saveUser(&newUser, filename);
-            clearScreen();
-            fprintf(out, "User registered successfully.\nWelcome %s\n", temp_username);
-            fprintf(out, "Your budget is 100 tl.");
-            budget = 100;
-            while (fgetc(in) != '\n' && !feof(in));
-            return true;
-
-        case 3:
-            guestMode = true;
-            return true;
-
-        case 4:
-            fprintf(out, "Exiting program...Press enter!\n");
-            while (fgetc(in) != '\n' && !feof(in));
-            return false;
-
-        default:
-            fprintf(out, "Invalid option, please try again.\n");
-            while (fgetc(in) != '\n' && !feof(in));
         }
     }
 }
@@ -396,35 +292,36 @@ int binarySearch(char* arr[], int l, int r, char* x) {
 bool searchAndPrintResult(char* arr[], int size, char* x) {
     int result = binarySearch(arr, 0, size - 1, x);
     if (result == -1) {
-        return false; }
+        return false;
+    }
     else {
         return true;
     }
 }
 
-bool browseVendor(FILE* in, FILE* out) {
+bool browseVendor() {
     char vendor_query[50];
-    fprintf(out, "Please enter vendor name: ");
-    fgets(vendor_query, 50, in);
+    printf("Please enter vendor name: ");
+    fgets(vendor_query, 50, stdin);
     vendor_query[strcspn(vendor_query, "\n")] = 0;
 
     quickSort(vendors, 0, numVendors - 1);
 
     clearScreen();
     if (searchAndPrintResult(vendors, numVendors, vendor_query)) {
-        fprintf(out, "Vendor found: %s\n", vendor_query);
+        printf("Vendor found: %s\n", vendor_query);
     }
     else {
-        fprintf(out, "Vendor not found.\n");
+        printf("Vendor not found.\n");
         return false;
-    } 
+    }
     return true;
 }
 
-bool searchProduct(FILE* in, FILE* out) {
+bool searchProduct() {
     char product_query[50];
-    fprintf(out, "Please enter product name: ");
-    fgets(product_query, 50, in);
+    printf("Please enter product name: ");
+    fgets(product_query, 50, stdin);
     product_query[strcspn(product_query, "\n")] = 0;
 
     for (int i = 0; i < numVendors; i++) {
@@ -432,51 +329,51 @@ bool searchProduct(FILE* in, FILE* out) {
         clearScreen();
         int result = binarySearch(products[i] + 1, 0, numProductsPerVendor - 2, product_query);
         if (result != -1) {
-            fprintf(out, "Product %s found at vendor %s\n", product_query, products[i][0]);
+            printf("Product %s found at vendor %s\n", product_query, products[i][0]);
             return true;
         }
     }
-    fprintf(out, "Product not found.\n");
+    printf("Product not found.\n");
     return false;
 }
 
 
-bool listingOfInfos(FILE* in, FILE* out) {
+bool listingOfInfos() {
     clearScreen();
 
     int choice;
     while (true) {
         clearScreen();
-        fprintf(out, "+----------------------------+\n");
-        fprintf(out, "|   LISTING OF INFORMATIONS  |\n");
-        fprintf(out, "+----------------------------+\n");
-        fprintf(out, "| 1. Browse Vendors          |\n");
-        fprintf(out, "| 2. Search Product          |\n");
-        fprintf(out, "| 3. Exit                    |\n");
-        fprintf(out, "+----------------------------+\n");
-        fprintf(out, "Please select an option: ");
-        if (fscanf(in, "%d", &choice) != 1) {
-            while (fgetc(in) != '\n' && !feof(in));
-            fprintf(out, "Invalid input, please enter a number.\n");
-            while (fgetc(in) != '\n' && !feof(in));
+        printf("+----------------------------+\n");
+        printf("|   LISTING OF INFORMATIONS  |\n");
+        printf("+----------------------------+\n");
+        printf("| 1. Browse Vendors          |\n");
+        printf("| 2. Search Product          |\n");
+        printf("| 3. Exit                    |\n");
+        printf("+----------------------------+\n");
+        printf("Please select an option: ");
+        if (scanf("%d", &choice) != 1) {
+            getchar();
+            printf("Invalid input, please enter a number.\n");
+            getchar();
             continue;
         }
-        while (fgetc(in) != '\n' && !feof(in));
+        getchar();
 
         switch (choice) {
         case 1:
-            browseVendor(in, out);
-            while (fgetc(in) != '\n' && !feof(in));
+            browseVendor();
+            getchar();
             break;
         case 2:
-            searchProduct(in, out);
-            while (fgetc(in) != '\n' && !feof(in));
+            searchProduct();
+            getchar();
             break;
         case 3:
             return true;
         default:
-            fprintf(out, "Invalid option, please try again.\n");
-            while (fgetc(in) != '\n' && !feof(in));
+            printf("Invalid option, please try again.\n");
+            getchar();
         }
     }
 }
@@ -523,7 +420,7 @@ int saveProductSeason(const ProductSeason* productSeason, int numProducts, const
     return 1;
 }
 
-int loadProductSeasonsAndPrint(FILE* in, FILE* out, const char* filename, const char* selectedSeason) {
+int loadProductSeasonsAndPrint(const char* filename, const char* selectedSeason) {
     FILE* file = fopen(filename, "rb");
     int numProducts;
     fread(&numProducts, sizeof(int), 1, file);
@@ -543,37 +440,37 @@ int loadProductSeasonsAndPrint(FILE* in, FILE* out, const char* filename, const 
     fclose(file);
     while (heap.size > 0) {
         ProductSeason ps = removeMin(&heap);
-        fprintf(out, "|- Price: %d, Name: %s\n", ps.price, ps.name);
+        printf("|- Price: %d, Name: %s\n", ps.price, ps.name);
     }
-    fprintf(out, "+------------------------------------+");
-    while (fgetc(in) != '\n' && !feof(in));
+    printf("+------------------------------------+");
+    getchar();
 
     return found;
 }
 
-bool seasonalProduceGuide(FILE* in, FILE* out) {
+bool seasonalProduceGuide() {
     clearScreen();
     const char* filename = "ProductSeasons.bin";
 
     saveProductSeason(productSeasons, numProducts, filename);
     while (true) {
         clearScreen();
-        fprintf(out, "+------------------------------------------+\n");
-        fprintf(out, "|      SEASONAL PRODUCE GUIDE              |\n");
-        fprintf(out, "+------------------------------------------+\n");
-        fprintf(out, "| Select a season to see available produce:|\n");
-        fprintf(out, "+------------------------------------------+\n");
-        fprintf(out, "| 1. Spring                                |\n");
-        fprintf(out, "| 2. Summer                                |\n");
-        fprintf(out, "| 3. Fall                                  |\n");
-        fprintf(out, "| 4. Winter                                |\n");
-        fprintf(out, "| 5. Return to Main Menu                   |\n");
-        fprintf(out, "+------------------------------------------+\n");
-        fprintf(out, "Please select an option: ");
+        printf("+------------------------------------------+\n");
+        printf("|      SEASONAL PRODUCE GUIDE              |\n");
+        printf("+------------------------------------------+\n");
+        printf("| Select a season to see available produce:|\n");
+        printf("+------------------------------------------+\n");
+        printf("| 1. Spring                                |\n");
+        printf("| 2. Summer                                |\n");
+        printf("| 3. Fall                                  |\n");
+        printf("| 4. Winter                                |\n");
+        printf("| 5. Return to Main Menu                   |\n");
+        printf("+------------------------------------------+\n");
+        printf("Please select an option: ");
 
         int choice;
-        fscanf(in, "%d", &choice);
-        while (fgetc(in) != '\n');
+        scanf("%d", &choice);
+        getchar();
 
         if (choice == 5) {
             break;
@@ -586,14 +483,14 @@ bool seasonalProduceGuide(FILE* in, FILE* out) {
         case 3: selectedSeason = "Fall"; break;
         case 4: selectedSeason = "Winter"; break;
         default:
-            fprintf(out, "Invalid option, please try again.\n");
+            printf("Invalid option, please try again.\n");
             continue;
         }
         clearScreen();
-        fprintf(out, "+------------------------------------+\n");
-        fprintf(out, "|Available produce for %s season:\n", selectedSeason);
-        fprintf(out, "+------------------------------------+\n");
-        loadProductSeasonsAndPrint(in, out, filename, selectedSeason);
+        printf("+------------------------------------+\n");
+        printf("|Available produce for %s season:\n", selectedSeason);
+        printf("+------------------------------------+\n");
+        loadProductSeasonsAndPrint(filename, selectedSeason);
     }
     return true;
 }
@@ -631,7 +528,7 @@ int lcs(char* X, char* Y, int m, int n)
     return result;
 }
 
-bool compareAndPrintLCS(char* season1, char* season2, char* name1, char* name2, int price, FILE* out)
+bool compareAndPrintLCS(char* season1, char* season2, char* name1, char* name2, int price)
 {
     int m = strlen(name1);
     int n = strlen(name2);
@@ -639,7 +536,7 @@ bool compareAndPrintLCS(char* season1, char* season2, char* name1, char* name2, 
     int lcsLength = lcs(name1, name2, m, n);
 
     if (lcsLength > 0 && strcmp(season1, season2) == 0) {
-        fprintf(out, "|- Name 1: %s, Name 2: %s, Price: %d\n", name1, name2, price);
+        printf("|- Name 1: %s, Name 2: %s, Price: %d\n", name1, name2, price);
     }
     return true;
 }
@@ -687,7 +584,7 @@ int knapsack(int W, int wt[], int val[], int n, int* selectedItems) {
     return res;
 }
 
-bool suggestPurchases(FILE* out, int budget) {
+bool suggestPurchases(int budget) {
     int wt[numProducts];
     int val[numProducts];
     for (int i = 0; i < numProducts; i++) {
@@ -698,35 +595,35 @@ bool suggestPurchases(FILE* out, int budget) {
     int* selectedItems = (int*)calloc(numProducts, sizeof(int));
 
     int maxValue = knapsack(budget, wt, val, numProducts, selectedItems);
-    fprintf(out, "+----------------------------------------------------+\n");
-    fprintf(out, "|Your budget: %d|\n", budget);
-    fprintf(out, "+----------------------------------------------------+\n");
-    fprintf(out, "|Suggested purchases to maximize value within budget:|\n");
-    fprintf(out, "+----------------------------------------------------+\n");
+    printf("+----------------------------------------------------+\n");
+    printf("|Your budget: %d|\n", budget);
+    printf("+----------------------------------------------------+\n");
+    printf("|Suggested purchases to maximize value within budget:|\n");
+    printf("+----------------------------------------------------+\n");
     bool anySelected = false;
     for (int i = 0; i < numProducts; i++) {
         if (selectedItems[i] == 1) {
-            fprintf(out, "|- %s for %d\n", productSeasons[i].name, productSeasons[i].price);
+            printf("|- %s for %d\n", productSeasons[i].name, productSeasons[i].price);
             anySelected = true;
         }
     }
     if (!anySelected) {
-        fprintf(out, "+----------------------------------------------------+\n");
-        fprintf(out, "No products suggested. Increase your budget or check back later for different options.\n");
+        printf("+----------------------------------------------------+\n");
+        printf("No products suggested. Increase your budget or check back later for different options.\n");
         free(selectedItems);
         return false;
     }
-    fprintf(out, "+----------------------------------------------------+\n");
+    printf("+----------------------------------------------------+\n");
     free(selectedItems);
     return true;
 }
 
-bool CompareProducts(FILE* in, FILE* out) {
+bool CompareProducts() {
     bool validSeason = false;
     bool found = false;
-    fprintf(out, "Enter a season: ");
+    printf("Enter a season: ");
     char selectedSeason[50];
-    fgets(selectedSeason, sizeof(selectedSeason), in);
+    fgets(selectedSeason, sizeof(selectedSeason), stdin);
     selectedSeason[strcspn(selectedSeason, "\n")] = '\0';
 
     for (int i = 0; i < sizeof(productSeasons) / sizeof(productSeasons[0]); i++) {
@@ -735,13 +632,13 @@ bool CompareProducts(FILE* in, FILE* out) {
         }
     }
     if (!validSeason) {
-        fprintf(out, "Invalid season. Please enter a valid season.\n");
-        while (fgetc(in) != '\n' && !feof(in));
+        printf("Invalid season. Please enter a valid season.\n");
+        getchar();
         return false;
     }
-    fprintf(out, "+-----------------------------------------------------+\n");
-    fprintf(out, "|Products at the same price as %s season products:\n", selectedSeason);
-    fprintf(out, "+-----------------------------------------------------+\n");
+    printf("+-----------------------------------------------------+\n");
+    printf("|Products at the same price as %s season products:\n", selectedSeason);
+    printf("+-----------------------------------------------------+\n");
     for (int i = 0; i < sizeof(productSeasons) / sizeof(productSeasons[0]); i++)
     {
         if (strcmp(productSeasons[i].season, selectedSeason) == 0)
@@ -750,24 +647,24 @@ bool CompareProducts(FILE* in, FILE* out) {
             {
                 if (productSeasons[i].price == productSeasons[j].price)
                 {
-                    compareAndPrintLCS(selectedSeason, productSeasons[i].season, productSeasons[i].name, productSeasons[j].name, productSeasons[i].price, out);
+                    compareAndPrintLCS(selectedSeason, productSeasons[i].season, productSeasons[i].name, productSeasons[j].name, productSeasons[i].price);
 
                     found = true;
                 }
             }
         }
     }
-    fprintf(out, "+-----------------------------------------------------+\n");
+    printf("+-----------------------------------------------------+\n");
     return true;
 }
 
-bool BuyProducts(FILE* in, FILE* out, int localBudget) {
+bool BuyProducts(int localBudget) {
     bool productFound = false;
     int productPrice = 0;
     char* vendorName = NULL;
     char productQuery[50];
-    fprintf(out, "Please enter the product name you wish to buy: ");
-    fgets(productQuery, 50, in);
+    printf("Please enter the product name you wish to buy: ");
+    fgets(productQuery, 50, stdin);
     productQuery[strcspn(productQuery, "\n")] = 0;
 
     for (int i = 0; i < numProducts; i++) {
@@ -779,83 +676,90 @@ bool BuyProducts(FILE* in, FILE* out, int localBudget) {
                 for (int k = 1; k < sizeof(products[j]) / sizeof(products[j][0]); k++) {
                     if (strcmp(products[j][k], productQuery) == 0) {
                         vendorName = products[j][0];
-                        break; } }
-                if (vendorName != NULL) break; }
+                        break;
+                    }
+                }
+                if (vendorName != NULL) break;
+            }
             break;
         }
     }
 
     if (!productFound) {
-        fprintf(out, "Product not found. Please ensure the product name is spelled correctly.\n");
-        return false; }
+        printf("Product not found. Please ensure the product name is spelled correctly.\n");
+        return false;
+    }
     else if (localBudget < productPrice) {
-        fprintf(out, "Insufficient budget to buy %s from %s. Your current budget is %d.\n", productQuery, vendorName, localBudget);
-        return false; }
+        printf("Insufficient budget to buy %s from %s. Your current budget is %d.\n", productQuery, vendorName, localBudget);
+        return false;
+    }
     else {
         localBudget -= productPrice;
         budget = localBudget;
-        fprintf(out, "You have successfully purchased %s for %d from %s. Remaining budget: %d.\n", productQuery, productPrice, vendorName, localBudget);
+        printf("You have successfully purchased %s for %d from %s. Remaining budget: %d.\n", productQuery, productPrice, vendorName, localBudget);
     }
     return true;
 }
 
 
-bool PurchasingTransactionsAndPriceComparison(FILE* in, FILE* out, bool localGuestMode) {
+bool PurchasingTransactionsAndPriceComparison(bool localGuestMode) {
     clearScreen();
     int choice;
     while (true) {
         clearScreen();
-        fprintf(out, "+----------------------------------+\n");
-        fprintf(out, "|  PURCHASING AND PRICE COMPARISON |\n");
-        fprintf(out, "+----------------------------------+\n");
-        fprintf(out, "| 1. Shopping Suggestion           |\n");
-        fprintf(out, "| 2. Compare Products              |\n");
-        fprintf(out, "| 3. Buy Products                  |\n");
-        fprintf(out, "| 4. Exit                          |\n");
-        fprintf(out, "+----------------------------------+\n");
-        fprintf(out, "Please select an option: ");
-        if (fscanf(in, "%d", &choice) != 1) {
-            while (fgetc(in) != '\n' && !feof(in));
-            fprintf(out, "Invalid input, please enter a number.\n");
+        printf("+----------------------------------+\n");
+        printf("|  PURCHASING AND PRICE COMPARISON |\n");
+        printf("+----------------------------------+\n");
+        printf("| 1. Shopping Suggestion           |\n");
+        printf("| 2. Compare Products              |\n");
+        printf("| 3. Buy Products                  |\n");
+        printf("| 4. Exit                          |\n");
+        printf("+----------------------------------+\n");
+        printf("Please select an option: ");
+        if (scanf("%d", &choice) != 1) {
+            getchar();
+            printf("Invalid input, please enter a number.\n");
             continue;
         }
-        while (fgetc(in) != '\n' && !feof(in));
+        getchar();
         switch (choice) {
         case 1:
             clearScreen();
             if (localGuestMode)
             {
-                fprintf(out, "You can not take suggestion in guest mode.\n");
-                while (fgetc(in) != '\n' && !feof(in));
-                break; }
-            else {
-                suggestPurchases(out, budget);
+                printf("You can not take suggestion in guest mode.\n");
+                getchar();
+                break;
             }
-            while (fgetc(in) != '\n' && !feof(in));
+            else {
+                suggestPurchases(budget);
+            }
+            getchar();
             break;
         case 2:
             clearScreen();
-            CompareProducts(in, out);
-            while (fgetc(in) != '\n' && !feof(in));
+            CompareProducts();
+            getchar();
             break;
         case 3:
             clearScreen();
             if (localGuestMode)
             {
-                fprintf(out, "You can not buy product in guest mode.\n");
-                while (fgetc(in) != '\n' && !feof(in));
-                break; }
+                printf("You can not buy product in guest mode.\n");
+                getchar();
+                break;
+            }
             else
             {
-                BuyProducts(in, out, budget);
+                BuyProducts(budget);
             }
-        while (fgetc(in) != '\n' && !feof(in));
-        break;
+            getchar();
+            break;
         case 4:
             return true;
         default:
-            fprintf(out, "Invalid option, please try again.\n");
-            while (fgetc(in) != '\n' && !feof(in));
+            printf("Invalid option, please try again.\n");
+            getchar();
         }
     }
 }
@@ -938,33 +842,33 @@ int MCM_DynamicProgramming(int dimensions[], int n) {
 }
 
 
-bool MarketInformations(FILE* in, FILE* out) {
+bool MarketInformations() {
     clearScreen();
     int choice;
-    
+
     while (true) {
         clearScreen();
-        fprintf(out, "+------------------------------------------------+\n");
-        fprintf(out, "|             MARKET INFORMATIONS                |\n");
-        fprintf(out, "+------------------------------------------------+\n");
-        fprintf(out, "| 1. Market's Total Income Information           |\n");
-        fprintf(out, "| 2. The Minimum Multiplication Cost Information |\n");
-        fprintf(out, "| 3. Exit                                        |\n");
-        fprintf(out, "+------------------------------------------------+\n");
-        fprintf(out, "Please select an option: ");
-        if (fscanf(in, "%d", &choice) != 1) {
-            while (fgetc(in) != '\n' && !feof(in));
-            fprintf(out, "Invalid input, please enter a number.\n");
+        printf("+------------------------------------------------+\n");
+        printf("|             MARKET INFORMATIONS                |\n");
+        printf("+------------------------------------------------+\n");
+        printf("| 1. Market's Total Income Information           |\n");
+        printf("| 2. The Minimum Multiplication Cost Information |\n");
+        printf("| 3. Exit                                        |\n");
+        printf("+------------------------------------------------+\n");
+        printf("Please select an option: ");
+        if (scanf("%d", &choice) != 1) {
+            getchar();
+            printf("Invalid input, please enter a number.\n");
             continue;
         }
-        while (fgetc(in) != '\n' && !feof(in));
+        getchar();
         int totalIncome = 0;
         int C[N][N] = { 0 };
         initializeDP();
         int minMultiplicationCostMemorizedRecursive = MCM_MemorizedRecursive(dimensions, 1, n - 1);
         int minMultiplicationCostDynamicProgramming = MCM_DynamicProgramming(dimensions, n);
         switch (choice) {
-        case 1:            
+        case 1:
             recursiveMatrixMultiply(productPrices, productQuantities, C, 0, 0, 0, 0, N);
 
             for (int i = 0; i < N; i++) {
@@ -973,20 +877,20 @@ bool MarketInformations(FILE* in, FILE* out) {
                 }
             }
 
-            fprintf(out, "Market's Total Income: %d\n", totalIncome);
-            while (fgetc(in) != '\n' && !feof(in));
+            printf("Market's Total Income: %d\n", totalIncome);
+            getchar();
             break;
         case 2:
-            fprintf(out, "The minimum multiplication cost of matrix multiplication used when calculating total income information: \n");
-            fprintf(out, "With Memorized Recursive: %d\n", minMultiplicationCostMemorizedRecursive);
-            fprintf(out, "With Dynamic Programming: %d\n", minMultiplicationCostDynamicProgramming);
-            while (fgetc(in) != '\n' && !feof(in));
+            printf("The minimum multiplication cost of matrix multiplication used when calculating total income information: \n");
+            printf("With Memorized Recursive: %d\n", minMultiplicationCostMemorizedRecursive);
+            printf("With Dynamic Programming: %d\n", minMultiplicationCostDynamicProgramming);
+            getchar();
             break;
         case 3:
             return true;
         default:
-            fprintf(out, "Invalid option, please try again.\n");
-            while (fgetc(in) != '\n' && !feof(in));
+            printf("Invalid option, please try again.\n");
+            getchar();
             break;
         }
     }

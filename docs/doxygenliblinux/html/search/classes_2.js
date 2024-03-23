@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['user_70',['User',['../structUser.html',1,'']]]
+  ['user_69',['User',['../structUser.html',1,'']]]
 ];

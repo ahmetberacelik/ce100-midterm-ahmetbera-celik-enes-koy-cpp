@@ -8,5 +8,5 @@ var searchData=
   ['products_5',['products',['../farmermarket_8cpp.html#a657cef6c55b765ba0fff6bb2f1060ffa',1,'farmermarket.cpp']]],
   ['productseason_6',['ProductSeason',['../struct_product_season.html',1,'']]],
   ['productseasons_7',['productSeasons',['../farmermarket_8cpp.html#ab10615d37b796f2de733bab04d544486',1,'farmermarket.cpp']]],
-  ['purchasingtransactionsandpricecomparison_8',['PurchasingTransactionsAndPriceComparison',['../farmermarket_8h.html#a4b0449fd81901cce445979946b9b69c2',1,'PurchasingTransactionsAndPriceComparison(FILE *in, FILE *out, bool localGuestMode):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a4b0449fd81901cce445979946b9b69c2',1,'PurchasingTransactionsAndPriceComparison(FILE *in, FILE *out, bool localGuestMode):&#160;farmermarket.cpp']]]
+  ['purchasingtransactionsandpricecomparison_8',['PurchasingTransactionsAndPriceComparison',['../farmermarket_8h.html#a6fa34d6dc62676996d50a91f6c83c26d',1,'PurchasingTransactionsAndPriceComparison(bool localGuestMode):&#160;farmermarket.cpp'],['../farmermarket_8cpp.html#a6fa34d6dc62676996d50a91f6c83c26d',1,'PurchasingTransactionsAndPriceComparison(bool localGuestMode):&#160;farmermarket.cpp']]]
 ];
