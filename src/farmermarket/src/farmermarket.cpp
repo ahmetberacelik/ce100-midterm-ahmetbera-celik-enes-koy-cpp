@@ -184,8 +184,7 @@ bool userAuthentication() {
 
                 getchar();
 
-                return true;
-            }
+                return true; }
             else {
                 printf("You entered wrong username or password. Please try again.\n");
                 right_to_try--;
@@ -292,8 +291,7 @@ int binarySearch(char* arr[], int l, int r, char* x) {
 bool searchAndPrintResult(char* arr[], int size, char* x) {
     int result = binarySearch(arr, 0, size - 1, x);
     if (result == -1) {
-        return false;
-    }
+        return false; }
     else {
         return true;
     }
@@ -676,23 +674,18 @@ bool BuyProducts(int localBudget) {
                 for (int k = 1; k < sizeof(products[j]) / sizeof(products[j][0]); k++) {
                     if (strcmp(products[j][k], productQuery) == 0) {
                         vendorName = products[j][0];
-                        break;
-                    }
-                }
-                if (vendorName != NULL) break;
-            }
+                        break; } }
+                if (vendorName != NULL) break; }
             break;
         }
     }
 
     if (!productFound) {
         printf("Product not found. Please ensure the product name is spelled correctly.\n");
-        return false;
-    }
+        return false; }
     else if (localBudget < productPrice) {
         printf("Insufficient budget to buy %s from %s. Your current budget is %d.\n", productQuery, vendorName, localBudget);
-        return false;
-    }
+        return false; }
     else {
         localBudget -= productPrice;
         budget = localBudget;
@@ -729,8 +722,7 @@ bool PurchasingTransactionsAndPriceComparison(bool localGuestMode) {
             {
                 printf("You can not take suggestion in guest mode.\n");
                 getchar();
-                break;
-            }
+                break; }
             else {
                 suggestPurchases(budget);
             }
@@ -747,8 +739,7 @@ bool PurchasingTransactionsAndPriceComparison(bool localGuestMode) {
             {
                 printf("You can not buy product in guest mode.\n");
                 getchar();
-                break;
-            }
+                break; }
             else
             {
                 BuyProducts(budget);

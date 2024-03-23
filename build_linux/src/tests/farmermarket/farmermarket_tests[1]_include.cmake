@@ -1,5 +1,0 @@
-if(EXISTS "/mnt/c/Users/Bera/Desktop/midtermproject/build_linux/src/tests/farmermarket/farmermarket_tests[1]_tests.cmake")
-  include("/mnt/c/Users/Bera/Desktop/midtermproject/build_linux/src/tests/farmermarket/farmermarket_tests[1]_tests.cmake")
-else()
-  add_test(farmermarket_tests_NOT_BUILT farmermarket_tests_NOT_BUILT)
-endif()
