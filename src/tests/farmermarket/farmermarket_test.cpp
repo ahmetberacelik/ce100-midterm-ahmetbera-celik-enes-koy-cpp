@@ -83,6 +83,16 @@ TEST_F(FarmermarketTest, UserAuthenticationLoginTest) {
 	EXPECT_TRUE(authResult);
 }
 
+TEST_F(FarmermarketTest, UserAuthenticationInvalidLoginTest) {
+	simulateUserInput("1\ninvalid user\n123456\n100\n\n1\ninvalid user\n123456\n100\n\n1\ninvalid user\n123456\n100\n\n");
+
+	bool authResult = userAuthentication();
+
+	resetStdinStdout();
+
+	EXPECT_FALSE(authResult);
+}
+
 TEST_F(FarmermarketTest, UserAuthenticationRegisterTest) {
 	simulateUserInput("2\nNew User\n123456\n");
 
@@ -90,8 +100,6 @@ TEST_F(FarmermarketTest, UserAuthenticationRegisterTest) {
 	bool authResult = userAuthentication();
 
 	resetStdinStdout();
-
-
 
 	EXPECT_TRUE(authResult);
 }
@@ -338,7 +346,7 @@ TEST_F(FarmermarketTest, SaveProductSeasonTest) {
 	remove(testProductSeasonFilename);
 }
 
-/*TEST_F(FarmermarketTest, LoadProductSeasonsAndPrintTest) {
+TEST_F(FarmermarketTest, LoadProductSeasonsAndPrintTest) {
 	const char* testLoadFilename = "TestProductSeasonsLoad.bin";
 
 	ProductSeason productSeasonsToSave[] = {
@@ -356,7 +364,7 @@ TEST_F(FarmermarketTest, SaveProductSeasonTest) {
 
 	EXPECT_EQ(productsFound, 3);
 	remove(testLoadFilename);
-}*/
+}
 
 TEST_F(FarmermarketTest, SeasonalProduceGuideTest) {
 	simulateUserInput("invalid\n\n1\n\n2\n\n3\n\n4\n\n5\n");
@@ -397,31 +405,6 @@ TEST_F(FarmermarketTest, LongestCommonSubsequenceTest) {
 	EXPECT_EQ(lcsLength, 3); // "ABC" is a subsequence of "AADC"
 }
 
-/*TEST_F(FarmermarketTest, CompareAndPrintLCSTest) {
-	char season1[] = "Summer";
-	char season2[] = "Summer";
-	char name1[] = "Watermelon";
-	char name2[] = "Melon";
-	int price = 50;
-
-	bool result = compareAndPrintLCS(season1, season2, name1, name2, price);
-
-	char expectedOutput[] = "|- Name 1: Watermelon, Name 2: Melon, Price: 50\n";
-	char actualOutput[100000];
-
-	readOutput(outputTest, actualOutput, sizeof(actualOutput));
-
-	EXPECT_TRUE(result);
-	EXPECT_STREQ(expectedOutput, actualOutput);
-
-	strcpy(season1, "Summer");
-	strcpy(season2, "Winter");
-
-	result = compareAndPrintLCS(season1, season2, name1, name2, price);
-
-	EXPECT_TRUE(result);
-}*/
-
 TEST_F(FarmermarketTest, MaxFunctionTest) {
 	EXPECT_EQ(10, max(5, 10)); // Test where second parameter is greater
 	EXPECT_EQ(10, max(10, 5)); // Test where first parameter is greater
@@ -445,7 +428,7 @@ TEST_F(FarmermarketTest, KnapsackFunctionTest) {
 	EXPECT_EQ(selectedItems[2], 1); // Item 3 (weight 30) is selected
 }
 
-/*TEST_F(FarmermarketTest, SuggestPurchasesTest) {
+TEST_F(FarmermarketTest, SuggestPurchasesTest) {
 	int budget = 100;
 	bool result = suggestPurchases(budget);
 	EXPECT_TRUE(result);
@@ -453,7 +436,7 @@ TEST_F(FarmermarketTest, KnapsackFunctionTest) {
 	budget = 0;
 	result = suggestPurchases(budget);
 	EXPECT_FALSE(result);
-}*/
+}
 
 TEST_F(FarmermarketTest, CompareProductsTest) {
 	simulateUserInput("Summer\n");
@@ -641,12 +624,12 @@ TEST_F(FarmermarketTest, MemorizedRecursiveReuseTest) {
 
 }
 
-/*TEST_F(FarmermarketTest, DynamicProgrammingTest) {
+TEST_F(FarmermarketTest, DynamicProgrammingTest) {
 	int dimensions[] = { 1, 2, 3, 4 };
 	int n = sizeof(dimensions) / sizeof(dimensions[0]);
 	int minCost = MCM_DynamicProgramming(dimensions, n);
 	EXPECT_EQ(minCost, 18); // The minimum cost to multiply matrices of given dimensions [1, 2, 3, 4] is 18.
-}*/
+}
 
 TEST_F(FarmermarketTest, MarketInformationsTotalIncomeTest) {
 	simulateUserInput("1\n\n2\n\n3\n");

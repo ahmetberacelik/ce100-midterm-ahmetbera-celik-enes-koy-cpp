@@ -418,7 +418,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarket/header/farmermarket.h" line="60" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="423" bodyend="449" declfile="src/farmermarket/header/farmermarket.h" declline="60" declcolumn="5"/>
+        <location file="src/farmermarket/header/farmermarket.h" line="60" column="5" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="423" bodyend="448" declfile="src/farmermarket/header/farmermarket.h" declline="60" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="farmermarket_8h_1a8d69687b66a9f47ddac107dbc5e34a7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -431,7 +431,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/farmermarket/header/farmermarket.h" line="62" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="451" bodyend="496" declfile="src/farmermarket/header/farmermarket.h" declline="62" declcolumn="6"/>
+        <location file="src/farmermarket/header/farmermarket.h" line="62" column="6" bodyfile="src/farmermarket/src/farmermarket.cpp" bodystart="450" bodyend="496" declfile="src/farmermarket/header/farmermarket.h" declline="62" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="farmermarket_8h_1adcef403a597dffc82764a462b584ccd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2024-03-23_15-01-35" tag="">
+  <assembly name="Default">
+    <class name="/mnt/c/Users/Bera/Desktop/midtermproject/src/farmermarket/src/farmermarket.cpp" coveredlines="566" coverablelines="566" totallines="897" coveredbranches="415" totalbranches="637" coveredcodeelements="32" totalcodeelements="32" />
+    <class name="/mnt/c/Users/Bera/Desktop/midtermproject/src/farmermarketapp/src/farmermarketapp.cpp" coveredlines="4" coverablelines="4" totallines="16" coveredbranches="0" totalbranches="0" coveredcodeelements="1" totalcodeelements="1" />
+    <class name="/mnt/c/Users/Bera/Desktop/midtermproject/src/tests/farmermarket/farmermarket_test.cpp" coveredlines="396" coverablelines="396" totallines="712" coveredbranches="241" totalbranches="998" coveredcodeelements="52" totalcodeelements="187" />
+  </assembly>
+</coverage>

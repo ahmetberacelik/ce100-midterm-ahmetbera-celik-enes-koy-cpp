@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="(empty)"
-	tests="42"
+	tests="46"
 	failures="0"
 	disabled="0"
 	skipped="0"
 	hostname=""
 	time="1"
-	timestamp="2024-03-23T14:38:37"
+	timestamp="2024-03-23T15:01:25"
 	>
-	<testcase name="utility_tests" classname="utility_tests" time="0.0110197" status="run">
+	<testcase name="utility_tests" classname="utility_tests" time="0.0110556" status="run">
 		<system-out>Running main() from /mnt/c/Users/Bera/Desktop/midtermproject/src/tests/googletest/googletest/src/gtest_main.cc
 [==========] Running 0 tests from 0 test suites.
 [==========] 0 tests from 0 test suites ran. (0 ms total)
 [  PASSED  ] 0 tests.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.SaveandAuthenticateUserTest" classname="FarmermarketTest.SaveandAuthenticateUserTest" time="0.0197039" status="run">
+	<testcase name="FarmermarketTest.SaveandAuthenticateUserTest" classname="FarmermarketTest.SaveandAuthenticateUserTest" time="0.0145992" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.SaveandAuthenticateUserTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from FarmermarketTest
 [ RUN      ] FarmermarketTest.SaveandAuthenticateUserTest
-[       OK ] FarmermarketTest.SaveandAuthenticateUserTest (8 ms)
-[----------] 1 test from FarmermarketTest (8 ms total)
+[       OK ] FarmermarketTest.SaveandAuthenticateUserTest (1 ms)
+[----------] 1 test from FarmermarketTest (1 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (8 ms total)
+[==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.InvalidAuthenticateUserTest" classname="FarmermarketTest.InvalidAuthenticateUserTest" time="0.0117741" status="run">
+	<testcase name="FarmermarketTest.InvalidAuthenticateUserTest" classname="FarmermarketTest.InvalidAuthenticateUserTest" time="0.0124459" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.InvalidAuthenticateUserTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -43,7 +43,7 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.UserAuthenticationLoginTest" classname="FarmermarketTest.UserAuthenticationLoginTest" time="0.0386744" status="run">
+	<testcase name="FarmermarketTest.UserAuthenticationLoginTest" classname="FarmermarketTest.UserAuthenticationLoginTest" time="0.0387939" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.UserAuthenticationLoginTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -51,7 +51,15 @@
 [ RUN      ] FarmermarketTest.UserAuthenticationLoginTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.UserAuthenticationRegisterTest" classname="FarmermarketTest.UserAuthenticationRegisterTest" time="0.0426212" status="run">
+	<testcase name="FarmermarketTest.UserAuthenticationInvalidLoginTest" classname="FarmermarketTest.UserAuthenticationInvalidLoginTest" time="0.0509718" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.UserAuthenticationInvalidLoginTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.UserAuthenticationInvalidLoginTest
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.UserAuthenticationRegisterTest" classname="FarmermarketTest.UserAuthenticationRegisterTest" time="0.0441098" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.UserAuthenticationRegisterTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -59,7 +67,7 @@
 [ RUN      ] FarmermarketTest.UserAuthenticationRegisterTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.LoginGuestModeTest" classname="FarmermarketTest.LoginGuestModeTest" time="0.0345905" status="run">
+	<testcase name="FarmermarketTest.LoginGuestModeTest" classname="FarmermarketTest.LoginGuestModeTest" time="0.0308579" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.LoginGuestModeTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -67,7 +75,7 @@
 [ RUN      ] FarmermarketTest.LoginGuestModeTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.ExitUserAuthenticationTest" classname="FarmermarketTest.ExitUserAuthenticationTest" time="0.0340359" status="run">
+	<testcase name="FarmermarketTest.ExitUserAuthenticationTest" classname="FarmermarketTest.ExitUserAuthenticationTest" time="0.0308046" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.ExitUserAuthenticationTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -75,7 +83,7 @@
 [ RUN      ] FarmermarketTest.ExitUserAuthenticationTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.UserAuthenticationInvalidInputTest" classname="FarmermarketTest.UserAuthenticationInvalidInputTest" time="0.0604699" status="run">
+	<testcase name="FarmermarketTest.UserAuthenticationInvalidInputTest" classname="FarmermarketTest.UserAuthenticationInvalidInputTest" time="0.0593252" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.UserAuthenticationInvalidInputTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -83,7 +91,7 @@
 [ RUN      ] FarmermarketTest.UserAuthenticationInvalidInputTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.HandlePointerSwap" classname="FarmermarketTest.HandlePointerSwap" time="0.0120264" status="run">
+	<testcase name="FarmermarketTest.HandlePointerSwap" classname="FarmermarketTest.HandlePointerSwap" time="0.0124275" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.HandlePointerSwap
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -97,7 +105,7 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.HandleSorting" classname="FarmermarketTest.HandleSorting" time="0.0113969" status="run">
+	<testcase name="FarmermarketTest.HandleSorting" classname="FarmermarketTest.HandleSorting" time="0.0123185" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.HandleSorting
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -111,7 +119,7 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.FindElement" classname="FarmermarketTest.FindElement" time="0.0115236" status="run">
+	<testcase name="FarmermarketTest.FindElement" classname="FarmermarketTest.FindElement" time="0.0118343" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.FindElement
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -125,7 +133,7 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.SearchInArray" classname="FarmermarketTest.SearchInArray" time="0.0116298" status="run">
+	<testcase name="FarmermarketTest.SearchInArray" classname="FarmermarketTest.SearchInArray" time="0.0123771" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.SearchInArray
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -139,7 +147,7 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.VendorSearchTest" classname="FarmermarketTest.VendorSearchTest" time="0.0273575" status="run">
+	<testcase name="FarmermarketTest.VendorSearchTest" classname="FarmermarketTest.VendorSearchTest" time="0.0265797" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.VendorSearchTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -147,7 +155,7 @@
 [ RUN      ] FarmermarketTest.VendorSearchTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.VendorNotFoundTest" classname="FarmermarketTest.VendorNotFoundTest" time="0.0334998" status="run">
+	<testcase name="FarmermarketTest.VendorNotFoundTest" classname="FarmermarketTest.VendorNotFoundTest" time="0.0271805" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.VendorNotFoundTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -155,7 +163,7 @@
 [ RUN      ] FarmermarketTest.VendorNotFoundTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.ProductSearchTest" classname="FarmermarketTest.ProductSearchTest" time="0.0248392" status="run">
+	<testcase name="FarmermarketTest.ProductSearchTest" classname="FarmermarketTest.ProductSearchTest" time="0.0258158" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.ProductSearchTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -163,7 +171,7 @@
 [ RUN      ] FarmermarketTest.ProductSearchTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.ProductNotFoundTest" classname="FarmermarketTest.ProductNotFoundTest" time="0.0495354" status="run">
+	<testcase name="FarmermarketTest.ProductNotFoundTest" classname="FarmermarketTest.ProductNotFoundTest" time="0.0468297" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.ProductNotFoundTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -171,7 +179,7 @@
 [ RUN      ] FarmermarketTest.ProductNotFoundTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.ListingInfosMenuValidOptionTest1" classname="FarmermarketTest.ListingInfosMenuValidOptionTest1" time="0.0438638" status="run">
+	<testcase name="FarmermarketTest.ListingInfosMenuValidOptionTest1" classname="FarmermarketTest.ListingInfosMenuValidOptionTest1" time="0.0458878" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.ListingInfosMenuValidOptionTest1
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -179,7 +187,7 @@
 [ RUN      ] FarmermarketTest.ListingInfosMenuValidOptionTest1
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.ListingInfosMenuValidOptionTest2" classname="FarmermarketTest.ListingInfosMenuValidOptionTest2" time="0.049781" status="run">
+	<testcase name="FarmermarketTest.ListingInfosMenuValidOptionTest2" classname="FarmermarketTest.ListingInfosMenuValidOptionTest2" time="0.0497024" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.ListingInfosMenuValidOptionTest2
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -187,7 +195,7 @@
 [ RUN      ] FarmermarketTest.ListingInfosMenuValidOptionTest2
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.ListingInfosMenuInvalidOptionTest" classname="FarmermarketTest.ListingInfosMenuInvalidOptionTest" time="0.0606822" status="run">
+	<testcase name="FarmermarketTest.ListingInfosMenuInvalidOptionTest" classname="FarmermarketTest.ListingInfosMenuInvalidOptionTest" time="0.0600967" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.ListingInfosMenuInvalidOptionTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -195,7 +203,7 @@
 [ RUN      ] FarmermarketTest.ListingInfosMenuInvalidOptionTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.ListingInfosMenuInvalidOptionTestWithNumber" classname="FarmermarketTest.ListingInfosMenuInvalidOptionTestWithNumber" time="0.0395258" status="run">
+	<testcase name="FarmermarketTest.ListingInfosMenuInvalidOptionTestWithNumber" classname="FarmermarketTest.ListingInfosMenuInvalidOptionTestWithNumber" time="0.0367414" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.ListingInfosMenuInvalidOptionTestWithNumber
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -203,7 +211,7 @@
 [ RUN      ] FarmermarketTest.ListingInfosMenuInvalidOptionTestWithNumber
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.InsertMinHeapWhenFullTest" classname="FarmermarketTest.InsertMinHeapWhenFullTest" time="0.0132888" status="run">
+	<testcase name="FarmermarketTest.InsertMinHeapWhenFullTest" classname="FarmermarketTest.InsertMinHeapWhenFullTest" time="0.0121381" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.InsertMinHeapWhenFullTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -217,7 +225,7 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.RemoveMinWithReinsertionTest" classname="FarmermarketTest.RemoveMinWithReinsertionTest" time="0.0114373" status="run">
+	<testcase name="FarmermarketTest.RemoveMinWithReinsertionTest" classname="FarmermarketTest.RemoveMinWithReinsertionTest" time="0.0122231" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.RemoveMinWithReinsertionTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -231,7 +239,7 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.SaveProductSeasonTest" classname="FarmermarketTest.SaveProductSeasonTest" time="0.0177891" status="run">
+	<testcase name="FarmermarketTest.SaveProductSeasonTest" classname="FarmermarketTest.SaveProductSeasonTest" time="0.0167645" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.SaveProductSeasonTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -245,7 +253,24 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.SeasonalProduceGuideTest" classname="FarmermarketTest.SeasonalProduceGuideTest" time="0.135363" status="run">
+	<testcase name="FarmermarketTest.LoadProductSeasonsAndPrintTest" classname="FarmermarketTest.LoadProductSeasonsAndPrintTest" time="0.0187436" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.LoadProductSeasonsAndPrintTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.LoadProductSeasonsAndPrintTest
+|- Price: 8, Name: Fig
+|- Price: 10, Name: Banana
+|- Price: 15, Name: Cherry
++------------------------------------+[       OK ] FarmermarketTest.LoadProductSeasonsAndPrintTest (6 ms)
+[----------] 1 test from FarmermarketTest (6 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (6 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.SeasonalProduceGuideTest" classname="FarmermarketTest.SeasonalProduceGuideTest" time="0.137124" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.SeasonalProduceGuideTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -253,7 +278,7 @@
 [ RUN      ] FarmermarketTest.SeasonalProduceGuideTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.LongestCommonSubsequenceTest" classname="FarmermarketTest.LongestCommonSubsequenceTest" time="0.0119151" status="run">
+	<testcase name="FarmermarketTest.LongestCommonSubsequenceTest" classname="FarmermarketTest.LongestCommonSubsequenceTest" time="0.0112237" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.LongestCommonSubsequenceTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -267,7 +292,7 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.MaxFunctionTest" classname="FarmermarketTest.MaxFunctionTest" time="0.0120967" status="run">
+	<testcase name="FarmermarketTest.MaxFunctionTest" classname="FarmermarketTest.MaxFunctionTest" time="0.0111534" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.MaxFunctionTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -281,7 +306,7 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.KnapsackFunctionTest" classname="FarmermarketTest.KnapsackFunctionTest" time="0.0115186" status="run">
+	<testcase name="FarmermarketTest.KnapsackFunctionTest" classname="FarmermarketTest.KnapsackFunctionTest" time="0.0118898" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.KnapsackFunctionTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -295,7 +320,35 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.CompareProductsTest" classname="FarmermarketTest.CompareProductsTest" time="0.0212876" status="run">
+	<testcase name="FarmermarketTest.SuggestPurchasesTest" classname="FarmermarketTest.SuggestPurchasesTest" time="0.013367" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.SuggestPurchasesTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.SuggestPurchasesTest
++----------------------------------------------------+
+|Your budget: 100|
++----------------------------------------------------+
+|Suggested purchases to maximize value within budget:|
++----------------------------------------------------+
+|- Banana for 10
+|- Apple for 10
+|- Grape for 15
+|- Spinach for 30
+|- Raspberry for 15
+|- Beet for 20
++----------------------------------------------------+
++----------------------------------------------------+
+|Your budget: 0|
++----------------------------------------------------+
+|Suggested purchases to maximize value within budget:|
++----------------------------------------------------+
++----------------------------------------------------+
+No products suggested. Increase your budget or check back later for different options....
+The rest of the test output was removed since it exceeds the threshold of 1024 bytes.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.CompareProductsTest" classname="FarmermarketTest.CompareProductsTest" time="0.0188062" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.CompareProductsTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -303,7 +356,7 @@
 [ RUN      ] FarmermarketTest.CompareProductsTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.CompareProductsTestInvalid" classname="FarmermarketTest.CompareProductsTestInvalid" time="0.0171754" status="run">
+	<testcase name="FarmermarketTest.CompareProductsTestInvalid" classname="FarmermarketTest.CompareProductsTestInvalid" time="0.0151876" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.CompareProductsTestInvalid
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -311,7 +364,7 @@
 [ RUN      ] FarmermarketTest.CompareProductsTestInvalid
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.BuyProductsTest" classname="FarmermarketTest.BuyProductsTest" time="0.021417" status="run">
+	<testcase name="FarmermarketTest.BuyProductsTest" classname="FarmermarketTest.BuyProductsTest" time="0.0197127" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.BuyProductsTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -319,7 +372,7 @@
 [ RUN      ] FarmermarketTest.BuyProductsTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.BuyProductsTestInvalid" classname="FarmermarketTest.BuyProductsTestInvalid" time="0.0228302" status="run">
+	<testcase name="FarmermarketTest.BuyProductsTestInvalid" classname="FarmermarketTest.BuyProductsTestInvalid" time="0.0152126" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.BuyProductsTestInvalid
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -327,7 +380,7 @@
 [ RUN      ] FarmermarketTest.BuyProductsTestInvalid
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.BuyProductsTestLowBudget" classname="FarmermarketTest.BuyProductsTestLowBudget" time="0.0193216" status="run">
+	<testcase name="FarmermarketTest.BuyProductsTestLowBudget" classname="FarmermarketTest.BuyProductsTestLowBudget" time="0.0161952" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.BuyProductsTestLowBudget
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -335,7 +388,7 @@
 [ RUN      ] FarmermarketTest.BuyProductsTestLowBudget
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.PurchasingTransactionsAndPriceComparisonMenuTest" classname="FarmermarketTest.PurchasingTransactionsAndPriceComparisonMenuTest" time="0.0586069" status="run">
+	<testcase name="FarmermarketTest.PurchasingTransactionsAndPriceComparisonMenuTest" classname="FarmermarketTest.PurchasingTransactionsAndPriceComparisonMenuTest" time="0.0586634" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.PurchasingTransactionsAndPriceComparisonMenuTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -343,7 +396,7 @@
 [ RUN      ] FarmermarketTest.PurchasingTransactionsAndPriceComparisonMenuTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.PurchasingTransactionsAndPriceComparisonShoppingSuggestionGuestModeTest" classname="FarmermarketTest.PurchasingTransactionsAndPriceComparisonShoppingSuggestionGuestModeTest" time="0.0459424" status="run">
+	<testcase name="FarmermarketTest.PurchasingTransactionsAndPriceComparisonShoppingSuggestionGuestModeTest" classname="FarmermarketTest.PurchasingTransactionsAndPriceComparisonShoppingSuggestionGuestModeTest" time="0.0455548" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.PurchasingTransactionsAndPriceComparisonShoppingSuggestionGuestModeTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -351,7 +404,7 @@
 [ RUN      ] FarmermarketTest.PurchasingTransactionsAndPriceComparisonShoppingSuggestionGuestModeTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsTest" classname="FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsTest" time="0.0462106" status="run">
+	<testcase name="FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsTest" classname="FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsTest" time="0.0444965" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -359,7 +412,7 @@
 [ RUN      ] FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsGuestModeTest" classname="FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsGuestModeTest" time="0.0460563" status="run">
+	<testcase name="FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsGuestModeTest" classname="FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsGuestModeTest" time="0.0492498" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsGuestModeTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -367,7 +420,7 @@
 [ RUN      ] FarmermarketTest.PurchasingTransactionsAndPriceComparisonBuyProductsGuestModeTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.PurchasingTransactionsAndPriceComparisonInvalidOptionTest" classname="FarmermarketTest.PurchasingTransactionsAndPriceComparisonInvalidOptionTest" time="0.0885972" status="run">
+	<testcase name="FarmermarketTest.PurchasingTransactionsAndPriceComparisonInvalidOptionTest" classname="FarmermarketTest.PurchasingTransactionsAndPriceComparisonInvalidOptionTest" time="0.0892331" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.PurchasingTransactionsAndPriceComparisonInvalidOptionTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -375,7 +428,7 @@
 [ RUN      ] FarmermarketTest.PurchasingTransactionsAndPriceComparisonInvalidOptionTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.RecursiveMatrixMultiply" classname="FarmermarketTest.RecursiveMatrixMultiply" time="0.0114887" status="run">
+	<testcase name="FarmermarketTest.RecursiveMatrixMultiply" classname="FarmermarketTest.RecursiveMatrixMultiply" time="0.0120484" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.RecursiveMatrixMultiply
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -389,7 +442,7 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.MemorizedRecursiveReuseTest" classname="FarmermarketTest.MemorizedRecursiveReuseTest" time="0.011339" status="run">
+	<testcase name="FarmermarketTest.MemorizedRecursiveReuseTest" classname="FarmermarketTest.MemorizedRecursiveReuseTest" time="0.0115134" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.MemorizedRecursiveReuseTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -403,7 +456,21 @@
 [  PASSED  ] 1 test.
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.MarketInformationsTotalIncomeTest" classname="FarmermarketTest.MarketInformationsTotalIncomeTest" time="0.0497117" status="run">
+	<testcase name="FarmermarketTest.DynamicProgrammingTest" classname="FarmermarketTest.DynamicProgrammingTest" time="0.0114096" status="run">
+		<system-out>Note: Google Test filter = FarmermarketTest.DynamicProgrammingTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FarmermarketTest
+[ RUN      ] FarmermarketTest.DynamicProgrammingTest
+[       OK ] FarmermarketTest.DynamicProgrammingTest (0 ms)
+[----------] 1 test from FarmermarketTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="FarmermarketTest.MarketInformationsTotalIncomeTest" classname="FarmermarketTest.MarketInformationsTotalIncomeTest" time="0.0471658" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.MarketInformationsTotalIncomeTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -411,7 +478,7 @@
 [ RUN      ] FarmermarketTest.MarketInformationsTotalIncomeTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.MarketInformationsInvalidOptionTest" classname="FarmermarketTest.MarketInformationsInvalidOptionTest" time="0.0986264" status="run">
+	<testcase name="FarmermarketTest.MarketInformationsInvalidOptionTest" classname="FarmermarketTest.MarketInformationsInvalidOptionTest" time="0.0952639" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.MarketInformationsInvalidOptionTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -419,7 +486,7 @@
 [ RUN      ] FarmermarketTest.MarketInformationsInvalidOptionTest
 </system-out>
 	</testcase>
-	<testcase name="FarmermarketTest.MainMenuTest" classname="FarmermarketTest.MainMenuTest" time="0.156067" status="run">
+	<testcase name="FarmermarketTest.MainMenuTest" classname="FarmermarketTest.MainMenuTest" time="0.157118" status="run">
 		<system-out>Note: Google Test filter = FarmermarketTest.MainMenuTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.

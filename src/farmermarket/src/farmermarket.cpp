@@ -443,7 +443,6 @@ int loadProductSeasonsAndPrint(const char* filename, const char* selectedSeason)
         printf("|- Price: %d, Name: %s\n", ps.price, ps.name);
     }
     printf("+------------------------------------+");
-    getchar();
 
     return found;
 }
@@ -491,6 +490,7 @@ bool seasonalProduceGuide() {
         printf("|Available produce for %s season:\n", selectedSeason);
         printf("+------------------------------------+\n");
         loadProductSeasonsAndPrint(filename, selectedSeason);
+        getchar();
     }
     return true;
 }
