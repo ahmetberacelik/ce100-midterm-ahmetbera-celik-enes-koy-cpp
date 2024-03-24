@@ -1121,7 +1121,7 @@ bool MarketInformations() {
                 }
             }
 
-            printf("Market's Total Income: %d\n", totalIncome);
+            printf("Market's Total Product Price: %d\n", totalIncome);
             getchar();
             break;
         case 2:
