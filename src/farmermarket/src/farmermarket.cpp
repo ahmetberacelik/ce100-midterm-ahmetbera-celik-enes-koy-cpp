@@ -1,3 +1,8 @@
+/**
+ * @file farmermarket.cpp
+ *
+ * @brief The functions are filled in this file.
+ */
 #include "../header/farmermarket.h"
 #include <stdio.h>
 #include <stdbool.h>
@@ -5,18 +10,44 @@
 #include <stdlib.h>
 #include <time.h>
 #include <climits>
-#define N 4
-#define MAX_SIZE 100
-int dp[MAX_SIZE][MAX_SIZE];
-bool guestMode = false;
-int budget;
-char* vendors[] = { "Ahmet", "Mehmet", "Veli", "Ayse" };
+#define N 4 /**< Define the constant N as 4, representing the size of arrays or matrices. */
+#define MAX_SIZE 100 /**< Define the constant MAX_SIZE as 100, indicating the maximum size of arrays or matrices. */
+int dp[MAX_SIZE][MAX_SIZE]; /**< Declare a 2D array dp with dimensions MAX_SIZE x MAX_SIZE for dynamic programming purposes. */
+bool guestMode = false; /**< Boolean variable to indicate whether the program is in guest mode (false by default). */
+int budget; /**< Variable to store the budget value. */
+char* vendors[] = { "Ahmet", "Mehmet", "Veli", "Ayse" }; /**< Array of strings representing vendor names. */
+/**
+ * @brief Array containing information about vendors and the products they offer.
+ *
+ * This two-dimensional array holds information about vendors and the products they offer.
+ * Each row represents a vendor, where the first element is the vendor's name, and the subsequent elements are the names of the products they offer.
+ *
+ * The information is organized as follows:
+ * - Row 0: Vendor "Ahmet" offers products "Banana", "Apple", "Grape", and "Spinach".
+ * - Row 1: Vendor "Mehmet" offers products "Raspberry", "Beet", "Turnip", and "Peas".
+ * - Row 2: Vendor "Veli" offers products "Cucumber", "Tomato", "Orange", and "Radish".
+ * - Row 3: Vendor "Ayse" offers products "Pear", "Nectarine", "Bean", and "Hazelnut".
+ *
+ * @note Each product name is represented as a string.
+ */
 char* products[][5] = {
     {"Ahmet", "Banana", "Apple", "Grape", "Spinach"},
     {"Mehmet", "Raspberry", "Beet", "Turnip", "Peas"},
     {"Veli", "Cucumber", "Tomato", "Orange", "Radish"},
     {"Ayse", "Pear", "Nectarine", "Bean", "Hazelnut"},
 };
+/**
+ * @brief Array containing information about various products including their prices, names, and seasons.
+ *
+ * This array holds structs representing different products, each containing the price, name, and season of the product.
+ * The information is organized as follows:
+ * - Index 0-3: Products available in Summer.
+ * - Index 4-7: Products available in Fall.
+ * - Index 8-11: Products available in Winter.
+ * - Index 12-15: Products available in Spring.
+ *
+ * @note Each product is represented by a struct of type ProductSeason.
+ */
 ProductSeason productSeasons[] = {
     {10,"Banana", "Summer"},
     {10,"Apple", "Fall"},
@@ -38,24 +69,54 @@ ProductSeason productSeasons[] = {
     {40, "Bean", "Summer"},
     {40, "Hazelnut", "Fall"},
 };
-
+/**
+ * @brief 2D array representing the prices of products.
+ *
+ * This 2D array represents the prices of products, where each row corresponds to a product and each column corresponds to a vendor.
+ * For example, productPrices[i][j] represents the price of product i sold by vendor j.
+ *
+ * The information is organized as follows:
+ * - Row 0: Prices of products offered by vendor "Ahmet" (from the products array).
+ * - Row 1: Prices of products offered by vendor "Mehmet" (from the products array).
+ * - Row 2: Prices of products offered by vendor "Veli" (from the products array).
+ * - Row 3: Prices of products offered by vendor "Ayse" (from the products array).
+ *
+ * @note Each element represents the price of a product and is of type integer.
+ */
 int productPrices[4][4] = {
         {10, 10, 15, 30},
         {15, 20, 25, 30},
         {25, 30, 30, 15},
         {35, 35, 40, 40},
 };
+/**
+ * @brief 2D array representing the quantities of products.
+ *
+ * This 2D array represents the quantities of products available, where each row corresponds to a product and each column corresponds to a vendor.
+ * For example, productQuantities[i][j] represents the quantity of product i sold by vendor j.
+ *
+ * The information is organized as follows:
+ * - Row 0: Quantities of products offered by vendor "Ahmet" (from the products array).
+ * - Row 1: Quantities of products offered by vendor "Mehmet" (from the products array).
+ * - Row 2: Quantities of products offered by vendor "Veli" (from the products array).
+ * - Row 3: Quantities of products offered by vendor "Ayse" (from the products array).
+ *
+ * @note Each element represents the quantity of a product and is of type integer.
+ */
 int productQuantities[4][4] = {
         {100, 28, 30, 50},
         {75, 27, 46, 18},
         {15, 73, 48, 24},
         {17, 43, 64, 37},
 };
-int numVendors = sizeof(vendors) / sizeof(vendors[0]);
-int numProductsPerVendor = sizeof(products[0]) / sizeof(products[0][0]);
-const int numProducts = sizeof(productSeasons) / sizeof(productSeasons[0]);
-int dimensions[] = { 4, 4, 4 };
-int n = sizeof(dimensions) / sizeof(dimensions[0]);
+int numVendors = sizeof(vendors) / sizeof(vendors[0]); /**< Number of products per vendor equals the number of columns in the products array. */
+int numProductsPerVendor = sizeof(products[0]) / sizeof(products[0][0]); /**< Number of products per vendor equals the number of columns in the products array. */
+const int numProducts = sizeof(productSeasons) / sizeof(productSeasons[0]);/**< Total number of products in the productSeasons array. */
+int dimensions[] = { 4, 4, 4 }; /**< Array representing the dimensions used for matrix multiplication, where each element corresponds to the number of rows or columns in a matrix. */
+int n = sizeof(dimensions) / sizeof(dimensions[0]); /**< Number of elements in the dimensions array, which indicates the number of matrices involved in matrix multiplication. */
+/**
+ * @brief Clears the console screen.
+ */
 void clearScreen() {
 #ifdef _WIN32
     system("cls");
@@ -63,6 +124,12 @@ void clearScreen() {
     system("clear");
 #endif
 }
+/**
+ * @brief Displays the main menu options and handles user input.
+ *
+ * @param authenticationResult Indicates whether the user is authenticated.
+ * @return True if the user chooses to exit the program, otherwise false.
+ */
 bool mainMenu(bool authenticationResult) {
     if (!authenticationResult) {
         return false;
@@ -112,14 +179,27 @@ bool mainMenu(bool authenticationResult) {
         }
     }
 }
-
+/**
+ * @brief Saves user information to a binary file.
+ *
+ * @param user Pointer to the User structure containing user information.
+ * @param filename Name of the file to save the user information.
+ * @return 1 if the user information is successfully saved, otherwise 0.
+ */
 int saveUser(const User* user, const char* filename) {
     FILE* file = fopen(filename, "ab");
     fwrite(user, sizeof(User), 1, file);
     fclose(file);
     return 1;
 }
-
+/**
+ * @brief Authenticates a user by checking the provided username and password against stored records.
+ *
+ * @param username The username entered by the user.
+ * @param password The password entered by the user.
+ * @param filename Name of the file containing user records.
+ * @return 1 if authentication is successful, -1 if the file cannot be opened, otherwise 0.
+ */
 int authenticateUser(const char* username, const char* password, const char* filename) {
     FILE* file = fopen(filename, "rb");
     if (!file) {
@@ -133,7 +213,11 @@ int authenticateUser(const char* username, const char* password, const char* fil
         }
     }
 }
-
+/**
+ * @brief Handles user authentication, login, registration, and guest mode selection.
+ *
+ * @return True if the user successfully logs in or registers, otherwise false.
+ */
 bool userAuthentication() {
     clearScreen();
     const char* filename = "Users.bin";
@@ -232,14 +316,27 @@ bool userAuthentication() {
         }
     }
 }
-
+/**
+ * @brief Swaps two pointers to strings.
+ *
+ * @param a Pointer to the first string pointer.
+ * @param b Pointer to the second string pointer.
+ * @return True if the swap is successful.
+ */
 bool swap(char** a, char** b) {
     char* t = *a;
     *a = *b;
     *b = t;
     return true;
 }
-
+/**
+ * @brief Partitions an array of strings for quicksort.
+ *
+ * @param arr Array of strings.
+ * @param low Starting index of the partition.
+ * @param high Ending index of the partition.
+ * @return The partition index.
+ */
 int partition(char* arr[], int low, int high) {
     char* pivot = arr[low + (rand() % (high - low))];
     int i = low - 1, j = high + 1;
@@ -258,7 +355,14 @@ int partition(char* arr[], int low, int high) {
         swap(&arr[i], &arr[j]);
     }
 }
-
+/**
+ * @brief Sorts an array of strings using the quicksort algorithm.
+ *
+ * @param arr Array of strings.
+ * @param low Starting index of the array.
+ * @param high Ending index of the array.
+ * @return True if the sorting is successful.
+ */
 bool quickSort(char* arr[], int low, int high) {
     if (low < high) {
         int pi = partition(arr, low, high);
@@ -268,7 +372,15 @@ bool quickSort(char* arr[], int low, int high) {
     }
     return true;
 }
-
+/**
+ * @brief Performs binary search on an array of strings.
+ *
+ * @param arr Array of strings.
+ * @param l Left index of the search range.
+ * @param r Right index of the search range.
+ * @param x String to search for.
+ * @return The index of the found string, or -1 if not found.
+ */
 int binarySearch(char* arr[], int l, int r, char* x) {
     if (r >= l) {
         int mid = l + (r - l) / 2;
@@ -288,6 +400,14 @@ int binarySearch(char* arr[], int l, int r, char* x) {
 
     return -1;
 }
+/**
+ * @brief Searches for a string in an array of strings and prints the result.
+ *
+ * @param arr Array of strings.
+ * @param size Size of the array.
+ * @param x String to search for.
+ * @return True if the string is found, otherwise false.
+ */
 bool searchAndPrintResult(char* arr[], int size, char* x) {
     int result = binarySearch(arr, 0, size - 1, x);
     if (result == -1) {
@@ -296,7 +416,11 @@ bool searchAndPrintResult(char* arr[], int size, char* x) {
         return true;
     }
 }
-
+/**
+ * @brief Searches for a vendor in the vendors array and prints the result.
+ *
+ * @return True if the vendor is found, otherwise false.
+ */
 bool browseVendor() {
     char vendor_query[50];
     printf("Please enter vendor name: ");
@@ -315,7 +439,11 @@ bool browseVendor() {
     }
     return true;
 }
-
+/**
+ * @brief Searches for a product in the products array and prints the result.
+ *
+ * @return True if the product is found, otherwise false.
+ */
 bool searchProduct() {
     char product_query[50];
     printf("Please enter product name: ");
@@ -334,8 +462,11 @@ bool searchProduct() {
     printf("Product not found.\n");
     return false;
 }
-
-
+/**
+ * @brief Displays the listing of information options and handles user input.
+ *
+ * @return True if the user chooses to exit, otherwise false.
+ */
 bool listingOfInfos() {
     clearScreen();
 
@@ -375,11 +506,20 @@ bool listingOfInfos() {
         }
     }
 }
-
+/**
+ * @brief Initializes a min heap.
+ *
+ * @param heap Pointer to the min heap.
+ */
 void initMinHeap(MinHeap* heap) {
     heap->size = 0;
 }
-
+/**
+ * @brief Inserts a product season into the min heap.
+ *
+ * @param heap Pointer to the min heap.
+ * @param item Product season to insert.
+ */
 void insertMinHeap(MinHeap* heap, ProductSeason item) {
     if (heap->size == MAX_SIZE) {
         return;
@@ -393,7 +533,12 @@ void insertMinHeap(MinHeap* heap, ProductSeason item) {
     }
     heap->items[i] = item;
 }
-
+/**
+ * @brief Removes and returns the minimum element from the min heap.
+ *
+ * @param heap Pointer to the min heap.
+ * @return The minimum element in the heap.
+ */
 ProductSeason removeMin(MinHeap* heap) {
     ProductSeason result = heap->items[0];
     ProductSeason lastItem = heap->items[--heap->size];
@@ -409,7 +554,14 @@ ProductSeason removeMin(MinHeap* heap) {
     heap->items[i] = lastItem;
     return result;
 }
-
+/**
+ * @brief Saves an array of product seasons to a binary file.
+ *
+ * @param productSeason Pointer to the array of product seasons.
+ * @param numProducts Number of product seasons.
+ * @param filename Name of the file to save to.
+ * @return 1 if successful, otherwise 0.
+ */
 int saveProductSeason(const ProductSeason* productSeason, int numProducts, const char* filename) {
     FILE* file = fopen(filename, "wb");
     fwrite(&numProducts, sizeof(int), 1, file);
@@ -417,7 +569,13 @@ int saveProductSeason(const ProductSeason* productSeason, int numProducts, const
     fclose(file);
     return 1;
 }
-
+/**
+ * @brief Loads product seasons from a binary file based on the selected season and prints them.
+ *
+ * @param filename Name of the file to load from.
+ * @param selectedSeason The selected season.
+ * @return Number of product seasons found for the selected season.
+ */
 int loadProductSeasonsAndPrint(const char* filename, const char* selectedSeason) {
     FILE* file = fopen(filename, "rb");
     int numProducts;
@@ -444,7 +602,11 @@ int loadProductSeasonsAndPrint(const char* filename, const char* selectedSeason)
 
     return found;
 }
-
+/**
+ * @brief Displays the seasonal produce guide menu and allows the user to view available produce for different seasons.
+ *
+ * @return True if the function executes successfully, otherwise false.
+ */
 bool seasonalProduceGuide() {
     clearScreen();
     const char* filename = "ProductSeasons.bin";
@@ -492,7 +654,15 @@ bool seasonalProduceGuide() {
     }
     return true;
 }
-
+/**
+ * @brief Finds the length of the longest common subsequence (LCS) between two strings.
+ *
+ * @param X First string.
+ * @param Y Second string.
+ * @param m Length of the first string.
+ * @param n Length of the second string.
+ * @return Length of the LCS.
+ */
 int lcs(char* X, char* Y, int m, int n)
 {
     int** L;
@@ -525,7 +695,16 @@ int lcs(char* X, char* Y, int m, int n)
 
     return result;
 }
-
+/**
+ * @brief Compares two product names and prints their details if they have a common subsequence and belong to the same season.
+ *
+ * @param season1 Season of the first product.
+ * @param season2 Season of the second product.
+ * @param name1 Name of the first product.
+ * @param name2 Name of the second product.
+ * @param price Price of the products.
+ * @return True if the comparison and printing are successful, otherwise false.
+ */
 bool compareAndPrintLCS(char* season1, char* season2, char* name1, char* name2, int price)
 {
     int m = strlen(name1);
@@ -538,11 +717,26 @@ bool compareAndPrintLCS(char* season1, char* season2, char* name1, char* name2, 
     }
     return true;
 }
-
+/**
+ * @brief Returns the maximum of two integers.
+ *
+ * @param a First integer.
+ * @param b Second integer.
+ * @return The maximum of the two integers.
+ */
 int max(int a, int b) {
     return (a > b) ? a : b;
 }
-
+/**
+ * @brief Solves the 0/1 knapsack problem to maximize the value of items selected within a given weight constraint.
+ *
+ * @param W The maximum weight that can be carried.
+ * @param wt[] An array containing the weights of the items.
+ * @param val[] An array containing the values of the items.
+ * @param n The number of items.
+ * @param selectedItems An array to store which items are selected (1 for selected, 0 for not selected).
+ * @return The maximum value that can be achieved.
+ */
 int knapsack(int W, int wt[], int val[], int n, int* selectedItems) {
     int i, w;
     int** K = (int**)malloc((n + 1) * sizeof(int*));
@@ -581,7 +775,12 @@ int knapsack(int W, int wt[], int val[], int n, int* selectedItems) {
 
     return res;
 }
-
+/**
+ * @brief Solves the 0/1 knapsack problem to suggest purchases maximizing value within a given budget.
+ *
+ * @param budget The available budget.
+ * @return True if suggestions are successfully printed, otherwise false.
+ */
 bool suggestPurchases(int budget) {
     int wt[numProducts];
     int val[numProducts];
@@ -615,7 +814,11 @@ bool suggestPurchases(int budget) {
     free(selectedItems);
     return true;
 }
-
+/**
+ * @brief Compares products in the same price range within a selected season and prints their details.
+ *
+ * @return True if the comparison and printing are successful, otherwise false.
+ */
 bool CompareProducts() {
     bool validSeason = false;
     bool found = false;
@@ -655,7 +858,12 @@ bool CompareProducts() {
     printf("+-----------------------------------------------------+\n");
     return true;
 }
-
+/**
+ * @brief Simulates a purchasing transaction by allowing the user to buy products within a specified budget.
+ *
+ * @param localBudget The current budget of the user.
+ * @return True if the purchase is successful, otherwise false.
+ */
 bool BuyProducts(int localBudget) {
     bool productFound = false;
     int productPrice = 0;
@@ -693,8 +901,12 @@ bool BuyProducts(int localBudget) {
     }
     return true;
 }
-
-
+/**
+ * @brief Displays a menu for purchasing transactions and price comparison, allowing users to perform various actions.
+ *
+ * @param localGuestMode Indicates if the user is in guest mode or not.
+ * @return True if the function executes successfully, otherwise false.
+ */
 bool PurchasingTransactionsAndPriceComparison(bool localGuestMode) {
     clearScreen();
     int choice;
@@ -754,7 +966,21 @@ bool PurchasingTransactionsAndPriceComparison(bool localGuestMode) {
         }
     }
 }
-
+/**
+ * @brief Recursively multiplies two matrices A and B to produce matrix C.
+ *
+ * This function recursively multiplies two matrices A and B to produce matrix C using the
+ * Strassen's algorithm for matrix multiplication.
+ *
+ * @param A The first matrix.
+ * @param B The second matrix.
+ * @param C The resulting matrix.
+ * @param rowA The starting row index of matrix A.
+ * @param colA The starting column index of matrix A.
+ * @param rowB The starting row index of matrix B.
+ * @param colB The starting column index of matrix B.
+ * @param size The size of the matrices.
+ */
 void recursiveMatrixMultiply(int A[N][N], int B[N][N], int C[N][N], int rowA, int colA, int rowB, int colB, int size) {
     if (size == 1) {
         C[rowA][colB] += A[rowA][colA] * B[rowB][colB];
@@ -778,11 +1004,24 @@ void recursiveMatrixMultiply(int A[N][N], int B[N][N], int C[N][N], int rowA, in
         recursiveMatrixMultiply(A, B, C, rowA + newSize, colA + newSize, rowB + newSize, colB + newSize, newSize);
     }
 }
-
+/**
+ * @brief Initializes the dynamic programming table used for memorization in matrix chain multiplication.
+ *
+ * This function initializes the dynamic programming table used for memorization in matrix chain multiplication.
+ */
 void initializeDP() {
     memset(dp, -1, sizeof(dp));
 }
-
+/**
+ * @brief Finds the minimum cost of matrix chain multiplication using memorization.
+ *
+ * This function finds the minimum cost of matrix chain multiplication using memorization technique.
+ *
+ * @param dimensions An array containing the dimensions of the matrices.
+ * @param i The starting index of the matrix chain.
+ * @param j The ending index of the matrix chain.
+ * @return The minimum cost of matrix chain multiplication.
+ */
 int MCM_MemorizedRecursive(int dimensions[], int i, int j) {
     if (i == j) {
         return 0;
@@ -801,7 +1040,15 @@ int MCM_MemorizedRecursive(int dimensions[], int i, int j) {
     }
     return dp[i][j];
 }
-
+/**
+ * @brief Finds the minimum cost of matrix chain multiplication using dynamic programming.
+ *
+ * This function finds the minimum cost of matrix chain multiplication using dynamic programming.
+ *
+ * @param dimensions An array containing the dimensions of the matrices.
+ * @param n The number of matrices.
+ * @return The minimum cost of matrix chain multiplication.
+ */
 int MCM_DynamicProgramming(int dimensions[], int n) {
     int** dp = new int* [n];
     for (int i = 0; i < n; ++i) {
@@ -831,8 +1078,14 @@ int MCM_DynamicProgramming(int dimensions[], int n) {
 
     return result;
 }
-
-
+/**
+ * @brief Provides market information such as total income and minimum multiplication cost.
+ *
+ * This function provides market information such as total income and the minimum multiplication cost
+ * of matrix chain multiplication used in calculating total income.
+ *
+ * @return True if the operation is successful, false otherwise.
+ */
 bool MarketInformations() {
     clearScreen();
     int choice;

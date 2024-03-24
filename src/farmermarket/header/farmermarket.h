@@ -6,21 +6,35 @@
 #ifndef FARMERMARKET_H
 #define FARMERMARKET_H
 #include <stdio.h>
-#define MAX_SIZE 100
-#define N 4
+#define MAX_SIZE 100 /**< Define the constant MAX_SIZE as 100, indicating the maximum size of arrays or matrices. */
+#define N 4 /**< Define the constant N as 4, representing the size of arrays or matrices. */
+ /**
+  * @brief Struct representing a user with username and password fields.
+  *
+  * This struct stores user information including username and password.
+  */
 typedef struct {
-    char username[50];
-    char password[50];
+    char username[50]; /**< Username of the user. */
+    char password[50]; /**< Password of the user. */
 } User;
+/**
+ * @brief Struct representing a product with price, name, and season fields.
+ *
+ * This struct stores information about a product including its price, name, and season.
+ */
 typedef struct {
-    int price;
-    char* name;
-    char* season;
+    int price; /**< Price of the product. */
+    char* name; /**< Name of the product. */
+    char* season; /**< Season associated with the product. */
 } ProductSeason;
-
+/**
+ * @brief Struct representing a min heap of product seasons.
+ *
+ * This struct implements a min heap data structure to store product seasons.
+ */
 typedef struct {
-    ProductSeason items[MAX_SIZE];
-    int size;
+    ProductSeason items[MAX_SIZE]; /**< Array of ProductSeason items representing the heap elements. */
+    int size; /**< Current size of the heap. */
 } MinHeap;
 
 void clearScreen();
